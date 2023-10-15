@@ -24,7 +24,7 @@
     
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar class="heading" color="primary">
+    <mat-toolbar class="search">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -33,7 +33,10 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>SecurityMaintenence</span>
-    </mat-toolbar>  
+      <span><i class="fa fa-2x fa-search" aria-hidden="true"></i></span>
+      <input type="text" class="searchfield" style="border: opx;" placeholder="Search by username...." />
+      
+    </mat-toolbar> 
+    <app-user-list></app-user-list> 
   </mat-sidenav-content>
 </mat-sidenav-container>

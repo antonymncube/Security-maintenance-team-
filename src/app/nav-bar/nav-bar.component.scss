@@ -1,32 +1,23 @@
 .menu-list {
   color: white; /* Add this line to set the text color to white */
 }
-
 .sidenav-container {
   height: 100%;
 }
-
 .sidenav {
   width: 200px;
   background-color: #2F3351;
 }
-
 .sidenav .mat-toolbar {
   background: inherit;
 }
-
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
   z-index: 1;
 }
 
-.heading {
-}
-
-.custom-background {
-  background-color: aqua;
-}
+ 
 .mat-sidenav-container .menu-list {
   color: white; /* Add this line to set the text color to white */
 } 
@@ -38,13 +29,11 @@
 
  
 .router-link {
-  color: #2F3351; /* Text color */
-  text-decoration: none; /* Remove underlines from links */
-  display: block; /* Make the links appear below each other (vertical) */
-  margin: 5px 0; /* Add space between the links (5px top and bottom, 0 left and right) */
-  padding: 10px; /* Add padding to the links for better clickability */
- 
- 
+  color: #2F3351;  
+  text-decoration: none;  
+  display: block; 
+  margin: 5px 0; 
+  padding: 10px;  
   transition: background-color
 }
 
@@ -68,3 +57,15 @@
    
  }
  
+ .search{
+  border-bottom: 3px solid #2F3351 ;
+  background-color: white;
+  
+ }
+
+ .searchfield{
+    border: none; /* Remove the border */
+    outline: none; /* Remove the default outline on focus (optional) */
+    margin-left: 10px;
+    font-size: 20px;
+ } 
