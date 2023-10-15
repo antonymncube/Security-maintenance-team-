@@ -1,0 +1,70 @@
+.menu-list {
+  color: white; /* Add this line to set the text color to white */
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  background-color: #2F3351;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.heading {
+}
+
+.custom-background {
+  background-color: aqua;
+}
+.mat-sidenav-container .menu-list {
+  color: white; /* Add this line to set the text color to white */
+} 
+
+.menu{
+  color: white;
+  margin-top: 80px;
+}
+
+ 
+.router-link {
+  color: #2F3351; /* Text color */
+  text-decoration: none; /* Remove underlines from links */
+  display: block; /* Make the links appear below each other (vertical) */
+  margin: 5px 0; /* Add space between the links (5px top and bottom, 0 left and right) */
+  padding: 10px; /* Add padding to the links for better clickability */
+ 
+ 
+  transition: background-color
+}
+
+.navbar{
+  margin-top: 15px;
+}
+
+.link{
+  margin-left: 20px;
+  color: white;
+  font-size: larger;
+}
+
+.icon{
+  color: white;
+}
+ .redline{
+  border-top: 15px solid red; /* Set the line color, style, and width */
+  width: 90%; 
+  margin-left: 8px;
+   
+ }
+ 
