@@ -1,3 +1,33 @@
 table {
     width: 100%;
   }
+
+  .mat-elevation-z8{
+    margin-top: 100PX;
+    margin-left: 8px;
+  }
+
+  .Agent{
+    color: red;
+  }
+
+ 
+  .mat-cell, .mat-header-cell {
+    padding: 2px;
+    margin: 2px;
+  }
+  
+  .mat-row {
+    border-bottom: none; /* Remove the border between rows */
+    margin: 2px;
+  }
+  
+  .mat-header-row {
+    border-bottom: none; /* Remove the border under the header row */
+    margin: 2px;
+  }
+  
+  
+  
+  
+  

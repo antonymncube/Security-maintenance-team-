@@ -1,4 +1,5 @@
- 
+
+
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
@@ -6,6 +7,7 @@
       [opened]="(isHandset$ | async) === false">
     
     <mat-nav-list class="navbar">
+      <img class="logo-img" src="assets\images\Genasys - White (CMYK).jpg">
       <div class="redline"></div>
       <div class="router-link">
         <i class="icon fa fa-home fa-2x" aria-hidden="true"></i>
@@ -17,13 +19,19 @@
       </div>
       <div class="router-link">
         <i class="icon fa fa-refresh fa-2x" aria-hidden="true"></i>
+        
         <label class="link" routerLink="/route2">Refresh</label>
       </div>
       
     </mat-nav-list>
     
   </mat-sidenav>
-  <mat-sidenav-content>
+  <!-- <mat-sidenav-content class="">
+    <div class="securityIcon">
+      <img class="key-img" src="assets\images\key-solid.svg">
+      <h2 class="Securityheading">Security Maintenence</h2>
+    </div>
+   
     <mat-toolbar class="search">
       <button
         type="button"
@@ -37,6 +45,6 @@
       <input type="text" class="searchfield" style="border: opx;" placeholder="Search by username...." />
       
     </mat-toolbar> 
-    <app-user-list></app-user-list> 
-  </mat-sidenav-content>
+     
+  </mat-sidenav-content> -->
 </mat-sidenav-container>

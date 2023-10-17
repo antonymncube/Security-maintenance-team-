@@ -38,7 +38,7 @@
 }
 
 .navbar{
-  margin-top: 15px;
+  margin-top: 1px;
 }
 
 .link{
@@ -54,13 +54,20 @@
   border-top: 15px solid red; /* Set the line color, style, and width */
   width: 90%; 
   margin-left: 8px;
+  margin-top: 1px;
    
  }
  
  .search{
   border-bottom: 3px solid #2F3351 ;
   background-color: white;
+  margin-top: 30px;
   
+ }
+
+ .side-information{
+  margin-top: 4px;
+  background-color: white;
  }
 
  .searchfield{
@@ -69,3 +76,30 @@
     margin-left: 10px;
     font-size: 20px;
  } 
+ .logo-img {
+  width: 180px;  
+  max-height: 70px;  
+  margin-left: 9px;
+  margin-bottom: 4px;
+}
+
+.key-img {
+  width: 50px;  
+  max-height: 30px;  
+  margin-left: 9px;
+  margin-bottom: 4px;
+}
+.securityIcon {
+  display: flex; 
+  align-items: center; 
+  background-color: white;
+  margin-top: 20px;
+}
+
+.Securityheading{
+  font-size: x-large;
+  margin-left: 10px;
+  margin: 5px;
+
+
+}

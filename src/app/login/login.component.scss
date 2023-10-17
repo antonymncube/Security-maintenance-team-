@@ -1,0 +1,49 @@
+.input-group {
+    position: relative;
+    background-color: white;
+    border: 3px solid #2F3351;
+    border-radius: 10px;
+    width: 20rem;
+    padding: 7px;
+    margin-top: 10px; /* Add margin-top here */
+}
+
+ 
+
+input {
+    width: 60%;
+    // padding: 10px;
+    font-size: 16px;
+    // color: white;
+    color: #000;
+    border: none;
+    transition: border-color 0.3s ease;
+}
+
+.submit {
+    height: 40px;
+    width: 20%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #2F3351;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+}
+
+.col-middle{
+    margin-top: 250px;
+    padding-left:80px ;
+}
+
+.logo{
+    width: 30rem;  
+    height: 10rem;  
+    margin-left: -120px;
+    margin-bottom: 4px;
+    padding: 0%;
+}

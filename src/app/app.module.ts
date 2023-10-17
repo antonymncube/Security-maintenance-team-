@@ -11,13 +11,25 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { UserListComponent } from './user-list/user-list.component';
 import { MatTableModule } from '@angular/material/table';
-import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+// import { FormsModule } from '@angular/forms';
+import {MatTabsModule} from '@angular/material/tabs';
+import { ReactiveFormsModule } from '@angular/forms';  
+import { MasterLayoutComponent } from './master-layout/master-layout.component';
+import { UserupdateComponent } from './userupdate/userupdate.component';
+import { authGuard } from './auth.guard';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    UserListComponent
+    UserListComponent,
+    LoginComponent,
+    MasterLayoutComponent,
+    UserupdateComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,9 +41,11 @@ import { HttpClientModule } from '@angular/common/http'; // Import HttpClientMod
     MatIconModule,
     MatListModule,
     MatTableModule,
-    HttpClientModule, // Add HttpClientModule to the imports array
+    HttpClientModule,
+    MatTabsModule,
+    ReactiveFormsModule, // Use either FormsModule or ReactiveFormsModule, depending on the type of forms you are using
   ],
-  providers: [],
+  providers: [authGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

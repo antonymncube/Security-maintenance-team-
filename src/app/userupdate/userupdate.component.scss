@@ -1,0 +1,48 @@
+ /* Style the mat-tab-group */
+.mat-tab-group {
+  margin-bottom: 48px;
+}
+ 
+form {
+  width: 80rem;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+ 
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+ 
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+ 
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 72rem;
+}
+ 
+button:disabled {
+  background-color: #ccc;
+  cursor:pointer;
+}
