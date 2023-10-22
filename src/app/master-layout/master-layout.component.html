@@ -1,15 +1,44 @@
-<main>
-    <div class="row">
-        <div class="col-lg-3">
+<!-- <img class="key-img" src="assets\images\key-solid.svg">
+<h2 class="Securityheading">Security Maintenance</h2> -->
+ 
+<main >
+    <!-- <div class="row m-0 d-flex gap-2">
+        <img class="key-img" src="C:\Users\antony.mncube\Documents\projects\securityMaintenance\SecurityMaintenence\src\assets\images\key-solid.svg">
+
+        <b>back there</b>
+    </div> -->
+
+    <div class="row bg-white">
+        <div class="col-lg-1">
             <app-nav-bar></app-nav-bar>
         </div>
-        <div class="col-lg-9">
-            <div class="d-block">
-                <h4>top bar</h4>
-            </div>
-            <div class="d-block"><router-outlet></router-outlet></div>
+        <div class="col-lg-11 ">
+            <div class="security-container">
+                <div class="securityIcon">
 
+                </div>
+                <div class="search">
+                    <button mat-icon-button >
+                        <mat-icon>menu</mat-icon>
+                      </button>
+                    <input type="text" class="searchfield" placeholder="Search by username...." />
+                    <span class="pt-2"><i class="fa fa-2x fa-search search icone" aria-hidden="true"></i></span>
+                    <i class="fa fa-user-circle User" aria-hidden="true" ></i>
+                </div>
+            </div>
+            <div class="col-content bg-white ">
+                <router-outlet></router-outlet>
+                <h4 class="h4 bg-light">back where</h4>
+            </div>
         </div>
         <div></div>
+        <!-- <div class="row " style="padding-right: 10px; padding-top: 0px; padding-bottom: 0px; height: 0px;">
+            <div class="col-6">
+              <h3 class="version " style="margin-left: 200px;margin-bottom: 2px;">Genasys Technologies (pty) Ltd</h3>
+            </div>
+            <div class="col-6 text-end mt-1"  ><h3 style="margin-bottom: 2px;">Version Design 1.0</h3></div>
+        
+          </div> -->
     </div>
+    
 </main>

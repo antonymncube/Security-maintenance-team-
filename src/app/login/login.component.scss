@@ -5,20 +5,53 @@
     border-radius: 10px;
     width: 20rem;
     padding: 7px;
-    margin-top: 10px; /* Add margin-top here */
+    margin-top: 20px;
+    height: 4rem;
+    // margin-left: -rem; 
+    padding: 10px; 
+    margin-top: 10px;
+    margin-right: 12rem;
+    
 }
+
+ .allinputs{
+    margin-top: 7rem ;
+    margin-left: 4rem;
+ }
 
  
-
+//  input {
+//     width: 80%;
+//     font-size: 16px;
+//     color: white;
+//     border: none;
+//     outline: none; /* Remove the blue outline on focus (click) */
+//     -webkit-focus-ring-color: transparent; /* Remove WebKit (Chrome, Safari) focus ring */
+//     transition: border-color 0.3s ease;
+// }
 input {
-    width: 60%;
-    // padding: 10px;
+    width: 80%;
     font-size: 16px;
-    // color: white;
-    color: #000;
+    color: white;
     border: none;
+    box-shadow: none; /* Remove any box-shadow */
+    outline: none; /* Remove the blue outline on focus (click) */
+    -webkit-focus-ring-color: transparent; /* Remove WebKit (Chrome, Safari) focus ring */
     transition: border-color 0.3s ease;
 }
+
+h1{
+    margin-left: 110px;
+     color:  #2F3351;
+     font-weight: bold;
+     
+     
+}
+ 
+
+ .container{
+    overflow: hidden;
+ }
 
 .submit {
     height: 40px;
@@ -32,18 +65,43 @@ input {
     cursor: pointer;
     margin-top: 15px;
     transition: background-color 0.3s ease;
-    margin-left: 20px;
+    margin-left:20;
+    margin-right: 20px;
 }
 
 .col-middle{
-    margin-top: 250px;
+    margin-top: 11px;
     padding-left:80px ;
 }
 
 .logo{
     width: 30rem;  
-    height: 10rem;  
-    margin-left: -120px;
+    height: 15rem;  
+    margin-left: -1px;
     margin-bottom: 4px;
     padding: 0%;
+}
+
+.input-field :hover{
+    background-color: black;
+    width: 40px;
+
+}
+
+.row1{
+    border: #2F3351 solid 4px;
+    padding-bottom: 20px;
+    width: 70rem;
+    margin-left: 6rem;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.col-mid{
+    margin-left: 2rem;
+    
+}
+
+.buttons{
+    margin-left: 4rem;
 }

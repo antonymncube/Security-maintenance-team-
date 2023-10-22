@@ -7,6 +7,7 @@ import { ApiServiceService } from './api-service.service';
 export class AuthService {
   private isAuthenticated = false;
   private users: any[] = [];
+  currentuser : string= ''
 
   constructor(private apiservice: ApiServiceService) {}
 
@@ -33,4 +34,11 @@ export class AuthService {
   isAuthenticatedUser(): boolean {
     return this.isAuthenticated;
   }
+  setCurrentUser(username: string): void {
+    this.currentuser = username;
+    sessionStorage.setItem('currentuser', username)
+  }
+  
 }
+
+

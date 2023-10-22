@@ -1,33 +1,172 @@
-table {
-    width: 100%;
-  }
 
-  .mat-elevation-z8{
-    margin-top: 100PX;
-    margin-left: 8px;
-  }
-
-  .Agent{
-    color: red;
-  }
+.container-table{
+  width: 96%;
+  // margin-left: ;
+  margin-bottom: 1px;
+  margin-left: 11px;
+  overflow-x: hidden;
+  
+}
 
  
-  .mat-cell, .mat-header-cell {
-    padding: 2px;
-    margin: 2px;
-  }
+ 
+.btn-add {
+  background-color: #2F3351;  
+  color: #fff;  
+  padding: 5px 15px;  
+  border: none;  
+  border-radius: 5px;  
+  cursor: pointer; 
+  font-size: 16px;  
+  margin-left: 72rem;
+}
+
+ 
+
+.welcome{
+  margin-left: 9px;
+  margin-top: 10px;
+}
+
+ 
+.mat-tab-group {
+  background-color: #f0f0f0; 
+  border-radius: 5px;  
+  padding: 2px;  
+  box-shadow: none;
+}
+
+.mat-tab-label {
+  background-color: #2F3351;  
+  color: #fff;  
+}
+
+.mat-tab-label-content {
+  padding: 5px 10px; 
+}
+
+ 
+.mat-paginator-page-size,
+.mat-select-arrow {
+  display: none ;
+}
+
+ 
+.mat-tab-label.Users {
+  display: flex;
+  align-items: center;
+}
+
+.mat-icon {
+  margin-right: 8px;  
+}
+
+.user {
+  margin-left: 0; 
+}
+
+
+
+.mat-tab-body {
+  border-bottom: 1px solid #ddd;
+  padding: 20px; 
+}
+
+
+
+/* Style the table container */
+.container-table {
+  width: auto;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+/* Style the table itself */
+.table {
+  width: auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the table header */
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Style the table rows */
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Style the Actions column */
+.action {
+  text-align: center;
+}
+
+/* Style the Add User button */
+// .btn-add {
+//   background-color: #007bff;
+//   color: white;
+//   border: none;
+//   border-radius: 5px;
+//   padding: 10px 20px;
+//   cursor: pointer;
+//   margin-top: 20px;
+//   font-size: 16px;
+// }
+
+.btn-add:hover {
+  background-color: #0056b3;
+}
+
+
+ 
+.mat-tab-label {
+  display: flex;
+  align-items: center;  
+}
+
+.mat-icon {
+  margin-right: 8px; 
+}
+
+ 
+.mat-icon {
+  font-size: 25px;  
+  color: #333;  
+  transform: scale(1.5);  
+}
+ 
+.mat-tab-label-content {
+  font-weight: bold;
+  font-size: 18px; 
+  color: #333; 
   
-  .mat-row {
-    border-bottom: none; /* Remove the border between rows */
-    margin: 2px;
-  }
-  
-  .mat-header-row {
-    border-bottom: none; /* Remove the border under the header row */
-    margin: 2px;
-  }
-  
-  
-  
-  
-  
+}
+
+.mat-tab-labels {
+  overflow: hidden;
+}
+
+.mat-tab-label {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 160px; /* Adjust this value to control the maximum tab width */
+}
+
+.mat-tab-group {
+  box-shadow: none !important;
+}
+
+
+
+
+
+ 
+ 

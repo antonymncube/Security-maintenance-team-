@@ -1,24 +1,39 @@
- /* Style the mat-tab-group */
+ /* Your existing styles here */
+
 .mat-tab-group {
   margin-bottom: 48px;
 }
- 
+
 form {
   width: 80rem;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
 }
- 
+
+.has-error {
+  input {
+    border: 2px solid red; // Red border for the input fields
+  }
+
+  .text-danger {
+    color: red; // Red text color for error messages
+  }
+}
+
+input.ng-invalid.ng-dirty.ng-touched {
+  border: 1px solid red;
+}
+
 label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
 
- 
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -31,7 +46,6 @@ textarea {
   border-radius: 3px;
 }
 
- 
 button {
   padding: 10px 20px;
   background-color: #007bff;
@@ -41,8 +55,53 @@ button {
   cursor: pointer;
   margin-left: 72rem;
 }
- 
-button:disabled {
-  background-color: #ccc;
-  cursor:pointer;
+
+// button:disabled {
+//   background-color: #ccc;
+//   cursor: not-allowed;
+// }
+
+.form-group {
+  display: inline;
+  // margin-right: 10px; /* Adjust this margin as needed to separate the elements */
 }
+
+.totalDetails {
+  display: flex important;
+  justify-content: space-between important;
+}
+
+.form-group {
+  flex: 1 important;
+}
+
+.totalDetails {
+  display: flex;
+}
+
+.totalDetails .userdetails,
+.totalDetails .contact-details {
+  flex: 1;
+  padding: 0 10px;  
+}
+
+.inputtag{
+  width: 14rem;
+}
+
+.description{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.totalDetails{
+  margin-top: 20px;
+}
+
+.contactdetails{
+  margin-right: 30rem;
+}
+ 
+

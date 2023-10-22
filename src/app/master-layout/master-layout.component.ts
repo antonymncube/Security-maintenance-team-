@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NavBarComponent } from '../nav-bar/nav-bar.component';
+ 
 
 @Component({
   selector: 'app-master-layout',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./master-layout.component.scss']
 })
 export class MasterLayoutComponent {
+  @ViewChild(NavBarComponent) navBarComponent: NavBarComponent | undefined;
 
+  constructor() {}
+
+   
 }

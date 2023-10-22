@@ -20,6 +20,17 @@ import { MasterLayoutComponent } from './master-layout/master-layout.component';
 import { UserupdateComponent } from './userupdate/userupdate.component';
 import { authGuard } from './auth.guard';
 import { HomeComponent } from './home/home.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { ViewUserComponent } from './view-user/view-user.component';
+import { MatSelectModule } from '@angular/material/select';
+import {MatMenuModule} from '@angular/material/menu';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatPrefix } from '@angular/material/form-field';
+import { SidenavComponent } from './sidenav/sidenav.component';
+ 
+
+ 
+
 
 @NgModule({
   declarations: [
@@ -30,6 +41,9 @@ import { HomeComponent } from './home/home.component';
     MasterLayoutComponent,
     UserupdateComponent,
     HomeComponent,
+    EditUserComponent,
+    ViewUserComponent,
+    SidenavComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +57,21 @@ import { HomeComponent } from './home/home.component';
     MatTableModule,
     HttpClientModule,
     MatTabsModule,
-    ReactiveFormsModule, // Use either FormsModule or ReactiveFormsModule, depending on the type of forms you are using
+    ReactiveFormsModule,
+    MatSelectModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+    MatPaginatorModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatButtonModule
+    
+    // MatButtonModule, MatMenuModule, MatIconModule
+
   ],
   providers: [authGuard],
   bootstrap: [AppComponent]

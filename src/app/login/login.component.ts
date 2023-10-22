@@ -10,6 +10,7 @@ import { AuthService } from '../services/auth.service'; // Import your AuthServi
 })
 export class LoginComponent {
   loginForm: FormGroup;
+  
 
   constructor(private router: Router, private authService: AuthService, private formBuilder: FormBuilder) {
     this.loginForm = this.formBuilder.group({
@@ -23,6 +24,8 @@ export class LoginComponent {
       const { username, password } = this.loginForm.value;
        console.log(`the user userna ${username} and password ${password}`)
       if (this.authService.login(username, password)) { 
+         
+        this.authService.setCurrentUser(username)
         this.router.navigate(['/home']);
       } else {
         
