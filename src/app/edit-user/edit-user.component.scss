@@ -7,9 +7,9 @@
     width: 80rem;
     margin: 0 auto;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 0.1px solid black;
+    // border-radius: 5px;
+    // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-top: 3rem;
   }
    
@@ -229,5 +229,55 @@ table {
 .mat-tab-body-content {
   padding: 20px;
 }
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 400px;
+  font-family: sans-serif;
+}
+
+.tabs__label {
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.tabs__radio {
+  display: none;
+}
+
+.tabs__content {
+  order: 1;
+  width: 100%;
+  border-bottom: 3px solid #dddddd;
+  line-height: 1.5;
+  font-size: 0.9em;
+  display: none;
+}
+
+.tabs__radio:checked + .tabs__label {
+  font-weight: bold;
+  color: #009578;
+  border-bottom: 2px solid #009578;
+}
+
+.tabs__radio:checked + .tabs__label + .tabs__content {
+  display: initial;
+}
+
+/* Remove shadow and make styling important for the form */
+form[formGroup="userForm"] {
+  box-shadow: none !important;
+  /* Add other styling as needed */
+}
+
+/* Custom styling for the tabs */
+.tabs__radio:checked + .tabs__label {
+  background-color: #2F3351 !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+/* Other custom styling for the tabs as needed */
 
   

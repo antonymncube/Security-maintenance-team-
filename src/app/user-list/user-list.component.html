@@ -1,6 +1,9 @@
  
   <h2 class="welcome">Welcome {{currentuser}}</h2>
 
+
+   
+
 <div class="container p-0">
   <div class="tabs">
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
@@ -61,7 +64,9 @@
       <!-- Place the mat-paginator here, inside the component's template -->
       <mat-paginator class="p-0 m-0" [pageSizeOptions]="[5, 10, 50]" showFirstLastButtons="false"></mat-paginator>
     </div>
+     
     </div>
+    <button class="btn-add" routerLink="/home/updateuser">+ Add-User</button>
     <!-- <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
     <label for="tab2" class="tabs__label">Tab #2</label>
     <div class="tabs__content">
