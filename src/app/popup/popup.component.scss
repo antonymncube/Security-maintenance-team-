@@ -1,0 +1,33 @@
+/* Custom styles for the modal */
+.modal {
+    position: fixed; /* Set the modal to a fixed position */
+    top: 0; /* Align to the top of the viewport */
+    left: 0; /* Align to the left of the viewport */
+    margin: 0; /* Reset margins to zero */
+  }
+  
+  /* Custom styles for the modal content */
+  .modal-content {
+    /* Add your custom styles for the modal content */
+    /* For example, set the width, padding, and background color */
+    // position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.4);
+  display: flex;
+  justify-content:flex-end;
+  align-items:flex-end;
+    width: 200px;
+    padding: 10px;
+    background-color: white;
+   margin-top: 20px;
+    /* Add other styles as needed */
+  }
+  
+  .custom-popup {
+    /* Add your custom styles here */
+    // position: absolute; /* Position the card absolutely */
+    top: 20px; /* Adjust the top position as needed */
+    left: 20px; /* Adjust the left position as needed */
+    /* Add other custom styles for the card appearance */
+}

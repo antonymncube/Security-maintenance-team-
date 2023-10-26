@@ -23,10 +23,12 @@ import { HomeComponent } from './home/home.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { MatSelectModule } from '@angular/material/select';
-import {MatMenuModule} from '@angular/material/menu';
+import {MatMenuModule, MatMenuTrigger} from '@angular/material/menu';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatPrefix } from '@angular/material/form-field';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { MatDialogModule } from '@angular/material/dialog';
+ 
  
 
  
@@ -44,6 +46,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     EditUserComponent,
     ViewUserComponent,
     SidenavComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -68,7 +71,9 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,
+ 
     
     // MatButtonModule, MatMenuModule, MatIconModule
 

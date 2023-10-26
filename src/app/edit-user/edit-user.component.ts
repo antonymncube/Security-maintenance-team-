@@ -24,11 +24,11 @@ export class EditUserComponent implements OnInit {
       fullname: ['', Validators.required],
       description: [''],
       password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmpassword: ['', [Validators.required, Validators.minLength(6)]],
       department: [''],
       email: ['', [Validators.required, Validators.email]],
       homephone: [''],
       mobile: [''],
+      agent :  ['',[Validators.required]],
     });
   }
 
@@ -43,11 +43,18 @@ export class EditUserComponent implements OnInit {
     });
   }
 
+  isControlInvalid(controlName: string) {
+    const control = this.userForm.get(controlName);
+  
+    return control?.invalid && control?.touched;
+  }
+   
+
   onSubmit() {
     if (this.userForm.valid) {
       this.apiService.updateUser(this.id, this.userForm.value).subscribe((response: any) => {
         this.userForm.reset();
-        this.router.navigate(['/home/userlist']);
+        this.router.navigate(['/home']);
         console.log('User data updated:', response);
       });
     }

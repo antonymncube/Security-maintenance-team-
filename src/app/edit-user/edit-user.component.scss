@@ -200,16 +200,16 @@ table {
   border-radius: 3px;
 }
 
-/* Style the tab group */
+ 
 .mat-tab-group {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin: 20px 0;
-  box-shadow: none; /* Remove the shadow */
+  box-shadow: none;  
   overflow: hidden;
 }
 
-/* Style the tabs */
+ 
 .mat-tab-label {
   background-color: #007bff;
   color: #fff;
@@ -219,14 +219,13 @@ table {
   margin-right: 1px;
 }
 
-/* Style the active tab */
+ 
 .mat-tab-label.mat-tab-label-active {
   background-color: #fff;
   color: #007bff;
   font-weight: bold;
 }
-
-/* Style the tab content */
+ 
 .mat-tab-body-content {
   padding: 20px;
 }

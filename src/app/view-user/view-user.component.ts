@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiServiceService } from '../services/api-service.service';
 
 @Component({
@@ -15,7 +15,8 @@ export class ViewUserComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private apiService: ApiServiceService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router :Router
   ) {
     this.userForm = this.formBuilder.group({
       id: [''],
@@ -28,6 +29,10 @@ export class ViewUserComponent implements OnInit {
       homephone: [{ value: '', disabled: true }],
       mobile: [{ value: '', disabled: true }]
     });
+  }
+
+  navigatehome(){
+    this.router.navigate(['./home'])
   }
 
   ngOnInit() {

@@ -55,7 +55,7 @@ router-outlet {
     background-color: white;
     margin-top: 1px;
     margin-left: 70px;
-    padding: 4px;
+    padding: 1px;
 }
 
 .searchfield {
@@ -80,9 +80,10 @@ router-outlet {
     border: none;
 }
 
-.User{
-    margin-left: 60rem ;
+.user{
+    margin-left: 949px;
     font-size: 3em;
+    // margin-bottom: 5px;
 }
 
 .User:hover{
@@ -116,5 +117,18 @@ router-outlet {
   z-index: 9999;  
   margin-top: 20px;
    }
+
+   .popup-container {
+    position: relative; /* The container is the reference for the popup positioning */
+}
+
+.custom-popup {
+    position: absolute; /* Position the card absolutely */
+    top: 40px; /* Adjust the top position as needed */
+    left: 0; /* Adjust the left position as needed */
+    /* Add other custom styles for the card appearance */
+}
+
+   
   
   

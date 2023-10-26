@@ -15,6 +15,12 @@ export class NavBarComponent {
   private breakpointObserver = inject(BreakpointObserver);
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
 
+  @ViewChild('drawer') drawer!: MatSidenav;
+
+  toggle() {
+    this.drawer.toggle();
+  }
+
 
   // this.sidenav.open();
   isSidenavOpen!: boolean;

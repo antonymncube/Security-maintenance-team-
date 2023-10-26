@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ApiServiceService } from './api-service.service';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class AuthService {
   private users: any[] = [];
   currentuser : string= ''
 
-  constructor(private apiservice: ApiServiceService) {}
+  constructor(private apiservice: ApiServiceService,private router : Router) {}
 
   login(username: string, password: string): boolean {
  
@@ -29,6 +30,7 @@ export class AuthService {
 
   logout(): void {
     this.isAuthenticated = false;
+    this.router.navigate(['/login']); // Navigate to the login page's route
   }
 
   isAuthenticatedUser(): boolean {

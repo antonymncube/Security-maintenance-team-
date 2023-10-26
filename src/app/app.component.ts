@@ -8,6 +8,6 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class AppComponent {
   title = 'SecurityMaintenence';
-  @ViewChild(MatSidenav) sidenav!: MatSidenav;
+ 
 
 }

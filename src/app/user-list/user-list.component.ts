@@ -46,4 +46,6 @@ export class UserListComponent implements OnInit {
       this.router.navigate(['/home/viewuser', element.id]);
     }
   }
+
+
 }

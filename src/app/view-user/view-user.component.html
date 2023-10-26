@@ -118,7 +118,7 @@
           </div>
         </div>
       </div>
-      <button type="submit" [disabled]="userForm.invalid">Save</button>
+      <button type="submit" [disabled]="userForm.invalid" (click)="navigatehome()">Done</button>
     </mat-tab>
     <mat-tab label="Contact-details">
       <!-- You can add contact details form fields here if needed -->

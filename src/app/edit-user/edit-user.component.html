@@ -30,11 +30,15 @@
               <input type="password" id="password" formControlName="password">
             </div>
           </div>
-
           <div class="form-group">
-            <label for="confirmpassword" class="label-width">Confirm Password:</label>
-            <div class="inputtag">
-              <input type="password" id="confirmpassword" formControlName="confirmpassword">
+            <label for="agent" class="label-width">Agent:</label>
+            <select id="agent" class="check" formControlName="agent">
+              <option value="Simply Health">Simply Health</option>
+              <option value="Genasys">Genasys</option>
+              <option value="Standard Bank">Standard Bank</option>
+            </select>
+            <div *ngIf="isControlInvalid('agent')" class="invalid-feedback">
+              Agent is required.
             </div>
           </div>
 

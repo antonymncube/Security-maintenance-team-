@@ -1,8 +1,7 @@
-
-<!-- <h2 class="Securityheading">Security Maintenance</h2>  -->
-<mat-toolbar color="accent">
+ 
+<!-- <mat-toolbar color="accent">
   <h1></h1>
-</mat-toolbar>
+</mat-toolbar> -->
 <mat-sidenav-container class="sidenav-container">
  
  <mat-sidenav #drawer class="sidenav" fixedInViewport
@@ -11,6 +10,9 @@
      [opened]="(isHandset$ | async) === false">
    
    <mat-nav-list class="navbar">
+    <button mat-icon-button>
+      <mat-icon (click)="toggle()">menu</mat-icon>
+  </button>
      
      <img class="logo-img" src="assets\images\Genasys - White (CMYK).jpg">
      <div class="redline"></div>
@@ -31,25 +33,5 @@
    </mat-nav-list>
    
  </mat-sidenav>
- <!-- <mat-sidenav-content class="">
-   <div class="securityIcon">
-     <img class="key-img" src="assets\images\key-solid.svg">
-     <h2 class="Securityheading">Security Maintenence</h2>
-   </div>
-  
-   <mat-toolbar class="search">
-     <button
-       type="button"
-       aria-label="Toggle sidenav"
-       mat-icon-button
-       (click)="drawer.toggle()"
-       *ngIf="isHandset$ | async">
-       <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-     </button>
-     <span><i class="fa fa-2x fa-search" aria-hidden="true"></i></span>
-     <input type="text" class="searchfield" style="border: opx;" placeholder="Search by username...." />
-     
-   </mat-toolbar> 
-    
- </mat-sidenav-content> -->
+ 
 </mat-sidenav-container>
