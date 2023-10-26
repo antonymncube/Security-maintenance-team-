@@ -7,7 +7,13 @@
 <div class="container p-0">
   <div class="tabs">
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
-    <label for="tab1" class="tabs__label"></label>
+      <label for="tab1" class="tabs__label" ><strong style="font-size: 20px; margin-left: -14px;" >Users<i class="fa fa-1x fa-user usericon "><select id="agent" class="check" formControlName="agent">
+        <option value="" disabled selected>Filter By</option>
+        <option value="Simply Health">Simply Health</option>
+        <option value="Genasys">Genasys</option>
+        <option value="Standard Bank">Standard Bank</option>
+      </select></i></strong></label>
+      
     <div class="tabs__content">
       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
         <ng-container matColumnDef="name">
@@ -61,11 +67,13 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
       </table>
 
-      <!-- Place the mat-paginator here, inside the component's template -->
-      <mat-paginator class="p-0 m-0" [pageSizeOptions]="[5, 10, 50]" showFirstLastButtons="false"></mat-paginator>
+      
     </div>
+    <!-- Place the mat-paginator here, inside the component's template -->
+    
      
     </div>
+    <mat-paginator class="p-0 m-0" [pageSizeOptions]="[5, 10, 50]" showFirstLastButtons="false"></mat-paginator>
     <button class="btn-add" routerLink="/home/updateuser">+ Add-User</button>
     <!-- <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
     <label for="tab2" class="tabs__label">Tab #2</label>

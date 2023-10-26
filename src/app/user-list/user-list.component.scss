@@ -85,9 +85,11 @@
 .table {
   width: auto;
   border-collapse: collapse;
-  background-color: #fff;
+  background-color: white;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: solid 1px black;
+  padding: 2px;
 }
 
 /* Style the table header */
@@ -95,13 +97,13 @@ th {
   background-color: #f2f2f2;
   text-align: left;
   padding: 2px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid black;
 }
 
 /* Style the table rows */
 td {
   padding: 5px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid black;
 }
 
 /* Style the Actions column */
@@ -169,12 +171,30 @@ td {
   flex-wrap: wrap;
   max-width: 100%;
   font-family: sans-serif;
-  padding: 5px;
+  padding: 1px;
+  // border: solid 1px black;
+ border-bottom: none;
+ border-radius: 5px;
 }
 
 .tabs__label {
-  padding: 10px 16px;
+  // padding: 5px 11px;
   cursor: pointer;
+  border:solid black 1px;
+  width: 235px;
+  height: 40px;
+  padding-left: 20px;
+  padding-top: 10px;
+  border-radius: 3px;
+  
+}
+
+.check{
+  width: 94px;
+  height: 20px;
+  margin-left: 10px;
+  margin-bottom: 4px;
+  border-radius:  3px;
 }
 
 .tabs__radio {
@@ -188,6 +208,12 @@ td {
   line-height: 1.5;
   font-size: 0.9em;
   display: none;
+  padding: 0px;
+}
+
+.usericon{
+  margin-left: 19px;
+  transform: scale(1.2);
 }
 
 // .tabs__radio:checked + .tabs__label {
@@ -199,6 +225,12 @@ td {
 .tabs__radio:checked + .tabs__label + .tabs__content {
   display: initial;
 }
+
+ 
+
+// .container{
+//   border: solid 3px black;
+// }
 
 .tab2{
   display:none;

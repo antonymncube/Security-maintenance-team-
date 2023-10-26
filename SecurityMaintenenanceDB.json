@@ -94,21 +94,32 @@
     {
       "id": 8,
       "username": "sive",
-      "fullname": "anotny",
+      "fullname": "khaya",
       "description": "we are bacl",
-      "location": "",
-      "agent": "Standard Bank",
       "password": "Ant073727@",
+      "department": "HR",
       "email": "219148414@edu.vut.ac.za",
       "homephone": "0671402936",
       "mobile": "84684351210",
-      "department": "HR"
+      "agent": "Standard Bank"
     },
     {
       "id": 9,
       "username": "mitch",
       "fullname": "Gordons",
       "description": "Äntony  mess",
+      "password": "Ant073727@",
+      "department": "HR",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "84684351210",
+      "agent": "Genasys"
+    },
+    {
+      "id": 10,
+      "username": " Emihle",
+      "fullname": "Jack/ntshongwana",
+      "description": " Married",
       "password": "Ant073727@",
       "department": "HR",
       "email": "219148414@edu.vut.ac.za",
