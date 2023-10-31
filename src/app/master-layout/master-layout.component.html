@@ -21,7 +21,8 @@
                     <button mat-icon-button>
                         <mat-icon>menu</mat-icon>
                     </button>
-                    <input type="text" class="searchfield" placeholder="Search by username...." />
+                    <!-- <input type="text" class="searchfield" placeholder="Search by username...." /> -->
+                    <input type="text" class="searchfield" placeholder="Search by username...." (input)="searchUsers($event)" />
                     <span class="pt-2"><i class="fa fa-2x fa-search search icone" aria-hidden="true"></i></span>
                     <i class="fa fa-user-circle User user" aria-hidden="true" mat-button [matMenuTriggerFor]="menu" #menuTriggers >
                      

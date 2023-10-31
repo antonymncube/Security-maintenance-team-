@@ -27,6 +27,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field'; // Import MatFormFieldModule for MatPrefix
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModifyAccesCodesComponent } from './modify-acces-codes/modify-acces-codes.component';
+import { AccessGroupComponent } from './access-group/access-group.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ModifyAccesCodesComponent } from './modify-acces-codes/modify-acces-cod
     HomeComponent,
     EditUserComponent,
     ViewUserComponent,
-    ModifyAccesCodesComponent, // Include ModifyAccesCodesComponent
+    ModifyAccesCodesComponent,
+    AccessGroupComponent, // Include ModifyAccesCodesComponent
   ],
   imports: [
     BrowserModule,

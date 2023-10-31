@@ -5,6 +5,8 @@ import { MatMenuTrigger, MatMenuModule } from '@angular/material/menu';
  
 import { MatButtonModule } from '@angular/material/button';
 import { AuthService } from '../services/auth.service';
+//import shared data service
+import { SharedDataService } from '../services/shared-data.service';
 
 @Component({
   selector: 'app-master-layout',
@@ -15,7 +17,7 @@ export class MasterLayoutComponent {
   @ViewChild('menuTrigger') menuTrigger!: MatMenuTrigger;
   @ViewChild(NavBarComponent) navBarComponent: NavBarComponent | undefined;
 
-  constructor(private dialog: MatDialog,private autservice:AuthService) {}
+  constructor(private dialog: MatDialog,private autservice:AuthService, private SharedDataService:  SharedDataService) {}
 
   openDialog() {
     const dialogRef = this.dialog.open(MasterLayoutComponent, { restoreFocus: false });
@@ -27,4 +29,9 @@ export class MasterLayoutComponent {
  logout(){
   this.autservice.logout()
  }
+
+ searchUsers(event: Event) {
+  const filterText = (event.target as HTMLInputElement).value;
+  this.SharedDataService.updateFilterText(filterText);
+}
 }

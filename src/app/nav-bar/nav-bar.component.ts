@@ -61,4 +61,8 @@ export class NavBarComponent {
       map(result => result.matches),
       shareReplay()
     );
+
+    refreshPage() {
+      location.reload();
+    }
 }

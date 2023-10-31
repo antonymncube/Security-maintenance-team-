@@ -206,18 +206,6 @@
       "department": "IT"
     },
     {
-      "id": 6,
-      "username": "Antony",
-      "fullname": "AntonyMncube",
-      "description": "accout",
-      "password": "Ant073727@",
-      "department": "IT",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0671402936",
-      "mobile": "06718029636",
-      "agent": "Standard Bank"
-    },
-    {
       "id": 7,
       "username": "xolaniiii",
       "fullname": "Antony",
@@ -267,19 +255,6 @@
       "agent": "Genasys"
     },
     {
-      "id": 11,
-      "username": " Siphokazi",
-      "fullname": "Antony",
-      "description": "tester",
-      "location": "",
-      "agent": "Genasys",
-      "password": "Ant073727@",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0671402936",
-      "mobile": "06718029636",
-      "department": "Sales"
-    },
-    {
       "id": 12,
       "username": " mohlale",
       "fullname": "Antony",
@@ -289,19 +264,6 @@
       "password": "Ant073727@",
       "email": "antonymncube49@gmail.com",
       "homephone": "0671402936",
-      "mobile": "84684351210",
-      "department": "Sales"
-    },
-    {
-      "id": 13,
-      "username": " boyzin",
-      "fullname": "Antony",
-      "description": "yes",
-      "location": "",
-      "agent": "Standard Bank",
-      "password": "Ant073727@",
-      "email": "nseptember591@gmail.com",
-      "homephone": "0021544005500",
       "mobile": "84684351210",
       "department": "Sales"
     },

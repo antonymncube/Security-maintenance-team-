@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { AuthService } from '../services/auth.service';
+import { SharedDataService } from '../services/shared-data.service';
+
 
 export interface PeriodicElement {
   position: number;
@@ -26,7 +28,8 @@ export class UserListComponent implements OnInit {
   paginator!: MatPaginator;
   currentuser: string = '';
 
-  constructor(private apiService: ApiServiceService, private router: Router, private autservice: AuthService) { }
+  constructor(private apiService: ApiServiceService, private router: Router, private autservice: AuthService,
+    private SharedDataService:  SharedDataService) { }
 
   ngOnInit() {
     this.apiService.getData().subscribe((data: PeriodicElement[]) => {
@@ -36,6 +39,11 @@ export class UserListComponent implements OnInit {
 
       const storedUser = sessionStorage.getItem('currentuser');
       this.currentuser = storedUser !== null ? storedUser : '';
+
+      this.SharedDataService.filterText$.subscribe((filterText) => {
+
+        this.dataSource.filter = filterText;
+      });
     });
   }
 
@@ -47,5 +55,10 @@ export class UserListComponent implements OnInit {
     }
   }
 
-
-}
+  onDeleteUser(userId: string): void {
+    if (confirm('Are you sure you want to delete this user?')) {
+      this.apiService.deleteUser(userId).subscribe(() => {
+       
+          location.reload();
+        });
+      }}}

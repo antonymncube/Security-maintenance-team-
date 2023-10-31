@@ -59,6 +59,13 @@ export class ApiServiceService {
       map(secCodes => secCodes.length > 0)
     );
   }
+
+  deleteUser(userId: string): Observable<any> {
+    const url = `http://localhost:3000/Users/${userId}`;
+    return this.http.delete(url).pipe(
+      map((res: any) => res)
+    );
+  }
   
 }
 
