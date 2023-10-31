@@ -1,71 +1,18 @@
-// .container {
-//   padding: 20px;
-//   background-color: #f5f5f5;
-//   border: 1px solid #ccc;
-//   border-radius: 5px;
-//   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-//   max-width: 800px;
-//   margin: 0 auto;
-// }
-
-// .common-form {
-//   width: 100%;
-// }
-
-// .form2 {
-//   background-color: #fff;
-//   border: 1px solid #ddd;
-//   border-radius: 5px;
-//   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-//   padding: 20px;
-//   max-height: 400px; /* Set a maximum height for content */
-//   overflow-y: auto; /* Allow vertical scrolling if content overflows */
-// }
-
-// .label-width {
-//   width: 25%;
-//   text-align: right;
-//   margin-right: 10px;
-//   font-weight: bold;
-// }
-
-// .info-display {
-//   display: inline-block;
-//   width: 70%;
-//   padding: 10px;
-//   border: 1px solid #ccc;
-//   border-radius: 3px;
-// }
-
-// .row {
-//   display: flex;
-// }
-
-// .col-12 {
-//   flex: 0 0 70%;
-// }
-
-// .col-4 {
-//   flex: 0 0 30%;
-// }
-
-// strong {
-//   font-weight: bold;
-// }
-
- /* Style the mat-tab-group */
+ 
  .mat-tab-group {
   margin-bottom: 48px;
 }
  
 form {
-  width: 80rem;
+  width: 100%;
   margin: 0 auto;
-  padding: 10px;
+  padding: 1px;
+  // margin-right: 4px;
   // border: 1px solid #ccc;
   // border-radius: 5px;
   // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-top: 3rem;
+  margin-top: 0rem;
+  background-color: white;
 }
  
 label {
@@ -89,56 +36,6 @@ textarea {
   border: none;
   background-color: white;
 }
-
-// input[type="text"],
-// input[type="password"],
-// input[type="email"],
-// input[type="tel"],
-// input[type="description"],
-// textarea {
-//   border: none;
-// }
-
-
- 
-//   button {
-//     padding: 10px 20px;
-//     background-color: #007bff;
-//     color: #fff;
-//     border: none;
-//     border-radius: 3px;
-//     cursor: pointer;
-//     margin-left: 72rem;
-//   }
- 
-//   button:disabled {
-//     background-color: #ccc;
-//     cursor:pointer;
-//   }
-
-//   button {
-//     color: black;
-//   }
-
-/* Uncomment and update button styling */
-button {
-  padding: 2px 20px;
-  background-color:#2F3351; /* Dark background color */
-  color: white;/* White text color */
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  // margin-right: 10rem;
-  margin-left: 72rem; 
-  height: 30px;
-  // margin-top: 10px;
-   
-}
-
-// button:disabled {
-//   background-color:red;
-//   cursor: not-allowed;
-// }
 
 h1{
   color: white;
@@ -178,6 +75,7 @@ table {
 .mat-elevation-z8 {
   margin-top: 100px;
   margin-left: 8px;
+
 }
 
 .Agent {
@@ -201,9 +99,9 @@ table {
 }
 
 
-.btn-add{
-  margin-left: 60px;
-}
+// .submit{
+//   margin-left: 100px;
+// }
 
 
 
@@ -250,7 +148,22 @@ margin-right: 15rem;
  
 }
 
+.view-container {
+  // background-color: white;
+  // padding: 3px;
+  margin-right: 50px;
+  margin-top: 20px;
+  // background-color: #6c757d;
+  
+ 
+}
 
+.username {
+  padding: 10px;
+  margin-top: 5px;
+  font-weight: 100;
+  font-size: 25px;
+}
 
 .input-width {
 width: 30%; 
@@ -258,7 +171,8 @@ width: 30%;
 
 .inputtag{
 width: 14rem;
-background-color: grey;
+margin-top: 5px;
+// background-color: gr;
 }
 
 .description{
@@ -297,7 +211,7 @@ font-weight: bold;
 
 /* Style the tab content */
 .mat-tab-body-content {
-padding: 20px;
+padding: 1px;
 }
 
 
@@ -329,7 +243,40 @@ box-shadow: none !important;
   border-radius: 0; /* Remove the border radius */
 }
 
+.mat-elevation-z0{
+  border: solid 1px #c3bebe;
+  // margin-left: 8px;
+  // padding: 50px;
+  // background-color: black;
+}
+
+#hover:hover{
+  color: black;
+}
+
+.white{
+   padding-top: 5px;
+   padding-bottom: 10px;
+  background-color: white;
+  width:100%;
+  margin-top: 10px;
+  
+}
 
 
 
-
+.submit {
+  margin-left: 75rem;
+  background-color: #2F3351; /* Greyish background color */
+  color: white; /* White text color */
+  // border: 1px solid #808080; /* Matching greyish border */
+  // padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 3px; /* Add rounded corners */
+  // text-transform: uppercase; /* Convert text to uppercase */
+  // font-weight: bold; /* Bold text */
+  cursor: pointer; /* Change cursor on hover */
+  /* Add more styles as needed */
+  width:55px;
+   margin-bottom: 4px;
+   
+}

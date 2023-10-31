@@ -13,8 +13,11 @@ import { Router } from '@angular/router';
 export class UserupdateComponent {
   userForm: FormGroup;
   user: UserFormData = new UserFormData();
+  SecLookup : any = '';
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiServiceService,private router :Router ) {
+      
+
     this.userForm = this.formBuilder.group({
       username: ['', [Validators.required]],
       fullname: ['', [Validators.required]],
@@ -32,7 +35,8 @@ export class UserupdateComponent {
   // Function to check if a control is invalid and should display as red
   isControlInvalid(controlName: string) {
     const control = this.userForm.get(controlName);
-    console.log('back is hot')
+    // console.log('back is hot')
+  
     return control?.invalid && control?.touched;
   }
    
@@ -57,8 +61,25 @@ checkPasswordMatch(): boolean {
   return true;
 }
 
+ngOnInit() {
+  this.getAccesslookup();
+}
+
+getAccesslookup() {
+  this.apiService.getSecLookup().subscribe((SecLookup: any) => {
+    this.SecLookup = SecLookup; // Assign the entire response to SecLookup
+    console.log('API Response:', SecLookup);
+    console.log('Security Access:', SecLookup[0].sAccessCode, 'Security Description', SecLookup[0].SAccessDescription);
+    console.log("Lets see now");
+  });
+}
+
+ 
+
+
 
 onSubmit() {
+  this.getAccesslookup();
   if (this.userForm.valid) {
     if (this.checkPasswordMatch()) {
       // Password and Confirm Password match
@@ -79,8 +100,7 @@ onSubmit() {
           this.user.agent = this.userForm.value.agent
 
           console.log(this.user);
-
-          // Set other form values to the 'user' object
+ 
           this.apiService.postdata(this.user).subscribe((postResponse: any) => {
             console.log('Data posted successfully:', postResponse);
             this.router.navigate(['/home']);

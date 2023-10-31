@@ -13,8 +13,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
-// import { FormsModule } from '@angular/forms';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { ReactiveFormsModule } from '@angular/forms';  
 import { MasterLayoutComponent } from './master-layout/master-layout.component';
 import { UserupdateComponent } from './userupdate/userupdate.component';
@@ -23,16 +22,11 @@ import { HomeComponent } from './home/home.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { MatSelectModule } from '@angular/material/select';
-import {MatMenuModule, MatMenuTrigger} from '@angular/material/menu';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
-import { MatPrefix } from '@angular/material/form-field';
-import { SidenavComponent } from './sidenav/sidenav.component';
+import { MatMenuModule } from '@angular/material/menu'; // Import MatMenuModule directly
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatFormFieldModule } from '@angular/material/form-field'; // Import MatFormFieldModule for MatPrefix
 import { MatDialogModule } from '@angular/material/dialog';
- 
- 
-
- 
-
+import { ModifyAccesCodesComponent } from './modify-acces-codes/modify-acces-codes.component';
 
 @NgModule({
   declarations: [
@@ -45,8 +39,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     HomeComponent,
     EditUserComponent,
     ViewUserComponent,
-    SidenavComponent,
-   
+    ModifyAccesCodesComponent, // Include ModifyAccesCodesComponent
   ],
   imports: [
     BrowserModule,
@@ -62,23 +55,12 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatTabsModule,
     ReactiveFormsModule,
     MatSelectModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
+    MatMenuModule, // Add MatMenuModule to imports
     MatPaginatorModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatButtonModule,
+    MatFormFieldModule, // Add MatFormFieldModule to imports for MatPrefix
     MatDialogModule,
- 
-    
-    // MatButtonModule, MatMenuModule, MatIconModule
-
   ],
   providers: [authGuard],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

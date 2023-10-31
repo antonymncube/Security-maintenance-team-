@@ -11,6 +11,8 @@ import { ApiServiceService } from '../services/api-service.service';
 export class ViewUserComponent implements OnInit {
   id: string = '';
   userForm: FormGroup;
+  currentuser : string = ''
+  fullname : string ='';
 
   constructor(
     private formBuilder: FormBuilder,
@@ -36,11 +38,14 @@ export class ViewUserComponent implements OnInit {
   }
 
   ngOnInit() {
+    const storedUser = sessionStorage.getItem('currentuser');
+    this.currentuser = storedUser !== null ? storedUser : ''
     this.route.params.subscribe((params: { [x: string]: string }) => {
       this.id = params['id'];
       console.log(this.id);
 
       this.apiService.getUserDetails(this.id).subscribe((userDetails: any) => {
+        this.fullname = userDetails.fullname
         this.userForm.patchValue(userDetails);
       });
     });

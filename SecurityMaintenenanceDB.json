@@ -1,16 +1,155 @@
 {
-  "posts": [
+  "SecLookupCodes": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "sAccessCode": "ACCEPTBBWARN",
+      "SAccessDescription": "Accept policy quote results"
+    },
+    {
+      "sAccessCode": "ADDR_OVERRIDE",
+      "SAccessDescription": "Allow Address Override"
+    },
+    {
+      "sAccessCode": "AGENT_COMM_PAY",
+      "SAccessDescription": "Allow user to execute the Commission Pay Over Maintenance app"
+    },
+    {
+      "sAccessCode": "AGENT_MAINT",
+      "SAccessDescription": "Agent maintenance"
+    },
+    {
+      "sAccessCode": "AGG_BATCH_REV",
+      "SAccessDescription": "View the batch claim aggregate review screen"
+    },
+    {
+      "sAccessCode": "API_CLAIM_DU",
+      "SAccessDescription": "Allow user to upload Claim documents using API"
+    },
+    {
+      "sAccessCode": "API_DOC_BLOCK",
+      "SAccessDescription": "Prevent access to all documents through API"
+    },
+    {
+      "sAccessCode": "API_DOC_CONF",
+      "SAccessDescription": "Allow access to documents with Confidential confidentiality through API"
+    },
+    {
+      "sAccessCode": "API_DOC_PERS",
+      "SAccessDescription": "Allow access to documents with Personal confidentiality through API"
+    },
+    {
+      "sAccessCode": "fgebe",
+      "SAccessDescription": "fgefg",
+      "id": "1bc69f64-5b51-4c54-bea1-df34e1fd8c80"
+    },
+    {
+      "sAccessCode": "fgebe",
+      "SAccessDescription": "fgefg",
+      "id": "a17d3ecb-677b-47c1-9197-f06a00540495"
+    },
+    {
+      "sAccessCode": "API_DOC_ANTONY",
+      "SAccessDescription": " Married",
+      "id": "0c5b51fb-b008-4a0b-83db-5f8a140584d6"
+    },
+    {
+      "sAccessCode": "API_DOC_ANTONV",
+      "SAccessDescription": " Married",
+      "id": "07aa4c84-1b3d-40ab-81c7-c3c12a7773fa"
+    },
+    {
+      "sAccessCode": "WESFSD",
+      "SAccessDescription": "sdfdd",
+      "id": "cc0f25b0-97d1-49fe-9ff0-228a19dbd9cf"
+    },
+    {
+      "sAccessCode": "MAC",
+      "SAccessDescription": "jhbk",
+      "id": "94fbfdcd-2794-4171-a862-1096edf84b0f"
+    },
+    {
+      "sAccessCode": "ASDAS",
+      "SAccessDescription": "sadsd",
+      "id": "efba7f54-faf8-4657-a1b5-553ccc0925d2"
+    },
+    {
+      "sAccessCode": "ACCEPTBBWARN",
+      "SAccessDescription": "adsd",
+      "id": "b662ce38-4082-4694-8ac8-d7fa494aaa78"
+    },
+    {
+      "sAccessCode": "ADDR_OVERRIDE",
+      "SAccessDescription": "tester",
+      "id": "5e73b020-9055-44a2-9034-bc1ee2f5530d"
+    },
+    {
+      "sAccessCode": "ACCEPTBBWARN",
+      "SAccessDescription": "sdfdf",
+      "id": "5dc8d14d-44c4-4e99-a291-25405b0311b9"
+    },
+    {
+      "sAccessCode": "DFKOSANGNG",
+      "SAccessDescription": "tester",
+      "id": "6989ba56-420a-4719-bbaf-44e143d3108a"
+    },
+    {
+      "sAccessCode": "BACK",
+      "SAccessDescription": "Äntony  mess",
+      "id": "277d86fe-f992-4597-b616-c2c62de144b7"
     }
   ],
-  "comments": [
+  "SecAccessGroups": [
+    {
+      "sAccessCodes": [
+        "AGENT_COMM_PAY",
+        "BORDEREAUX",
+        "CASHB_REVERSE",
+        "CL_BCLMPAYMENTS",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_PAYSEC_LEV3",
+        "CL_REOPEN"
+      ],
+      "sAccessGroup": "SH-FINANCE"
+    },
+    {
+      "sAccessCodes": [
+        "AGENT_COMM_PAY",
+        "CL_UNDSUP",
+        "CNG_TARIFFVER",
+        "CO1_ACT_POL",
+        "CO1_ADD_POL",
+        "CO1_ADD_RISK",
+        "CO1_ADVS_CUST",
+        "CO1_CHANGEADMIN"
+      ],
+      "sAccessGroup": "SH-PRODUCT"
+    },
+    {
+      "sAccessCodes": [
+        "ACCEPTBBWARN",
+        "AGENT_COMM_PAY",
+        "AGG_BATCH_REV",
+        "CL_UNDMAN",
+        "CL_UNDSUP",
+        "CLAIM_MAINT"
+      ],
+      "sAccessGroup": "SH-UNDERWRITER"
+    }
+  ],
+  "SecUserAccess": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "sAccessCodes": [
+        "API_DOC_PERS",
+        "API_DOC_CONF"
+      ]
+    },
+    {
+      "id": 2,
+      "sAccessCodes": [
+        "API_CUST_DU",
+        "AGENT_COMM_PAY"
+      ]
     }
   ],
   "profile": {
@@ -117,7 +256,7 @@
     },
     {
       "id": 10,
-      "username": " Emihle",
+      "username": " Hle",
       "fullname": "Jack/ntshongwana",
       "description": " Married",
       "password": "Ant073727@",
@@ -126,6 +265,71 @@
       "homephone": "0671402936",
       "mobile": "84684351210",
       "agent": "Genasys"
+    },
+    {
+      "id": 11,
+      "username": " Siphokazi",
+      "fullname": "Antony",
+      "description": "tester",
+      "location": "",
+      "agent": "Genasys",
+      "password": "Ant073727@",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "06718029636",
+      "department": "Sales"
+    },
+    {
+      "id": 12,
+      "username": " mohlale",
+      "fullname": "Antony",
+      "description": " Married",
+      "location": "",
+      "agent": "Standard Bank",
+      "password": "Ant073727@",
+      "email": "antonymncube49@gmail.com",
+      "homephone": "0671402936",
+      "mobile": "84684351210",
+      "department": "Sales"
+    },
+    {
+      "id": 13,
+      "username": " boyzin",
+      "fullname": "Antony",
+      "description": "yes",
+      "location": "",
+      "agent": "Standard Bank",
+      "password": "Ant073727@",
+      "email": "nseptember591@gmail.com",
+      "homephone": "0021544005500",
+      "mobile": "84684351210",
+      "department": "Sales"
+    },
+    {
+      "id": 14,
+      "username": "lion",
+      "fullname": "Antony",
+      "description": " Married",
+      "location": "",
+      "agent": "Simply Health",
+      "password": "Ant073727@",
+      "email": "nseptember591@gmail.com",
+      "homephone": "0671402936",
+      "mobile": "84684351210",
+      "department": "IT"
+    },
+    {
+      "id": 15,
+      "username": " sillas w",
+      "fullname": "Antony",
+      "description": " Married",
+      "location": "",
+      "agent": "Simply Health",
+      "password": "Ant073727@",
+      "email": "antonymncube@gmail.com",
+      "homephone": " 0671402936",
+      "mobile": "84684351210",
+      "department": "HR"
     }
   ]
 }

@@ -1,37 +1,30 @@
- 
-<!-- <mat-toolbar color="accent">
-  <h1></h1>
-</mat-toolbar> -->
 <mat-sidenav-container class="sidenav-container">
- 
- <mat-sidenav #drawer class="sidenav" fixedInViewport
-     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-     [mode]="(isHandset$ | async) ? 'over' : 'side'"
-     [opened]="(isHandset$ | async) === false">
-   
-   <mat-nav-list class="navbar">
-    <!-- <button mat-icon-button>
-      <mat-icon (click)="toggle()">menu</mat-icon>
-  </button> -->
-     
-     <img class="logo-img" src="assets\images\Genasys - White (CMYK).jpg">
-     <div class="redline"></div>
-     <div class="router-link">
-       <i class="icon fa fa-home fa-2x" aria-hidden="true"></i>
-       <label class="link" routerLink="/route1">Home</label>
-     </div>
-     <div class="router-link">
-       <i class="icon fa fa-cog fa-2x" aria-hidden="true"></i>
-       <label class="link" routerLink="/route3">Tools</label>
-     </div>
-     <div class="router-link">
-       <i class="icon fa fa-refresh fa-2x" aria-hidden="true"></i>
-       
-       <label class="link" routerLink="/route2">Refresh</label>
-     </div>
-     
-   </mat-nav-list>
-   
- </mat-sidenav>
- 
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false">
+    
+    <mat-nav-list class="navbar">
+      <img class="logo-img" src="assets\images\Genasys - White (CMYK).jpg">
+      <div class="redline"></div>
+
+      <div class="router-link">
+        <i class="icon fa fa-home fa-2x" aria-hidden="true"></i>
+        <label class="link" routerLink="/route1">Home</label>
+      </div>
+
+      <i class="icon fa fa-cog fa-2x"  [matMenuTriggerFor]="menu" aria-hidden="true"></i>
+      <label class="link" [matMenuTriggerFor]="menu">Tools</label>
+      <mat-menu #menu="matMenu" style="color: white; background-color: white; padding: 1px;">
+        <button mat-menu-item (click)="openDialog()">
+          <i class="fa fa-1x fa-sign-out"></i> Log out
+        </button>
+      </mat-menu>
+
+      <div class="router-link">
+        <i class="icon fa fa-refresh fa-2x" aria-hidden="true"></i>
+        <label class="link" routerLink="/route2">Refresh</label>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
 </mat-sidenav-container>

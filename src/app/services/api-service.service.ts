@@ -14,10 +14,24 @@ export class ApiServiceService {
     return this.http.get<any>('http://localhost:3000/Users');
   }
 
+  getSecLookup():Observable<any>{
+    return this.http.get<any>('http://localhost:3000/SecLookupCodes')
+    
+  }
+
   postdata(data: any): Observable<any> {
     return this.http.post<any>('http://localhost:3000/Users', data).pipe(
       map((res: any) => res)  
     );
+  }
+
+  postsecLookup(data: any): Observable<any> {
+    return this.http.post<any>('http://localhost:3000/SecLookupCodes', data).pipe(
+      map((res: any) => res)  
+    );
+  }
+  getsecLookup(): Observable<any> {
+    return this.http.get<any>('http://localhost:3000/SecLookupCodes') 
   }
 
   // Update user data based on ID
@@ -39,4 +53,13 @@ export class ApiServiceService {
       map(users => users.length > 0)
     );
   }
+  checkAccessCodeExists(accessCode: string): Observable<boolean> {
+    const url = `http://localhost:3000/SecLookupCodes?sAccessCode=${accessCode}`;
+    return this.http.get<any[]>(url).pipe(
+      map(secCodes => secCodes.length > 0)
+    );
+  }
+  
 }
+
+

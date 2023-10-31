@@ -131,7 +131,15 @@
       </div>
       <button type="submit" [disabled]="userForm.invalid">Save</button>
     </mat-tab>
-    <mat-tab label="Contact-details"></mat-tab>
+    <mat-tab label="Contact-details">
+      <div *ngFor="let secCode of SecLookup; let i = index">
+        <label class="checkbox-label">
+          <input type="checkbox" [formControlName]="'securityCode' + i"> {{ secCode.sAccessCode }}
+        </label>
+        <label>{{ secCode.SAccessDescription }}</label>
+      </div>
+
+    </mat-tab>
   </mat-tab-group>
  
 </form>

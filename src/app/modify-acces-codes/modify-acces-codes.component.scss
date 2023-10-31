@@ -1,0 +1,95 @@
+.dialog-content {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.access-codes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.access-code {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.access-code-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.access-code strong {
+  margin-right: 10px;
+}
+
+.form-container {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.error-message {
+  color: #ff0000;
+  margin-top: 5px;
+}
+
+.display {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.dialog-actions {
+  text-align: right;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.scrollable {
+  max-height: 200px;  
+  overflow-y: auto;
+}
+ 
+
+
