@@ -10,7 +10,7 @@
     },
     {
       "sAccessCode": "AGENT_COMM_PAY",
-      "SAccessDescription": "Allow user to execute the Commission Pay Over Maintenance app"
+      "SAccessDescription": "Allow user to execute the Ccd  ommission Pay Over Maintenance app"
     },
     {
       "sAccessCode": "AGENT_MAINT",
@@ -95,6 +95,11 @@
       "sAccessCode": "BACK",
       "SAccessDescription": "Äntony  mess",
       "id": "277d86fe-f992-4597-b616-c2c62de144b7"
+    },
+    {
+      "sAccessCode": "",
+      "SAccessDescription": "",
+      "id": "cb7655d9-2a91-45d5-a7cb-10e1cafb2624"
     }
   ],
   "SecAccessGroups": [
