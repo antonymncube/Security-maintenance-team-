@@ -25,8 +25,8 @@ export class UserupdateComponent {
       confirmpassword: ['', [Validators.required, Validators.minLength(6)]],
       description: ['',[Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      homephone: ['',[Validators.required]],  // Validate with a regular expression
-      mobile: ['',[Validators.required]],  // Validate with a regular expression
+      homephone: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
+      mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       department: ['',[Validators.required]],
       agent :  ['',[Validators.required]],
     });
