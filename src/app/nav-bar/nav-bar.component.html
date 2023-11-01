@@ -3,7 +3,7 @@
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false">
-    
+
     <mat-nav-list class="navbar">
       <img class="logo-img" src="assets\images\Genasys - White (CMYK).jpg">
       <div class="redline"></div>
@@ -24,7 +24,7 @@
       <div class="router-link">
         <i class="icon fa fa-refresh fa-2x" (click)="refreshPage()" aria-hidden="true"></i>
         <!-- <label class="link" routerLink="/route2">Refresh</label> -->
-        <label class="link" (click)="refreshPage()">Refresh</label>
+        <label class="link" (click)="refreshPage()">Refreshment</label>
       </div>
     </mat-nav-list>
   </mat-sidenav>

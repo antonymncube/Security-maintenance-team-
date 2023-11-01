@@ -14,10 +14,10 @@ import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { MatTabsModule } from '@angular/material/tabs';
-import { ReactiveFormsModule } from '@angular/forms';  
+import { ReactiveFormsModule } from '@angular/forms';
 import { MasterLayoutComponent } from './master-layout/master-layout.component';
 import { UserupdateComponent } from './userupdate/userupdate.component';
-import { authGuard } from './auth.guard';
+import { AuthGuard } from './auth.guard';
 import { HomeComponent } from './home/home.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { ViewUserComponent } from './view-user/view-user.component';
@@ -62,7 +62,7 @@ import { AccessGroupComponent } from './access-group/access-group.component';
     MatFormFieldModule, // Add MatFormFieldModule to imports for MatPrefix
     MatDialogModule,
   ],
-  providers: [authGuard],
+  providers: [AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

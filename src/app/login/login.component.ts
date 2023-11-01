@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../services/auth.service'; // Import your AuthService with the correct capitalization
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,6 @@ import { AuthService } from '../services/auth.service'; // Import your AuthServi
 })
 export class LoginComponent {
   loginForm: FormGroup;
-  
 
   constructor(private router: Router, private authService: AuthService, private formBuilder: FormBuilder) {
     this.loginForm = this.formBuilder.group({
@@ -19,16 +18,15 @@ export class LoginComponent {
     });
   }
 
-  login() {
+  async login() {
     if (this.loginForm.valid) {
       const { username, password } = this.loginForm.value;
-       console.log(`the user userna ${username} and password ${password}`)
-      if (this.authService.login(username, password)) { 
-         
-        this.authService.setCurrentUser(username)
+
+      const success = await this.authService.login(username, password);
+
+      if (success) {
         this.router.navigate(['/home']);
       } else {
-        
         alert('Invalid username or password');
       }
     } else {
