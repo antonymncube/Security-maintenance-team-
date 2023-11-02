@@ -60,17 +60,25 @@
             <div class="form-group">
               <label for="homephone" class="label-width">Home-Phone:</label>
               <div class="inputtag">
-                <input type="text" id="homephone" formControlName="homephone">
+                <input type="text" id="homephone" formControlName="homephone"
+                  [ngClass]="{ 'is-invalid': isControlInvalid('homephone') }">
+                <div *ngIf="isControlInvalid('homephone')" class="invalid-feedback">
+                  Home-Phone is not valid.
+                </div>
               </div>
             </div>
             <div class="form-group">
-              <label for="mobile" class="label-width">Mobile:</label>
-              <div class="inputtag">
-                <input type="text" id="mobile" formControlName="mobile">
+            <label for="mobile" class="label-width">Mobile:</label>
+            <div class="inputtag">
+              <input type="text" id="mobile" formControlName="mobile"
+                [ngClass]="{ 'is-invalid': isControlInvalid('mobile') }">
+              <div *ngIf="isControlInvalid('mobile')" class="invalid-feedback">
+                Mobile is not valid.
               </div>
             </div>
           </div>
         </div>
+      </div>
       </div>
       <button type="submit" [disabled]="userForm.invalid">Save</button>
     </mat-tab>
