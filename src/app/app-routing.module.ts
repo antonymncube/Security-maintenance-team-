@@ -15,7 +15,8 @@ const routes: Routes = [
 
     {
       path: 'home',
-      loadChildren: () => import('./master-layout/master-layout.module').then((m) => m.MasterLayoutModule)
+      loadChildren: () => import('./master-layout/master-layout.module').then((m) => m.MasterLayoutModule),
+      canActivate: [AuthGuard]
     }
     // path: 'home',
     // component: UserListComponent,
