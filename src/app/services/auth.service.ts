@@ -38,7 +38,13 @@ export class AuthService {
 
   logout(): void {
     this.isAuthenticated$.next(false);
+    this.currentuser = '';
+    sessionStorage.removeItem('currentuser');
     this.router.navigate(['/login']);
+
+
+    this.isAuthenticated$.next(false);
+
   }
 
   isAuthenticatedUser(): BehaviorSubject<boolean> {
