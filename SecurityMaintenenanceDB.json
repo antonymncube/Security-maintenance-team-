@@ -139,6 +139,50 @@
         "CLAIM_MAINT"
       ],
       "sAccessGroup": "SH-UNDERWRITER"
+    },
+    {
+      "sAccessCodes": [
+        "ACCEPTBBWARN",
+        "AGENT_COMM_PAY",
+        "AGG_BATCH_REV",
+        "CL_UNDMAN",
+        "CL_UNDSUP",
+        "CLAIM_MAINT"
+      ],
+      "sAccessGroup": "SH-UNDERWRITER"
+    },
+    {
+      "sAccessCodes": [
+        "ACCEPTBBWARN",
+        "AGENT_COMM_PAY",
+        "AGG_BATCH_REV",
+        "CL_UNDMAN",
+        "CL_UNDSUP",
+        "CLAIM_MAINT"
+      ],
+      "sAccessGroup": "SH-UNDERWRITER"
+    },
+    {
+      "sAccessCodes": [
+        "ACCEPTBBWARN",
+        "AGENT_COMM_PAY",
+        "AGG_BATCH_REV",
+        "CL_UNDMAN",
+        "CL_UNDSUP",
+        "CLAIM_MAINT"
+      ],
+      "sAccessGroup": "SH-UNDERWRITER"
+    },
+    {
+      "sAccessCodes": [
+        "ACCEPTBBWARN",
+        "AGENT_COMM_PAY",
+        "AGG_BATCH_REV",
+        "CL_UNDMAN",
+        "CL_UNDSUP",
+        "CLAIM_MAINT"
+      ],
+      "sAccessGroup": "SH-UNDERWRITER"
     }
   ],
   "SecUserAccess": [
@@ -287,16 +331,41 @@
     },
     {
       "id": 15,
-      "username": " sillas w",
+      "username": " sillas mark",
       "fullname": "Antony",
       "description": " Married",
+      "password": "Ant073727@",
+      "department": "HR",
+      "email": "antonymncube@gmail.com",
+      "homephone": " sddsd",
+      "mobile": " sccxczxcxz",
+      "agent": "Simply Health"
+    },
+    {
+      "id": 16,
+      "username": "Antonyma",
+      "fullname": "Antony",
+      "description": "accout",
       "location": "",
       "agent": "Simply Health",
       "password": "Ant073727@",
-      "email": "antonymncube@gmail.com",
-      "homephone": " 0671402936",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": " dsdxcax",
       "mobile": "84684351210",
-      "department": "HR"
+      "department": "IT"
+    },
+    {
+      "id": 17,
+      "username": "xolaniii",
+      "fullname": "Jack/ntshongwana",
+      "description": "kjsbdjks",
+      "location": "",
+      "agent": "Genasys",
+      "password": "Ant073727@",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "0671802969",
+      "department": "IT"
     }
   ]
 }

@@ -43,7 +43,7 @@ export class ModifyAccesCodesComponent {
           if (exists) {
             alert('Access code already exists.');
           } else {
-            // Access code is unique; you can proceed to save it
+            
             const generatedId = generateUUID();
             this.securityAccessCode = {
               sAccessCode: accessCode,

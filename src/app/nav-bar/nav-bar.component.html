@@ -19,12 +19,15 @@
         <button mat-menu-item (click)="openDialog()">
           Modify Access code
         </button>
+        <button mat-menu-item (click)=" getAccessGroup()">
+          Modify Access Groups
+        </button>
       </mat-menu>
 
       <div class="router-link">
         <i class="icon fa fa-refresh fa-2x" (click)="refreshPage()" aria-hidden="true"></i>
         <!-- <label class="link" routerLink="/route2">Refresh</label> -->
-        <label class="link" (click)="refreshPage()">Refreshment</label>
+        <label class="link" (click)="refreshPage()">Refresh</label>
       </div>
     </mat-nav-list>
   </mat-sidenav>

@@ -19,6 +19,11 @@ export class ApiServiceService {
     
   }
 
+  getAccessGroup():Observable<any>{
+    return this.http.get<any>('http://localhost:3000/SecAccessGroups')
+    
+  }
+
   postdata(data: any): Observable<any> {
     return this.http.post<any>('http://localhost:3000/Users', data).pipe(
       map((res: any) => res)  

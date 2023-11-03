@@ -8,6 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { UserListComponent } from '../user-list/user-list.component';
 import { ModifyAccesCodesComponent } from '../modify-acces-codes/modify-acces-codes.component';
 import { ApiServiceService } from '../services/api-service.service';
+import { AccessGroupComponent } from '../access-group/access-group.component';
 
 @Component({
   selector: 'app-nav-bar',
@@ -19,6 +20,7 @@ export class NavBarComponent {
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
   @ViewChild('drawer') drawer!: MatSidenav;
   SecLookup: any = '';
+  accessGroup : any = '';
 
   constructor(public dialog: MatDialog, private apiService: ApiServiceService) { }
 
@@ -30,24 +32,50 @@ export class NavBarComponent {
   getAccesslookup() {
     this.apiService.getSecLookup().subscribe((SecLookup: any) => {
       this.SecLookup = SecLookup; // Assign the entire response to SecLookup
-      console.log('API Response:', SecLookup);
-      console.log('Security Access:', SecLookup[0].sAccessCode, 'Security Description', SecLookup[0].SAccessDescription);
-      console.log("Data is available, opening the dialog.");
+      // console.log('API Response:', SecLookup);
+      // console.log('Security Access:', SecLookup[0].sAccessCode, 'Security Description', SecLookup[0].SAccessDescription);
+      // console.log("Data is available, opening the dialog.");
       this.openDialogWithSecLookup(this.SecLookup);
+    });
+  }
+
+ 
+  getAccessGroup() {
+    this.apiService.getAccessGroup().subscribe((accessGroup: any) => {
+      this.accessGroup = accessGroup;
+      this.openDialogWithAccessGroup(accessGroup);
     });
   }
 
   openDialogWithSecLookup(SecLookup: any) {
     const dialogRef = this.dialog.open(ModifyAccesCodesComponent, {
       width: '700px',
+      height:'200px',
       data: { SecLookup } // Pass SecLookup data to the dialog
     });
+    
 
     dialogRef.afterClosed().subscribe((result) => {
-      // Handle dialog close or any result from the dialog (if needed)
+       
       console.log('The dialog was closed');
     });
   }
+
+  openDialogWithAccessGroup(accessGroup: any) {
+   
+    const dialogRef = this.dialog.open(AccessGroupComponent, {
+      width: '700px',
+      height:'200px',
+      data: {accessGroup},
+      
+    });
+   
+  
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+    });
+  }
+
 
   toggle() {
     this.drawer.toggle();

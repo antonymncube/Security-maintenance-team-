@@ -1,0 +1,66 @@
+.dialog-content {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.access-groups {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px;
+  height: 100px;
+}
+
+.access-group {
+  cursor: pointer;
+  
+  
+}
+
+.access-group-name {
+  font-weight: bold;
+  // height: 30px;
+}
+
+.col {
+  display: inline-block;
+  width: 49%;
+}
+
+.col1 {
+  margin-right: 2%;
+}
+
+.col2 {
+  margin-left: 2%;
+}
+
+.access-codes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100px;
+}
+
+.access-code {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.scrollable {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.access-group-item.clicked {
+  background-color: rgb(115, 115, 238); /* Set your desired background color */
+  color: white; /* Set text color to improve visibility */
+  cursor: pointer; /* Change cursor to indicate clickability */
+}
