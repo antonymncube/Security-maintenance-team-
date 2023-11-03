@@ -83,5 +83,17 @@ h1 {
 }
 
 .buttons {
-    margin-left: 4rem;
+   // margin-left: 4rem;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+.forgot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
