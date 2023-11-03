@@ -22,10 +22,13 @@ export class LoginComponent {
     if (this.loginForm.valid) {
       const { username, password } = this.loginForm.value;
 
-      const success = await this.authService.login(username, password);
-      if (success) {
+      try {
+        await this.authService.login(username, password);
+
+
         this.router.navigate(['/home']);
-      } else {
+      } catch (error) {
+        console.error('Login error:', error);
         alert('Invalid username or password');
       }
     } else {

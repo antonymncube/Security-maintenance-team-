@@ -5,6 +5,8 @@ import { LoginComponent } from './login/login.component';
 import { UserupdateComponent } from './userupdate/userupdate.component';
 import { AuthGuard } from './auth.guard';
 import { MasterLayoutComponent } from './master-layout/master-layout.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+
 
 const routes: Routes = [
 
@@ -37,6 +39,10 @@ const routes: Routes = [
     redirectTo: '/login',
     pathMatch: 'full',
   },
+  {
+    path: 'forgot-password',
+    component: ForgotPasswordComponent
+  }
 
 
 ];

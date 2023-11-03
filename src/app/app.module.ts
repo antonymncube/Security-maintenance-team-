@@ -28,6 +28,7 @@ import { MatFormFieldModule } from '@angular/material/form-field'; // Import Mat
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModifyAccesCodesComponent } from './modify-acces-codes/modify-acces-codes.component';
 import { AccessGroupComponent } from './access-group/access-group.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { AccessGroupComponent } from './access-group/access-group.component';
     EditUserComponent,
     ViewUserComponent,
     ModifyAccesCodesComponent,
-    AccessGroupComponent, // Include ModifyAccesCodesComponent
+    AccessGroupComponent,
+    ForgotPasswordComponent, // Include ModifyAccesCodesComponent
   ],
   imports: [
     BrowserModule,
