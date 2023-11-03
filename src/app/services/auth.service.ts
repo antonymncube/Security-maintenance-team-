@@ -1,3 +1,4 @@
+import { PasswordHashingService } from './password-hashing.service';
 import { AuthGuard } from './../auth.guard';
 import { Injectable } from '@angular/core';
 import { ApiServiceService } from './api-service.service';
@@ -13,18 +14,19 @@ export class AuthService {
   private users: any[] = [];
   currentuser: string = '';
 
-  constructor(private apiservice: ApiServiceService, private router: Router) {
+  constructor(private apiservice: ApiServiceService, private router: Router, private PasswordHashingService: PasswordHashingService) {
     this.checkAuthenticationStatus();
   }
 
+
   login(username: string, password: string): Promise<boolean> {
     return new Promise<boolean>((resolve) => {
-      this.apiservice.getData().subscribe((data: any) => {
+      this.apiservice.getData().subscribe(async (data: any) => {
         this.users = data;
 
-        const authenticatedUser = this.users.find(user => user.username === username && user.password === password);
+        const user = this.users.find((user) => user.username === username);
 
-        if (authenticatedUser) {
+        if (user && await this.PasswordHashingService.verifyPassword(password, user.password)) {
           this.isAuthenticated$.next(true);
           this.setCurrentUser(username);
           resolve(true);
@@ -41,9 +43,6 @@ export class AuthService {
     this.currentuser = '';
     sessionStorage.removeItem('currentuser');
     this.router.navigate(['/login']);
-
-
-    this.isAuthenticated$.next(false);
 
   }
 
