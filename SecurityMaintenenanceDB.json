@@ -1,165 +1,156 @@
 {
   "SecLookupCodes": [
     {
-      "id": "1",
       "sAccessCode": "ACCEPTBBWARN",
       "SAccessDescription": "Accept policy quote results"
     },
     {
-      "id": "2",
       "sAccessCode": "ADDR_OVERRIDE",
       "SAccessDescription": "Allow Address Override"
     },
     {
-      "id": "3",
       "sAccessCode": "AGENT_COMM_PAY",
-      "SAccessDescription": "Allow user to execute the Commission Pay Over Maintenance app"
+      "SAccessDescription": "Allow user to execute the Ccd  ommission Pay Over Maintenance app"
     },
     {
-      "id": "4",
       "sAccessCode": "AGENT_MAINT",
       "SAccessDescription": "Agent maintenance"
     },
     {
-      "id": "5",
       "sAccessCode": "AGG_BATCH_REV",
       "SAccessDescription": "View the batch claim aggregate review screen"
     },
     {
-      "id": "6",
       "sAccessCode": "API_CLAIM_DU",
       "SAccessDescription": "Allow user to upload Claim documents using API"
     },
     {
-      "id": "7",
       "sAccessCode": "API_DOC_BLOCK",
       "SAccessDescription": "Prevent access to all documents through API"
     },
     {
-      "id": "8",
       "sAccessCode": "API_DOC_CONF",
       "SAccessDescription": "Allow access to documents with Confidential confidentiality through API"
     },
     {
-      "id": "9",
       "sAccessCode": "API_DOC_PERS",
       "SAccessDescription": "Allow access to documents with Personal confidentiality through API"
     },
     {
-      "id": "10",
       "sAccessCode": "fgebe",
-      "SAccessDescription": "fgefg"
+      "SAccessDescription": "fgefg",
+      "id": "1bc69f64-5b51-4c54-bea1-df34e1fd8c80"
     },
     {
-      "id": "11",
       "sAccessCode": "fgebe",
-      "SAccessDescription": "fgefg"
+      "SAccessDescription": "fgefg",
+      "id": "a17d3ecb-677b-47c1-9197-f06a00540495"
     },
     {
-      "id": "12",
       "sAccessCode": "API_DOC_ANTONY",
-      "SAccessDescription": "Married"
+      "SAccessDescription": " Married",
+      "id": "0c5b51fb-b008-4a0b-83db-5f8a140584d6"
     },
     {
-      "id": "13",
       "sAccessCode": "API_DOC_ANTONV",
-      "SAccessDescription": "Married"
+      "SAccessDescription": " Married",
+      "id": "07aa4c84-1b3d-40ab-81c7-c3c12a7773fa"
     },
     {
-      "id": "14",
       "sAccessCode": "WESFSD",
-      "SAccessDescription": "sdfdd"
+      "SAccessDescription": "sdfdd",
+      "id": "cc0f25b0-97d1-49fe-9ff0-228a19dbd9cf"
     },
     {
-      "id": "15",
       "sAccessCode": "MAC",
-      "SAccessDescription": "jhbk"
+      "SAccessDescription": "jhbk",
+      "id": "94fbfdcd-2794-4171-a862-1096edf84b0f"
     },
     {
-      "id": "16",
       "sAccessCode": "ASDAS",
-      "SAccessDescription": "sadsd"
+      "SAccessDescription": "sadsd",
+      "id": "efba7f54-faf8-4657-a1b5-553ccc0925d2"
     },
     {
-      "id": "17",
       "sAccessCode": "ACCEPTBBWARN",
-      "SAccessDescription": "adsd"
+      "SAccessDescription": "adsd",
+      "id": "b662ce38-4082-4694-8ac8-d7fa494aaa78"
     },
     {
-      "id": "18",
       "sAccessCode": "ADDR_OVERRIDE",
-      "SAccessDescription": "tester"
+      "SAccessDescription": "tester",
+      "id": "5e73b020-9055-44a2-9034-bc1ee2f5530d"
     },
     {
-      "id": "19",
       "sAccessCode": "ACCEPTBBWARN",
-      "SAccessDescription": "sdfdf"
+      "SAccessDescription": "sdfdf",
+      "id": "5dc8d14d-44c4-4e99-a291-25405b0311b9"
     },
     {
-      "id": "20",
       "sAccessCode": "DFKOSANGNG",
-      "SAccessDescription": "tester"
+      "SAccessDescription": "tester",
+      "id": "6989ba56-420a-4719-bbaf-44e143d3108a"
     },
     {
-      "id": "21",
       "sAccessCode": "BACK",
-      "SAccessDescription": "Äntony mess"
+      "SAccessDescription": "Äntony  mess",
+      "id": "277d86fe-f992-4597-b616-c2c62de144b7"
     },
     {
-      "id": "22",
       "sAccessCode": "",
-      "SAccessDescription": ""
+      "SAccessDescription": "",
+      "id": "cb7655d9-2a91-45d5-a7cb-10e1cafb2624"
     }
   ],
   "SecAccessGroups": [
     {
-      "sAccessGroup": "SH-sales",
       "sAccessCodes": [
-        "fgebe",
-        "ACCEPTBBWARN",
-        "MAC",
-        "BACK",
-        "ADDR_OVERRIDE",
         "AGENT_COMM_PAY",
-        "AGENT_MAINT",
-        null
+        "BORDEREAUX",
+        "CASHB_REVERSE",
+        "CL_BCLMPAYMENTS",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_PAYSEC_LEV3",
+        "CL_REOPEN"
       ],
-      "id": "1"
+      "sAccessGroup": "SH-FINANCE"
     },
     {
-      "sAccessGroup": "SH-sales",
       "sAccessCodes": [
-        "ACCEPTBBWARN",
-        "ADDR_OVERRIDE",
-        "AGENT_MAINT",
-        "fgebe",
-        "API_DOC_ANTONV",
         "AGENT_COMM_PAY",
-        null
+        "CL_UNDSUP",
+        "CNG_TARIFFVER",
+        "CO1_ACT_POL",
+        "CO1_ADD_POL",
+        "CO1_ADD_RISK",
+        "CO1_ADVS_CUST",
+        "CO1_CHANGEADMIN"
       ],
-      "id": "2"
+      "sAccessGroup": "SH-PRODUCT"
     },
     {
-      "sAccessGroup": "SH-sales",
       "sAccessCodes": [
-        "AGENT_COMM_PAY",
-        "AGENT_MAINT",
         "ACCEPTBBWARN",
-        null
+        "AGENT_COMM_PAY",
+        "AGG_BATCH_REV",
+        "CL_UNDMAN",
+        "CL_UNDSUP",
+        "CLAIM_MAINT"
       ],
-      "id": "3"
+      "sAccessGroup": "SH-UNDERWRITER"
     }
   ],
   "SecUserAccess": [
     {
-      "id": "1",
+      "id": 1,
       "sAccessCodes": [
         "API_DOC_PERS",
         "API_DOC_CONF"
       ]
     },
     {
-      "id": "2",
+      "id": 2,
       "sAccessCodes": [
         "API_CUST_DU",
         "AGENT_COMM_PAY"
@@ -171,8 +162,8 @@
   },
   "Users": [
     {
-      "id": "1",
-      "username": "Antony.",
+      "id": 1,
+      "username": "Antony",
       "fullname": "Aphele spouse",
       "description": "yes",
       "password": "mark",
@@ -183,7 +174,7 @@
       "mobile": "sadsaddasdsa"
     },
     {
-      "id": "2",
+      "id": 2,
       "username": "vicky",
       "fullname": "Mkhomi Ndivuwo",
       "description": "we are bacl",
@@ -195,7 +186,7 @@
       "mobile": "we are back"
     },
     {
-      "id": "3",
+      "id": 3,
       "username": "updated",
       "fullname": "Kholo yes",
       "description": "yes",
@@ -207,7 +198,7 @@
       "mobile": "yes"
     },
     {
-      "id": "5",
+      "id": 5,
       "username": "Antony2",
       "fullname": "anotny",
       "description": "tester",
@@ -220,7 +211,7 @@
       "department": "IT"
     },
     {
-      "id": "7",
+      "id": 7,
       "username": "xolaniiii",
       "fullname": "Antony",
       "description": "tester",
@@ -233,7 +224,7 @@
       "department": "Sales"
     },
     {
-      "id": "8",
+      "id": 8,
       "username": "sive",
       "fullname": "khaya",
       "description": "we are bacl",
@@ -245,10 +236,10 @@
       "agent": "Standard Bank"
     },
     {
-      "id": "9",
+      "id": 9,
       "username": "mitch",
       "fullname": "Gordons",
-      "description": "Äntony mess",
+      "description": "Äntony  mess",
       "password": "Ant073727@",
       "department": "HR",
       "email": "219148414@edu.vut.ac.za",
@@ -257,10 +248,10 @@
       "agent": "Genasys"
     },
     {
-      "id": "10",
+      "id": 10,
       "username": " Hle",
       "fullname": "Jack/ntshongwana",
-      "description": "Married",
+      "description": " Married",
       "password": "Ant073727@",
       "department": "HR",
       "email": "219148414@edu.vut.ac.za",
@@ -269,10 +260,10 @@
       "agent": "Genasys"
     },
     {
-      "id": "12",
+      "id": 12,
       "username": " mohlale",
       "fullname": "Antony",
-      "description": "Married",
+      "description": " Married",
       "location": "",
       "agent": "Standard Bank",
       "password": "Ant073727@",
@@ -282,10 +273,10 @@
       "department": "Sales"
     },
     {
-      "id": "14",
+      "id": 14,
       "username": "lion",
       "fullname": "Antony",
-      "description": "Married",
+      "description": " Married",
       "location": "",
       "agent": "Simply Health",
       "password": "Ant073727@",
@@ -295,10 +286,10 @@
       "department": "IT"
     },
     {
-      "id": "15",
+      "id": 15,
       "username": " sillas w",
       "fullname": "Antony",
-      "description": "Married",
+      "description": " Married",
       "location": "",
       "agent": "Simply Health",
       "password": "Ant073727@",
@@ -306,45 +297,6 @@
       "homephone": " 0671402936",
       "mobile": "84684351210",
       "department": "HR"
-    },
-    {
-      "id": "16",
-      "username": "EmihleN",
-      "fullname": "Emihle Ntshongwana",
-      "description": "MGA",
-      "location": "",
-      "agent": "Genasys",
-      "password": "$2a$10$Fp8Nb1ZVij/SRnEWNH5gv.adxaLYOo.sI4Ylbf0MlrslW.w9gLOpi",
-      "email": "ntshongwanae@gmail.com",
-      "homephone": "0712425668",
-      "mobile": "0712425668",
-      "department": "IT"
-    },
-    {
-      "id": "17",
-      "username": "Aphelele",
-      "fullname": "Aphelele Rana",
-      "description": "GHqom",
-      "location": "",
-      "agent": "Simply Health",
-      "password": "$2a$10$YTBDMIX4vycg1Qo2AzFwIOpfgJf6MqB.B.4TlNDSqGgUXFzPfX2h.",
-      "email": "ranaaphelele@gmail.com",
-      "homephone": "0781638594",
-      "mobile": "0781990677",
-      "department": "IT"
-    },
-    {
-      "id": "18",
-      "username": "Dev",
-      "fullname": "Test",
-      "description": "MGA",
-      "location": "",
-      "agent": "Genasys",
-      "password": "$2a$10$1YjWgMHGucqzRsGyKBV8Qedsw.uOsGUQA.yG3DBl7/5IZp6uhMVOO",
-      "email": "DEV@Genasystech.com",
-      "homephone": "0781638594",
-      "mobile": "0781638594",
-      "department": "IT"
     }
   ]
 }
