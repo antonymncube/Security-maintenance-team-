@@ -50,7 +50,7 @@ export class NavBarComponent {
   openDialogWithSecLookup(SecLookup: any) {
     const dialogRef = this.dialog.open(ModifyAccesCodesComponent, {
       width: '800px',
-      height:'450px',
+      height:'500px',
       data: { SecLookup } // Pass SecLookup data to the dialog
     });
     
@@ -65,7 +65,7 @@ export class NavBarComponent {
    
     const dialogRef = this.dialog.open(AccessGroupComponent, {
       width: '800px',
-      height:'450px',
+      height:'500px',
       data: {accessGroup},
       
     });

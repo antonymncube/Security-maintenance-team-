@@ -6,6 +6,7 @@ import { UserupdateComponent } from './userupdate/userupdate.component';
 import { AuthGuard } from './auth.guard';
 import { MasterLayoutComponent } from './master-layout/master-layout.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ModifyAccesCodesComponent } from './modify-acces-codes/modify-acces-codes.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'forgot-password',
     component: ForgotPasswordComponent
+  },
+  {
+    path:'./accesscode',
+    component:ModifyAccesCodesComponent
   }
 
 

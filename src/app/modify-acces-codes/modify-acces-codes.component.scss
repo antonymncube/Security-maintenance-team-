@@ -131,3 +131,9 @@ body {
 .tabs__radio:checked + .tabs__label + .tabs__content {
   display: initial;
 }
+
+.clicked-item {
+  background-color: blue;
+  color: white; /* You can adjust the text color to make it visible on the blue background. */
+  cursor: pointer; /* Change the cursor to indicate interactivity. */
+}

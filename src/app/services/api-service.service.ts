@@ -19,6 +19,11 @@ export class ApiServiceService {
     
   }
 
+  getSecLookupid(id: string): Observable<any> {
+    return this.http.get<any>(`http://localhost:3000/SecLookupCodes/${id}`);
+  }
+  
+
   getAccessGroup():Observable<any>{
     return this.http.get<any>('http://localhost:3000/SecAccessGroups')
     
@@ -49,6 +54,29 @@ export class ApiServiceService {
       map((res: any) => res)
     );
   }
+
+  // updateAccesscode(id: string, data: any): Observable<any> {
+  //   const url = `http://localhost:3000/Users/${id}`;
+  //   return this.http.put(url, data).pipe(
+  //     map((res: any) => res)
+  //   );
+  // }
+
+  updateAccesscode(id: string, data: any): Observable<any> {
+    const url = `http://localhost:3000/SecLookupCodes/${id}`;  
+    return this.http.put(url, data).pipe(
+      map((res: any) => res)
+    );
+  }
+
+  
+  deleteAccesscode(id: string): Observable<any> {
+    const url = `http://localhost:3000/SecLookupCodes/${id}`;  
+    return this.http.delete(url).pipe(
+      map((res: any) => res)
+    );
+  }
+  
 
   updateAccessgroup(id: string, data: any): Observable<any> {
     const url = `http://localhost:3000/SecAccessGroups/${id}`;

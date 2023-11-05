@@ -2,42 +2,57 @@
   <h2>Security Access Codes</h2>
   <div class="access-codes scrollable">
     <div *ngFor="let secCode of SecLookup" class="access-code">
-      <div class="access-code-item">
-        <strong>{{ secCode.sAccessCode }}</strong>-<span>{{ secCode.SAccessDescription }}</span>
+      <div class="access-code-item" (click)="toggleaccesscode(secCode)"  #accessCodeItem>
+
+        <strong>{{ secCode.sAccessCode }}</strong><span>{{ secCode.SAccessDescription }}</span>
       </div>
     </div>
   </div>
 </div>
 
-<div class="form-container" [formGroup]="myForm">
-  <form (ngSubmit)="onsubmit()">
-    <div class="form-row">
-      <div class="form-group">
-        <label for="code">Code:</label>
-        <input type="text" id="code" formControlName="code">
-        <div *ngIf="myForm.get('code').hasError('required')" class="error-message">Code is required</div>
-      </div>
-      <div class="form-group">
-        <label for="description">Description:</label>
-        <input type="text" id="description" formControlName="description">
-        <div *ngIf="myForm.get('description').hasError('required')" class="error-message">Description is required</div>
-      </div>
-    </div>
+<mat-tab-group animationDuration="0ms">
+  <mat-tab label="Add Access-code">
+    <div class="form-container" [formGroup]="myForm">
+      <form (ngSubmit)="onsubmit()">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="code">Code:</label>
+            <input type="text" id="code" formControlName="code">
+            <div *ngIf="myForm.get('code').hasError('required')" class="error-message">Code is required</div>
+          </div>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" id="description" formControlName="description">
+            <div *ngIf="myForm.get('description').hasError('required')" class="error-message">Description is required</div>
+          </div>
+        </div>
 
-    <div class="dialog-actions">
-      <button mat-button type="submit" [disabled]="myForm.invalid" (click)="onsubmit()">Add</button>
+        <div class="dialog-actions">
+          <button mat-button type="submit" [disabled]="myForm.invalid">Add</button>
+        </div>
+      </form>
     </div>
-  </form>
-</div>
-<!-- <div class="tabs">
-  <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
-  <label for="tab1" class="tabs__label">Tab #1</label>
-  <div class="tabs__content">
-    CONTENT for Tab #1
-  </div>
-  <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
-  <label for="tab2" class="tabs__label">Tab #2</label>
-  <div class="tabs__content">
-    CONTENT for Tab #2
-  </div>
-</div> -->
+  </mat-tab>
+  <mat-tab label="Edit Access-code">
+    <div class="form-container">
+      <form (ngSubmit)="editsubmit()">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="editCode">Code:</label>
+            <input type="text" id="editcode" name="editcode" [(ngModel)]="securityAccessCode.sAccessCode">
+          </div>
+          <div class="form-group">
+            <label for="editDescription">Description:</label>
+            <input type="text" id="editdescription" name="editdescription" [(ngModel)]="securityAccessCode.SAccessDescription">
+          </div>
+        </div>
+        <div class="dialog-actions">
+          <button mat-button type="submit">Edit</button>
+          <button (click)="delete()">Delete</button>
+        </div>
+      </form>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+ 
+

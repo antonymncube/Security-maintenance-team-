@@ -29,6 +29,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ModifyAccesCodesComponent } from './modify-acces-codes/modify-acces-codes.component';
 import { AccessGroupComponent } from './access-group/access-group.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+ 
 
 
 @NgModule({
@@ -64,7 +65,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     MatPaginatorModule,
     MatFormFieldModule, // Add MatFormFieldModule to imports for MatPrefix
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent],
