@@ -23,6 +23,9 @@ export class ApiServiceService {
     return this.http.get<any>('http://localhost:3000/SecAccessGroups')
     
   }
+  getAccessGroupById(id:  string): Observable<any> {
+    return this.http.get<any>(`http://localhost:3000/SecAccessGroups/${id}`);
+  }
 
   postdata(data: any): Observable<any> {
     return this.http.post<any>('http://localhost:3000/Users', data).pipe(
@@ -42,6 +45,13 @@ export class ApiServiceService {
   // Update user data based on ID
   updateUser(id: string, data: any): Observable<any> {
     const url = `http://localhost:3000/Users/${id}`;
+    return this.http.put(url, data).pipe(
+      map((res: any) => res)
+    );
+  }
+
+  updateAccessgroup(id: string, data: any): Observable<any> {
+    const url = `http://localhost:3000/SecAccessGroups/${id}`;
     return this.http.put(url, data).pipe(
       map((res: any) => res)
     );
