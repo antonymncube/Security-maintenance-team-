@@ -5,11 +5,7 @@
       "SAccessDescription": "Accept policy quote results",
       "id": "1"
     },
-    {
-      "sAccessCode": "thank silas",
-      "SAccessDescription": "again",
-      "id": "2"
-    },
+   
     {
       "id": "4",
       "sAccessCode": "AGENT_MAINT",
@@ -35,96 +31,14 @@
       "sAccessCode": "API_DOC_PERS",
       "SAccessDescription": "Allow access to documents with Personal confidentiality through API"
     },
-    {
-      "id": "10",
-      "sAccessCode": "fgebe",
-      "SAccessDescription": "fgefg"
-    },
-    {
-      "id": "11",
-      "sAccessCode": "fgebe",
-      "SAccessDescription": "fgefg"
-    },
-    {
-      "id": "12",
-      "sAccessCode": "API_DOC_ANTONY",
-      "SAccessDescription": "Married"
-    },
-    {
-      "id": "13",
-      "sAccessCode": "API_DOC_ANTONV",
-      "SAccessDescription": "Married"
-    },
-    {
-      "id": "14",
-      "sAccessCode": "WESFSD",
-      "SAccessDescription": "sdfdd"
-    },
-    {
-      "id": "15",
-      "sAccessCode": "MAC",
-      "SAccessDescription": "jhbk"
-    },
-    {
-      "id": "16",
-      "sAccessCode": "ASDAS",
-      "SAccessDescription": "sadsd"
-    },
-    {
-      "id": "17",
-      "sAccessCode": "ACCEPTBBWARN",
-      "SAccessDescription": "adsd"
-    },
+    
+
     {
       "id": "18",
       "sAccessCode": "ADDR_OVERRIDE",
-      "SAccessDescription": "tester"
-    },
-    {
-      "id": "20",
-      "sAccessCode": "DFKOSANGNG",
-      "SAccessDescription": "tester"
-    },
-    {
-      "sAccessCode": "",
-      "SAccessDescription": "",
-      "id": "839fc2c3-a708-4020-8687-3237bcfa708c"
-    },
-    {
-      "sAccessCode": "SADAS",
-      "SAccessDescription": "sads",
-      "id": "f40b2893-2ec3-41ec-9f86-bf4dc2c21892"
-    },
-    {
-      "sAccessCode": "BACKTHERE",
-      "SAccessDescription": "fdagfda",
-      "id": "3be7daed-ae62-4ba1-8e4b-383bcb9fd78e"
-    },
-    {
-      "sAccessCode": "CHURCH",
-      "SAccessDescription": "tester",
-      "id": "d3acb86e-6753-4954-af29-b4e4776c94be"
-    },
-    {
-      "sAccessCode": "BACK",
-      "SAccessDescription": "you",
-      "id": "6c67822c-68c1-4e04-8e9a-d2dba09f8d1f"
-    },
-    {
-      "sAccessCode": "BACK",
-      "SAccessDescription": null,
-      "id": "dcd2ea98-0064-46a0-af8e-98379ed4af37"
-    },
-    {
-      "sAccessCode": "BACK",
-      "SAccessDescription": null,
-      "id": "1b3fa765-ffdb-42d3-9f06-2f9797ac344b"
-    },
-    {
-      "sAccessCode": "dlayani ximanga",
-      "SAccessDescription": "ayakayi",
-      "id": "ac472ad9-ded4-4622-821f-adcc0996b2fa"
+      "SAccessDescription": "Prevent access to all documents through API"
     }
+    
   ],
   "SecAccessGroups": [
     {
