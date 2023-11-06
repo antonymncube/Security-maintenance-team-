@@ -215,6 +215,62 @@
       "homephone": "0781638594",
       "mobile": "0781638594",
       "agent": "Simply Health"
+    },
+    {
+      "id": "W54mHDU",
+      "username": "Emihle",
+      "fullname": "Emihle Ntshongwana",
+      "description": " Married",
+      "location": "",
+      "agent": "Genasys",
+      "password": "$2a$10$Z7vwnbPeltFmDCXLwbtxk.EqEhE8AkRgYzEbiveqrANunXET73q9W",
+      "email": "e.ntshongwana@genasystech.com",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "department": "IT",
+      "status": true
+    },
+    {
+      "id": "P1kTOnC",
+      "username": "Mihle",
+      "fullname": "Mihle Jack",
+      "description": " Married",
+      "location": "",
+      "agent": "Genasys",
+      "password": "$2a$10$G9g8FpFUBnYg6iYha2wsi.nRF8Vx9k4cWdHq5QvFKZb24.RfhV.4e",
+      "email": "m.jack@genasystech.com",
+      "homephone": "0671402936",
+      "mobile": "7819906770",
+      "department": "IT",
+      "status": true
+    },
+    {
+      "id": "E1yptON",
+      "username": "Grace",
+      "fullname": "Grace Ngwangwa",
+      "description": "Hello Grace",
+      "location": "",
+      "agent": "Genasys",
+      "password": "$2a$10$fH8zSNFGNRn.FVRpVCUTwu1EObbnRTfUGV.kqWLdxWxjuvt4yxwF6",
+      "email": "g.ngwangwa@genasystech.com",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "department": "IT",
+      "status": true
+    },
+    {
+      "id": "A0LIYn3",
+      "username": "Anthony",
+      "fullname": "Anthony Ncube",
+      "description": "Anthony Hemilton",
+      "location": "",
+      "agent": "Genasys",
+      "password": "$2a$10$QX4J8usm1PVh2yBC3BMiS.EODCbw/nWsRnX379BL2fHlKMKnjSnoi",
+      "email": "a.ncube@genasystech.com",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "department": "IT",
+      "status": false
     }
   ]
 }
