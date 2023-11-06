@@ -336,6 +336,19 @@
       "homephone": "0781638594",
       "mobile": "0781638594",
       "department": "IT"
+    },
+    {
+      "id": 19,
+      "username": "MihleJ",
+      "fullname": "Mihle Jack",
+      "description": " Married",
+      "location": "",
+      "agent": "Genasys",
+      "password": "$2a$10$2TjM/Q1CxotiweohW.nE5.6PqXQS0c2LNLWtNkB5pEQECrIqlz64e",
+      "email": "mihlejack2@gmail.com",
+      "homephone": "0714374894",
+      "mobile": "0714374894",
+      "department": "IT"
     }
   ]
 }

@@ -30,11 +30,21 @@
                     <mat-menu #menu="" style="color: white;background-color: white; padding: 1px;">
                         <!-- <button mat-menu-item (click)="openDialog()">Open dialog</button> -->
                         
-                        <p (click)="logout()" style="padding-left: 10px;"><i class="fa fa-1x fa-sign-out"></i>Log out</p>
+                    <p (click)="logout()" style="padding-left: 10px;"><i class="fa fa-1x fa-sign-out"></i>Log out</p>
+
+                    
+                    <p (click)="About()" style="padding-right: 10px;"><i class="fa fa-1x fa-sign-out"></i>About
+                    <mat-icon>info</mat-icon>
+                </p>
+
+
+
                     </mat-menu>
+                
                 </i>
                 </div>
             </div>
+            
             <div class="col-content  ">
                 <router-outlet></router-outlet>
                 
