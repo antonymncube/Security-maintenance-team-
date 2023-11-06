@@ -1,5 +1,5 @@
 export interface SecLookup {
     id:any;
-    sAccessCode: string;
-    SAccessDescription: string;
+    sAccessCode: string | null |  undefined;
+    SAccessDescription:  string | null | undefined
   }
