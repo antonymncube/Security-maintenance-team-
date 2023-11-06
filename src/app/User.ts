@@ -10,7 +10,7 @@ export class UserFormData {
     homephone: string = '';
     mobile: string = '';
     department: string = '';
-    
+    status: boolean = true;
 
   
 }

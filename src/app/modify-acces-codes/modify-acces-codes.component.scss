@@ -10,23 +10,34 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .access-code {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  background-color: #fff;
+  // border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+  width: 700px;
+  height: 55px;
 }
 
 .access-code-item {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .access-code strong {
   margin-right: 10px;
 }
+
 
 .form-container {
   padding: 20px;
@@ -63,11 +74,6 @@ input {
   margin-top: 5px;
 }
 
-.display {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
 .dialog-actions {
   text-align: right;
   margin-top: 20px;
@@ -86,10 +92,94 @@ button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
+
 .scrollable {
-  max-height: 200px;  
+  max-height: 200px;
   overflow-y: auto;
 }
- 
+
+body {
+  margin: 50px;
+}
+
+.mat-tab-label {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.mat-tab-label-active {
+  background-color: #009578;
+}
+
+.tabs__radio {
+  display: none;
+}
+
+.tabs__content {
+  border-bottom: 3px solid #dddddd;
+  line-height: 1.5;
+  font-size: 0.9em;
+  display: none;
+}
+
+.tabs__radio:checked + .tabs__label + .tabs__content {
+  display: initial;
+}
+
+.clicked-item {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+/* Add new CSS rules */
+.access-description {
+  margin-left: 10px; /* Add margin to separate description from code */
+  font-weight: bold; /* Make the description bold */
+}
+
+ /* Add new CSS rule for the button text color */
+.mat-tab-group mat-tab-label {
+  color: #fff !important;
+}
+
+/* Update the button text color in the .btn class */
+.btn {
+  background-color: #2F3351;
+  color: #fff !important; /* Use !important to override Material Tab styles */
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 0rem;
+}
+.btn-save{
+  background-color: #2F3351;
+  color: #fff !important; /* Use !important to override Material Tab styles */
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 1rem;
+}
+
+.btn:hover {
+  background-color: #1d1f37; /* Darker color on hover */
+}
+
+.access-code-item {
+  display: flex; /* Add display: flex to make the content items align horizontally */
+  align-items: center;
+}
+
+.access-description {
+  margin-top: 0; /* Remove any top margin to align descriptions at the top */
+}
 
 

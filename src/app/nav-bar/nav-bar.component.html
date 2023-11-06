@@ -1,8 +1,6 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'"
-    [opened]="(isHandset$ | async) === false">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
 
     <mat-nav-list class="navbar">
       <img class="logo-img" src="assets\images\Genasys - White (CMYK).jpg" alt> 
@@ -13,18 +11,21 @@
         <label class="link" routerLink="/home">Home</label>
       </div>
 
-      <i class="icon fa fa-cog fa-2x"  [matMenuTriggerFor]="menu" aria-hidden="true"></i>
-      <label class="link" [matMenuTriggerFor]="menu">Tools</label>
+      <i class="icon2 fa fa-cog fa-2x" [matMenuTriggerFor]="menu" aria-hidden="true"></i>
+      <label class="link1" [matMenuTriggerFor]="menu">Tools</label>
       <mat-menu #menu="matMenu" style="color: white; background-color: white; padding: 1px;">
         <button mat-menu-item (click)="openDialog()">
           Modify Access code
+        </button>
+        <button mat-menu-item (click)=" getAccessGroup()">
+          Modify Access Groups
         </button>
       </mat-menu>
 
       <div class="router-link">
         <i class="icon fa fa-refresh fa-2x" (click)="refreshPage()" aria-hidden="true"></i>
         <!-- <label class="link" routerLink="/route2">Refresh</label> -->
-        <label class="link" (click)="refreshPage()">Refreshment</label>
+        <label class="link" (click)="refreshPage()">Refresh</label>
       </div>
     </mat-nav-list>
   </mat-sidenav>

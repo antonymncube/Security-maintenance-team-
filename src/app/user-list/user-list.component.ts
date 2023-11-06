@@ -12,6 +12,14 @@ export interface PeriodicElement {
   name: string;
   weight: number;
   symbol: string;
+  description: string;
+  agent: string;
+  password: string;
+  email: string;
+  homephone: string;
+  mobile: string;
+  department: string;
+  status: boolean;
   id: number; // Add the 'id' property with the appropriate data type (e.g., number)
   // Add more properties as needed
 }
@@ -52,6 +60,8 @@ export class UserListComponent implements OnInit {
       this.router.navigate(['/home/edituser', element.id]);
     } else if (action === 'viewuser') {
       this.router.navigate(['/home/viewuser', element.id]);
+    } else if (action === 'toggleStatus') {
+      this.toggleUserStatus(element.id);
     }
   }
 
@@ -61,4 +71,21 @@ export class UserListComponent implements OnInit {
        
           location.reload();
         });
-      }}}
+      }}
+   
+      
+
+      toggleUserStatus(userId: number): void {
+        const userToUpdate = this.dataSource.data.find(user => user.id === userId);
+      
+        if (userToUpdate) {
+          userToUpdate.status = !userToUpdate.status;
+      
+          this.apiService.updateUser(userId.toString(), userToUpdate).subscribe(() => {
+            console.log('User status updated successfully.');
+          });
+        } else {
+          console.error('User not found');
+        }
+      }
+    }

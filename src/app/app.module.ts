@@ -14,7 +14,7 @@ import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { MatTabsModule } from '@angular/material/tabs';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MasterLayoutComponent } from './master-layout/master-layout.component';
 import { UserupdateComponent } from './userupdate/userupdate.component';
 import { AuthGuard } from './auth.guard';
@@ -29,6 +29,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ModifyAccesCodesComponent } from './modify-acces-codes/modify-acces-codes.component';
 import { AccessGroupComponent } from './access-group/access-group.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+ 
+
 
 @NgModule({
   declarations: [
@@ -63,6 +65,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     MatPaginatorModule,
     MatFormFieldModule, // Add MatFormFieldModule to imports for MatPrefix
     MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent],

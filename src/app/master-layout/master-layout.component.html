@@ -31,11 +31,24 @@
                         <!-- <button mat-menu-item (click)="openDialog()">Open dialog</button> -->
                         
                     <p (click)="logout()" style="padding-left: 10px;"><i class="fa fa-1x fa-sign-out"></i>Log out</p>
+<<<<<<< HEAD
 
                     
                     <p (click)="About()" style="padding-right: 10px;"><i class="fa fa-1x fa-sign-out"></i>About
                     <mat-icon>info</mat-icon>
                 </p>
+=======
+                        
+                    <p (click)="togglePurpose()" style="cursor: pointer; padding-right: 10px;">
+                        <i><mat-icon>info</mat-icon></i>About
+                      </p>
+                      
+                      <div *ngIf="showPurpose">
+                        <h2>Version1</h2>
+                        <p>{{ Version1 }}</p>
+                      </div>
+                      
+>>>>>>> b5aa04827b2dcc5fce35a17b11f0f3e0a305c87f
 
 
 
