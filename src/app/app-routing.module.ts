@@ -5,6 +5,9 @@ import { LoginComponent } from './login/login.component';
 import { UserupdateComponent } from './userupdate/userupdate.component';
 import { AuthGuard } from './auth.guard';
 import { MasterLayoutComponent } from './master-layout/master-layout.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ModifyAccesCodesComponent } from './modify-acces-codes/modify-acces-codes.component';
+
 
 const routes: Routes = [
 
@@ -15,7 +18,8 @@ const routes: Routes = [
 
     {
       path: 'home',
-      loadChildren: () => import('./master-layout/master-layout.module').then((m) => m.MasterLayoutModule)
+      loadChildren: () => import('./master-layout/master-layout.module').then((m) => m.MasterLayoutModule),
+      canActivate: [AuthGuard]
     }
     // path: 'home',
     // component: UserListComponent,
@@ -36,6 +40,14 @@ const routes: Routes = [
     redirectTo: '/login',
     pathMatch: 'full',
   },
+  {
+    path: 'forgot-password',
+    component: ForgotPasswordComponent
+  },
+  {
+    path:'./accesscode',
+    component:ModifyAccesCodesComponent
+  }
 
 
 ];

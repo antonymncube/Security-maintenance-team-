@@ -1,0 +1,106 @@
+.dialog-content {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.access-groups {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px;
+  max-height: 200px; /* Set a max height for scrollable content */
+  overflow-y: auto; /* Add vertical scrollbar if content exceeds max height */
+}
+
+.access-group {
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.access-group-name {
+  font-weight: bold;
+  color: #333; /* Text color for group names */
+}
+
+.col {
+  display: inline-block;
+  width: 49%;
+  vertical-align: top; /* Ensure columns align properly */
+}
+
+.access-codes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-height: 200px; /* Set a max height for scrollable content */
+  overflow-y: auto; /* Add vertical scrollbar if content exceeds max height */
+}
+
+.access-code {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.access-code.clicked {
+  background-color: rgb(115, 115, 238);
+  color: white;
+  cursor: pointer;
+}
+
+.code-item {
+  width: 150px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.description-item {
+  display: inline-block;
+  color: #666; /* Text color for descriptions */
+}
+
+/* Add more styling as needed for your form and buttons */
+.form-group {
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style the Save button */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Style the checkboxes */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.code-checkbox {
+  margin-right: 10px;
+}

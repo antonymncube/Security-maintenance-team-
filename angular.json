@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            
             "outputPath": "dist/security-maintenence",
             "index": "src/index.html",
             "main": "src/main.ts",

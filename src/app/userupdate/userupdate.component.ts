@@ -1,8 +1,9 @@
+import { PasswordHashingService } from './../services/password-hashing.service';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiServiceService } from '../services/api-service.service';
 import { UserFormData } from '../User';
-import { Router } from '@angular/router'; 
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,8 +16,9 @@ export class UserupdateComponent {
   user: UserFormData = new UserFormData();
   SecLookup : any = '';
 
-  constructor(private formBuilder: FormBuilder, private apiService: ApiServiceService,private router :Router ) {
-      
+  constructor(private formBuilder: FormBuilder, private apiService: ApiServiceService,private router :Router,
+    private PasswordHashingService: PasswordHashingService ) {
+
 
     this.userForm = this.formBuilder.group({
       username: ['', [Validators.required]],
@@ -36,10 +38,10 @@ export class UserupdateComponent {
   isControlInvalid(controlName: string) {
     const control = this.userForm.get(controlName);
     // console.log('back is hot')
-  
+
     return control?.invalid && control?.touched;
   }
-   
+
   // Add this function inside your UserupdateComponent class
 checkPasswordMatch(): boolean {
   const passwordControl = this.userForm.get('password');
@@ -74,7 +76,7 @@ getAccesslookup() {
   });
 }
 
- 
+
 
 
 
@@ -82,31 +84,34 @@ onSubmit() {
   this.getAccesslookup();
   if (this.userForm.valid) {
     if (this.checkPasswordMatch()) {
-      // Password and Confirm Password match
-      this.apiService.checkUsernameExist(this.userForm.value.username).subscribe((exists: boolean) => {
-        if (exists) {
-          alert('Username already exists. Please choose a different username.');
-          // You can display an error message or take appropriate action here
-        } else {
-          // Username is unique; proceed to add the user
-          this.user.email = this.userForm.value.email;
-          this.user.username = this.userForm.value.username;
-          this.user.password = this.userForm.value.password;
-          this.user.department = this.userForm.value.department;
-          this.user.mobile = this.userForm.value.mobile;
-          this.user.homephone = this.userForm.value.homephone;
-          this.user.description = this.userForm.value.description;
-          this.user.fullname = this.userForm.value.fullname;
-          this.user.agent = this.userForm.value.agent
 
-          console.log(this.user);
- 
-          this.apiService.postdata(this.user).subscribe((postResponse: any) => {
-            console.log('Data posted successfully:', postResponse);
-            this.router.navigate(['/home']);
-            this.userForm.reset();
-          });
-        }
+      this.PasswordHashingService.hashPassword(this.userForm.value.password).then((hashedPassword) => {
+
+        this.apiService.checkUsernameExist(this.userForm.value.username).subscribe((exists: boolean) => {
+          if (exists) {
+            alert('Username already exists. Please choose a different username.');
+          } else {
+
+            this.user.email = this.userForm.value.email;
+            this.user.username = this.userForm.value.username;
+            this.user.password = hashedPassword;
+            this.user.department = this.userForm.value.department;
+            this.user.mobile = this.userForm.value.mobile;
+            this.user.homephone = this.userForm.value.homephone;
+            this.user.description = this.userForm.value.description;
+            this.user.fullname = this.userForm.value.fullname;
+            this.user.agent = this.userForm.value.agent;
+
+            console.log(this.user);
+
+
+            this.apiService.postdata(this.user).subscribe((postResponse: any) => {
+              console.log('Data posted successfully:', postResponse);
+              this.router.navigate(['/home']);
+              this.userForm.reset();
+            });
+          }
+        });
       });
     }
   }

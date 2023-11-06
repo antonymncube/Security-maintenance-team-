@@ -1,1 +1,50 @@
-<p>access-group works!</p>
+<div class="dialog-content">
+  <h2>Security Access Groups and Codes</h2>
+  <div class="row">
+    <div class="col">
+      <div class="access-groups scrollable">
+        <div *ngFor="let group of accessGroup; let i = index" class="access-group">
+          <div class="access-group-item" (click)="toggleAccessCodes(i)" [ngClass]="{'clicked': group.selected}">
+            <div class="access-group-name">
+              <strong>{{ group.sAccessGroup }}</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col bg-white">
+      <div class="access-codes scrollable">
+        <div *ngFor="let group of accessGroup">
+           <div *ngIf="group.selected"> 
+            <div *ngFor="let code of group.sAccessCodes" class="access-code">{{ code }}</div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+<div class="row scrollable p-3">
+  <div *ngFor="let accesscodes of accessCodes; let i = index" class="access-code p-2">
+    <label class="checkbox-container">
+      <input type="checkbox" class="code-checkbox" [(ngModel)]="accesscodes.selected">
+      <span class="code-item">{{ accesscodes.sAccessCode }}</span>
+      <span class="description-item">{{ accesscodes.SAccessDescription }}</span>
+    </label>
+  </div>
+</div>
+
+<form [formGroup]="accessGroundForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="accessGroup">Access Group</label>
+    <input type="text" id="accessGround" formControlName="accessGroup" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Add</button>
+</form>
+
+ 
+  <button (click)="saveSelectedAccessCodes()">Save</button>
+ 
+
+
+
+ 
