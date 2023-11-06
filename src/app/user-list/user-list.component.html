@@ -59,7 +59,9 @@
               </button> -->
 
               <button mat-menu-item (click)="onActionSelected(element, 'toggleStatus')">
-                <span>Toggle Status</span>
+                <span>
+                  {{ element.status ? 'Deactivate' : 'Activate' }} user
+                </span>
               </button>
             </mat-menu>
           </td>
