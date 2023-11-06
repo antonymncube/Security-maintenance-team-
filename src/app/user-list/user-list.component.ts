@@ -61,7 +61,7 @@ export class UserListComponent implements OnInit {
     } else if (action === 'viewuser') {
       this.router.navigate(['/home/viewuser', element.id]);
     } else if (action === 'toggleStatus') {
-      this.toggleUserStatuzs(element.id);
+      this.toggleUserStatus(element.id);
     }
   }
 
@@ -73,40 +73,9 @@ export class UserListComponent implements OnInit {
         });
       }}
    
-      toggleUserStatus(user: PeriodicElement): void {
-        this.apiService.updateUser(user.id.toString(), {user}).subscribe((data: PeriodicElement[]) => {
-          user.status = !user.status;
-          console.log('User status updated successfully.');
-        });
-      }
+      
 
-      toggleUserStatuss(userid: number): void {
-        this.apiService.updateUser(userid.toString(), this.apiService.getUserDetails(userid.toString())).subscribe((res: any) => {
-          res.status = !res.status;
-          console.log('User status updated successfully.');
-        });
-      }
-
-      toggleUserStatusz(user: PeriodicElement): void {
-        user.status = !user.status;
-        this.apiService.updateUser(user.toString(), {user}).subscribe((data: PeriodicElement[]) => {
-          user.status = !user.status;
-          console.log('User status updated successfully.');
-        });
-      }
-
-      toggleUserStatuszz(user: string): void {
-        this.apiService.getUserDetails(user).subscribe((data: any) =>{
-        this.dataSource.data = data;
-        data
-        this.apiService.updateUser(data.id, {data}).subscribe((data: PeriodicElement[]) => {
-          
-          console.log('User status updated successfully.');
-        });
-      });
-      }
-
-      toggleUserStatuzs(userId: number): void {
+      toggleUserStatus(userId: number): void {
         const userToUpdate = this.dataSource.data.find(user => user.id === userId);
       
         if (userToUpdate) {

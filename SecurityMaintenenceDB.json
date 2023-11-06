@@ -335,7 +335,8 @@
       "email": "DEV@Genasystech.com",
       "homephone": "0781638594",
       "mobile": "0781638594",
-      "department": "IT"
+      "department": "IT",
+      "status": true
     },
     {
       "id": 19,
