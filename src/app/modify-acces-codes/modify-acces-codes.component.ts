@@ -75,7 +75,7 @@ export class ModifyAccesCodesComponent implements OnInit {
 
   updateAccessCode() {
  
-    if (this.EditForm1.invalid) return
+    if (this.EditForm1.invalid) return 
      
     this.securityAccessCode = {
       sAccessCode: this.EditForm1.value.editcode,
@@ -92,6 +92,7 @@ export class ModifyAccesCodesComponent implements OnInit {
           SAccessDescription: '',
         }; // Reset the form after successful edit
         this.accesscodeid = null;
+        location.reload();
       },
       (error) => {
         console.error('Edit error:', error);
@@ -108,6 +109,7 @@ export class ModifyAccesCodesComponent implements OnInit {
 
       this.apiService.deleteAccesscode(this.accesscodeid).subscribe(res => {
         alert("Record Deleted")
+        location.reload();
       })
     }
 
@@ -138,6 +140,7 @@ export class ModifyAccesCodesComponent implements OnInit {
             this.apiService.postsecLookup(this.securityAccessCode).subscribe(
               response => {
                 console.log('Request was successful:', response);
+                this.refreshPage()
               },
               error => {
                 console.error('An error occurred:', error);
@@ -147,6 +150,9 @@ export class ModifyAccesCodesComponent implements OnInit {
         }
       );
     }
+  }
+  refreshPage() {
+    location.reload();
   }
 
 

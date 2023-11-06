@@ -83,6 +83,10 @@ export class AccessGroupComponent {
     // Now, this.selectedAccessCodes contains the selected access codes
   }
 
+  
+  refreshPage() {
+    location.reload();
+  }
 
   saveSelectedAccessCodes(): void {
     if (this.selectedGroupId === null) {
@@ -124,6 +128,7 @@ export class AccessGroupComponent {
       
         this.accessCodes.forEach((code) => {
           code.selected = false;
+          this.refreshPage()
         });
   
       });
