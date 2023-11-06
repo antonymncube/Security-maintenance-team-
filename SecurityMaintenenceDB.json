@@ -336,6 +336,62 @@
       "homephone": "0781638594",
       "mobile": "0781638594",
       "department": "IT"
+    },
+    {
+      "id": 19,
+      "username": "aphelele.rana@genasystech.comss",
+      "fullname": "Kholo yes",
+      "description": " Married",
+      "location": "",
+      "agent": "Simply Health",
+      "password": "$2a$10$k8vfeW0chnSruaFmI3goXuTHp3rNkjseIChuqG0yVdjUiYJHZ13CW",
+      "email": "shghsghsah@gmail.com",
+      "homephone": "0671402936",
+      "mobile": "0781990677",
+      "department": "HR",
+      "status": true
+    },
+    {
+      "id": 20,
+      "username": "updatedaa",
+      "fullname": "Russia",
+      "description": "yes",
+      "location": "",
+      "agent": "Standard Bank",
+      "password": "$2a$10$uQ8gPuWqa8ATQDEcZ/ieJ.OCG0a6wQiffjFI5OsGkCHLJn/U8FM/u",
+      "email": "nseptember591@gmail.com",
+      "homephone": "0671402936",
+      "mobile": "0781990677",
+      "department": "IT",
+      "status": false
+    },
+    {
+      "id": 21,
+      "username": "aphelele.ranaass",
+      "fullname": "Russia",
+      "description": " Married",
+      "location": "",
+      "agent": "Standard Bank",
+      "password": "$2a$10$9R3nLWFGX5cAR2W.gVol9.jjmeEES3i/E2FtCkm1O9cwRSm.6tHG2",
+      "email": "ranaaphelele@gmail.com",
+      "homephone": "0671402936",
+      "mobile": "0781990677",
+      "department": "HR",
+      "status": true
+    },
+    {
+      "id": 22,
+      "username": "lionesss",
+      "fullname": "Russia",
+      "description": "Coolest Ever",
+      "location": "",
+      "agent": "Standard Bank",
+      "password": "$2a$10$dPl402siSpAM1gJt.QqdzewJB5AT4VBmSwwnbfeGzFhZfxHgxr.7i",
+      "email": "shghsghsah@gmail.com",
+      "homephone": "0671402936",
+      "mobile": "0781990677",
+      "department": "IT",
+      "status": false
     }
   ]
 }
