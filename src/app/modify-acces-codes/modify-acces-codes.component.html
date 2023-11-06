@@ -1,4 +1,4 @@
-<div class="dialog-content">
+<!-- <div class="dialog-content content">
   <h2>Security Access Codes</h2>
   <div class="access-codes scrollable">
     <div *ngFor="let secCode of SecLookup" class="access-code">
@@ -8,7 +8,28 @@
       </div>
     </div>
   </div>
+</div> -->
+
+<div class="dialog-content content">
+  <h2>Security Access Codes</h2>
+  <div class="access-codes scrollable">
+    <div *ngFor="let secCode of SecLookup" class="access-code">
+      <div class="access-code-item" (click)="toggleaccesscode(secCode)"  #accessCodeItem>
+        <strong>{{ secCode.sAccessCode }}</strong>
+        <div class="access-description">
+          {{ secCode.SAccessDescription }}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+<!-- ... rest of your code ... -->
+
+
+<!-- ... rest of your code ... -->
+
 
 <mat-tab-group animationDuration="0ms">
   <mat-tab label="Add Access-code">
@@ -28,7 +49,7 @@
         </div>
 
         <div class="dialog-actions">
-          <button mat-button type="submit" [disabled]="myForm.invalid">Add</button>
+          <button mat-button type="submit" [disabled]="myForm.invalid" class="btn ">Add</button>
         </div>
       </form>
     </div>
@@ -47,8 +68,8 @@
           </div>
         </div>
         <div class="dialog-actions">
-          <button mat-button type="submit"  >Save</button>
-          <button (click)="delete()">Delete</button>
+          <button mat-button type="submit" class="btn-save" >Save</button>
+          <button (click)="delete()" class="btn">Delete</button>
         </div>
       </form>
     </div>
