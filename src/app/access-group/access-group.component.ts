@@ -1,5 +1,5 @@
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule, Validators } from '@angular/forms';
 import { Component, Inject, ChangeDetectionStrategy } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ApiServiceService } from '../services/api-service.service';
@@ -27,14 +27,21 @@ export class AccessGroupComponent {
    
   }>;
   selectedGroupId: string ='';
+  accessGroundForm: any;
 
   constructor(
-    public dialogRef: MatDialogRef<AccessGroupComponent>, private apiService: ApiServiceService,
+    public dialogRef: MatDialogRef<AccessGroupComponent>,private fb: FormBuilder, private apiService: ApiServiceService,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.accessGroup = data.accessGroup;  
     this.accessCodes = []; // Initialize accessCodes as an empty array
     this.accesscodes();
+  }
+
+  ngOnInit(): void {
+    this.accessGroundForm = this.fb.group({
+      accessGround: ['', Validators.required]
+    });
   }
 
   accesscodes() {
@@ -63,7 +70,13 @@ export class AccessGroupComponent {
 
   selectedAccessCodes: any[] = []; 
 
- 
+  onSubmit() {
+    if (this.accessGroundForm.valid) {
+      const accessGroundValue = this.accessGroundForm.value.accessGround;
+      console.log('Submitted Access Ground: ' + accessGroundValue);
+      
+    }
+  }
 
   getSelectedAccessCodes(): void {
     this.selectedAccessCodes = this.accessCodes.filter((code) => code.selected);

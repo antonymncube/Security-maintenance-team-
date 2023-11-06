@@ -6,14 +6,14 @@
       "id": "1"
     },
     {
-      "id": "2",
-      "sAccessCode": "ADDR_OVERRIDE",
-      "SAccessDescription": "Allow Address Override"
+      "sAccessCode": "thank silas",
+      "SAccessDescription": "again",
+      "id": "2"
     },
     {
+      "id": "4",
       "sAccessCode": "AGENT_MAINT",
-      "SAccessDescription": "Agent maintenance",
-      "id": "4"
+      "SAccessDescription": "Agent maintenance"
     },
     {
       "id": "6",
@@ -86,19 +86,52 @@
       "SAccessDescription": "tester"
     },
     {
-      "id": "22",
       "sAccessCode": "",
-      "SAccessDescription": ""
+      "SAccessDescription": "",
+      "id": "839fc2c3-a708-4020-8687-3237bcfa708c"
+    },
+    {
+      "sAccessCode": "SADAS",
+      "SAccessDescription": "sads",
+      "id": "f40b2893-2ec3-41ec-9f86-bf4dc2c21892"
+    },
+    {
+      "sAccessCode": "BACKTHERE",
+      "SAccessDescription": "fdagfda",
+      "id": "3be7daed-ae62-4ba1-8e4b-383bcb9fd78e"
+    },
+    {
+      "sAccessCode": "CHURCH",
+      "SAccessDescription": "tester",
+      "id": "d3acb86e-6753-4954-af29-b4e4776c94be"
+    },
+    {
+      "sAccessCode": "BACK",
+      "SAccessDescription": "you",
+      "id": "6c67822c-68c1-4e04-8e9a-d2dba09f8d1f"
+    },
+    {
+      "sAccessCode": "BACK",
+      "SAccessDescription": null,
+      "id": "dcd2ea98-0064-46a0-af8e-98379ed4af37"
+    },
+    {
+      "sAccessCode": "BACK",
+      "SAccessDescription": null,
+      "id": "1b3fa765-ffdb-42d3-9f06-2f9797ac344b"
+    },
+    {
+      "sAccessCode": "dlayani ximanga",
+      "SAccessDescription": "ayakayi",
+      "id": "ac472ad9-ded4-4622-821f-adcc0996b2fa"
     }
   ],
   "SecAccessGroups": [
     {
-      "sAccessGroup": "SH-sales",
+      "sAccessGroup": "SH-silas",
       "sAccessCodes": [
-        "fgebe",
         "ACCEPTBBWARN",
-        "MAC",
-        "BACK",
+        "thank silas",
         "ADDR_OVERRIDE",
         "AGENT_COMM_PAY",
         "AGENT_MAINT",
@@ -107,12 +140,9 @@
       "id": "1"
     },
     {
-      "sAccessGroup": "SH-sales",
+      "sAccessGroup": "SH-Antony",
       "sAccessCodes": [
         "ACCEPTBBWARN",
-        "ADDR_OVERRIDE",
-        "AGENT_MAINT",
-        "fgebe",
         "API_DOC_ANTONV",
         "AGENT_COMM_PAY",
         null
@@ -120,10 +150,9 @@
       "id": "2"
     },
     {
-      "sAccessGroup": "SH-sales",
+      "sAccessGroup": "SH-xolani",
       "sAccessCodes": [
         "AGENT_COMM_PAY",
-        "AGENT_MAINT",
         "ACCEPTBBWARN",
         null
       ],
@@ -173,16 +202,6 @@
       "email": "antonymncube49@gmail.com",
       "homephone": "llllll",
       "mobile": "we are back"
-    },
-    {
-      "id": "3",
-      "sAccessCode": "AGENT_COMM_PAY",
-      "SAccessDescription": "Allow user to execute the Commission Pay Over Maintenance app"
-    },
-    {
-      "sAccessCode": "AGG_BATCH_REV",
-      "SAccessDescription": "View the batch claim aggregate review screen",
-      "id": "5"
     },
     {
       "id": "7",
@@ -287,29 +306,27 @@
     },
     {
       "id": "17",
-      "username": "Aphelele",
+      "username": "aphelela",
       "fullname": "Aphelele Rana",
       "description": "GHqom",
-      "location": "",
-      "agent": "Simply Health",
       "password": "$2a$10$YTBDMIX4vycg1Qo2AzFwIOpfgJf6MqB.B.4TlNDSqGgUXFzPfX2h.",
+      "department": "IT",
       "email": "ranaaphelele@gmail.com",
       "homephone": "0781638594",
       "mobile": "0781990677",
-      "department": "IT"
+      "agent": "Simply Health"
     },
     {
       "id": "18",
       "username": "Dev",
       "fullname": "Test",
       "description": "MGA",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$1YjWgMHGucqzRsGyKBV8Qedsw.uOsGUQA.yG3DBl7/5IZp6uhMVOO",
+      "department": "IT",
       "email": "DEV@Genasystech.com",
       "homephone": "0781638594",
       "mobile": "0781638594",
-      "department": "IT"
+      "agent": "Simply Health"
     }
   ]
 }

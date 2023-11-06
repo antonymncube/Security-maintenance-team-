@@ -64,8 +64,8 @@ export class NavBarComponent {
   openDialogWithAccessGroup(accessGroup: any) {
    
     const dialogRef = this.dialog.open(AccessGroupComponent, {
-      width: '800px',
-      height:'500px',
+      width: '850px',
+      height:'550px',
       data: {accessGroup},
       
     });

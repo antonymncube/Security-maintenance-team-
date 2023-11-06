@@ -12,8 +12,8 @@
 
 <mat-tab-group animationDuration="0ms">
   <mat-tab label="Add Access-code">
-    <div class="form-container" [formGroup]="myForm">
-      <form (ngSubmit)="onsubmit()">
+    <div class="form-container" >
+      <form (ngSubmit)="onsubmit()" [formGroup]="myForm">
         <div class="form-row">
           <div class="form-group">
             <label for="code">Code:</label>
@@ -35,19 +35,19 @@
   </mat-tab>
   <mat-tab label="Edit Access-code">
     <div class="form-container">
-      <form (ngSubmit)="editsubmit()">
+      <form (ngSubmit)="updateAccessCode()" [formGroup]="EditForm1">
         <div class="form-row">
           <div class="form-group">
             <label for="editCode">Code:</label>
-            <input type="text" id="editcode" name="editcode" [(ngModel)]="securityAccessCode.sAccessCode">
+            <input type="text" id="editcode" name="editcode" formControlName="editcode">
           </div>
           <div class="form-group">
             <label for="editDescription">Description:</label>
-            <input type="text" id="editdescription" name="editdescription" [(ngModel)]="securityAccessCode.SAccessDescription">
+            <input type="text" id="editdescription" name="editdescription" formControlName="editdescription">
           </div>
         </div>
         <div class="dialog-actions">
-          <button mat-button type="submit">Edit</button>
+          <button mat-button type="submit"  >Save</button>
           <button (click)="delete()">Delete</button>
         </div>
       </form>

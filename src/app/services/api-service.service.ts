@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { SecLookup } from '../SecAccessLookup';
 
 @Injectable({
   providedIn: 'root'
@@ -62,8 +63,9 @@ export class ApiServiceService {
   //   );
   // }
 
-  updateAccesscode(id: string, data: any): Observable<any> {
-    const url = `http://localhost:3000/SecLookupCodes/${id}`;  
+  updateAccesscode( data: SecLookup): Observable<any> {
+    const url = `http://localhost:3000/SecLookupCodes/${data.id}`; 
+    console.log(url) 
     return this.http.put(url, data).pipe(
       map((res: any) => res)
     );
