@@ -5,8 +5,6 @@ import { UserListComponent } from '../user-list/user-list.component';
 import { UserupdateComponent } from '../userupdate/userupdate.component';
 import { EditUserComponent } from '../edit-user/edit-user.component';
 import { ViewUserComponent } from '../view-user/view-user.component';
-import { ForgotPasswordComponent } from '../forgot-password/forgot-password.component';
-
 
 
 
@@ -31,12 +29,6 @@ const routes: Routes = [
       {
         path:'viewuser/:id',
         component:ViewUserComponent
-      },
-      {
-        path: 'forgot-password',
-        component: ForgotPasswordComponent
-
-
       }
 
     ]
