@@ -29,6 +29,8 @@ export class EditUserComponent implements OnInit {
       homephone: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       agent :  ['',[Validators.required]],
+      lastUpdated: [''],
+      Language:['']
     });
   }
 
@@ -45,13 +47,19 @@ export class EditUserComponent implements OnInit {
 
   isControlInvalid(controlName: string) {
     const control = this.userForm.get(controlName);
-  
+
     return control?.invalid && control?.touched;
   }
-   
+
 
   onSubmit() {
     if (this.userForm.valid) {
+      const lastUpdatedControl = this.userForm.get('lastUpdated');
+
+      if (lastUpdatedControl) {
+        lastUpdatedControl.setValue(new Date());
+      }
+
       this.apiService.updateUser(this.id, this.userForm.value).subscribe((response: any) => {
         this.userForm.reset();
         this.router.navigate(['/home']);
@@ -59,4 +67,5 @@ export class EditUserComponent implements OnInit {
       });
     }
   }
+
 }
