@@ -44,6 +44,11 @@
       "sAccessCode": "API_DOC_4",
       "SAccessDescription": "TEST",
       "id": "200ba171-0ec1-428c-a200-28b144739185"
+    },
+    {
+      "sAccessCode": " API_DOC_BLOCK",
+      "SAccessDescription": "Prevent access to all documents through API",
+      "id": "2f009fc3-2441-42d8-a1a6-b3852e523a47"
     }
   ],
   "SecAccessGroups": [
@@ -211,14 +216,12 @@
       "username": "Grant",
       "fullname": "Grant Oliver",
       "description": "tester",
-      "location": "",
-      "agent": "Genasys",
-      "password": "$2a$10$zq8RKm5vtAP255voAQHLYewSWd3gIwdLglW/aJqfyA8f8QWtUdY8m",
+      "password": "wawawawe",
+      "department": "Sales",
       "email": "nseptember591@gmail.com",
       "homephone": "0781638594",
       "mobile": "0671802963",
-      "department": "Sales",
-      "status": true
+      "agent": "Genasys"
     }
   ]
 }
