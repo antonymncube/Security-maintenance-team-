@@ -5,6 +5,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { AuthService } from '../services/auth.service';
 import { SharedDataService } from '../services/shared-data.service';
+import { FormBuilder} from '@angular/forms';
+
 
 
 export interface PeriodicElement {
@@ -38,9 +40,11 @@ export class UserListComponent implements OnInit {
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
   currentuser: string = '';
+  statusFilterControl = this.formBuilder.control('');
+
 
   constructor(private apiService: ApiServiceService, private router: Router, private autservice: AuthService,
-    private SharedDataService:  SharedDataService) { }
+    private SharedDataService:  SharedDataService, private formBuilder: FormBuilder) { }
 
     ngOnInit() {
       this.apiService.getData().subscribe((data: PeriodicElement[]) => {
@@ -56,6 +60,9 @@ export class UserListComponent implements OnInit {
 
 
       });
+    });
+    this.statusFilterControl.valueChanges.subscribe((status: string | null) => {
+      this.applyStatusFilter(status);
     });
   }
 
@@ -90,6 +97,16 @@ export class UserListComponent implements OnInit {
           });
         } else {
           console.error('User not found');
+        }
+      }
+
+      applyStatusFilter(status: string | null): void {
+        if (status === null) {
+          // If status is null, no filter should be applied
+          this.dataSource.filter = '';
+        } else {
+          // Otherwise, apply the filter based on the boolean value
+          this.dataSource.filter = status === 'true' ? 'true' : 'false';
         }
       }
     }
