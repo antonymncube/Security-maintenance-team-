@@ -299,24 +299,18 @@
     },
     {
       "id": "RIpKtJb",
-      "username": "Mitch",
       "fullname": "Mitch Gordons",
       "description": "Dev Manager",
-      "location": "",
-      "agent": "Standard Bank",
-      "password": "$2a$10$ZPiM8IHrPp24ywAM4bQQbu0RRtbNrc5iAMD2.3HAhiePvsZgtBOuq",
+      "department": "IT",
       "email": "nseptember591@gmail.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "department": "IT",
-      "status": true
+      "agent": "Standard Bank"
     },
     {
       "id": "9d802p8",
-      "username": "Grant",
       "fullname": "Grant Oliver",
-      "description": "tester",
-      "password": "wawawawe",
+      "description": "Dev Manager",
       "department": "Sales",
       "email": "nseptember591@gmail.com",
       "homephone": "0781638594",

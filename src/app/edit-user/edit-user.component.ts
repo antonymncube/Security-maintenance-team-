@@ -11,6 +11,8 @@ import { ApiServiceService } from '../services/api-service.service';
 export class EditUserComponent implements OnInit {
   id: string = '';
   userForm: FormGroup;
+  editedFields: Set<string> = new Set(); // Track edited fields
+
 
   constructor(
     private formBuilder: FormBuilder,
@@ -59,4 +61,18 @@ export class EditUserComponent implements OnInit {
       });
     }
   }
+  
+  resetForm() {
+    // Reset only the edited fields
+    this.editedFields.forEach((fieldName) => {
+      this.userForm.get(fieldName)?.reset();
+    });
+    this.editedFields.clear(); // Clear the set of edited fields
+  }
+
+  // Track changes in form controls
+  onControlChange(controlName: string) {
+    this.editedFields.add(controlName);
+  }
+
 }

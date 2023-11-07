@@ -80,7 +80,14 @@
         </div>
       </div>
       </div>
+      <div class="button-group">
+
+        <button type="button" (click)="resetForm()">Reset</button>
+
       <button type="submit" [disabled]="userForm.invalid">Save</button>
+    </div>
+  
+      
     </mat-tab>
     <mat-tab label="Contact-details">
       <!-- You can add contact details form fields here if needed -->

@@ -18,10 +18,12 @@ export class UserupdateComponent {
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiServiceService,private router :Router,
     private PasswordHashingService: PasswordHashingService ) {
+       // Define a regular expression pattern to allow only letters, numbers, and underscores
+    const usernamePattern = /^[A-Za-z0-9_]+$/;
 
 
     this.userForm = this.formBuilder.group({
-      username: ['', [Validators.required]],
+      username: ['', [Validators.required, Validators.pattern(usernamePattern)]],
       fullname: ['', [Validators.required]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmpassword: ['', [Validators.required, Validators.minLength(6)]],
