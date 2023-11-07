@@ -20,10 +20,10 @@ export class EditUserComponent implements OnInit {
   ) {
     this.userForm = this.formBuilder.group({
       id: [''],
-      username: ['', Validators.required],
+      username: [{ value: '', disabled: true }, Validators.required], // Set username as not editable
       fullname: ['', Validators.required],
       description: [''],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      password: [{ value: '', disabled: true }, [Validators.required, Validators.minLength(6)]], // Set password as not editable
       department: [''],
       email: ['', [Validators.required, Validators.email]],
       homephone: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits

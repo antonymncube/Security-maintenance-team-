@@ -6,11 +6,6 @@
       "id": "1"
     },
     {
-      "sAccessCode": "thank silas",
-      "SAccessDescription": "again",
-      "id": "2"
-    },
-    {
       "id": "4",
       "sAccessCode": "AGENT_MAINT",
       "SAccessDescription": "Agent maintenance"
@@ -36,94 +31,124 @@
       "SAccessDescription": "Allow access to documents with Personal confidentiality through API"
     },
     {
-      "id": "10",
-      "sAccessCode": "fgebe",
-      "SAccessDescription": "fgefg"
-    },
-    {
-      "id": "11",
-      "sAccessCode": "fgebe",
-      "SAccessDescription": "fgefg"
-    },
-    {
-      "id": "12",
-      "sAccessCode": "API_DOC_ANTONY",
-      "SAccessDescription": "Married"
-    },
-    {
-      "id": "13",
-      "sAccessCode": "API_DOC_ANTONV",
-      "SAccessDescription": "Married"
-    },
-    {
-      "id": "14",
-      "sAccessCode": "WESFSD",
-      "SAccessDescription": "sdfdd"
-    },
-    {
-      "id": "15",
-      "sAccessCode": "MAC",
-      "SAccessDescription": "jhbk"
-    },
-    {
-      "id": "16",
-      "sAccessCode": "ASDAS",
-      "SAccessDescription": "sadsd"
-    },
-    {
-      "id": "17",
-      "sAccessCode": "ACCEPTBBWARN",
-      "SAccessDescription": "adsd"
-    },
-    {
       "id": "18",
       "sAccessCode": "ADDR_OVERRIDE",
-      "SAccessDescription": "tester"
+      "SAccessDescription": "Prevent access to all documents through API"
     },
     {
-      "id": "20",
-      "sAccessCode": "DFKOSANGNG",
-      "SAccessDescription": "tester"
+      "sAccessCode": "API_CLAIM_MAINT",
+      "SAccessDescription": "All user to claim",
+      "id": "d03dd7c5-6f3a-4e71-8675-f2547c266845"
     },
     {
-      "sAccessCode": "",
-      "SAccessDescription": "",
-      "id": "839fc2c3-a708-4020-8687-3237bcfa708c"
+      "sAccessCode": "API_DOC_4",
+      "SAccessDescription": "TEST",
+      "id": "200ba171-0ec1-428c-a200-28b144739185"
     },
     {
-      "sAccessCode": "SADAS",
-      "SAccessDescription": "sads",
-      "id": "f40b2893-2ec3-41ec-9f86-bf4dc2c21892"
+      "sAccessCode": " API_DOC_BLOCK",
+      "SAccessDescription": "Prevent access to all documents through API",
+      "id": "2f009fc3-2441-42d8-a1a6-b3852e523a47"
     },
     {
-      "sAccessCode": "BACKTHERE",
-      "SAccessDescription": "fdagfda",
-      "id": "3be7daed-ae62-4ba1-8e4b-383bcb9fd78e"
+      "sAccessCode": "CL_DEL_CLAIMANT",
+      "SAccessDescription": "Claim - Delete unpaid Claim Parties",
+      "id": "5af926dc-02b6-4008-88b0-dea6a7d4c196"
     },
     {
-      "sAccessCode": "CHURCH",
-      "SAccessDescription": "tester",
-      "id": "d3acb86e-6753-4954-af29-b4e4776c94be"
+      "sAccessCode": "CL_EXCEL_PRINT",
+      "SAccessDescription": "Print Excel Documents",
+      "id": "d7310922-48b3-448c-9362-d38867e86973"
     },
     {
-      "sAccessCode": "BACK",
-      "SAccessDescription": "you",
-      "id": "6c67822c-68c1-4e04-8e9a-d2dba09f8d1f"
+      "sAccessCode": "CL_EXCHANGERATE",
+      "SAccessDescription": "Allow user to specify a settlement currency and rate for Claim Payments",
+      "id": "ae011d42-4348-4cef-b3e2-b98e73a44d9e"
     },
     {
-      "sAccessCode": "BACK",
-      "SAccessDescription": null,
-      "id": "dcd2ea98-0064-46a0-af8e-98379ed4af37"
+      "sAccessCode": "CL_FINALISECLMT",
+      "SAccessDescription": "Finalise Claimant",
+      "id": "f41ef724-3970-4313-bee1-820990da13d5"
     },
     {
-      "sAccessCode": "BACK",
-      "SAccessDescription": null,
-      "id": "1b3fa765-ffdb-42d3-9f06-2f9797ac344b"
+      "sAccessCode": "CL_INCIDENT",
+      "SAccessDescription": "Claim - Change Incident Date",
+      "id": "8ff89267-0a7d-4c6c-a9a5-6d207f047d3e"
     },
     {
-      "sAccessCode": "dlayani ximanga",
-      "SAccessDescription": "ayakayi",
-      "id": "ac472ad9-ded4-4622-821f-adcc0996b2fa"
+      "sAccessCode": "CL_IND_APR",
+      "SAccessDescription": "Allow Individual Claim Approval Note",
+      "id": "feb31cd7-0e0b-454d-bb3c-6c18ac95388c"
+    },
+    {
+      "sAccessCode": "CL_IND_DEC",
+      "SAccessDescription": "Allow Individual Claim Decline Note",
+      "id": "32d2e826-cacd-4c36-95a5-ea8ccc93b614"
+    },
+    {
+      "sAccessCode": "CL_NEGCLAIMBAL",
+      "SAccessDescription": "Allow negative Claim Balances",
+      "id": "71505981-4e1a-4468-b63a-f0310b70e968"
+    },
+    {
+      "sAccessCode": "CL_PAYSEC_LEV2",
+      "SAccessDescription": "Claim - Approve Payment Request",
+      "id": "3e633674-07c1-4053-b290-476e65107b33"
+    },
+    {
+      "sAccessCode": "CL_PAYSEC_LEV3",
+      "SAccessDescription": "Claim - Authorise or Decline Payment",
+      "id": "eeaa029d-33d9-43a8-89a1-5d7490ac0046"
+    },
+    {
+      "sAccessCode": "CL_RECOVERY",
+      "SAccessDescription": "Claim - Perform Recovery",
+      "id": "d8f208ef-4c46-4752-aa59-83589b11e50c"
+    },
+    {
+      "sAccessCode": "CL_REOPEN",
+      "SAccessDescription": "Re-open Finalised Claims",
+      "id": "fbb14367-3723-40bf-8f34-7db2d29c4771"
+    },
+    {
+      "sAccessCode": "CL_REQUISITION",
+      "SAccessDescription": "Claim - Print Payment Requisition",
+      "id": "cb508eb6-30cc-4d02-bcf8-a165fe216a9a"
+    },
+    {
+      "sAccessCode": "CL_REVERSEPAY",
+      "SAccessDescription": "Can reverse Claim Payments",
+      "id": "78972d50-752f-498d-84ff-b62f39352cd2"
+    },
+    {
+      "sAccessCode": "CL_SALVAGE",
+      "SAccessDescription": "Claims - can do salvage",
+      "id": "01be0b36-b1e7-4a73-ab3d-0b10595d02d5"
+    },
+    {
+      "sAccessCode": "CL_SAVECLAIM",
+      "SAccessDescription": "Claim - Can Save Claim",
+      "id": "f21fce2c-ddcd-439b-bbad-77780b3f5e6a"
+    },
+    {
+      "sAccessCode": "CL_STALECHEQUE",
+      "SAccessDescription": "Reverse Claim Payments",
+      "id": "c63cc6ae-265f-4544-813f-e2fe4445d0b2"
+    },
+    {
+      "sAccessCode": "CL_STATUS",
+      "SAccessDescription": "Claim - Change Status",
+      "id": "24d2fd41-b36b-48d3-bcef-414ca1fb1504"
+    },
+    {
+      "sAccessCode": "CL_UNDMAN",
+      "SAccessDescription": "Underwriting Manager",
+      "id": "ece0c0cb-c7ea-46b3-9ddd-0d6be32322d9"
+    },
+    {
+      "sAccessCode": "CL_UNDSUP",
+      "SAccessDescription": "Underwriting Supervisor",
+      "id": "8208fba3-7603-4ee0-aee8-f79aed235ddc"
     }
   ],
   "SecAccessGroups": [
@@ -214,8 +239,89 @@
       "email": "DEV@Genasystech.com",
       "homephone": "0781638594",
       "mobile": "0781638594",
-      "agent": "Simply Health",
-      "status": false
+      "agent": "Simply Health"
+    },
+    {
+      "id": "W54mHDU",
+      "username": "Emihle",
+      "fullname": "Emihle Ntshongwana",
+      "description": " Married",
+      "location": "",
+      "agent": "Genasys",
+      "password": "$2a$10$Z7vwnbPeltFmDCXLwbtxk.EqEhE8AkRgYzEbiveqrANunXET73q9W",
+      "email": "e.ntshongwana@genasystech.com",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "department": "IT",
+      "status": true
+    },
+    {
+      "id": "P1kTOnC",
+      "username": "Mihle",
+      "fullname": "Mihle Jack",
+      "description": " Married",
+      "location": "",
+      "agent": "Genasys",
+      "password": "$2a$10$G9g8FpFUBnYg6iYha2wsi.nRF8Vx9k4cWdHq5QvFKZb24.RfhV.4e",
+      "email": "m.jack@genasystech.com",
+      "homephone": "0671402936",
+      "mobile": "7819906770",
+      "department": "IT",
+      "status": true
+    },
+    {
+      "id": "E1yptON",
+      "username": "Grace",
+      "fullname": "Grace Ngwangwa",
+      "description": "Hello Grace",
+      "location": "",
+      "agent": "Genasys",
+      "password": "$2a$10$fH8zSNFGNRn.FVRpVCUTwu1EObbnRTfUGV.kqWLdxWxjuvt4yxwF6",
+      "email": "g.ngwangwa@genasystech.com",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "department": "IT",
+      "status": true
+    },
+    {
+      "id": "A0LIYn3",
+      "username": "Anthony",
+      "fullname": "Anthony Ncube",
+      "description": "Anthony Hemilton",
+      "location": "",
+      "agent": "Genasys",
+      "password": "$2a$10$QX4J8usm1PVh2yBC3BMiS.EODCbw/nWsRnX379BL2fHlKMKnjSnoi",
+      "email": "a.ncube@genasystech.com",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "department": "IT",
+      "status": true
+    },
+    {
+      "id": "RIpKtJb",
+      "username": "Mitch",
+      "fullname": "Mitch Gordons",
+      "description": "Dev Manager",
+      "location": "",
+      "agent": "Standard Bank",
+      "password": "$2a$10$ZPiM8IHrPp24ywAM4bQQbu0RRtbNrc5iAMD2.3HAhiePvsZgtBOuq",
+      "email": "nseptember591@gmail.com",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "department": "IT",
+      "status": true
+    },
+    {
+      "id": "9d802p8",
+      "username": "Grant",
+      "fullname": "Grant Oliver",
+      "description": "tester",
+      "password": "wawawawe",
+      "department": "Sales",
+      "email": "nseptember591@gmail.com",
+      "homephone": "0781638594",
+      "mobile": "0671802963",
+      "agent": "Genasys"
     }
   ]
 }
