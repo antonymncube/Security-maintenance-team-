@@ -1,8 +1,8 @@
- 
+
   <h2 class="welcome">Welcome {{currentuser}}</h2>
 
 
-  
+
 <div class="container p-0">
   <div class="tabs">
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
@@ -12,7 +12,7 @@
         <option value="Genasys">Genasys</option>
         <option value="Standard Bank">Standard Bank</option>
       </select></i></strong></label>
-      
+
     <div class="tabs__content">
       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
         <ng-container matColumnDef="name">
@@ -38,6 +38,11 @@
         <ng-container matColumnDef="agent">
           <th mat-header-cell *matHeaderCellDef>Agent</th>
           <td mat-cell *matCellDef="let element">{{ element.agent }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="lastUpdated">
+          <th mat-header-cell *matHeaderCellDef>Last Updated</th>
+          <td mat-cell *matCellDef="let element">{{ element.lastUpdated | date: 'yyyy-MM-dd HH:mm:ss' }}</td>
         </ng-container>
 
         <ng-container matColumnDef="Action" class="action">
@@ -72,11 +77,11 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
       </table>
 
-      
+
     </div>
     <!-- Place the mat-paginator here, inside the component's template -->
-    
-     
+
+
     </div>
     <mat-paginator class="p-0 m-0" [pageSizeOptions]="[5, 10, 50]" showFirstLastButtons="false"></mat-paginator>
     <button class="btn-add" routerLink="/home/updateuser">+ Add-User</button>
