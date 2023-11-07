@@ -2,7 +2,7 @@
  .mat-tab-group {
     margin-bottom: 48px;
   }
-   
+
   form {
     width: 80rem;
     margin: 0 auto;
@@ -12,14 +12,14 @@
     // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-top: 3rem;
   }
-   
+
   label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
   }
-  
-   
+
+
   input[type="text"],
   input[type="password"],
   input[type="email"],
@@ -32,8 +32,8 @@
     border: 1px solid #ccc;
     border-radius: 3px;
   }
-  
-   
+
+
 //   button {
 //     padding: 10px 20px;
 //     background-color: #007bff;
@@ -43,7 +43,7 @@
 //     cursor: pointer;
 //     margin-left: 72rem;
 //   }
-   
+
 //   button:disabled {
 //     background-color: #ccc;
 //     cursor:pointer;
@@ -62,20 +62,20 @@ button {
     border-radius: 3px;
     cursor: pointer;
     // margin-right: 10rem;
-    margin-left: 72rem; 
+    margin-left: 72rem;
     height: 30px;
     // margin-top: 10px;
-     
+
   }
-  
+
   // button:disabled {
   //   background-color:red;
   //   cursor: not-allowed;
   // }
-  
+
   h1{
     color: white;
-    
+
     background-color: red;
     margin-left: 80px;
   }
@@ -95,56 +95,56 @@ button {
   .form-group textarea {
     flex: 2;
   }
-  
-  
-  
+
+
+
 table {
     width: 100%;
     overflow: auto; /* Add horizontal and vertical scrollbars when needed */
     max-height: 250px; /* Set a max height for the table to show at least 5 users; adjust as needed */
   }
-  
+
   .mat-row {
     height: 50px; /* Set the height of individual rows, which should be at least 5 users' worth of space; adjust as needed */
   }
-  
+
   .mat-elevation-z8 {
     margin-top: 100px;
     margin-left: 8px;
   }
-  
+
   .Agent {
     color: blue;
   }
-  
+
   .mat-cell,
   .mat-header-cell {
     padding: 2px;
     margin: 2px;
   }
-  
+
   .mat-row {
     border-bottom: none; /* Remove the border between rows */
     margin: 2px;
   }
-  
+
   .mat-header-row {
     border-bottom: none; /* Remove the border under the header row */
     margin: 2px;
   }
-  
+
   .btn-add{
     margin-left: 60px;
   }
 
-  
+
 
   .descriptionlb{
     margin-right: 100;
   }
-  
+
   .label-width {
-    width: 120px;  
+    width: 120px;
   }
   .fullnamelb{
     margin-right: 20rem;
@@ -152,20 +152,20 @@ table {
 
   .label-width {
     display: inline-block;
-    width: 150px;  
+    width: 150px;
     text-align: right;
     margin-right: 10px;
   }
-  
-  
+
+
   .totalDetails{
-     
+
     display: flex;
     justify-content: space-between;
   }
 
  .contact-details{
-   
+
   margin-right: 60rem;
   margin-top: 30px;
   }
@@ -178,14 +178,14 @@ table {
   .userdetails,
 .contact-details {
   flex: 1;
-  margin-right: 15rem; 
-   
+  margin-right: 15rem;
+
 }
 
- 
+
 
 .input-width {
-  width: 30%; 
+  width: 30%;
 }
 
 .inputtag{
@@ -200,16 +200,16 @@ table {
   border-radius: 3px;
 }
 
- 
+
 .mat-tab-group {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin: 20px 0;
-  box-shadow: none;  
+  box-shadow: none;
   overflow: hidden;
 }
 
- 
+
 .mat-tab-label {
   background-color: #007bff;
   color: #fff;
@@ -219,13 +219,13 @@ table {
   margin-right: 1px;
 }
 
- 
+
 .mat-tab-label.mat-tab-label-active {
   background-color: #fff;
   color: #007bff;
   font-weight: bold;
 }
- 
+
 .mat-tab-body-content {
   padding: 20px;
 }
@@ -278,6 +278,11 @@ form[formGroup="userForm"] {
   font-weight: bold !important;
 }
 
-/* Other custom styling for the tabs as needed */
 
-  
+.readonly-field {
+  background-color: #f2f2f2;
+  color: #888;
+  pointer-events: none;
+}
+
+

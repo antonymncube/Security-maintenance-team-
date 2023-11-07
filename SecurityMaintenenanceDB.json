@@ -117,13 +117,14 @@
       "username": "EmihleN",
       "fullname": "Emihle Ntshongwana",
       "description": "MGA",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$Fp8Nb1ZVij/SRnEWNH5gv.adxaLYOo.sI4Ylbf0MlrslW.w9gLOpi",
+      "department": "IT",
       "email": "ntshongwanae@gmail.com",
       "homephone": "0712425668",
       "mobile": "0712425668",
-      "department": "IT"
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-07T12:36:59.638Z",
+      "Language": ""
     },
     {
       "id": "17",
@@ -135,7 +136,9 @@
       "email": "ranaaphelele@gmail.com",
       "homephone": "0781638594",
       "mobile": "0781990677",
-      "agent": "Simply Health"
+      "agent": "Simply Health",
+      "lastUpdated": "2023-11-07T12:36:54.628Z",
+      "Language": ""
     },
     {
       "id": "18",
@@ -147,21 +150,23 @@
       "email": "DEV@Genasystech.com",
       "homephone": "0781638594",
       "mobile": "0781638594",
-      "agent": "Simply Health"
+      "agent": "Simply Health",
+      "lastUpdated": "2023-11-07T12:36:50.214Z",
+      "Language": ""
     },
     {
       "id": "W54mHDU",
       "username": "Emihle",
       "fullname": "Emihle Ntshongwana",
       "description": " Married",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$Z7vwnbPeltFmDCXLwbtxk.EqEhE8AkRgYzEbiveqrANunXET73q9W",
+      "department": "IT",
       "email": "e.ntshongwana@genasystech.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "department": "IT",
-      "status": true
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-07T12:36:43.928Z",
+      "Language": ""
     },
     {
       "id": "P1kTOnC",
@@ -173,49 +178,51 @@
       "email": "m.jack@genasystech.com",
       "homephone": "0671402936",
       "mobile": "7819906770",
-      "agent": "Genasys"
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-07T12:36:36.205Z",
+      "Language": ""
     },
     {
       "id": "E1yptON",
       "username": "Grace",
       "fullname": "Grace Ngwangwa",
       "description": "Hello Grace",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$fH8zSNFGNRn.FVRpVCUTwu1EObbnRTfUGV.kqWLdxWxjuvt4yxwF6",
+      "department": "IT",
       "email": "g.ngwangwa@genasystech.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "department": "IT",
-      "status": true
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-07T12:36:29.644Z",
+      "Language": ""
     },
     {
       "id": "A0LIYn3",
       "username": "Anthony",
       "fullname": "Anthony Ncube",
       "description": "Anthony Hemilton",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$QX4J8usm1PVh2yBC3BMiS.EODCbw/nWsRnX379BL2fHlKMKnjSnoi",
+      "department": "IT",
       "email": "a.ncube@genasystech.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "department": "IT",
-      "status": false
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-07T12:36:27.362Z",
+      "Language": ""
     },
     {
       "id": "RIpKtJb",
       "username": "Mitch",
       "fullname": "Mitch Gordons",
       "description": "Dev Manager",
-      "location": "",
-      "agent": "Standard Bank",
       "password": "$2a$10$ZPiM8IHrPp24ywAM4bQQbu0RRtbNrc5iAMD2.3HAhiePvsZgtBOuq",
+      "department": "IT",
       "email": "nseptember591@gmail.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "department": "IT",
-      "status": false
+      "agent": "Standard Bank",
+      "lastUpdated": "2023-11-07T12:36:24.910Z",
+      "Language": ""
     },
     {
       "id": "9d802p8",
@@ -227,7 +234,9 @@
       "email": "nseptember591@gmail.com",
       "homephone": "0781638594",
       "mobile": "0671802963",
-      "agent": "Genasys"
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-07T12:36:21.722Z",
+      "Language": ""
     },
     {
       "id": "v2GXgqF",
@@ -240,7 +249,8 @@
       "homephone": "0671402936",
       "mobile": "0781954154",
       "agent": "Standard Bank",
-      "status": true
+      "lastUpdated": "2023-11-07T12:36:19.380Z",
+      "Language": ""
     }
   ]
 }
