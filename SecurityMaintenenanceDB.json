@@ -41,80 +41,37 @@
       "id": "d03dd7c5-6f3a-4e71-8675-f2547c266845"
     },
     {
-      "sAccessCode": " API_COMMENT_DU",
-      "SAccessDescription": "Allow user to upload Commission Entity documents using API",
+      "sAccessCode": "API_DOC_4",
+      "SAccessDescription": "TEST",
       "id": "200ba171-0ec1-428c-a200-28b144739185"
-    },
-    {
-      "sAccessCode": "APL_DOC_MAINT",
-      "SAccessDescription": "allow user access",
-      "id": "b07a3c16-a667-4e32-b663-3d9de21cecc1"
-    },
-    {
-      "sAccessCode": "API_COMMENT-GM",
-      "SAccessDescription": "Meta Data of a Commission Entity documents using API",
-      "id": "2af00755-3c14-4acf-ad42-277b02016457"
     }
   ],
   "SecAccessGroups": [
     {
-      "sAccessGroup": "Underwriting Admin",
+      "sAccessGroup": "SH-silas",
       "sAccessCodes": [
         "ACCEPTBBWARN",
-        "APL_DOC_MAINT",
-        "API_COMMENT-GM"
+        "thank silas",
+        "ADDR_OVERRIDE",
+        "AGENT_COMM_PAY",
+        "AGENT_MAINT",
+        null
       ],
       "id": "1"
     },
     {
       "sAccessGroup": "Underwriting sales cons",
-      "sAccessCodes": [
-        "ACCEPTBBWARN",
-        "AGENT_MAINT",
-        "API_CLAIM_DU",
-        "API_DOC_BLOCK",
-        "API_DOC_CONF",
-        "API_DOC_PERS",
-        "ADDR_OVERRIDE",
-        "API_CLAIM_MAINT",
-        " API_COMMENT_DU",
-        "APL_DOC_MAINT",
-        "API_COMMENT-GM"
-      ],
+      "sAccessCodes": [],
       "id": "2"
     },
     {
       "sAccessGroup": "Underwriting Service cons",
-      "sAccessCodes": [
-        "ACCEPTBBWARN",
-        "AGENT_MAINT",
-        "API_CLAIM_DU",
-        "API_DOC_BLOCK",
-        "API_DOC_CONF",
-        "API_DOC_PERS",
-        "ADDR_OVERRIDE",
-        "API_CLAIM_MAINT",
-        " API_COMMENT_DU",
-        "APL_DOC_MAINT",
-        "API_COMMENT-GM"
-      ],
+      "sAccessCodes": [],
       "id": "3"
     },
     {
       "sAccessGroup": "Underwriting Manager",
-      "sAccessCodes": [
-        "ACCEPTBBWARN",
-        "AGENT_MAINT",
-        "API_CLAIM_DU",
-        "API_DOC_BLOCK",
-        "API_DOC_CONF",
-        "API_DOC_PERS",
-        "ADDR_OVERRIDE",
-        "API_CLAIM_MAINT",
-        " API_COMMENT_DU",
-        "APL_DOC_MAINT",
-        "API_COMMENT-GM"
-      ],
+      "sAccessCodes": [],
       "id": "4"
     },
     {
@@ -223,7 +180,7 @@
       "homephone": "0671402936",
       "mobile": "0781954154",
       "department": "IT",
-      "status": true
+      "status": false
     },
     {
       "id": "A0LIYn3",
@@ -255,7 +212,7 @@
     },
     {
       "id": "9d802p8",
-      "username": " Mehluli",
+      "username": "Grant",
       "fullname": "Grant Oliver",
       "description": "tester",
       "password": "$2a$10$zq8RKm5vtAP255voAQHLYewSWd3gIwdLglW/aJqfyA8f8QWtUdY8m",
@@ -277,35 +234,6 @@
       "mobile": "0781954154",
       "agent": "Standard Bank",
       "status": true
-    },
-    {
-      "id":"1",
-      "username": "mark",
-      "fullname": "Mitch",
-      "description": "yes",
-      "location": "",
-      "agent": "Genasys",
-      "password": "$2a$10$le8anLJ6usGM74wIapK7BenezQO3J0F3RU0Pjl8oufiNvR2QEPC2i",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0671402936",
-      "mobile": "0781954154",
-      "department": "Sales",
-      "status": true
-    }
-  ],
-
-  "secUserAccessGroups" :[
-
-    {
-      "id": "1",
-      "sAccessGroups":["financial Manager","Underwriting Service cons"]
-    }
-  ],
-  "secUserAccess":[
-    {
-      "id":"1",
-      "sAccessCodes":[ "API_DOC_PERS",
-      "API_DOC_CONF"]
     }
   ]
 }

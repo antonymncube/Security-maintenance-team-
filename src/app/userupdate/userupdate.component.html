@@ -1,5 +1,5 @@
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form1">
-  
+
   <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" class="my-custom-class">
     <mat-tab label="User-Details">
       <div class="totalDetails">
@@ -37,6 +37,7 @@
             </div>
           </div>
 
+
           <div class="form-group">
             <label for="confirmpassword" class="label-width">Confirm Password:</label>
             <div class="inputtag">
@@ -47,6 +48,8 @@
               </div>
             </div>
           </div>
+
+
 
           <div class="form-group">
             <label for="department" class="label-width">Department:</label>
@@ -59,7 +62,11 @@
               Department is required.
             </div>
           </div>
+
+
         </div>
+
+
 
         <div class="contactdetails form-group">
           <!-- <div class="form-group">
@@ -114,6 +121,18 @@
               </div>
             </div>
           </div>
+
+
+          <div class="form-group">
+            <label for="Language" class="label-width">Language:</label>
+            <select id="Language" class="check" formControlName="agent">
+              <option value="English">English</option>
+              <option value="Afrikaans">Afrikaans</option>
+              <option value="Native">Native</option>
+            </select>
+            <!-- <div *ngIf="isControlInvalid('Language')" class="invalid-feedback">
+              Language is required. -->
+            </div>
 
 
 
@@ -174,5 +193,5 @@
 
     </mat-tab>
   </mat-tab-group>
- 
+
 </form>
