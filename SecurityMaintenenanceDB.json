@@ -68,17 +68,53 @@
     },
     {
       "sAccessGroup": "Underwriting sales cons",
-      "sAccessCodes": [],
+      "sAccessCodes": [
+        "ACCEPTBBWARN",
+        "AGENT_MAINT",
+        "API_CLAIM_DU",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_CLAIM_MAINT",
+        " API_COMMENT_DU",
+        "APL_DOC_MAINT",
+        "API_COMMENT-GM"
+      ],
       "id": "2"
     },
     {
       "sAccessGroup": "Underwriting Service cons",
-      "sAccessCodes": [],
+      "sAccessCodes": [
+        "ACCEPTBBWARN",
+        "AGENT_MAINT",
+        "API_CLAIM_DU",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_CLAIM_MAINT",
+        " API_COMMENT_DU",
+        "APL_DOC_MAINT",
+        "API_COMMENT-GM"
+      ],
       "id": "3"
     },
     {
       "sAccessGroup": "Underwriting Manager",
-      "sAccessCodes": [],
+      "sAccessCodes": [
+        "ACCEPTBBWARN",
+        "AGENT_MAINT",
+        "API_CLAIM_DU",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_CLAIM_MAINT",
+        " API_COMMENT_DU",
+        "APL_DOC_MAINT",
+        "API_COMMENT-GM"
+      ],
       "id": "4"
     },
     {
@@ -241,6 +277,35 @@
       "mobile": "0781954154",
       "agent": "Standard Bank",
       "status": true
+    },
+    {
+      "id":"1",
+      "username": "mark",
+      "fullname": "Mitch",
+      "description": "yes",
+      "location": "",
+      "agent": "Genasys",
+      "password": "$2a$10$le8anLJ6usGM74wIapK7BenezQO3J0F3RU0Pjl8oufiNvR2QEPC2i",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "department": "Sales",
+      "status": true
+    }
+  ],
+
+  "secUserAccessGroups" :[
+
+    {
+      "id": "1",
+      "sAccessGroups":["financial Manager","Underwriting Service cons"]
+    }
+  ],
+  "secUserAccess":[
+    {
+      "id":"1",
+      "sAccessCodes":[ "API_DOC_PERS",
+      "API_DOC_CONF"]
     }
   ]
 }
