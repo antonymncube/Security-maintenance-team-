@@ -31,6 +31,8 @@ export class UserupdateComponent {
       mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       department: ['',[Validators.required]],
       agent :  ['',[Validators.required]],
+      Language:[''],
+
     });
   }
 
