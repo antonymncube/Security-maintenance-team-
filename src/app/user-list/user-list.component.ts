@@ -5,6 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { AuthService } from '../services/auth.service';
 import { SharedDataService } from '../services/shared-data.service';
+import { FormBuilder} from '@angular/forms';
 
 
 export interface PeriodicElement {
@@ -35,9 +36,10 @@ export class UserListComponent implements OnInit {
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
   currentuser: string = '';
+  statusFilterControl = this.formBuilder.control('');
 
   constructor(private apiService: ApiServiceService, private router: Router, private autservice: AuthService,
-    private SharedDataService:  SharedDataService) { }
+    private SharedDataService:  SharedDataService, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.apiService.getData().subscribe((data: PeriodicElement[]) => {
@@ -49,9 +51,11 @@ export class UserListComponent implements OnInit {
       this.currentuser = storedUser !== null ? storedUser : '';
 
       this.SharedDataService.filterText$.subscribe((filterText) => {
-
         this.dataSource.filter = filterText;
       });
+    });
+    this.statusFilterControl.valueChanges.subscribe((status: string | null) => {
+      this.applyStatusFilter(status);
     });
   }
 
@@ -65,6 +69,7 @@ export class UserListComponent implements OnInit {
     }
   }
 
+  //Delete user (/*not used at the moment*/)
   onDeleteUser(userId: string): void {
     if (confirm('Are you sure you want to delete this user?')) {
       this.apiService.deleteUser(userId).subscribe(() => {
@@ -74,7 +79,7 @@ export class UserListComponent implements OnInit {
       }}
    
       
-
+      // Function to change the status of a user
       toggleUserStatus(userId: number): void {
         const userToUpdate = this.dataSource.data.find(user => user.id === userId);
       
@@ -83,9 +88,30 @@ export class UserListComponent implements OnInit {
       
           this.apiService.updateUser(userId.toString(), userToUpdate).subscribe(() => {
             console.log('User status updated successfully.');
+            location.reload();
           });
         } else {
           console.error('User not found');
+        }
+      }
+
+      //method to apply the status filter
+      applyStatusFilterr(status: boolean): void {
+        if (status === true || status === false) {
+          const filterValue = status === true;
+          this.dataSource.filter = filterValue.toString();
+        } else {
+          this.dataSource.filter = '';
+        }
+      }
+
+      applyStatusFilter(status: string | null): void {
+        if (status === null) {
+          // If status is null, no filter should be applied
+          this.dataSource.filter = '';
+        } else {
+          // Otherwise, apply the filter based on the boolean value
+          this.dataSource.filter = status === 'true' ? 'true' : 'false';
         }
       }
     }

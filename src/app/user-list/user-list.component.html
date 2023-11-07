@@ -9,10 +9,10 @@
     <label for="tab1" class="tabs__label">
       <strong style="font-size: 20px; margin-left: -14px;">Users
         <i class="fa fa-1x fa-user usericon">
-          <select id="statusFilter" class="check" formControlName="status">
+          <select id="statusFilter" class="check" [formControl]="statusFilterControl">
             <option value="" disabled selected>Filter By Status</option>
-            <option value="active">Active</option>
-            <option value="non-active">Non-Active</option>
+            <option value="true">Active</option>
+            <option value="false">Non-Active</option>
           </select>
         </i>
       </strong>
