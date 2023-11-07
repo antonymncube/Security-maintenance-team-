@@ -8,6 +8,7 @@ import { SharedDataService } from '../services/shared-data.service';
 import { FormBuilder} from '@angular/forms';
 
 
+
 export interface PeriodicElement {
   position: number;
   name: string;
@@ -41,6 +42,7 @@ export class UserListComponent implements OnInit {
   currentuser: string = '';
   statusFilterControl = this.formBuilder.control('');
 
+
   constructor(private apiService: ApiServiceService, private router: Router, private autservice: AuthService,
     private SharedDataService:  SharedDataService, private formBuilder: FormBuilder) { }
 
@@ -55,6 +57,7 @@ export class UserListComponent implements OnInit {
 
         this.SharedDataService.filterText$.subscribe((filterText) => {
           this.dataSource.filter = filterText;
+
 
       });
     });
@@ -73,7 +76,6 @@ export class UserListComponent implements OnInit {
     }
   }
 
-  //Delete user (/*not used at the moment*/)
   onDeleteUser(userId: string): void {
     if (confirm('Are you sure you want to delete this user?')) {
       this.apiService.deleteUser(userId).subscribe(() => {
@@ -92,20 +94,9 @@ export class UserListComponent implements OnInit {
 
           this.apiService.updateUser(userId.toString(), userToUpdate).subscribe(() => {
             console.log('User status updated successfully.');
-            location.reload();
           });
         } else {
           console.error('User not found');
-        }
-      }
-
-      //method to apply the status filter
-      applyStatusFilterr(status: boolean): void {
-        if (status === true || status === false) {
-          const filterValue = status === true;
-          this.dataSource.filter = filterValue.toString();
-        } else {
-          this.dataSource.filter = '';
         }
       }
 
