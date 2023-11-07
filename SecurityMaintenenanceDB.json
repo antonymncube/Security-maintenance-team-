@@ -41,41 +41,54 @@
       "id": "d03dd7c5-6f3a-4e71-8675-f2547c266845"
     },
     {
-      "sAccessCode": "API_DOC_4",
-      "SAccessDescription": "TEST",
+      "sAccessCode": " API_COMMENT_DU",
+      "SAccessDescription": "Allow user to upload Commission Entity documents using API",
       "id": "200ba171-0ec1-428c-a200-28b144739185"
+    },
+    {
+      "sAccessCode": "APL_DOC_MAINT",
+      "SAccessDescription": "allow user access",
+      "id": "b07a3c16-a667-4e32-b663-3d9de21cecc1"
+    },
+    {
+      "sAccessCode": "API_COMMENT-GM",
+      "SAccessDescription": "Meta Data of a Commission Entity documents using API",
+      "id": "2af00755-3c14-4acf-ad42-277b02016457"
     }
   ],
   "SecAccessGroups": [
     {
-      "sAccessGroup": "SH-silas",
+      "sAccessGroup": "Underwriting Admin",
       "sAccessCodes": [
         "ACCEPTBBWARN",
-        "thank silas",
-        "ADDR_OVERRIDE",
-        "AGENT_COMM_PAY",
-        "AGENT_MAINT",
-        null
+        "APL_DOC_MAINT",
+        "API_COMMENT-GM"
       ],
       "id": "1"
     },
     {
-      "sAccessGroup": "SH-Antony",
-      "sAccessCodes": [
-        "ACCEPTBBWARN",
-        "API_DOC_ANTONV",
-        "AGENT_COMM_PAY",
-        null
-      ],
+      "sAccessGroup": "Underwriting sales cons",
+      "sAccessCodes": [],
       "id": "2"
     },
     {
-      "sAccessGroup": "SH-xolani",
-      "sAccessCodes": [
-        "AGENT_COMM_PAY",
-        "ACCEPTBBWARN",
-        null
-      ],
+      "sAccessGroup": "Underwriting Service cons",
+      "sAccessCodes": [],
+      "id": "3"
+    },
+    {
+      "sAccessGroup": "Underwriting Manager",
+      "sAccessCodes": [],
+      "id": "4"
+    },
+    {
+      "sAccessGroup": "financial Manager",
+      "sAccessCodes": [],
+      "id": "3"
+    },
+    {
+      "sAccessGroup": "Underwriting Service cons",
+      "sAccessCodes": [],
       "id": "3"
     }
   ],
@@ -104,13 +117,14 @@
       "username": "EmihleN",
       "fullname": "Emihle Ntshongwana",
       "description": "MGA",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$Fp8Nb1ZVij/SRnEWNH5gv.adxaLYOo.sI4Ylbf0MlrslW.w9gLOpi",
+      "department": "IT",
       "email": "ntshongwanae@gmail.com",
       "homephone": "0712425668",
       "mobile": "0712425668",
-      "department": "IT"
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-07T12:36:59.638Z",
+      "Language": ""
     },
     {
       "id": "17",
@@ -122,7 +136,9 @@
       "email": "ranaaphelele@gmail.com",
       "homephone": "0781638594",
       "mobile": "0781990677",
-      "agent": "Simply Health"
+      "agent": "Simply Health",
+      "lastUpdated": "2023-11-07T12:36:54.628Z",
+      "Language": ""
     },
     {
       "id": "18",
@@ -134,21 +150,23 @@
       "email": "DEV@Genasystech.com",
       "homephone": "0781638594",
       "mobile": "0781638594",
-      "agent": "Simply Health"
+      "agent": "Simply Health",
+      "lastUpdated": "2023-11-07T12:36:50.214Z",
+      "Language": ""
     },
     {
       "id": "W54mHDU",
       "username": "Emihle",
       "fullname": "Emihle Ntshongwana",
       "description": " Married",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$Z7vwnbPeltFmDCXLwbtxk.EqEhE8AkRgYzEbiveqrANunXET73q9W",
+      "department": "IT",
       "email": "e.ntshongwana@genasystech.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "department": "IT",
-      "status": true
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-07T12:36:43.928Z",
+      "Language": ""
     },
     {
       "id": "P1kTOnC",
@@ -160,53 +178,65 @@
       "email": "m.jack@genasystech.com",
       "homephone": "0671402936",
       "mobile": "7819906770",
-      "agent": "Genasys"
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-07T12:36:36.205Z",
+      "Language": ""
     },
     {
       "id": "E1yptON",
       "username": "Grace",
       "fullname": "Grace Ngwangwa",
       "description": "Hello Grace",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$fH8zSNFGNRn.FVRpVCUTwu1EObbnRTfUGV.kqWLdxWxjuvt4yxwF6",
+      "department": "IT",
       "email": "g.ngwangwa@genasystech.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "department": "IT",
-      "status": true
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-07T12:36:29.644Z",
+      "Language": ""
     },
     {
       "id": "A0LIYn3",
       "username": "Anthony",
       "fullname": "Anthony Ncube",
       "description": "Anthony Hemilton",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$QX4J8usm1PVh2yBC3BMiS.EODCbw/nWsRnX379BL2fHlKMKnjSnoi",
+      "department": "IT",
       "email": "a.ncube@genasystech.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
+<<<<<<< HEAD
       "department": "IT",
       "status": false
+=======
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-07T12:36:27.362Z",
+      "Language": ""
+>>>>>>> 140788c74004c055bd31b6e52428218977c6abc7
     },
     {
       "id": "RIpKtJb",
       "username": "Mitch",
       "fullname": "Mitch Gordons",
       "description": "Dev Manager",
-      "location": "",
-      "agent": "Standard Bank",
       "password": "$2a$10$ZPiM8IHrPp24ywAM4bQQbu0RRtbNrc5iAMD2.3HAhiePvsZgtBOuq",
+      "department": "IT",
       "email": "nseptember591@gmail.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
+<<<<<<< HEAD
       "department": "IT",
       "status": false
+=======
+      "agent": "Standard Bank",
+      "lastUpdated": "2023-11-07T12:36:24.910Z",
+      "Language": ""
+>>>>>>> 140788c74004c055bd31b6e52428218977c6abc7
     },
     {
       "id": "9d802p8",
-      "username": "Grant",
+      "username": " Mehluli",
       "fullname": "Grant Oliver",
       "description": "tester",
       "password": "$2a$10$zq8RKm5vtAP255voAQHLYewSWd3gIwdLglW/aJqfyA8f8QWtUdY8m",
@@ -214,6 +244,7 @@
       "email": "nseptember591@gmail.com",
       "homephone": "0781638594",
       "mobile": "0671802963",
+<<<<<<< HEAD
       "agent": "Genasys"
     },
     {
@@ -229,6 +260,25 @@
       "mobile": "0781990677",
       "department": "HR",
       "status": false
+=======
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-07T12:36:21.722Z",
+      "Language": ""
+    },
+    {
+      "id": "v2GXgqF",
+      "username": "james",
+      "fullname": "mitch Gordon",
+      "description": "Delivery Manager",
+      "password": "$2a$10$VXWAWvC5iHeAjnSZgVylPOVLX3qhv8TN/e2aoNAvj.iE.8.WNmKBW",
+      "department": "IT",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "agent": "Standard Bank",
+      "lastUpdated": "2023-11-07T12:36:19.380Z",
+      "Language": ""
+>>>>>>> 140788c74004c055bd31b6e52428218977c6abc7
     }
   ]
 }
