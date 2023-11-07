@@ -58,34 +58,37 @@
   ],
   "SecAccessGroups": [
     {
-      "sAccessGroup": "SH-silas",
+      "sAccessGroup": "Underwriting Admin",
       "sAccessCodes": [
         "ACCEPTBBWARN",
-        "thank silas",
-        "ADDR_OVERRIDE",
-        "AGENT_COMM_PAY",
-        "AGENT_MAINT",
-        null
+        "APL_DOC_MAINT",
+        "API_COMMENT-GM"
       ],
       "id": "1"
     },
     {
-      "sAccessGroup": "SH-Antony",
-      "sAccessCodes": [
-        "ACCEPTBBWARN",
-        "API_DOC_ANTONV",
-        "AGENT_COMM_PAY",
-        null
-      ],
+      "sAccessGroup": "Underwriting sales cons",
+      "sAccessCodes": [],
       "id": "2"
     },
     {
-      "sAccessGroup": "SH-xolani",
-      "sAccessCodes": [
-        "AGENT_COMM_PAY",
-        "ACCEPTBBWARN",
-        null
-      ],
+      "sAccessGroup": "Underwriting Service cons",
+      "sAccessCodes": [],
+      "id": "3"
+    },
+    {
+      "sAccessGroup": "Underwriting Manager",
+      "sAccessCodes": [],
+      "id": "4"
+    },
+    {
+      "sAccessGroup": "financial Manager",
+      "sAccessCodes": [],
+      "id": "3"
+    },
+    {
+      "sAccessGroup": "Underwriting Service cons",
+      "sAccessCodes": [],
       "id": "3"
     }
   ],
