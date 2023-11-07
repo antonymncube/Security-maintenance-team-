@@ -3,10 +3,12 @@
     <mat-tab label="User-Details">
       <div class="totalDetails">
         <div class="userdetails">
+
+
           <div class="form-group">
             <label for="username" class="label-width">Username:</label>
             <div class="inputtag">
-              <input type="text" id="username" formControlName="username">
+              <input type="text" id="username" formControlName="username" class="readonly-field">
             </div>
           </div>
 
@@ -27,12 +29,12 @@
           <div class="form-group">
             <label for="password" class="label-width">Password:</label>
             <div class="inputtag">
-              <input type="password" id="password" formControlName="password">
+              <input type="password" id="password" formControlName="password" class="readonly-field">
             </div>
           </div>
           <div class="form-group">
             <label for="agent" class="label-width">Agent:</label>
-            <select id="agent" class="check" formControlName="agent">
+            <select id="agent" class="inputtag" formControlName="agent">
               <option value="Simply Health">Simply Health</option>
               <option value="Genasys">Genasys</option>
               <option value="Standard Bank">Standard Bank</option>
@@ -66,6 +68,8 @@
                   Home-Phone is not valid.
                 </div>
               </div>
+
+
             </div>
             <div class="form-group">
             <label for="mobile" class="label-width">Mobile:</label>
@@ -76,7 +80,9 @@
                 Mobile is not valid.
               </div>
             </div>
+
           </div>
+
         </div>
       </div>
       </div>
@@ -95,12 +101,12 @@
   </mat-tab-group>
 </form>
 
-<!-- <form [formGroup]="userForm" (ngSubmit)="onSubmit()"> 
+<!-- <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
 <div class="tabs">
   <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
   <label for="tab1" class="tabs__label">Tab #1</label>
   <div class="tabs__content">
-    
+
   </div>
   <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
   <label for="tab2" class="tabs__label">Tab #2</label>

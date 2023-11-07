@@ -103,6 +103,7 @@ onSubmit() {
             this.user.description = this.userForm.value.description;
             this.user.fullname = this.userForm.value.fullname;
             this.user.agent = this.userForm.value.agent;
+            this.user.lastUpdated = new Date();
 
             console.log(this.user);
 

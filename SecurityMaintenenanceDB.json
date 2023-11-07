@@ -155,14 +155,12 @@
       "username": "Mihle",
       "fullname": "Mihle Jack",
       "description": " Married",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$G9g8FpFUBnYg6iYha2wsi.nRF8Vx9k4cWdHq5QvFKZb24.RfhV.4e",
+      "department": "IT",
       "email": "m.jack@genasystech.com",
       "homephone": "0671402936",
       "mobile": "7819906770",
-      "department": "IT",
-      "status": true
+      "agent": "Genasys"
     },
     {
       "id": "E1yptON",
@@ -176,7 +174,7 @@
       "homephone": "0671402936",
       "mobile": "0781954154",
       "department": "IT",
-      "status": true
+      "status": false
     },
     {
       "id": "A0LIYn3",
@@ -190,7 +188,7 @@
       "homephone": "0671402936",
       "mobile": "0781954154",
       "department": "IT",
-      "status": true
+      "status": false
     },
     {
       "id": "RIpKtJb",
@@ -204,21 +202,33 @@
       "homephone": "0671402936",
       "mobile": "0781954154",
       "department": "IT",
-      "status": true
+      "status": false
     },
     {
       "id": "9d802p8",
       "username": "Grant",
       "fullname": "Grant Oliver",
       "description": "tester",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$zq8RKm5vtAP255voAQHLYewSWd3gIwdLglW/aJqfyA8f8QWtUdY8m",
+      "department": "Sales",
       "email": "nseptember591@gmail.com",
       "homephone": "0781638594",
       "mobile": "0671802963",
-      "department": "Sales",
-      "status": true
+      "agent": "Genasys"
+    },
+    {
+      "id": "12o-cxY",
+      "username": "Mihles",
+      "fullname": "Mihle Jack",
+      "description": " Married",
+      "location": "",
+      "agent": "Genasys",
+      "password": "$2a$10$Olu4cfb64ZJVhmHuEFe1W.i4pxZYwnrYFV.nRtnJUC8v1EhkTGYR2",
+      "email": "shghsghsah@gmail.com",
+      "homephone": "0851456989",
+      "mobile": "0781990677",
+      "department": "HR",
+      "status": false
     }
   ]
 }

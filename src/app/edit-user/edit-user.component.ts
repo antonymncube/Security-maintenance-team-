@@ -22,15 +22,17 @@ export class EditUserComponent implements OnInit {
   ) {
     this.userForm = this.formBuilder.group({
       id: [''],
-      username: [{ value: '', disabled: true }, Validators.required], // Set username as not editable
+      username: [{ value: '',  }, Validators.required], // Set username as not editable
       fullname: ['', Validators.required],
       description: [''],
-      password: [{ value: '', disabled: true }, [Validators.required, Validators.minLength(6)]], // Set password as not editable
+      password: [{ value: '', }, [Validators.required, Validators.minLength(6)]], // Set password as not editable
       department: [''],
       email: ['', [Validators.required, Validators.email]],
       homephone: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       agent :  ['',[Validators.required]],
+      lastUpdated: [''],
+      Language:['']
     });
   }
 
@@ -47,32 +49,25 @@ export class EditUserComponent implements OnInit {
 
   isControlInvalid(controlName: string) {
     const control = this.userForm.get(controlName);
-  
+
     return control?.invalid && control?.touched;
   }
-   
+
 
   onSubmit() {
     if (this.userForm.valid) {
+      const lastUpdatedControl = this.userForm.get('lastUpdated');
+
+      if (lastUpdatedControl) {
+        lastUpdatedControl.setValue(new Date());
+      }
+
       this.apiService.updateUser(this.id, this.userForm.value).subscribe((response: any) => {
         this.userForm.reset();
         this.router.navigate(['/home']);
         console.log('User data updated:', response);
       });
     }
-  }
-  
-  resetForm() {
-    // Reset only the edited fields
-    this.editedFields.forEach((fieldName) => {
-      this.userForm.get(fieldName)?.reset();
-    });
-    this.editedFields.clear(); // Clear the set of edited fields
-  }
-
-  // Track changes in form controls
-  onControlChange(controlName: string) {
-    this.editedFields.add(controlName);
   }
 
 }

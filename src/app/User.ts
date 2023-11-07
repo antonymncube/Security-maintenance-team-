@@ -11,6 +11,7 @@ export class UserFormData {
     mobile: string = '';
     department: string = '';
     status: boolean = true;
+    lastUpdated: Date = new Date();
 
-  
+
 }
