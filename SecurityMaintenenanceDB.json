@@ -104,13 +104,14 @@
       "username": "EmihleN",
       "fullname": "Emihle Ntshongwana",
       "description": "MGA",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$Fp8Nb1ZVij/SRnEWNH5gv.adxaLYOo.sI4Ylbf0MlrslW.w9gLOpi",
+      "department": "IT",
       "email": "ntshongwanae@gmail.com",
       "homephone": "0712425668",
       "mobile": "0712425668",
-      "department": "IT"
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-08T07:43:31.213Z",
+      "Language": ""
     },
     {
       "id": "17",
@@ -122,7 +123,9 @@
       "email": "ranaaphelele@gmail.com",
       "homephone": "0781638594",
       "mobile": "0781990677",
-      "agent": "Simply Health"
+      "agent": "Simply Health",
+      "lastUpdated": "2023-11-08T07:43:25.891Z",
+      "Language": ""
     },
     {
       "id": "18",
@@ -134,21 +137,23 @@
       "email": "DEV@Genasystech.com",
       "homephone": "0781638594",
       "mobile": "0781638594",
-      "agent": "Simply Health"
+      "agent": "Simply Health",
+      "lastUpdated": "2023-11-08T07:43:21.516Z",
+      "Language": ""
     },
     {
       "id": "W54mHDU",
       "username": "Emihle",
       "fullname": "Emihle Ntshongwana",
       "description": " Married",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$Z7vwnbPeltFmDCXLwbtxk.EqEhE8AkRgYzEbiveqrANunXET73q9W",
+      "department": "IT",
       "email": "e.ntshongwana@genasystech.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "department": "IT",
-      "status": true
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-08T07:43:15.779Z",
+      "Language": ""
     },
     {
       "id": "P1kTOnC",
@@ -160,49 +165,51 @@
       "email": "m.jack@genasystech.com",
       "homephone": "0671402936",
       "mobile": "7819906770",
-      "agent": "Genasys"
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-08T07:43:09.819Z",
+      "Language": ""
     },
     {
       "id": "E1yptON",
       "username": "Grace",
       "fullname": "Grace Ngwangwa",
       "description": "Hello Grace",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$fH8zSNFGNRn.FVRpVCUTwu1EObbnRTfUGV.kqWLdxWxjuvt4yxwF6",
+      "department": "IT",
       "email": "g.ngwangwa@genasystech.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "department": "IT",
-      "status": false
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-08T07:43:02.940Z",
+      "Language": ""
     },
     {
       "id": "A0LIYn3",
       "username": "Anthony",
       "fullname": "Anthony Ncube",
       "description": "Anthony Hemilton",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$QX4J8usm1PVh2yBC3BMiS.EODCbw/nWsRnX379BL2fHlKMKnjSnoi",
+      "department": "IT",
       "email": "a.ncube@genasystech.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "department": "IT",
-      "status": false
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-08T07:42:54.931Z",
+      "Language": ""
     },
     {
       "id": "RIpKtJb",
       "username": "Mitch",
       "fullname": "Mitch Gordons",
       "description": "Dev Manager",
-      "location": "",
-      "agent": "Standard Bank",
       "password": "$2a$10$ZPiM8IHrPp24ywAM4bQQbu0RRtbNrc5iAMD2.3HAhiePvsZgtBOuq",
+      "department": "IT",
       "email": "nseptember591@gmail.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "department": "IT",
-      "status": false
+      "agent": "Standard Bank",
+      "lastUpdated": "2023-11-08T07:42:52.451Z",
+      "Language": ""
     },
     {
       "id": "9d802p8",
@@ -214,21 +221,23 @@
       "email": "nseptember591@gmail.com",
       "homephone": "0781638594",
       "mobile": "0671802963",
-      "agent": "Genasys"
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-08T07:47:28.984Z",
+      "Language": ""
     },
     {
       "id": "12o-cxY",
       "username": "Mihles",
       "fullname": "Mihle Jack",
       "description": " Married",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$Olu4cfb64ZJVhmHuEFe1W.i4pxZYwnrYFV.nRtnJUC8v1EhkTGYR2",
+      "department": "HR",
       "email": "shghsghsah@gmail.com",
       "homephone": "0851456989",
       "mobile": "0781990677",
-      "department": "HR",
-      "status": false
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-08T07:42:45.323Z",
+      "Language": ""
     },
     {
       "id": "2deYZ57",
@@ -244,6 +253,51 @@
       "department": "Sales",
       "status": true,
       "lastUpdated": "2023-11-07T14:32:42.688Z"
+    },
+    {
+      "id": "OjEr3_1",
+      "username": "Mugiwara",
+      "fullname": "Monkey D Luffy",
+      "description": "Pirate King",
+      "password": "$2a$10$pz9v9k7ovHwieH2TseqYCeDDg3bhN/NleEiqFlnNjzz4fXRBe6RL2",
+      "department": "IT",
+      "email": "meat@onepiece.com",
+      "homephone": "0110405478",
+      "mobile": "0781990671",
+      "agent": "English",
+      "lastUpdated": "2023-11-08T07:46:24.426Z",
+      "Language": ""
+    },
+    {
+      "id": "wGZI91g",
+      "username": "Minamina",
+      "fullname": "Shibawa",
+      "description": "Awo Baka",
+      "password": "$2a$10$BBePQg/cK5VZ8PXiQMIqPuUOaeIoD2PcWBQIeP93kpeeEjO/qV.9q",
+      "department": "HR",
+      "email": "pinapule@poroporo.com",
+      "homephone": "0902229087",
+      "mobile": "0781990621",
+      "agent": "Native",
+      "status": false,
+      "lastUpdated": "2023-11-08T07:50:29.457Z",
+      "Language": ""
+    },
+    {
+      "id": "FUmza34",
+      "username": "Yanie",
+      "fullname": "Yan Vankop",
+      "description": "Hello Grace",
+      "location": "",
+      "agent": "Afrikaans",
+      "password": "$2a$10$JZy.1GNdZxfjqc1/7cp3teOfnZaYw6pvxTLn53qwaIz8y3j9/jigW",
+      "email": "shghsghsah@gmail.com",
+      "homephone": "0671402936",
+      "mobile": "0781990671",
+      "department": "HR",
+      "status": true,
+      "lastUpdated": "2023-11-08T07:59:34.815Z",
+      "Language": ""
     }
   ]
 }
