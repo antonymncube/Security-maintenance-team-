@@ -6,6 +6,7 @@ import { UserupdateComponent } from '../userupdate/userupdate.component';
 import { EditUserComponent } from '../edit-user/edit-user.component';
 import { ViewUserComponent } from '../view-user/view-user.component';
 import { ForgotPasswordComponent } from '../forgot-password/forgot-password.component';
+import { AvailableProductsComponent } from '../available-products/available-products.component';
 
 
 
@@ -37,6 +38,11 @@ const routes: Routes = [
         component: ForgotPasswordComponent
 
 
+      }
+    ,
+      {
+        path: 'available-products',
+        component: AvailableProductsComponent
       }
 
     ]

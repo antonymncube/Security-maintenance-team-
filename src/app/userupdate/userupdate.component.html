@@ -155,6 +155,20 @@
       </div>
 
     </mat-tab>
+
+
+    <!-- <mat-tab label="Available Products">
+      <app-available-products (selectedProducts)="receiveSelectedProducts($event)"></app-available-products>
+    </mat-tab> -->
+
+    <mat-tab label="Available Products">
+      <app-available-products (selectedProducts)="receiveSelectedProducts($event)"></app-available-products>
+      <button mat-raised-button color="primary" (click)="saveSelectedProducts()">Save</button>
+    </mat-tab>
+
+
   </mat-tab-group>
+
+
 
 </form>

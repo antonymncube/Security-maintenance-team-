@@ -13,6 +13,7 @@ export class ViewUserComponent implements OnInit {
   userForm: FormGroup;
   currentuser : string = ''
   fullname : string ='';
+  selectedProducts: string[] = [];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -39,15 +40,17 @@ export class ViewUserComponent implements OnInit {
 
   ngOnInit() {
     const storedUser = sessionStorage.getItem('currentuser');
-    this.currentuser = storedUser !== null ? storedUser : ''
+    this.currentuser = storedUser !== null ? storedUser : '';
     this.route.params.subscribe((params: { [x: string]: string }) => {
       this.id = params['id'];
-      console.log(this.id);
 
       this.apiService.getUserDetails(this.id).subscribe((userDetails: any) => {
-        this.fullname = userDetails.fullname
+        console.log('User Details:', userDetails);
+        this.fullname = userDetails.fullname;
         this.userForm.patchValue(userDetails);
+        this.selectedProducts = userDetails.selectedProducts;
       });
+
     });
   }
 }

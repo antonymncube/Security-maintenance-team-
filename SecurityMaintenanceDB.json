@@ -177,8 +177,10 @@
     {
       "sAccessGroup": "SH-xolani",
       "sAccessCodes": [
-        "AGENT_COMM_PAY",
         "ACCEPTBBWARN",
+        "AGENT_MAINT",
+        "API_CLAIM_DU",
+        "AGENT_COMM_PAY",
         null
       ],
       "id": "3"
@@ -302,14 +304,14 @@
       "username": "Mitch",
       "fullname": "Mitch Gordons",
       "description": "Dev Manager",
-      "location": "",
-      "agent": "Standard Bank",
       "password": "$2a$10$ZPiM8IHrPp24ywAM4bQQbu0RRtbNrc5iAMD2.3HAhiePvsZgtBOuq",
+      "department": "IT",
       "email": "nseptember591@gmail.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "department": "IT",
-      "status": true
+      "agent": "Standard Bank",
+      "lastUpdated": "2023-11-08T05:56:03.267Z",
+      "Language": ""
     },
     {
       "id": "9d802p8",
@@ -321,7 +323,49 @@
       "email": "nseptember591@gmail.com",
       "homephone": "0781638594",
       "mobile": "0671802963",
-      "agent": "Genasys"
+      "agent": "Genasys",
+      "lastUpdated": "2023-11-08T05:55:57.341Z",
+      "Language": ""
+    }
+
+
+
+  ],
+  "Products": [
+    {
+      "id": "16169",
+      "sProductName": "Dental Cover Plan",
+      "sProductCode": "BDI"
+    },
+    {
+      "id": "16383",
+      "sProductName": "Cash Plan",
+      "sProductCode": "SHCP"
+    },
+    {
+      "id": "16462",
+      "sProductName": "Group Cash Plan",
+      "sProductCode": "SHGCP"
+    },
+    {
+      "id": "16542",
+      "sProductName": "Corporate Dental_old",
+      "sProductCode": "SHCD"
+    },
+    {
+      "id": "16842",
+      "sProductName": "Corporate Dental",
+      "sProductCode": "SHCD"
+    },
+    {
+      "id": "16845",
+      "sProductName": "Consumer Dental",
+      "sProductCode": "SHCSD"
+    },
+    {
+      "id": "16847",
+      "sProductName": "Consumer CashPlan",
+      "sProductCode": "SHCCP"
     }
   ]
 }
