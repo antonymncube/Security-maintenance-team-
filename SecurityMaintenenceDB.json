@@ -152,18 +152,7 @@
     }
   ],
   "SecAccessGroups": [
-    {
-      "sAccessGroup": "SH-silas",
-      "sAccessCodes": [
-        "ACCEPTBBWARN",
-        "thank silas",
-        "ADDR_OVERRIDE",
-        "AGENT_COMM_PAY",
-        "AGENT_MAINT",
-        null
-      ],
-      "id": "1"
-    },
+    
     {
       "sAccessGroup": "SH-Antony",
       "sAccessCodes": [

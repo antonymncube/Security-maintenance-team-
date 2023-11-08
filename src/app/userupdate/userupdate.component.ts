@@ -139,7 +139,7 @@ getAccesslookup() {
   this.apiService.getSecLookup().subscribe((SecLookup: any) => {
     this.SecLookup = SecLookup; // Assign the entire response to SecLookup
     // console.log('API Response:', SecLookup);
-    // console.log('Security Access:', SecLookup[0].sAccessCode, 'Security Description', SecLookup[0].SAccessDescription);
+    console.log('Security Access2:', SecLookup[0].sAccessCode, 'Security Description', SecLookup[0].SAccessDescription);
     // console.log("Lets see now");
   });
 }
@@ -164,12 +164,10 @@ onSubmit() {
             this.user.homephone = this.userForm.value.homephone;
             this.user.description = this.userForm.value.description;
             this.user.fullname = this.userForm.value.fullname;
-            this.user.agent = this.userForm.value.agent;
-<<<<<<< HEAD
-            this.user.id = 50;
-=======
+            this.user.agent = this.userForm.value.agent
+            
             this.user.lastUpdated = new Date();
->>>>>>> 8ca384d07a130a255d927f80a51acbedaf8397aa
+  
 
             console.log(this.user);
 
