@@ -229,6 +229,21 @@
       "mobile": "0781990677",
       "department": "HR",
       "status": false
+    },
+    {
+      "id": "2deYZ57",
+      "username": "Gosu",
+      "fullname": "Kim Jon Lee",
+      "description": "Wasabi",
+      "location": "",
+      "agent": "English",
+      "password": "$2a$10$rh6prcBqP/Mc29JFCYSUeOzfU1XGsdWK0ay9.85RuHcoODi1xMnu6",
+      "email": "kimjlee@washu.com",
+      "homephone": "0671402936",
+      "mobile": "0671802963",
+      "department": "Sales",
+      "status": true,
+      "lastUpdated": "2023-11-07T14:32:42.688Z"
     }
   ]
 }
