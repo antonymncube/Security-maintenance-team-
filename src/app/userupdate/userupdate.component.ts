@@ -87,6 +87,7 @@ apiService.getAccessGroup().subscribe(res=>{
       mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       department: ['',[Validators.required]],
       agent :  ['',[Validators.required]],
+      language: ['',[Validators.required]],
     });
   }
 
@@ -164,10 +165,12 @@ onSubmit() {
             this.user.homephone = this.userForm.value.homephone;
             this.user.description = this.userForm.value.description;
             this.user.fullname = this.userForm.value.fullname;
-            this.user.agent = this.userForm.value.agent
-            
+            this.user.agent = this.userForm.value.agent;
+<<<<<<< HEAD
+            this.user.id = 50;
+=======
             this.user.lastUpdated = new Date();
-  
+>>>>>>> 8ca384d07a130a255d927f80a51acbedaf8397aa
 
             console.log(this.user);
 

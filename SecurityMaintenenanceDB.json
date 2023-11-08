@@ -48,63 +48,40 @@
   ],
   "SecAccessGroups": [
     {
-      "sAccessGroup": "Underwriting sales cons",
+      "sAccessGroup": "SH-silas",
       "sAccessCodes": [
-        "API_DOC_4",
         "ACCEPTBBWARN",
-        "AGENT_MAINT",
-        "API_CLAIM_DU",
-        "API_DOC_BLOCK",
-        "API_DOC_CONF",
-        "API_DOC_PERS",
+        "thank silas",
         "ADDR_OVERRIDE",
-        "API_CLAIM_MAINT"
+        "AGENT_COMM_PAY",
+        "AGENT_MAINT",
+        null
       ],
+      "id": "1"
+    },
+    {
+      "sAccessGroup": "Underwriting sales cons",
+      "sAccessCodes": [],
       "id": "2"
     },
     {
       "sAccessGroup": "Underwriting Service cons",
-      "sAccessCodes": [
-        "ACCEPTBBWARN",
-        "AGENT_MAINT",
-        "API_DOC_BLOCK",
-        "API_CLAIM_DU",
-        "API_DOC_4",
-        "API_DOC_CONF",
-        "API_DOC_PERS",
-        "ADDR_OVERRIDE",
-        "API_CLAIM_MAINT"
-      ],
+      "sAccessCodes": [],
       "id": "3"
     },
     {
       "sAccessGroup": "Underwriting Manager",
-      "sAccessCodes": [
-        "ACCEPTBBWARN",
-        "AGENT_MAINT",
-        "API_CLAIM_DU",
-        "API_DOC_BLOCK",
-        "API_DOC_CONF",
-        "API_DOC_PERS",
-        "ADDR_OVERRIDE",
-        "API_CLAIM_MAINT",
-        "API_DOC_4"
-      ],
+      "sAccessCodes": [],
       "id": "4"
     },
     {
       "sAccessGroup": "financial Manager",
-      "sAccessCodes": ["API_DOC_BLOCK",
-      "API_DOC_CONF",
-      "API_DOC_PERS",
-      "ADDR_OVERRIDE"],
+      "sAccessCodes": [],
       "id": "3"
     },
     {
       "sAccessGroup": "Underwriting Service cons",
-      "sAccessCodes": ["ADDR_OVERRIDE",
-      "API_CLAIM_MAINT",
-      "API_DOC_4"],
+      "sAccessCodes": [],
       "id": "3"
     }
   ],
@@ -177,7 +154,7 @@
       "homephone": "0671402936",
       "mobile": "0781954154",
       "department": "IT",
-      "status": false
+      "status": true
     },
     {
       "id": "P1kTOnC",
@@ -189,54 +166,49 @@
       "email": "m.jack@genasystech.com",
       "homephone": "0671402936",
       "mobile": "7819906770",
-      "agent": "Genasys",
-      "lastUpdated": "2023-11-07T14:14:57.356Z",
-      "Language": ""
+      "agent": "Genasys"
     },
     {
       "id": "E1yptON",
       "username": "Grace",
       "fullname": "Grace Ngwangwa",
       "description": "Hello Grace",
+      "location": "",
+      "agent": "Genasys",
       "password": "$2a$10$fH8zSNFGNRn.FVRpVCUTwu1EObbnRTfUGV.kqWLdxWxjuvt4yxwF6",
-      "department": "IT",
       "email": "g.ngwangwa@genasystech.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "agent": "Genasys",
-      "lastUpdated": "2023-11-07T14:14:48.710Z",
-      "Language": "",
-      "status": true
+      "department": "IT",
+      "status": false
     },
     {
       "id": "A0LIYn3",
       "username": "Anthony",
       "fullname": "Anthony Ncube",
       "description": "Anthony Hemilton",
+      "location": "",
+      "agent": "Genasys",
       "password": "$2a$10$QX4J8usm1PVh2yBC3BMiS.EODCbw/nWsRnX379BL2fHlKMKnjSnoi",
-      "department": "IT",
       "email": "a.ncube@genasystech.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "agent": "Genasys",
-      "lastUpdated": "2023-11-07T14:14:26.416Z",
-      "Language": "",
-      "status": true
+      "department": "IT",
+      "status": false
     },
     {
       "id": "RIpKtJb",
       "username": "Mitch",
       "fullname": "Mitch Gordons",
       "description": "Dev Manager",
+      "location": "",
+      "agent": "Standard Bank",
       "password": "$2a$10$ZPiM8IHrPp24ywAM4bQQbu0RRtbNrc5iAMD2.3HAhiePvsZgtBOuq",
-      "department": "IT",
       "email": "nseptember591@gmail.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "agent": "Standard Bank",
-      "lastUpdated": "2023-11-07T14:14:21.646Z",
-      "Language": "",
-      "status": true
+      "department": "IT",
+      "status": false
     },
     {
       "id": "9d802p8",
@@ -248,10 +220,7 @@
       "email": "nseptember591@gmail.com",
       "homephone": "0781638594",
       "mobile": "0671802963",
-      "agent": "Genasys",
-      "lastUpdated": "2023-11-07T14:14:16.302Z",
-      "Language": "",
-      "status": true
+      "agent": "Genasys"
     },
     {
       "id": "v2GXgqF",
@@ -264,8 +233,6 @@
       "homephone": "0671402936",
       "mobile": "0781954154",
       "agent": "Standard Bank",
-      "lastUpdated": "2023-11-07T14:14:09.045Z",
-      "Language": "",
       "status": true
     }
   ]
