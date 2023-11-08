@@ -123,7 +123,7 @@
 
           <div class="form-group">
             <label for="Language" class="label-width">Language:</label>
-            <select id="Language" class="check" formControlName="Language">
+            <select id="Language" class="check" formControlName="agent">
               <option value="English">English</option>
               <option value="Afrikaans">Afrikaans</option>
               <option value="Native">Native</option>
@@ -147,12 +147,45 @@
       <button type="submit" [disabled]="userForm.invalid">Save</button>
     </mat-tab>
     <mat-tab label="Contact-details">
-      <div *ngFor="let secCode of SecLookup; let i = index">
-        <label class="checkbox-label">
-          <input type="checkbox" [formControlName]="'securityCode' + i"> {{ secCode.sAccessCode }}
-        </label>
-        <label>{{ secCode.SAccessDescription }}</label>
+
+
+      <div class="dialog-content">
+        <h2>Security Access Groups and Codes</h2>
+        <div class="row">
+          <div class="col">
+            <div class="access-groups scrollable">
+              <div *ngFor="let group of accessGroup; let i = index" class="access-group">
+                <div class="access-group-item" (click)="toggleAccessCodes(i)" [ngClass]="{'clicked': group.selected}">
+                  <div class="access-group-name">
+                    <strong>{{ group.sAccessGroup }}</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col bg-white">
+            <div class="access-codes scrollable">
+              <div *ngFor="let group of accessGroup">
+                 <div *ngIf="group.selected">
+                  <div *ngFor="let code of group.sAccessCodes" class="access-code">{{ code }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <div class="row scrollable p-3">
+        <div *ngFor="let accesscodes of accessCodes; let i = index" class="access-code p-2">
+          <label class="checkbox-container">
+            <input type="checkbox" class="code-checkbox" [(ngModel)]="accesscodes.selected">
+            <span class="code-item">{{ accesscodes.sAccessCode }}</span>
+            <span class="description-item">{{ accesscodes.SAccessDescription }}</span>
+          </label>
+        </div>
+      </div>
+
+
+        <button (click)="saveSelectedAccessCodes()">Save</button>
 
     </mat-tab>
 

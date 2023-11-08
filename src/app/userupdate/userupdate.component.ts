@@ -16,11 +16,36 @@ export class UserupdateComponent {
   userForm: FormGroup;
   user: UserFormData = new UserFormData();
   SecLookup : any = '';
-  selectedProducts: string[] = [];
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiServiceService,private router :Router,
     private PasswordHashingService: PasswordHashingService ) {
+      this.accessCodes = [];
+      this.accessGroup = [];
 
+apiService.getAccessGroup().subscribe(res=>{
+  this.accessGroup = res;
+  // console.log("here are the groups" + this.accessGroup)
+})
+apiService.getSecLookup().subscribe((res: any) => {
+  this.accessCodes = res; // Assigning all the access codes to this array
+  // console.log("here is respond mnaka", res);
+
+
+  // if (res && res.length > 0) {
+  //   const firstObject = res[0]; // Access the first object
+  //   if (firstObject.SecLookupCodes && firstObject.SecLookupCodes.length > 0) {
+  //     const firstSecLookupCode = firstObject.SecLookupCodes[0];
+  //     console.log("First SecLookupCode:", firstSecLookupCode);
+  //   }
+  // }
+});
+
+apiService.getAccessGroup().subscribe(res=>{
+
+})
+
+      // this.accessCodes = data;
+      this.accesscodes();
 
     this.userForm = this.formBuilder.group({
       username: ['', [Validators.required]],
@@ -33,17 +58,27 @@ export class UserupdateComponent {
       mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       department: ['',[Validators.required]],
       agent :  ['',[Validators.required]],
-      Language:[''],
-
     });
   }
 
+
+
+  accesscodes() {
+    this.apiService.getSecLookup().subscribe((data) => {
+      this.accessCodes = data;
+    });
+  }
   // Function to check if a control is invalid and should display as red
   isControlInvalid(controlName: string) {
     const control = this.userForm.get(controlName);
     // console.log('back is hot')
 
     return control?.invalid && control?.touched;
+  }
+
+  getSelectedAccessCodes(): void {
+    this.selectedAccessCodes = this.accessCodes.filter((code) => code.selected);
+    // Now, this.selectedAccessCodes contains the selected access codes
   }
 
   // Add this function inside your UserupdateComponent class
@@ -74,23 +109,14 @@ ngOnInit() {
 getAccesslookup() {
   this.apiService.getSecLookup().subscribe((SecLookup: any) => {
     this.SecLookup = SecLookup; // Assign the entire response to SecLookup
-    console.log('API Response:', SecLookup);
-    console.log('Security Access:', SecLookup[0].sAccessCode, 'Security Description', SecLookup[0].SAccessDescription);
-    console.log("Lets see now");
+    // console.log('API Response:', SecLookup);
+    // console.log('Security Access:', SecLookup[0].sAccessCode, 'Security Description', SecLookup[0].SAccessDescription);
+    // console.log("Lets see now");
   });
 }
 
 
-receiveSelectedProducts(products: string[]) {
-  console.log('Received selected products:', products);
-  this.selectedProducts = products;
 
-}
-
-updateUserWithSelectedProducts() {
-  this.user.selectedProducts = this.selectedProducts;
-
-}
 
 
 onSubmit() {
@@ -111,13 +137,14 @@ onSubmit() {
             this.user.description = this.userForm.value.description;
             this.user.fullname = this.userForm.value.fullname;
             this.user.agent = this.userForm.value.agent;
+            this.user.language = this.userForm.value.language;
             this.user.lastUpdated = new Date();
 
 
             this.updateUserWithSelectedProducts();
 
             this.apiService.postdata(this.user).subscribe((postResponse: any) => {
-              console.log('Data posted successfully:', postResponse);
+
               this.router.navigate(['/home']);
               this.userForm.reset();
             });
@@ -128,11 +155,5 @@ onSubmit() {
   }
 }
 
-saveSelectedProducts() {
-  this.updateUserWithSelectedProducts();
-
-
-
-}
 
 }

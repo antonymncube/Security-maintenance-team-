@@ -30,7 +30,8 @@ export class EditUserComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       homephone: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
-      agent :  ['',[Validators.required]],
+      
+      status: [{value: '', }],
       lastUpdated: [''],
       Language:[''],
       selectedProducts: [[]],
