@@ -5,6 +5,7 @@ export class UserFormData {
     description: string = '';
     location: string = '';
     agent: string = '';
+    language: string = '';
     password: string = '';
     email: string = '';
     homephone: string = '';
