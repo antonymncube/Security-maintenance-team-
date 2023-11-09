@@ -98,6 +98,8 @@
             </div>
           </div>
 
+
+
           <div class="form-group">
             <label for="homephone" class="label-width">Home-Phone:</label>
             <div class="inputtag">
@@ -122,12 +124,14 @@
 
 
           <div class="form-group">
-            <label for="Language" class="label-width">Language:</label>
-            <select id="Language" class="check" formControlName="Language">
+            <label for="language" class="label-width">Language:</label>
+            <select id="language" class="check" formControlName="language">
               <option value="English">English</option>
               <option value="Afrikaans">Afrikaans</option>
               <option value="Native">Native</option>
             </select>
+            <!-- <div *ngIf="isControlInvalid('Language')" class="invalid-feedback">
+              Language is required. -->
             </div>
 
 
@@ -155,26 +159,49 @@
           <div class="col">
             <div class="access-groups scrollable">
               <div *ngFor="let group of accessGroup; let i = index" class="access-group">
+                <!-- <div class="access-group-item" (click)="toggleAccessCodes(i)" [ngClass]="{'clicked': group.selected}">
+                  <div class="access-group-name">
+                    <label>
+                      <input type="checkbox" id="checkbox1">
+                      <strong>{{ group.sAccessGroup }}</strong>
+                    </label>
+                  </div>
+                </div> -->
                 <div class="access-group-item" (click)="toggleAccessCodes(i)" [ngClass]="{'clicked': group.selected}">
                   <div class="access-group-name">
-                    <strong>{{ group.sAccessGroup }}</strong>
+                    <label>
+                      <input type="checkbox" [(ngModel)]="group.selected" (click)="$event.stopPropagation()">
+                      <strong>{{ group.sAccessGroup }}</strong>
+                    </label>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col bg-white">
+          <div class="col bg-white p-0">
             <div class="access-codes scrollable">
               <div *ngFor="let group of accessGroup">
                  <div *ngIf="group.selected">
-                  <div *ngFor="let code of group.sAccessCodes" class="access-code">{{ code }}</div>
+                  <div *ngFor="let code of group.sAccessCodes" class="access-code">
+                    <label  class="custom-checkbox">
+                      <input type="checkbox" [value]="code" checked>
+                      {{ code }}
+                    </label>
+                 </div>
                 </div>
+              </div>
+              <div *ngFor="let accesscodes of accessCodes; let i = index">
+                <label class="checkbox-container">
+                  <input type="checkbox" class="code-checkbox" [(ngModel)]="accesscodes.selected">
+                  <span class="code-item">{{ accesscodes.sAccessCode }}</span>
+                  <!-- <span class="description-item">{{ accesscodes.SAccessDescription }}</span> -->
+                </label>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row scrollable p-3">
+      <!-- <div class="row scrollable p-3">
         <div *ngFor="let accesscodes of accessCodes; let i = index" class="access-code p-2">
           <label class="checkbox-container">
             <input type="checkbox" class="code-checkbox" [(ngModel)]="accesscodes.selected">
@@ -183,16 +210,9 @@
           </label>
         </div>
       </div>
+     -->
 
-
-        <button (click)="selectedAccessCodes()">Save</button>
-
-    </mat-tab>
-
-
-    <!-- <mat-tab label="Available Products">
-      <app-available-products (selectedProducts)="receiveSelectedProducts($event)"></app-available-products>
-    </mat-tab> -->
+        <button (click)="saveSelectedAccessCodes()">Save</button>
 
     <mat-tab label="Available Products">
       <app-available-products (selectedProducts)="receiveSelectedProducts($event)"></app-available-products>
@@ -200,8 +220,8 @@
     </mat-tab>
 
 
-  </mat-tab-group>
+  <!-- </mat-tab-group>
 
 
 
-</form>
+</form> -->

@@ -17,6 +17,7 @@ export class UserupdateComponent {
   user: UserFormData = new UserFormData();
   SecLookup : any = '';
   selectedAccessCodes: any[] = [];
+  selectedProducts: string[] = [];
 
   dataToUpdate :any
 
@@ -88,8 +89,7 @@ apiService.getAccessGroup().subscribe(res=>{
       mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       department: ['',[Validators.required]],
       agent :  ['',[Validators.required]],
-      Language:[''],
-
+      language: ['',[Validators.required]],
     });
   }
 
@@ -109,7 +109,7 @@ apiService.getAccessGroup().subscribe(res=>{
   }
 
   getSelectedAccessCodes(): void {
-    // this.selectedAccessCodes = this.accessCodes.filter((code) => code.selected);
+    this.selectedAccessCodes = this.accessCodes.filter((code) => code.selected);
     // Now, this.selectedAccessCodes contains the selected access codes
   }
 
@@ -142,7 +142,7 @@ getAccesslookup() {
   this.apiService.getSecLookup().subscribe((SecLookup: any) => {
     this.SecLookup = SecLookup; // Assign the entire response to SecLookup
     // console.log('API Response:', SecLookup);
-    console.log('Security Access2:', SecLookup[0].sAccessCode, 'Security Description', SecLookup[0].SAccessDescription);
+    // console.log('Security Access:', SecLookup[0].sAccessCode, 'Security Description', SecLookup[0].SAccessDescription);
     // console.log("Lets see now");
   });
 }
@@ -194,6 +194,9 @@ onSubmit() {
       });
     }
   }
+}
+saveSelectedProducts() {
+  this.updateUserWithSelectedProducts();
 }
 
 toggleAccessCodes(index: number) {
