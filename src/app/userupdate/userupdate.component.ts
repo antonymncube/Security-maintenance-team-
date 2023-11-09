@@ -6,6 +6,7 @@ import { UserFormData } from '../User';
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-userupdate',
   templateUrl: './userupdate.component.html',
@@ -15,36 +16,10 @@ export class UserupdateComponent {
   userForm: FormGroup;
   user: UserFormData = new UserFormData();
   SecLookup : any = '';
-  selectedAccessCodes: any[] = []; 
-
-  dataToUpdate :any
-
-  // items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
-  // accessGroup: Array<{
-  //   clicked: boolean;
-  //   sAccessGroup: string;
-  //   sAccessCodes: Array<string>;
-  //   selected: boolean;
-  //   id:string   
-  // }> ;
-  accessGroup: Array<{
-    clicked: boolean;
-    sAccessGroup: string;
-    sAccessCodes: Array<string>;
-    selected: boolean;
-    id:string   
-  }> ;
-
-  accessCodes: Array<{
-    sAccessCode: string;
-    SAccessDescription: string;
-    selected: boolean; 
-   
-  }>;
-  selectedGroupId: string ='';
-  accessGroundForm: any;
-  selectedGroupIndex: number | null = null;
-  
+  selectedProducts: string[] = [];
+  accessCodes: never[];
+  accessGroup: never[];
+  selectedAccessCodes: any;
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiServiceService,private router :Router,
     private PasswordHashingService: PasswordHashingService ) {
@@ -59,7 +34,7 @@ apiService.getSecLookup().subscribe((res: any) => {
   this.accessCodes = res; // Assigning all the access codes to this array
   // console.log("here is respond mnaka", res);
 
- 
+
   // if (res && res.length > 0) {
   //   const firstObject = res[0]; // Access the first object
   //   if (firstObject.SecLookupCodes && firstObject.SecLookupCodes.length > 0) {
@@ -87,11 +62,12 @@ apiService.getAccessGroup().subscribe(res=>{
       mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       department: ['',[Validators.required]],
       agent :  ['',[Validators.required]],
-      language: ['',[Validators.required]],
+      Language:[''],
+
     });
   }
 
-  
+
 
   accesscodes() {
     this.apiService.getSecLookup().subscribe((data) => {
@@ -107,7 +83,7 @@ apiService.getAccessGroup().subscribe(res=>{
   }
 
   getSelectedAccessCodes(): void {
-    this.selectedAccessCodes = this.accessCodes.filter((code) => code.selected);
+    // this.selectedAccessCodes = this.accessCodes.filter((code) => code.selected);
     // Now, this.selectedAccessCodes contains the selected access codes
   }
 
@@ -145,18 +121,28 @@ getAccesslookup() {
   });
 }
 
+
+receiveSelectedProducts(products: string[]) {
+  console.log('Received selected products:', products);
+  this.selectedProducts = products;
+
+}
+
+updateUserWithSelectedProducts() {
+  this.user.selectedProducts = this.selectedProducts;
+
+}
+
+
 onSubmit() {
   this.getAccesslookup();
   if (this.userForm.valid) {
     if (this.checkPasswordMatch()) {
-
       this.PasswordHashingService.hashPassword(this.userForm.value.password).then((hashedPassword) => {
-
         this.apiService.checkUsernameExist(this.userForm.value.username).subscribe((exists: boolean) => {
           if (exists) {
             alert('Username already exists. Please choose a different username.');
           } else {
-
             this.user.email = this.userForm.value.email;
             this.user.username = this.userForm.value.username;
             this.user.password = hashedPassword;
@@ -166,17 +152,13 @@ onSubmit() {
             this.user.description = this.userForm.value.description;
             this.user.fullname = this.userForm.value.fullname;
             this.user.agent = this.userForm.value.agent;
-<<<<<<< HEAD
-            this.user.id = 50;
-=======
             this.user.lastUpdated = new Date();
->>>>>>> 8ca384d07a130a255d927f80a51acbedaf8397aa
 
-            console.log(this.user);
 
+            this.updateUserWithSelectedProducts();
 
             this.apiService.postdata(this.user).subscribe((postResponse: any) => {
-              
+
               this.router.navigate(['/home']);
               this.userForm.reset();
             });
@@ -187,77 +169,11 @@ onSubmit() {
   }
 }
 
-toggleAccessCodes(index: number) {
-  this.accessGroup.forEach((group, i) => {
-    if (i !== index) {
-      group.selected = false;
-    }
-  });
+saveSelectedProducts() {
+this.updateUserWithSelectedProducts();
 
-  this.accessGroup[index].selected = !this.accessGroup[index].selected;
 
-  // Debugging: Log the group.id
-  this.selectedGroupId = this.accessGroup[index].id;
 
-  // console.log('toggle debug',this.selectedGroupId);
-}
-
-  
-refreshPage() {
-  location.reload();
-}
-
-saveSelectedAccessCodes(): void {
-
-  
-  if (this.selectedGroupId === null) {
-    console.log("No selected group.");
-    return;
-  }
-  
-  // console.log('hERE ARE THE ACCESS CODES ARRAY'+this.accessCodes)
-  console.log('HERE ARE THE ACCESS CODES ARRAY', this.accessCodes.map(code => ({ selected: code.selected, sAccessCode: code.sAccessCode })));
-
-  const selectedAccessCodes = this.accessCodes.map(code => ({ selected: code.selected, sAccessCode: code.sAccessCode }))
-
-   console.log(selectedAccessCodes) 
-  if (selectedAccessCodes.length === 0) {
-    console.log("No access codes selected.");
-    return;
-  }
-
-  this.apiService.getAccessGroupById(this.selectedGroupId).subscribe((res) => {
-    // console.log(res);
-
-    this.dataToUpdate = {
-      sAccessGroup: res.sAccessGroup,
-      sAccessCodes: selectedAccessCodes.map((code) => code.sAccessCode),
-
-    };  
-     
-    console.log('respond ' + res.sAccessCodes[0]);
-    for (let i = 0; i < res.sAccessCodes.length; i++) {
-      const code = res.sAccessCodes[i];
-      if (!this.dataToUpdate.sAccessCodes.includes(code)) {
-        // Add the code to this.dataToUpdate.sAccessCodes if it doesn't exist
-        this.dataToUpdate.sAccessCodes.push(code);
-      }
-      else {
-        console.log('No access codes in the response.');
-      }
-    }
-    
-    const dataToUpdateString = JSON.stringify(this.dataToUpdate, null, 2);
-
-    this.apiService.updateAccessgroup(this.selectedGroupId, this.dataToUpdate).subscribe((updateRes) => {
-    
-      this.accessCodes.forEach((code) => {
-        code.selected = false;
-        this.refreshPage()
-      });
-
-    });
-  });
 }
 
 }

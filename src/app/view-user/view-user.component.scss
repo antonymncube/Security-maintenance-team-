@@ -1,8 +1,8 @@
- 
+
  .mat-tab-group {
   margin-bottom: 48px;
 }
- 
+
 form {
   width: 100%;
   margin: 0 auto;
@@ -14,14 +14,14 @@ form {
   margin-top: 0rem;
   background-color: white;
 }
- 
+
 label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
 
- 
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -39,7 +39,7 @@ textarea {
 
 h1{
   color: white;
-  
+
   background-color: red;
   margin-left: 80px;
 }
@@ -110,7 +110,7 @@ table {
 }
 
 .label-width {
-  width: 120px;  
+  width: 120px;
 }
 .fullnamelb{
   margin-right: 20rem;
@@ -118,20 +118,20 @@ table {
 
 .label-width {
   display: inline-block;
-  width: 150px;  
+  width: 150px;
   text-align: right;
   margin-right: 10px;
 }
 
 
 .totalDetails{
-   
+
   display: flex;
   justify-content: space-between;
 }
 
 .contact-details{
- 
+
 margin-right: 60rem;
 margin-top: 30px;
 }
@@ -144,8 +144,8 @@ margin-top: 30px;
 .userdetails,
 .contact-details {
 flex: 1;
-margin-right: 15rem; 
- 
+margin-right: 15rem;
+
 }
 
 .view-container {
@@ -154,8 +154,8 @@ margin-right: 15rem;
   margin-right: 50px;
   margin-top: 20px;
   // background-color: #6c757d;
-  
- 
+
+
 }
 
 .username {
@@ -166,7 +166,7 @@ margin-right: 15rem;
 }
 
 .input-width {
-width: 30%; 
+width: 30%;
 }
 
 .inputtag{
@@ -237,7 +237,7 @@ box-shadow: none !important;
 
 /* Remove the shadow from the mat-tab */
 .mat-tab-label {
-  
+
   box-shadow: none !important; /* Remove the shadow */
   border: none; /* Remove the border */
   border-radius: 0; /* Remove the border radius */
@@ -260,7 +260,7 @@ box-shadow: none !important;
   background-color: white;
   width:100%;
   margin-top: 10px;
-  
+
 }
 
 
@@ -278,5 +278,9 @@ box-shadow: none !important;
   /* Add more styles as needed */
   width:55px;
    margin-bottom: 4px;
-   
+
 }
+
+
+
+

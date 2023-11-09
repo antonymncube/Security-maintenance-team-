@@ -7,6 +7,7 @@ import { AuthGuard } from './auth.guard';
 import { MasterLayoutComponent } from './master-layout/master-layout.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ModifyAccesCodesComponent } from './modify-acces-codes/modify-acces-codes.component';
+import { AvailableProductsComponent } from './available-products/available-products.component';
 
 
 const routes: Routes = [
@@ -47,6 +48,11 @@ const routes: Routes = [
   {
     path:'./accesscode',
     component:ModifyAccesCodesComponent
+  },
+  {
+    path:'./available-products',
+    component:AvailableProductsComponent
+    ,canActivate: [AuthGuard]
   }
 
 
