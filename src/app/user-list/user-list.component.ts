@@ -76,13 +76,13 @@ export class UserListComponent implements OnInit {
     }
   }
 
-  onDeleteUser(userId: string): void {
-    if (confirm('Are you sure you want to delete this user?')) {
-      this.apiService.deleteUser(userId).subscribe(() => {
+  // onDeleteUser(userId: string): void {
+  //   if (confirm('Are you sure you want to delete this user?')) {
+  //     this.apiService.deleteUser(userId).subscribe(() => {
 
-          location.reload();
-        });
-      }}
+  //         location.reload();
+  //       });
+  //     }}
 
 
 

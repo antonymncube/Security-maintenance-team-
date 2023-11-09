@@ -228,6 +228,7 @@ button {
 
 }
 
+
 .buttons1 {
   margin: 0 auto;
   display: flex;
@@ -239,6 +240,12 @@ button.cancel-btn,
 button.save-btn {
   width: 48%; /* Adjust the width as needed */
   right: 0;
+}
+.custom-checkbox{
+  background-color: blue !important;
+  // width:100px;
+  // height: 30px;
+
 }
 
  
