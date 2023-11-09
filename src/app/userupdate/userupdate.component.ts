@@ -16,10 +16,37 @@ export class UserupdateComponent {
   userForm: FormGroup;
   user: UserFormData = new UserFormData();
   SecLookup : any = '';
+  selectedAccessCodes: any[] = [];
   selectedProducts: string[] = [];
-  accessCodes: never[];
-  accessGroup: never[];
-  selectedAccessCodes: any;
+
+  dataToUpdate :any
+
+  // items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
+  // accessGroup: Array<{
+  //   clicked: boolean;
+  //   sAccessGroup: string;
+  //   sAccessCodes: Array<string>;
+  //   selected: boolean;
+  //   id:string
+  // }> ;
+  accessGroup: Array<{
+    clicked: boolean;
+    sAccessGroup: string;
+    sAccessCodes: Array<string>;
+    selected: boolean;
+    id:string
+  }> ;
+
+  accessCodes: Array<{
+    sAccessCode: string;
+    SAccessDescription: string;
+    selected: boolean;
+
+  }>;
+  selectedGroupId: string ='';
+  accessGroundForm: any;
+  selectedGroupIndex: number | null = null;
+
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiServiceService,private router :Router,
     private PasswordHashingService: PasswordHashingService ) {
@@ -62,8 +89,7 @@ apiService.getAccessGroup().subscribe(res=>{
       mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       department: ['',[Validators.required]],
       agent :  ['',[Validators.required]],
-      Language:[''],
-
+      language: ['',[Validators.required]],
     });
   }
 
@@ -83,7 +109,7 @@ apiService.getAccessGroup().subscribe(res=>{
   }
 
   getSelectedAccessCodes(): void {
-    // this.selectedAccessCodes = this.accessCodes.filter((code) => code.selected);
+    this.selectedAccessCodes = this.accessCodes.filter((code) => code.selected);
     // Now, this.selectedAccessCodes contains the selected access codes
   }
 
@@ -116,7 +142,7 @@ getAccesslookup() {
   this.apiService.getSecLookup().subscribe((SecLookup: any) => {
     this.SecLookup = SecLookup; // Assign the entire response to SecLookup
     // console.log('API Response:', SecLookup);
-    console.log('Security Access2:', SecLookup[0].sAccessCode, 'Security Description', SecLookup[0].SAccessDescription);
+    // console.log('Security Access:', SecLookup[0].sAccessCode, 'Security Description', SecLookup[0].SAccessDescription);
     // console.log("Lets see now");
   });
 }
@@ -153,6 +179,7 @@ onSubmit() {
             this.user.fullname = this.userForm.value.fullname;
             this.user.agent = this.userForm.value.agent;
             this.user.lastUpdated = new Date();
+            console.log(this.user);
 
 
             this.updateUserWithSelectedProducts();
@@ -168,12 +195,81 @@ onSubmit() {
     }
   }
 }
-
 saveSelectedProducts() {
-this.updateUserWithSelectedProducts();
+  this.updateUserWithSelectedProducts();
+}
+
+toggleAccessCodes(index: number) {
+  this.accessGroup.forEach((group, i) => {
+    if (i !== index) {
+      group.selected = false;
+    }
+  });
+
+  this.accessGroup[index].selected = !this.accessGroup[index].selected;
+
+  // Debugging: Log the group.id
+  this.selectedGroupId = this.accessGroup[index].id;
+
+  // console.log('toggle debug',this.selectedGroupId);
+}
 
 
+refreshPage() {
+  location.reload();
+}
 
+saveSelectedAccessCodes(): void {
+
+
+  if (this.selectedGroupId === null) {
+    console.log("No selected group.");
+    return;
+  }
+
+  // console.log('hERE ARE THE ACCESS CODES ARRAY'+this.accessCodes)
+  console.log('HERE ARE THE ACCESS CODES ARRAY', this.accessCodes.map(code => ({ selected: code.selected, sAccessCode: code.sAccessCode })));
+
+  const selectedAccessCodes = this.accessCodes.map(code => ({ selected: code.selected, sAccessCode: code.sAccessCode }))
+
+   console.log(selectedAccessCodes)
+  if (selectedAccessCodes.length === 0) {
+    console.log("No access codes selected.");
+    return;
+  }
+
+  this.apiService.getAccessGroupById(this.selectedGroupId).subscribe((res) => {
+    // console.log(res);
+
+    this.dataToUpdate = {
+      sAccessGroup: res.sAccessGroup,
+      sAccessCodes: selectedAccessCodes.map((code) => code.sAccessCode),
+
+    };
+
+    console.log('respond ' + res.sAccessCodes[0]);
+    for (let i = 0; i < res.sAccessCodes.length; i++) {
+      const code = res.sAccessCodes[i];
+      if (!this.dataToUpdate.sAccessCodes.includes(code)) {
+        // Add the code to this.dataToUpdate.sAccessCodes if it doesn't exist
+        this.dataToUpdate.sAccessCodes.push(code);
+      }
+      else {
+        console.log('No access codes in the response.');
+      }
+    }
+
+    const dataToUpdateString = JSON.stringify(this.dataToUpdate, null, 2);
+
+    this.apiService.updateAccessgroup(this.selectedGroupId, this.dataToUpdate).subscribe((updateRes) => {
+
+      this.accessCodes.forEach((code) => {
+        code.selected = false;
+        this.refreshPage()
+      });
+
+    });
+  });
 }
 
 }
