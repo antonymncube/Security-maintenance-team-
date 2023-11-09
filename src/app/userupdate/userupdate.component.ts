@@ -15,7 +15,7 @@ export class UserupdateComponent {
   userForm: FormGroup;
   user: UserFormData = new UserFormData();
   SecLookup : any = '';
-  selectedAccessCodes: any[] = []; 
+  selectedAccessCodes: any[] = [];
 
   dataToUpdate :any
 
@@ -25,26 +25,26 @@ export class UserupdateComponent {
   //   sAccessGroup: string;
   //   sAccessCodes: Array<string>;
   //   selected: boolean;
-  //   id:string   
+  //   id:string
   // }> ;
   accessGroup: Array<{
     clicked: boolean;
     sAccessGroup: string;
     sAccessCodes: Array<string>;
     selected: boolean;
-    id:string   
+    id:string
   }> ;
 
   accessCodes: Array<{
     sAccessCode: string;
     SAccessDescription: string;
-    selected: boolean; 
-   
+    selected: boolean;
+
   }>;
   selectedGroupId: string ='';
   accessGroundForm: any;
   selectedGroupIndex: number | null = null;
-  
+
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiServiceService,private router :Router,
     private PasswordHashingService: PasswordHashingService ) {
@@ -59,7 +59,7 @@ apiService.getSecLookup().subscribe((res: any) => {
   this.accessCodes = res; // Assigning all the access codes to this array
   // console.log("here is respond mnaka", res);
 
- 
+
   // if (res && res.length > 0) {
   //   const firstObject = res[0]; // Access the first object
   //   if (firstObject.SecLookupCodes && firstObject.SecLookupCodes.length > 0) {
@@ -91,7 +91,7 @@ apiService.getAccessGroup().subscribe(res=>{
     });
   }
 
-  
+
 
   accesscodes() {
     this.apiService.getSecLookup().subscribe((data) => {
@@ -166,17 +166,13 @@ onSubmit() {
             this.user.description = this.userForm.value.description;
             this.user.fullname = this.userForm.value.fullname;
             this.user.agent = this.userForm.value.agent;
-<<<<<<< HEAD
-            this.user.id = 50;
-=======
             this.user.lastUpdated = new Date();
->>>>>>> 8ca384d07a130a255d927f80a51acbedaf8397aa
 
             console.log(this.user);
 
 
             this.apiService.postdata(this.user).subscribe((postResponse: any) => {
-              
+
               this.router.navigate(['/home']);
               this.userForm.reset();
             });
@@ -202,25 +198,25 @@ toggleAccessCodes(index: number) {
   // console.log('toggle debug',this.selectedGroupId);
 }
 
-  
+
 refreshPage() {
   location.reload();
 }
 
 saveSelectedAccessCodes(): void {
 
-  
+
   if (this.selectedGroupId === null) {
     console.log("No selected group.");
     return;
   }
-  
+
   // console.log('hERE ARE THE ACCESS CODES ARRAY'+this.accessCodes)
   console.log('HERE ARE THE ACCESS CODES ARRAY', this.accessCodes.map(code => ({ selected: code.selected, sAccessCode: code.sAccessCode })));
 
   const selectedAccessCodes = this.accessCodes.map(code => ({ selected: code.selected, sAccessCode: code.sAccessCode }))
 
-   console.log(selectedAccessCodes) 
+   console.log(selectedAccessCodes)
   if (selectedAccessCodes.length === 0) {
     console.log("No access codes selected.");
     return;
@@ -233,8 +229,8 @@ saveSelectedAccessCodes(): void {
       sAccessGroup: res.sAccessGroup,
       sAccessCodes: selectedAccessCodes.map((code) => code.sAccessCode),
 
-    };  
-     
+    };
+
     console.log('respond ' + res.sAccessCodes[0]);
     for (let i = 0; i < res.sAccessCodes.length; i++) {
       const code = res.sAccessCodes[i];
@@ -246,11 +242,11 @@ saveSelectedAccessCodes(): void {
         console.log('No access codes in the response.');
       }
     }
-    
+
     const dataToUpdateString = JSON.stringify(this.dataToUpdate, null, 2);
 
     this.apiService.updateAccessgroup(this.selectedGroupId, this.dataToUpdate).subscribe((updateRes) => {
-    
+
       this.accessCodes.forEach((code) => {
         code.selected = false;
         this.refreshPage()
