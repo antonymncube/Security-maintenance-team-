@@ -6,6 +6,7 @@ import { UserFormData } from '../User';
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-userupdate',
   templateUrl: './userupdate.component.html',
@@ -87,7 +88,8 @@ apiService.getAccessGroup().subscribe(res=>{
       mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       department: ['',[Validators.required]],
       agent :  ['',[Validators.required]],
-      language: ['',[Validators.required]],
+      Language:[''],
+
     });
   }
 
@@ -107,7 +109,7 @@ apiService.getAccessGroup().subscribe(res=>{
   }
 
   getSelectedAccessCodes(): void {
-    this.selectedAccessCodes = this.accessCodes.filter((code) => code.selected);
+    // this.selectedAccessCodes = this.accessCodes.filter((code) => code.selected);
     // Now, this.selectedAccessCodes contains the selected access codes
   }
 
@@ -145,18 +147,28 @@ getAccesslookup() {
   });
 }
 
+
+receiveSelectedProducts(products: string[]) {
+  console.log('Received selected products:', products);
+  this.selectedProducts = products;
+
+}
+
+updateUserWithSelectedProducts() {
+  this.user.selectedProducts = this.selectedProducts;
+
+}
+
+
 onSubmit() {
   this.getAccesslookup();
   if (this.userForm.valid) {
     if (this.checkPasswordMatch()) {
-
       this.PasswordHashingService.hashPassword(this.userForm.value.password).then((hashedPassword) => {
-
         this.apiService.checkUsernameExist(this.userForm.value.username).subscribe((exists: boolean) => {
           if (exists) {
             alert('Username already exists. Please choose a different username.');
           } else {
-
             this.user.email = this.userForm.value.email;
             this.user.username = this.userForm.value.username;
             this.user.password = hashedPassword;
@@ -167,9 +179,10 @@ onSubmit() {
             this.user.fullname = this.userForm.value.fullname;
             this.user.agent = this.userForm.value.agent;
             this.user.lastUpdated = new Date();
-
             console.log(this.user);
 
+
+            this.updateUserWithSelectedProducts();
 
             this.apiService.postdata(this.user).subscribe((postResponse: any) => {
 

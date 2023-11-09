@@ -56,7 +56,7 @@
   </form>
 </div> -->
 <div class="view-container container ">
-  <div class="white container  "> 
+  <div class="white container  ">
 <form [formGroup]="userForm" class="bg-white p-0">
   <h4 class="bg-white username ">{{fullname}}</h4>
   <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" class="mat-elevation-z0">
@@ -118,14 +118,18 @@
                 <input type="text" id="mobile" formControlName="mobile">
               </div>
             </div>
+            <div class="form-group">
+              <label for="products">Selected Products:</label>
+              <ul>
+                <li *ngFor="let product of selectedProducts">{{ product }}</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
       <button class="submit" type="submit" [disabled]="userForm.invalid" (click)="navigatehome()">Done</button>
     </mat-tab>
-    <!-- <mat-tab label="Contact-details" id="hover">
-      You can add contact details form fields here if needed -->
-    <!-- </mat-tab>  -->
+   
   </mat-tab-group>
 </form>
 </div>

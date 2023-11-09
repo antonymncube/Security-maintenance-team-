@@ -91,6 +91,21 @@
     <mat-tab label="Contact-details">
       <!-- You can add contact details form fields here if needed -->
     </mat-tab>
+
+    <!-- <mat-tab label="Available Products">
+      <app-available-products
+      [availableProducts]="userForm.get('selectedProducts')?.value"
+      (selectedProducts)="updateSelectedProducts($event)"
+    ></app-available-products>
+
+    </mat-tab> -->
+
+    <mat-tab label="Available Products">
+      <app-available-products
+        [availableProducts]="userForm.get('selectedProducts')?.value"
+        (selectedProducts)="updateSelectedProducts($event)"
+      ></app-available-products>
+    </mat-tab>
   </mat-tab-group>
 </form>
 
