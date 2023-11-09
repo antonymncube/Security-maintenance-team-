@@ -94,6 +94,7 @@ export class UserListComponent implements OnInit {
 
           this.apiService.updateUser(userId.toString(), userToUpdate).subscribe(() => {
             console.log('User status updated successfully.');
+            this.dataSource.data = this.dataSource.data.map(u => (u.id === userId ? userToUpdate : u));
           });
         } else {
           console.error('User not found');
@@ -104,6 +105,7 @@ export class UserListComponent implements OnInit {
         if (status === null) {
           // If status is null, no filter should be applied
           this.dataSource.filter = '';
+          
         } else {
           // Otherwise, apply the filter based on the boolean value
           this.dataSource.filter = status === 'true' ? 'true' : 'false';

@@ -50,19 +50,17 @@
           </div>
 
 
-
           <div class="form-group">
-            <label for="department" class="label-width">Department:</label>
-            <select id="department" class="check1" formControlName="department">
-              <option value="HR">HR</option>
-              <option value="IT">IT</option>
-              <option value="Sales">Sales</option>
-            </select>
-            <div *ngIf="isControlInvalid('department')" class="invalid-feedback">
-              Department is required.
+            <label for="email" class="label-width">Email:</label>
+            <div class="inputtag">
+              <input type="email" id="email" formControlName="email"
+                [ngClass]="{ 'is-invalid': isControlInvalid('email') }">
+              <div *ngIf="isControlInvalid('email')" class="invalid-feedback">
+                Email is required and should be in a valid format.
+              </div>
             </div>
           </div>
-
+          
 
         </div>
 
@@ -76,6 +74,19 @@
             </div>
           </div> -->
           <div class="form-group">
+            <label for="department" class="label-width">Department:</label>
+            <select id="department" class="check" formControlName="department">
+              <option value="HR">HR</option>
+              <option value="IT">IT</option>
+              <option value="Sales">Sales</option>
+            </select>
+            <div *ngIf="isControlInvalid('department')" class="invalid-feedback">
+              Department is required.
+            </div>
+          </div>
+
+
+          <div class="form-group">
             <label for="agent" class="label-width">Agent:</label>
             <select id="agent" class="check" formControlName="agent">
               <option value="Simply Health">Simply Health</option>
@@ -86,18 +97,6 @@
               Agent is required.
             </div>
           </div>
-
-          <div class="form-group">
-            <label for="email" class="label-width">Email:</label>
-            <div class="inputtag">
-              <input type="email" id="email" formControlName="email"
-                [ngClass]="{ 'is-invalid': isControlInvalid('email') }">
-              <div *ngIf="isControlInvalid('email')" class="invalid-feedback">
-                Email is required and should be in a valid format.
-              </div>
-            </div>
-          </div>
-
 
 
           <div class="form-group">
@@ -130,9 +129,10 @@
               <option value="Afrikaans">Afrikaans</option>
               <option value="Native">Native</option>
             </select>
-            <!-- <div *ngIf="isControlInvalid('Language')" class="invalid-feedback">
-              Language is required. -->
+            <div *ngIf="isControlInvalid('language')" class="invalid-feedback">
+              Language is required.
             </div>
+          </div>
 
 
 
@@ -148,7 +148,10 @@
           </div>
         </div>
       </div>
-      <button type="submit" [disabled]="userForm.invalid">Save</button>
+      <div class="buttons1">
+        <button class="cancel-btn" type="submit" routerLink="/home">Cancel</button>
+      <button class="save-btn" type="submit" [disabled]="userForm.invalid">Save</button>
+    </div>
     </mat-tab>
     <mat-tab label="Contact-details">
 
