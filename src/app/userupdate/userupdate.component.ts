@@ -16,6 +16,10 @@ export class UserupdateComponent {
   userForm: FormGroup;
   user: UserFormData = new UserFormData();
   SecLookup : any = '';
+  selectedProducts: string[] = [];
+  accessCodes: never[];
+  accessGroup: never[];
+  selectedAccessCodes: any;
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiServiceService,private router :Router,
     private PasswordHashingService: PasswordHashingService ) {
@@ -58,6 +62,8 @@ apiService.getAccessGroup().subscribe(res=>{
       mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       department: ['',[Validators.required]],
       agent :  ['',[Validators.required]],
+      Language:[''],
+
     });
   }
 
@@ -77,7 +83,7 @@ apiService.getAccessGroup().subscribe(res=>{
   }
 
   getSelectedAccessCodes(): void {
-    this.selectedAccessCodes = this.accessCodes.filter((code) => code.selected);
+    // this.selectedAccessCodes = this.accessCodes.filter((code) => code.selected);
     // Now, this.selectedAccessCodes contains the selected access codes
   }
 
@@ -116,7 +122,16 @@ getAccesslookup() {
 }
 
 
+receiveSelectedProducts(products: string[]) {
+  console.log('Received selected products:', products);
+  this.selectedProducts = products;
 
+}
+
+updateUserWithSelectedProducts() {
+  this.user.selectedProducts = this.selectedProducts;
+
+}
 
 
 onSubmit() {
@@ -155,5 +170,11 @@ onSubmit() {
   }
 }
 
+saveSelectedProducts() {
+this.updateUserWithSelectedProducts();
+
+
+
+}
 
 }
