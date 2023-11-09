@@ -152,11 +152,7 @@ onSubmit() {
             this.user.description = this.userForm.value.description;
             this.user.fullname = this.userForm.value.fullname;
             this.user.agent = this.userForm.value.agent;
-<<<<<<< HEAD
-            this.user.id = 50;
-=======
             this.user.lastUpdated = new Date();
->>>>>>> 8ca384d07a130a255d927f80a51acbedaf8397aa
 
 
             this.updateUserWithSelectedProducts();
