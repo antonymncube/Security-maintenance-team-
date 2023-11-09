@@ -180,7 +180,7 @@
           </div>
           <div class="col bg-white p-0">
             <div class="access-codes scrollable">
-              <div *ngFor="let group of accessGroup">
+              <!-- <div *ngFor="let group of accessGroup">
                  <div *ngIf="group.selected"> 
                   <div *ngFor="let code of group.sAccessCodes" class="access-code">
                     <label  class="custom-checkbox">
@@ -189,10 +189,10 @@
                     </label>
                  </div>
                 </div>
-              </div>
-              <div *ngFor="let accesscodes of accessCodes; let i = index">
-                <label class="checkbox-container">
-                  <input type="checkbox" class="code-checkbox" [(ngModel)]="accesscodes.selected">
+              </div> -->
+              <div *ngFor="let accesscodes of SecLookup; let i = index">
+                <label class="checkbox-container" [ngClass]="{'red-checkbox': accesscodes.status}">
+                  <input type="checkbox" class="code-checkbox">
                   <span class="code-item">{{ accesscodes.sAccessCode }}</span>
                   <!-- <span class="description-item">{{ accesscodes.SAccessDescription }}</span> -->
                 </label>

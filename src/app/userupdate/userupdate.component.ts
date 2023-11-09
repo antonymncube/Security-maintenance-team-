@@ -16,6 +16,7 @@ export class UserupdateComponent {
   user: UserFormData = new UserFormData();
   SecLookup : any = '';
   selectedAccessCodes: any[] = []; 
+  AvailableCodes : any [] = [];
 
   dataToUpdate :any
 
@@ -36,7 +37,10 @@ export class UserupdateComponent {
   }> ;
 
   accessCodes: Array<{
-    sAccessCode: string;
+    sAccessCode: {
+      code: string;
+      status: boolean ;
+    };
     SAccessDescription: string;
     selected: boolean; 
    
@@ -166,11 +170,9 @@ onSubmit() {
             this.user.description = this.userForm.value.description;
             this.user.fullname = this.userForm.value.fullname;
             this.user.agent = this.userForm.value.agent;
-<<<<<<< HEAD
             this.user.id = 50;
-=======
+
             this.user.lastUpdated = new Date();
->>>>>>> 8ca384d07a130a255d927f80a51acbedaf8397aa
 
             console.log(this.user);
 
@@ -188,6 +190,11 @@ onSubmit() {
 }
 
 toggleAccessCodes(index: number) {
+
+  this.SecLookup.forEach((item: { status: boolean; }) => {
+    item.status = false;
+  });
+  
   this.accessGroup.forEach((group, i) => {
     if (i !== index) {
       group.selected = false;
@@ -199,8 +206,24 @@ toggleAccessCodes(index: number) {
   // Debugging: Log the group.id
   this.selectedGroupId = this.accessGroup[index].id;
 
-  // console.log('toggle debug',this.selectedGroupId);
+  const accessCodesInGroup = this.accessGroup[index].sAccessCodes;
+
+  console.log('this is the secLookup ' + JSON.stringify(this.SecLookup));
+  console.log('this is the access groups ' + JSON.stringify(this.accessGroup));
+
+  for (let i = 0; i < accessCodesInGroup.length; ++i) {
+    for (let j = 0; j < this.SecLookup.length; ++j) {
+      if (accessCodesInGroup[i] === this.SecLookup[j].sAccessCode) {
+        this.SecLookup[j].status = true;
+        break; // Exit the loop when a match is found.
+      }
+    }
+  }
+
+  // Log the updated SecLookup array
+  console.log('Updated secLookup ' + JSON.stringify(this.SecLookup));
 }
+
 
   
 refreshPage() {
