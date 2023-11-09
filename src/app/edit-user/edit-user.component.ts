@@ -26,13 +26,13 @@ export class EditUserComponent implements OnInit {
       location: [{value: '',}],
       agent :  ['',[Validators.required]],
       password: [{ value: '', }, [Validators.required, Validators.minLength(6)]], // Set password as not editable
+      department: ['',[Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       homephone: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
-      department: [''],
       status: [{value: '', }],
       lastUpdated: [''],
-      Language:[''],
+      language:['',[Validators.required]],
     });
   }
 
