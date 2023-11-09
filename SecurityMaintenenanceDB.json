@@ -235,5 +235,44 @@
       "agent": "Standard Bank",
       "status": true
     }
-  ]
+  ],
+  
+"Products": [
+    {
+      "id": "16169",
+      "sProductName": "Dental Cover Plan",
+      "sProductCode": "BDI"
+    },
+    {
+      "id": "16383",
+      "sProductName": "Cash Plan",
+      "sProductCode": "SHCP"
+    },
+    {
+      "id": "16462",
+      "sProductName": "Group Cash Plan",
+      "sProductCode": "SHGCP"
+    },
+    {
+      "id": "16542",
+      "sProductName": "Corporate Dental_old",
+      "sProductCode": "SHCD"
+    },
+    {
+      "id": "16842",
+      "sProductName": "Corporate Dental",
+      "sProductCode": "SHCD"
+    },
+    {
+      "id": "16845",
+      "sProductName": "Consumer Dental",
+      "sProductCode": "SHCSD"
+    },
+    {
+      "id": "16847",
+      "sProductName": "Consumer CashPlan",
+      "sProductCode": "SHCCP"
+    }
+]
+
 }
