@@ -4,6 +4,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiServiceService } from '../services/api-service.service';
 import { UserFormData } from '../User';
 import { Router } from '@angular/router';
+import { MatTabsModule } from '@angular/material/tabs';
+
+
 
 
 
@@ -18,6 +21,7 @@ export class UserupdateComponent {
   SecLookup : any = '';
   selectedAccessCodes: any[] = [];
   selectedProducts: string[] = [];
+  AvailableCodes : any [] = [];
 
   dataToUpdate :any
 
@@ -38,7 +42,10 @@ export class UserupdateComponent {
   }> ;
 
   accessCodes: Array<{
-    sAccessCode: string;
+    sAccessCode: {
+      code: string;
+      status: boolean ;
+    };
     SAccessDescription: string;
     selected: boolean;
 
@@ -200,19 +207,38 @@ saveSelectedProducts() {
   this.updateUserWithSelectedProducts();
 }
 
-toggleAccessCodes(index: number) {
-  this.accessGroup.forEach((group, i) => {
-    if (i !== index) {
-      group.selected = false;
-    }
+resetAccessStatus(){
+  this.SecLookup.forEach((item: { status: boolean; }) => {
+    item.status = false;
   });
+}
 
+toggleAccessCodes(index: number) {
+
+  this.resetAccessStatus()
+  
+ 
   this.accessGroup[index].selected = !this.accessGroup[index].selected;
 
   // Debugging: Log the group.id
   this.selectedGroupId = this.accessGroup[index].id;
 
-  // console.log('toggle debug',this.selectedGroupId);
+  const accessCodesInGroup = this.accessGroup[index].sAccessCodes;
+
+  // console.log('this is the secLookup ' + JSON.stringify(this.SecLookup));
+  // console.log('this is the access groups ' + JSON.stringify(this.accessGroup));
+
+  for (let i = 0; i < accessCodesInGroup.length; ++i) {
+    for (let j = 0; j < this.SecLookup.length; ++j) {
+      if (accessCodesInGroup[i] === this.SecLookup[j].sAccessCode) {
+        this.SecLookup[j].status = true;
+        break; // Exit the loop when a match is found.
+      }
+    }
+  }
+
+  // Log the updated SecLookup array
+  // console.log('Updated secLookup ' + JSON.stringify(this.SecLookup));
 }
 
 
@@ -222,6 +248,8 @@ refreshPage() {
 
 saveSelectedAccessCodes(): void {
 
+  const selectedAccessGroups = this.accessGroup.filter(group => group.selected);
+  console.log( 'SELECTED GROUPS',selectedAccessGroups)
 
   if (this.selectedGroupId === null) {
     console.log("No selected group.");
@@ -229,7 +257,7 @@ saveSelectedAccessCodes(): void {
   }
 
   // console.log('hERE ARE THE ACCESS CODES ARRAY'+this.accessCodes)
-  console.log('HERE ARE THE ACCESS CODES ARRAY', this.accessCodes.map(code => ({ selected: code.selected, sAccessCode: code.sAccessCode })));
+  // console.log('HERE ARE THE ACCESS CODES ARRAY', this.accessCodes.map(code => ({ selected: code.selected, sAccessCode: code.sAccessCode })));
 
   const selectedAccessCodes = this.accessCodes.map(code => ({ selected: code.selected, sAccessCode: code.sAccessCode }))
 
@@ -266,7 +294,7 @@ saveSelectedAccessCodes(): void {
 
       this.accessCodes.forEach((code) => {
         code.selected = false;
-        this.refreshPage()
+        // this.refreshPage()
       });
 
     });

@@ -44,45 +44,246 @@
       "sAccessCode": "API_DOC_4",
       "SAccessDescription": "TEST",
       "id": "200ba171-0ec1-428c-a200-28b144739185"
+    },
+    {
+      "sAccessCode": " API_DOC_BLOCK",
+      "SAccessDescription": "Prevent access to all documents through API",
+      "id": "2f009fc3-2441-42d8-a1a6-b3852e523a47"
+    },
+    {
+      "sAccessCode": "CL_DEL_CLAIMANT",
+      "SAccessDescription": "Claim - Delete unpaid Claim Parties",
+      "id": "5af926dc-02b6-4008-88b0-dea6a7d4c196"
+    },
+    {
+      "sAccessCode": "CL_EXCEL_PRINT",
+      "SAccessDescription": "Print Excel Documents",
+      "id": "d7310922-48b3-448c-9362-d38867e86973"
+    },
+    {
+      "sAccessCode": "CL_EXCHANGERATE",
+      "SAccessDescription": "Allow user to specify a settlement currency and rate for Claim Payments",
+      "id": "ae011d42-4348-4cef-b3e2-b98e73a44d9e"
+    },
+    {
+      "sAccessCode": "CL_FINALISECLMT",
+      "SAccessDescription": "Finalise Claimant",
+      "id": "f41ef724-3970-4313-bee1-820990da13d5"
+    },
+    {
+      "sAccessCode": "CL_INCIDENT",
+      "SAccessDescription": "Claim - Change Incident Date",
+      "id": "8ff89267-0a7d-4c6c-a9a5-6d207f047d3e"
+    },
+    {
+      "sAccessCode": "CL_IND_APR",
+      "SAccessDescription": "Allow Individual Claim Approval Note",
+      "id": "feb31cd7-0e0b-454d-bb3c-6c18ac95388c"
+    },
+    {
+      "sAccessCode": "CL_IND_DEC",
+      "SAccessDescription": "Allow Individual Claim Decline Note",
+      "id": "32d2e826-cacd-4c36-95a5-ea8ccc93b614"
+    },
+    {
+      "sAccessCode": "CL_NEGCLAIMBAL",
+      "SAccessDescription": "Allow negative Claim Balances",
+      "id": "71505981-4e1a-4468-b63a-f0310b70e968"
+    },
+    {
+      "sAccessCode": "CL_PAYSEC_LEV2",
+      "SAccessDescription": "Claim - Approve Payment Request",
+      "id": "3e633674-07c1-4053-b290-476e65107b33"
+    },
+    {
+      "sAccessCode": "CL_PAYSEC_LEV3",
+      "SAccessDescription": "Claim - Authorise or Decline Payment",
+      "id": "eeaa029d-33d9-43a8-89a1-5d7490ac0046"
+    },
+    {
+      "sAccessCode": "CL_RECOVERY",
+      "SAccessDescription": "Claim - Perform Recovery",
+      "id": "d8f208ef-4c46-4752-aa59-83589b11e50c"
+    },
+    {
+      "sAccessCode": "CL_REOPEN",
+      "SAccessDescription": "Re-open Finalised Claims",
+      "id": "fbb14367-3723-40bf-8f34-7db2d29c4771"
+    },
+    {
+      "sAccessCode": "CL_REQUISITION",
+      "SAccessDescription": "Claim - Print Payment Requisition",
+      "id": "cb508eb6-30cc-4d02-bcf8-a165fe216a9a"
+    },
+    {
+      "sAccessCode": "CL_REVERSEPAY",
+      "SAccessDescription": "Can reverse Claim Payments",
+      "id": "78972d50-752f-498d-84ff-b62f39352cd2"
+    },
+    {
+      "sAccessCode": "CL_SALVAGE",
+      "SAccessDescription": "Claims - can do salvage",
+      "id": "01be0b36-b1e7-4a73-ab3d-0b10595d02d5"
+    },
+    {
+      "sAccessCode": "CL_SAVECLAIM",
+      "SAccessDescription": "Claim - Can Save Claim",
+      "id": "f21fce2c-ddcd-439b-bbad-77780b3f5e6a"
+    },
+    {
+      "sAccessCode": "CL_STALECHEQUE",
+      "SAccessDescription": "Reverse Claim Payments",
+      "id": "c63cc6ae-265f-4544-813f-e2fe4445d0b2"
+    },
+    {
+      "sAccessCode": "API_DOC_ANTONV",
+      "SAccessDescription": "Claim - Change Status",
+      "id": "24d2fd41-b36b-48d3-bcef-414ca1fb1504"
+    },
+    {
+      "sAccessCode": "CL_UNDMAN",
+      "SAccessDescription": "Underwriting Manager",
+      "id": "ece0c0cb-c7ea-46b3-9ddd-0d6be32322d9"
+    },
+    {
+      "sAccessCode": "AGENT_COMM_PAY",
+      "SAccessDescription": "Underwriting Supervisor",
+      "id": "8208fba3-7603-4ee0-aee8-f79aed235ddc"
+    },
+    {
+      "sAccessCode": " CL_FINALISECLMT",
+      "SAccessDescription": "Finalise Claims",
+      "id": "ff3d2831-7ac6-4572-a259-3df9bdea4ae4"
+    },
+    {
+      "sAccessCode": " CL_STALECHEQUE",
+      "SAccessDescription": "Edit CHEQUE",
+      "id": "f69b62e0-507e-4857-b73c-4321d386d094"
     }
   ],
   "SecAccessGroups": [
     {
-      "sAccessGroup": "SH-silas",
+      "sAccessGroup": "Underwriting con",
       "sAccessCodes": [
         "ACCEPTBBWARN",
-        "thank silas",
-        "ADDR_OVERRIDE",
-        "AGENT_COMM_PAY",
         "AGENT_MAINT",
-        null
+        "API_CLAIM_DU",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_CLAIM_MAINT",
+        "API_DOC_4",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        "CL_EXCHANGERATE",
+        "CL_FINALISECLMT",
+        "CL_INCIDENT",
+        "CL_IND_APR",
+        "CL_IND_DEC",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_PAYSEC_LEV3",
+        "CL_RECOVERY",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_REVERSEPAY",
+        "CL_SALVAGE",
+        "CL_SAVECLAIM",
+        "CL_STALECHEQUE",
+        "API_DOC_ANTONV",
+        "CL_UNDMAN",
+        "AGENT_COMM_PAY",
+        " CL_FINALISECLMT",
+        " CL_STALECHEQUE"
       ],
-      "id": "1"
-    },
-    {
-      "sAccessGroup": "Underwriting sales cons",
-      "sAccessCodes": [],
       "id": "2"
     },
     {
-      "sAccessGroup": "Underwriting Service cons",
-      "sAccessCodes": [],
+      "sAccessGroup": "Accountent",
+      "sAccessCodes": [
+        "ACCEPTBBWARN",
+        "API_CLAIM_DU",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_CLAIM_MAINT",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        "CL_SALVAGE",
+        " CL_FINALISECLMT",
+        " CL_STALECHEQUE"
+      ],
+      "id": "23"
+    },
+    {
+      "sAccessGroup": "Broker Pack",
+      "sAccessCodes": [
+        "ACCEPTBBWARN",
+        "AGENT_MAINT",
+        "API_CLAIM_DU",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_CLAIM_MAINT",
+        "API_DOC_4",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        "CL_EXCHANGERATE",
+        "CL_FINALISECLMT",
+        "CL_INCIDENT",
+        "CL_IND_APR",
+        "CL_IND_DEC",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_PAYSEC_LEV3",
+        "CL_RECOVERY",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_REVERSEPAY",
+        "CL_SALVAGE",
+        "CL_SAVECLAIM",
+        "CL_STALECHEQUE",
+        "API_DOC_ANTONV",
+        "CL_UNDMAN",
+        "AGENT_COMM_PAY",
+        " CL_FINALISECLMT",
+        " CL_STALECHEQUE"
+      ],
       "id": "3"
     },
     {
-      "sAccessGroup": "Underwriting Manager",
-      "sAccessCodes": [],
-      "id": "4"
-    },
-    {
-      "sAccessGroup": "financial Manager",
-      "sAccessCodes": [],
+      "sAccessGroup": "Claim-Admin",
+      "sAccessCodes": [
+        "AGENT_MAINT",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_DOC_4",
+        " API_DOC_BLOCK",
+        "CL_EXCHANGERATE",
+        "CL_PAYSEC_LEV2",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_SALVAGE",
+        "CL_UNDMAN"
+      ],
       "id": "3"
     },
     {
-      "sAccessGroup": "Underwriting Service cons",
-      "sAccessCodes": [],
-      "id": "3"
+      "sAccessGroup": "Accounts Clerk",
+      "sAccessCodes": [
+        "CL_IND_DEC",
+        "CL_PAYSEC_LEV3",
+        "CL_RECOVERY",
+        "CL_SALVAGE",
+        "CL_SAVECLAIM",
+        "AGENT_COMM_PAY"
+      ]
     }
   ],
   "SecUserAccess": [
@@ -97,7 +298,21 @@
       "id": "2",
       "sAccessCodes": [
         "API_CUST_DU",
-        "AGENT_COMM_PAY"
+        "AGENT_COMM_PA"
+      ]
+    },
+    {
+      "id": "3",
+      "sAccessCodes": [
+        "API_CUST_DU",
+        "AGENT_CO"
+      ]
+    },
+    {
+      "id": "4",
+      "sAccessCodes": [
+        "API_CUST_DU",
+        "AGE_COMM_PAY"
       ]
     }
   ],
@@ -116,7 +331,8 @@
       "email": "ntshongwanae@gmail.com",
       "homephone": "0712425668",
       "mobile": "0712425668",
-      "department": "IT"
+      "department": "IT",
+      "status": true
     },
     {
       "id": "17",
@@ -128,7 +344,8 @@
       "email": "ranaaphelele@gmail.com",
       "homephone": "0781638594",
       "mobile": "0781990677",
-      "agent": "Simply Health"
+      "agent": "Simply Health",
+      "status": true
     },
     {
       "id": "18",
@@ -140,7 +357,8 @@
       "email": "DEV@Genasystech.com",
       "homephone": "0781638594",
       "mobile": "0781638594",
-      "agent": "Simply Health"
+      "agent": "Simply Health",
+      "status": true
     },
     {
       "id": "W54mHDU",
@@ -161,12 +379,14 @@
       "username": "Mihle",
       "fullname": "Mihle Jack",
       "description": " Married",
+      "location": "",
+      "agent": "Genasys",
       "password": "$2a$10$G9g8FpFUBnYg6iYha2wsi.nRF8Vx9k4cWdHq5QvFKZb24.RfhV.4e",
-      "department": "IT",
       "email": "m.jack@genasystech.com",
       "homephone": "0671402936",
       "mobile": "7819906770",
-      "agent": "Genasys"
+      "department": "IT",
+      "status": true
     },
     {
       "id": "E1yptON",
@@ -180,7 +400,7 @@
       "homephone": "0671402936",
       "mobile": "0781954154",
       "department": "IT",
-      "status": false
+      "status": true
     },
     {
       "id": "A0LIYn3",
@@ -194,7 +414,7 @@
       "homephone": "0671402936",
       "mobile": "0781954154",
       "department": "IT",
-      "status": false
+      "status": true
     },
     {
       "id": "RIpKtJb",
@@ -208,30 +428,40 @@
       "homephone": "0671402936",
       "mobile": "0781954154",
       "department": "IT",
-      "status": false
+      "status": true
     },
     {
       "id": "9d802p8",
       "username": "Grant",
       "fullname": "Grant Oliver",
       "description": "tester",
-      "password": "$2a$10$zq8RKm5vtAP255voAQHLYewSWd3gIwdLglW/aJqfyA8f8QWtUdY8m",
-      "department": "Sales",
+      "location": {
+        "value": ""
+      },
+      "agent": "Genasys",
+      "password": "wawawawe",
+      "department": "Simply Health",
       "email": "nseptember591@gmail.com",
       "homephone": "0781638594",
       "mobile": "0671802963",
-      "agent": "Genasys"
+      "status": {
+        "value": ""
+      },
+      "lastUpdated": "2023-11-09T12:37:54.039Z",
+      "language": "Afrikaans"
     },
     {
-      "id": "v2GXgqF",
-      "username": "james",
-      "fullname": "mitch Gordon",
-      "description": "Delivery Manager",
-      "password": "$2a$10$VXWAWvC5iHeAjnSZgVylPOVLX3qhv8TN/e2aoNAvj.iE.8.WNmKBW",
-      "department": "IT",
+      "id": "6Pt4JWs",
+      "username": "mItch",
+      "fullname": "Mitch",
+      "description": "yes",
+      "location": "",
+      "agent": "Standard Bank",
+      "password": "$2a$10$hK9YkfAyFdzfaNIirQ6N7O64CaOVo4xkzB27D.92kgkijDl7jk9ZW",
       "email": "219148414@edu.vut.ac.za",
       "homephone": "0671402936",
       "mobile": "0781954154",
+<<<<<<< HEAD
       "agent": "Standard Bank",
       "status": true
     },
@@ -331,6 +561,49 @@
       "language": "English",
       "location": "",
       "selectedProducts": []
+=======
+      "department": "Sales",
+      "status": true,
+      "lastUpdated": "2023-11-09T12:47:23.328Z",
+      "selectedProducts": []
+    }
+  ],
+  "Products": [
+    {
+      "id": "16169",
+      "sProductName": "Dental Cover Plan",
+      "sProductCode": "BDI"
+    },
+    {
+      "id": "16383",
+      "sProductName": "Cash Plan",
+      "sProductCode": "SHCP"
+    },
+    {
+      "id": "16462",
+      "sProductName": "Group Cash Plan",
+      "sProductCode": "SHGCP"
+    },
+    {
+      "id": "16542",
+      "sProductName": "Corporate Dental_old",
+      "sProductCode": "SHCD"
+    },
+    {
+      "id": "16842",
+      "sProductName": "Corporate Dental",
+      "sProductCode": "SHCD"
+    },
+    {
+      "id": "16845",
+      "sProductName": "Consumer Dental",
+      "sProductCode": "SHCSD"
+    },
+    {
+      "id": "16847",
+      "sProductName": "Consumer CashPlan",
+      "sProductCode": "SHCCP"
+>>>>>>> a46081660db9c7d4572219231f2846ff2fe05d74
     }
   ],
   "Products": [
