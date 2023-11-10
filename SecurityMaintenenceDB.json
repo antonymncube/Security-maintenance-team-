@@ -1,0 +1,332 @@
+{
+  "SecLookupCodes": [
+    {
+      "sAccessCode": "ACCEPTBBWARN",
+      "SAccessDescription": "Accept policy quote results",
+      "id": "1"
+    },
+    {
+      "sAccessCode": "thank silas",
+      "SAccessDescription": "again",
+      "id": "2"
+    },
+    {
+      "id": "4",
+      "sAccessCode": "AGENT_MAINT",
+      "SAccessDescription": "Agent maintenance"
+    },
+    {
+      "id": "6",
+      "sAccessCode": "API_CLAIM_DU",
+      "SAccessDescription": "Allow user to upload Claim documents using API"
+    },
+    {
+      "id": "7",
+      "sAccessCode": "API_DOC_BLOCK",
+      "SAccessDescription": "Prevent access to all documents through API"
+    },
+    {
+      "id": "8",
+      "sAccessCode": "API_DOC_CONF",
+      "SAccessDescription": "Allow access to documents with Confidential confidentiality through API"
+    },
+    {
+      "id": "9",
+      "sAccessCode": "API_DOC_PERS",
+      "SAccessDescription": "Allow access to documents with Personal confidentiality through API"
+    },
+    {
+      "id": "10",
+      "sAccessCode": "fgebe",
+      "SAccessDescription": "fgefg"
+    },
+    {
+      "id": "11",
+      "sAccessCode": "fgebe",
+      "SAccessDescription": "fgefg"
+    },
+    {
+      "id": "12",
+      "sAccessCode": "API_DOC_ANTONY",
+      "SAccessDescription": "Married"
+    },
+    {
+      "id": "13",
+      "sAccessCode": "API_DOC_ANTONV",
+      "SAccessDescription": "Married"
+    },
+    {
+      "id": "14",
+      "sAccessCode": "WESFSD",
+      "SAccessDescription": "sdfdd"
+    },
+    {
+      "id": "15",
+      "sAccessCode": "MAC",
+      "SAccessDescription": "jhbk"
+    },
+    {
+      "id": "16",
+      "sAccessCode": "ASDAS",
+      "SAccessDescription": "sadsd"
+    },
+    {
+      "id": "17",
+      "sAccessCode": "ACCEPTBBWARN",
+      "SAccessDescription": "adsd"
+    },
+    {
+      "id": "18",
+      "sAccessCode": "ADDR_OVERRIDE",
+      "SAccessDescription": "tester"
+    },
+    {
+      "id": "20",
+      "sAccessCode": "DFKOSANGNG",
+      "SAccessDescription": "tester"
+    },
+    {
+      "sAccessCode": "",
+      "SAccessDescription": "",
+      "id": "839fc2c3-a708-4020-8687-3237bcfa708c"
+    },
+    {
+      "sAccessCode": "SADAS",
+      "SAccessDescription": "sads",
+      "id": "f40b2893-2ec3-41ec-9f86-bf4dc2c21892"
+    },
+    {
+      "sAccessCode": "BACKTHERE",
+      "SAccessDescription": "fdagfda",
+      "id": "3be7daed-ae62-4ba1-8e4b-383bcb9fd78e"
+    },
+    {
+      "sAccessCode": "CHURCH",
+      "SAccessDescription": "tester",
+      "id": "d3acb86e-6753-4954-af29-b4e4776c94be"
+    },
+    {
+      "sAccessCode": "BACK",
+      "SAccessDescription": "you",
+      "id": "6c67822c-68c1-4e04-8e9a-d2dba09f8d1f"
+    },
+    {
+      "sAccessCode": "BACK",
+      "SAccessDescription": null,
+      "id": "dcd2ea98-0064-46a0-af8e-98379ed4af37"
+    },
+    {
+      "sAccessCode": "BACK",
+      "SAccessDescription": null,
+      "id": "1b3fa765-ffdb-42d3-9f06-2f9797ac344b"
+    },
+    {
+      "sAccessCode": "dlayani ximanga",
+      "SAccessDescription": "ayakayi",
+      "id": "ac472ad9-ded4-4622-821f-adcc0996b2fa"
+    }
+  ],
+  "SecAccessGroups": [
+    {
+      "sAccessGroup": "SH-silas",
+      "sAccessCodes": [
+        "ACCEPTBBWARN",
+        "thank silas",
+        "ADDR_OVERRIDE",
+        "AGENT_COMM_PAY",
+        "AGENT_MAINT",
+        null
+      ],
+      "id": "1"
+    },
+    {
+      "sAccessGroup": "SH-Antony",
+      "sAccessCodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_ANTONV",
+        "AGENT_COMM_PAY",
+        null
+      ],
+      "id": "2"
+    },
+    {
+      "sAccessGroup": "SH-xolani",
+      "sAccessCodes": [
+        "AGENT_COMM_PAY",
+        "ACCEPTBBWARN",
+        null
+      ],
+      "id": "3"
+    }
+  ],
+  "SecUserAccess": [
+    {
+      "id": "1",
+      "sAccessCodes": [
+        "API_DOC_PERS",
+        "API_DOC_CONF"
+      ]
+    },
+    {
+      "id": "2",
+      "sAccessCodes": [
+        "API_CUST_DU",
+        "AGENT_COMM_PAY"
+      ]
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "Users": [
+    {
+      "id": "1",
+      "username": "Antony.",
+      "fullname": "Aphele spouse",
+      "description": "yes",
+      "password": "mark",
+      "confirmpassword": "sfdsdfsdfdfsdfdfdfsd",
+      "department": "adasdasasdsd",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "sadassadas",
+      "mobile": "sadsaddasdsa"
+    },
+    {
+      "id": "2",
+      "username": "vicky",
+      "fullname": "Mkhomi Ndivuwo",
+      "description": "we are bacl",
+      "password": "Ant073727@",
+      "confirmpassword": "bxcbbxcbvbzvbbvc",
+      "department": "bair port",
+      "email": "antonymncube49@gmail.com",
+      "homephone": "llllll",
+      "mobile": "we are back"
+    },
+    {
+      "id": "7",
+      "username": "xolaniiii",
+      "fullname": "Antony",
+      "description": "tester",
+      "location": "",
+      "agent": "Simply Health",
+      "password": "Ant073727@",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "84684351210",
+      "department": "Sales"
+    },
+    {
+      "id": "8",
+      "username": "sive",
+      "fullname": "khaya",
+      "description": "we are bacl",
+      "password": "Ant073727@",
+      "department": "HR",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "84684351210",
+      "agent": "Standard Bank"
+    },
+    {
+      "id": "9",
+      "username": "mitch",
+      "fullname": "Gordons",
+      "description": "Äntony mess",
+      "password": "Ant073727@",
+      "department": "HR",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "84684351210",
+      "agent": "Genasys"
+    },
+    {
+      "id": "10",
+      "username": " Hle",
+      "fullname": "Jack/ntshongwana",
+      "description": "Married",
+      "password": "Ant073727@",
+      "department": "HR",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "84684351210",
+      "agent": "Genasys"
+    },
+    {
+      "id": "12",
+      "username": " mohlale",
+      "fullname": "Antony",
+      "description": "Married",
+      "location": "",
+      "agent": "Standard Bank",
+      "password": "Ant073727@",
+      "email": "antonymncube49@gmail.com",
+      "homephone": "0671402936",
+      "mobile": "84684351210",
+      "department": "Sales"
+    },
+    {
+      "id": "14",
+      "username": "lion",
+      "fullname": "Antony",
+      "description": "Married",
+      "location": "",
+      "agent": "Simply Health",
+      "password": "Ant073727@",
+      "email": "nseptember591@gmail.com",
+      "homephone": "0671402936",
+      "mobile": "84684351210",
+      "department": "IT"
+    },
+    {
+      "id": "15",
+      "username": " sillas w",
+      "fullname": "Antony",
+      "description": "Married",
+      "location": "",
+      "agent": "Simply Health",
+      "password": "Ant073727@",
+      "email": "antonymncube@gmail.com",
+      "homephone": " 0671402936",
+      "mobile": "84684351210",
+      "department": "HR"
+    },
+    {
+      "id": "16",
+      "username": "EmihleN",
+      "fullname": "Emihle Ntshongwana",
+      "description": "MGA",
+      "location": "",
+      "agent": "Genasys",
+      "password": "$2a$10$Fp8Nb1ZVij/SRnEWNH5gv.adxaLYOo.sI4Ylbf0MlrslW.w9gLOpi",
+      "email": "ntshongwanae@gmail.com",
+      "homephone": "0712425668",
+      "mobile": "0712425668",
+      "department": "IT"
+    },
+    {
+      "id": "17",
+      "username": "aphelela",
+      "fullname": "Aphelele Rana",
+      "description": "GHqom",
+      "password": "$2a$10$YTBDMIX4vycg1Qo2AzFwIOpfgJf6MqB.B.4TlNDSqGgUXFzPfX2h.",
+      "department": "IT",
+      "email": "ranaaphelele@gmail.com",
+      "homephone": "0781638594",
+      "mobile": "0781990677",
+      "agent": "Simply Health"
+    },
+    {
+      "id": "18",
+      "username": "Dev",
+      "fullname": "Test",
+      "description": "MGA",
+      "password": "$2a$10$1YjWgMHGucqzRsGyKBV8Qedsw.uOsGUQA.yG3DBl7/5IZp6uhMVOO",
+      "department": "IT",
+      "email": "DEV@Genasystech.com",
+      "homephone": "0781638594",
+      "mobile": "0781638594",
+      "agent": "Simply Health"
+    }
+  ]
+}

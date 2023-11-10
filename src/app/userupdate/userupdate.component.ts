@@ -21,10 +21,7 @@ export class UserupdateComponent {
   SecLookup : any = '';
   selectedAccessCodes: any[] = [];
   selectedProducts: string[] = [];
-<<<<<<< HEAD
   AvailableCodes : any [] = [];
-=======
->>>>>>> e6dabac8665213821da0cfc544d73dd04f3b63c6
 
   dataToUpdate :any
 
@@ -98,7 +95,7 @@ apiService.getAccessGroup().subscribe(res=>{
       homephone: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       department: ['',[Validators.required]],
-      agent :  ['',[Validators.required]],
+      agent:  ['',[Validators.required]],
       language: ['',[Validators.required]],
     });
   }
@@ -160,20 +157,12 @@ getAccesslookup() {
 
 receiveSelectedProducts(products: string[]) {
   console.log('Received selected products:', products);
-<<<<<<< HEAD
-  // this.selectedProducts = products;
-=======
   this.selectedProducts = products;
->>>>>>> e6dabac8665213821da0cfc544d73dd04f3b63c6
 
 }
 
 updateUserWithSelectedProducts() {
-<<<<<<< HEAD
-  // this.user.selectedProducts = this.selectedProducts;
-=======
   this.user.selectedProducts = this.selectedProducts;
->>>>>>> e6dabac8665213821da0cfc544d73dd04f3b63c6
 
 }
 
@@ -183,7 +172,7 @@ onSubmit() {
   if (this.userForm.valid) {
     if (this.checkPasswordMatch()) {
       this.PasswordHashingService.hashPassword(this.userForm.value.password).then((hashedPassword) => {
-        this.apiService.checkUsernameExist(this.userForm.value.username).subscribe((exists: boolean) => {
+        this.apiService.checkUsernameExisttt(this.userForm.value.username).subscribe((exists: boolean) => {
           if (exists) {
             alert('Username already exists. Please choose a different username.');
           } else {
@@ -196,6 +185,7 @@ onSubmit() {
             this.user.description = this.userForm.value.description;
             this.user.fullname = this.userForm.value.fullname;
             this.user.agent = this.userForm.value.agent;
+            this.user.language = this.userForm.value.language;
             this.user.lastUpdated = new Date();
             console.log(this.user);
 
@@ -216,15 +206,12 @@ onSubmit() {
 saveSelectedProducts() {
   this.updateUserWithSelectedProducts();
 }
-<<<<<<< HEAD
 
 resetAccessStatus(){
   this.SecLookup.forEach((item: { status: boolean; }) => {
     item.status = false;
   });
 }
-=======
->>>>>>> e6dabac8665213821da0cfc544d73dd04f3b63c6
 
 toggleAccessCodes(index: number) {
 
@@ -255,21 +242,14 @@ toggleAccessCodes(index: number) {
 }
 
 
-<<<<<<< HEAD
-  
-=======
->>>>>>> e6dabac8665213821da0cfc544d73dd04f3b63c6
 refreshPage() {
   location.reload();
 }
 
 saveSelectedAccessCodes(): void {
 
-<<<<<<< HEAD
   const selectedAccessGroups = this.accessGroup.filter(group => group.selected);
   console.log( 'SELECTED GROUPS',selectedAccessGroups)
-=======
->>>>>>> e6dabac8665213821da0cfc544d73dd04f3b63c6
 
   if (this.selectedGroupId === null) {
     console.log("No selected group.");

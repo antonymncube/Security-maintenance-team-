@@ -461,6 +461,107 @@
       "email": "219148414@edu.vut.ac.za",
       "homephone": "0671402936",
       "mobile": "0781954154",
+<<<<<<< HEAD
+      "agent": "Standard Bank",
+      "status": true
+    },
+    {
+      "id": "IwrHf2H",
+      "username": "Nami",
+      "fullname": "Nami Swan",
+      "description": " Married",
+      "password": "$2a$10$C/cRjlx2sjHOxMm3BZILt.A8KTaO3TMs844iIbuyUg7ui.m2WDWBy",
+      "department": "Genasys",
+      "email": "curlybrows@onepiece.com",
+      "homephone": "0671402936",
+      "mobile": "0781990671",
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-11-10T07:12:27.779Z",
+      "language": "Afrikaans",
+      "selectedProducts": []
+    },
+    {
+      "id": "rwT478F",
+      "username": "Sanji",
+      "fullname": "Vinsmoke Sanji",
+      "description": "Nami swann!!!!",
+      "location": "",
+      "agent": "Simply Health",
+      "password": "$2a$10$kAuUPq/GhGX1gbQ0zWVodOA.coFwHBNn6D1wrzKvxMtdSnJwpRPYa",
+      "email": "curlybrows@onepiece.com",
+      "homephone": "0671402936",
+      "mobile": "0781990671",
+      "department": "HR",
+      "status": true,
+      "lastUpdated": "2023-11-10T07:12:53.490Z",
+      "selectedProducts": []
+    },
+    {
+      "id": "kFIUrk0",
+      "username": "Namiss",
+      "fullname": "Nami Swan",
+      "description": " Married",
+      "password": "$2a$10$7jL9Cnum2z8vX.XmBA56Mesvh4F5cnmGU3ThVK5M30ggtiBiTmjHG",
+      "department": "Genasys",
+      "email": "mosshead@onepiece.com",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-11-10T07:20:29.706Z",
+      "language": "Simply Health",
+      "selectedProducts": []
+    },
+    {
+      "id": "OQWl6Pp",
+      "username": "Namisss",
+      "fullname": "Nami Swan",
+      "description": " Married",
+      "location": "",
+      "agent": "Genasys",
+      "password": "$2a$10$VaFR7jpWaj.pdKAdeHqpleMJEL26Cox1EyTfF0eRVmG7f2S8y/C6.",
+      "email": "pinapule@poroporo.com",
+      "homephone": "0671402936",
+      "mobile": "0671802963",
+      "department": "IT",
+      "status": true,
+      "lastUpdated": "2023-11-10T07:21:04.495Z",
+      "selectedProducts": []
+    },
+    {
+      "id": "L6iloi8",
+      "username": "Namiqq",
+      "fullname": "Kholo yes",
+      "description": " Married",
+      "location": "",
+      "agent": "Genasys",
+      "password": "$2a$10$FabIadCz5358bp5Mv6gcdOGgqv/jbeQK.fKb0/r7z93FjOr54tkRS",
+      "email": "pinapule@poroporo.com",
+      "homephone": "0671402936",
+      "mobile": "0781990621",
+      "department": "Sales",
+      "status": true,
+      "lastUpdated": "2023-11-10T07:25:40.776Z",
+      "selectedProducts": []
+    },
+    {
+      "id": "vUxRspY",
+      "username": "Minamina",
+      "fullname": "Shibawa",
+      "description": " Married",
+      "password": "$2a$10$MrOMku4J7TmYbKt9KjFlDuHMMpDaF.i/wc9rHKpWWG/.De5nD6VK6",
+      "department": "HR",
+      "email": "nami@onepiece.com",
+      "homephone": "0671402936",
+      "mobile": "0671802963",
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-11-10T07:41:33.076Z",
+      "language": "English",
+      "location": "",
+      "selectedProducts": []
+=======
       "department": "Sales",
       "status": true,
       "lastUpdated": "2023-11-09T12:47:23.328Z",
@@ -502,10 +603,10 @@
       "id": "16847",
       "sProductName": "Consumer CashPlan",
       "sProductCode": "SHCCP"
+>>>>>>> a46081660db9c7d4572219231f2846ff2fe05d74
     }
   ],
-  
-"Products": [
+  "Products": [
     {
       "id": "16169",
       "sProductName": "Dental Cover Plan",
@@ -541,6 +642,5 @@
       "sProductName": "Consumer CashPlan",
       "sProductCode": "SHCCP"
     }
-]
-
+  ]
 }
