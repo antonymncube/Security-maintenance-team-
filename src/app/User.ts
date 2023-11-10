@@ -3,17 +3,17 @@ export class UserFormData {
   username: string = '';
   fullname: string = '';
   description: string = '';
-  location: string = '';
-  agent: string = '';
   password: string = '';
+  department: string = '';
   email: string = '';
   homephone: string = '';
   mobile: string = '';
-  department: string = '';
+  agent: string = '';
   status: boolean = true;
   lastUpdated: Date = new Date();
+  language: string = '';
+  location: string = '';
   selectedProducts: string[];
-  language: any;
 
   constructor() {
     this.selectedProducts = [];
