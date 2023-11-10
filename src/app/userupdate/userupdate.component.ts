@@ -9,6 +9,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 
 
 
+
 @Component({
   selector: 'app-userupdate',
   templateUrl: './userupdate.component.html',
@@ -20,7 +21,10 @@ export class UserupdateComponent {
   SecLookup : any = '';
   selectedAccessCodes: any[] = [];
   selectedProducts: string[] = [];
+<<<<<<< HEAD
   AvailableCodes : any [] = [];
+=======
+>>>>>>> e6dabac8665213821da0cfc544d73dd04f3b63c6
 
   dataToUpdate :any
 
@@ -156,12 +160,20 @@ getAccesslookup() {
 
 receiveSelectedProducts(products: string[]) {
   console.log('Received selected products:', products);
+<<<<<<< HEAD
   // this.selectedProducts = products;
+=======
+  this.selectedProducts = products;
+>>>>>>> e6dabac8665213821da0cfc544d73dd04f3b63c6
 
 }
 
 updateUserWithSelectedProducts() {
+<<<<<<< HEAD
   // this.user.selectedProducts = this.selectedProducts;
+=======
+  this.user.selectedProducts = this.selectedProducts;
+>>>>>>> e6dabac8665213821da0cfc544d73dd04f3b63c6
 
 }
 
@@ -204,12 +216,15 @@ onSubmit() {
 saveSelectedProducts() {
   this.updateUserWithSelectedProducts();
 }
+<<<<<<< HEAD
 
 resetAccessStatus(){
   this.SecLookup.forEach((item: { status: boolean; }) => {
     item.status = false;
   });
 }
+=======
+>>>>>>> e6dabac8665213821da0cfc544d73dd04f3b63c6
 
 toggleAccessCodes(index: number) {
 
@@ -240,15 +255,21 @@ toggleAccessCodes(index: number) {
 }
 
 
+<<<<<<< HEAD
   
+=======
+>>>>>>> e6dabac8665213821da0cfc544d73dd04f3b63c6
 refreshPage() {
   location.reload();
 }
 
 saveSelectedAccessCodes(): void {
 
+<<<<<<< HEAD
   const selectedAccessGroups = this.accessGroup.filter(group => group.selected);
   console.log( 'SELECTED GROUPS',selectedAccessGroups)
+=======
+>>>>>>> e6dabac8665213821da0cfc544d73dd04f3b63c6
 
   if (this.selectedGroupId === null) {
     console.log("No selected group.");
