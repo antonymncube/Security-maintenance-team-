@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiServiceService } from '../services/api-service.service';
+import { AvailableProductsComponent } from '../available-products/available-products.component';
+import { UserupdateComponent } from '../userupdate/userupdate.component';
 
 @Component({
   selector: 'app-edit-user',
@@ -20,15 +22,20 @@ export class EditUserComponent implements OnInit {
   ) {
     this.userForm = this.formBuilder.group({
       id: [''],
-      username: ['', Validators.required],
+      username: [{ value: '',  }, Validators.required],
       fullname: ['', Validators.required],
       description: [''],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      department: [''],
+      location: [{value: '',}],
+      agent :  ['',[Validators.required]],
+      password: [{ value: '', }, [Validators.required, Validators.minLength(6)]], // Set password as not editable
+      department: ['',[Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       homephone: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
-      agent :  ['',[Validators.required]],
+      status: [{value: '', }],
+      lastUpdated: [''],
+      language:['',[Validators.required]],
+
     });
   }
 
@@ -38,6 +45,11 @@ export class EditUserComponent implements OnInit {
       console.log(this.id);
 
       this.apiService.getUserDetails(this.id).subscribe((userDetails: any) => {
+        if (userDetails && userDetails.selectedProducts) {
+          this.userForm.get('selectedProducts')!.setValue(userDetails.selectedProducts);
+
+
+        }
         this.userForm.patchValue(userDetails);
       });
     });
@@ -45,13 +57,19 @@ export class EditUserComponent implements OnInit {
 
   isControlInvalid(controlName: string) {
     const control = this.userForm.get(controlName);
-  
+
     return control?.invalid && control?.touched;
   }
-   
+
 
   onSubmit() {
     if (this.userForm.valid) {
+      const lastUpdatedControl = this.userForm.get('lastUpdated');
+
+      if (lastUpdatedControl) {
+        lastUpdatedControl.setValue(new Date());
+      }
+
       this.apiService.updateUser(this.id, this.userForm.value).subscribe((response: any) => {
         this.userForm.reset();
         this.router.navigate(['/home']);
@@ -59,4 +77,13 @@ export class EditUserComponent implements OnInit {
       });
     }
   }
+
+  updateSelectedProducts(selectedProducts: any[]) {
+    const selectedProductsControl = this.userForm.get('selectedProducts');
+    if (selectedProductsControl) {
+      selectedProductsControl.setValue(selectedProducts);
+    }
+  }
+
+
 }

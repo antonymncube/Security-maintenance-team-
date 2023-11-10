@@ -19,11 +19,11 @@
   align-items: center;
   margin-bottom: 10px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  // border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 10px;
+  padding: 8px;
   cursor: pointer;
-  width: 600px;
+  width: 700px;
   height: 55px;
 }
 
@@ -37,6 +37,7 @@
 .access-code strong {
   margin-right: 10px;
 }
+
 
 .form-container {
   padding: 20px;
@@ -134,3 +135,51 @@ body {
   color: white;
   cursor: pointer;
 }
+
+/* Add new CSS rules */
+.access-description {
+  margin-left: 10px; /* Add margin to separate description from code */
+  font-weight: bold; /* Make the description bold */
+}
+
+ /* Add new CSS rule for the button text color */
+.mat-tab-group mat-tab-label {
+  color: #fff !important;
+}
+
+/* Update the button text color in the .btn class */
+.btn {
+  background-color: #2F3351;
+  color: #fff !important; /* Use !important to override Material Tab styles */
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 0rem;
+}
+.btn-save{
+  background-color: #2F3351;
+  color: #fff !important; /* Use !important to override Material Tab styles */
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 1rem;
+}
+
+.btn:hover {
+  background-color: #1d1f37; /* Darker color on hover */
+}
+
+.access-code-item {
+  display: flex; /* Add display: flex to make the content items align horizontally */
+  align-items: center;
+}
+
+.access-description {
+  margin-top: 0; /* Remove any top margin to align descriptions at the top */
+}
+
+

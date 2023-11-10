@@ -11,13 +11,20 @@ import { SharedDataService } from '../services/shared-data.service';
 @Component({
   selector: 'app-master-layout',
   templateUrl: './master-layout.component.html',
-  styleUrls: ['./master-layout.component.scss']
+  styleUrls: ['./master-layout.component.scss'],
+  
 })
 export class MasterLayoutComponent {
   @ViewChild('menuTrigger') menuTrigger!: MatMenuTrigger;
   @ViewChild(NavBarComponent) navBarComponent: NavBarComponent | undefined;
 
-  constructor(private dialog: MatDialog,private autservice:AuthService, private SharedDataService:  SharedDataService) {}
+  Version1: string;
+  showPurpose: boolean = false;
+
+
+  constructor(private dialog: MatDialog,private autservice:AuthService, private SharedDataService:  SharedDataService) {
+  this.Version1 = "";
+}
 
   openDialog() {
     const dialogRef = this.dialog.open(MasterLayoutComponent, { restoreFocus: false });
@@ -34,4 +41,13 @@ export class MasterLayoutComponent {
   const filterText = (event.target as HTMLInputElement).value;
   this.SharedDataService.updateFilterText(filterText);
 }
+About(){
+  this.showPurpose = !this.showPurpose;
+
+}
+
+togglePurpose() {
+  this.showPurpose = !this.showPurpose;
+}
+
 }

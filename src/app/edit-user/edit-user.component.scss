@@ -1,191 +1,120 @@
- /* Style the mat-tab-group */
+ /* Your existing styles here */
+
  .mat-tab-group {
-    margin-bottom: 48px;
-  }
-   
-  form {
-    width: 80rem;
-    margin: 0 auto;
-    padding: 10px;
-    border: 0.1px solid black;
-    // border-radius: 5px;
-    // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 3rem;
-  }
-   
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-   
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  input[type="tel"],
-  input[type="description"]
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-   
-//   button {
-//     padding: 10px 20px;
-//     background-color: #007bff;
-//     color: #fff;
-//     border: none;
-//     border-radius: 3px;
-//     cursor: pointer;
-//     margin-left: 72rem;
-//   }
-   
-//   button:disabled {
-//     background-color: #ccc;
-//     cursor:pointer;
-//   }
-
-//   button {
-//     color: black;
-//   }
-
-/* Uncomment and update button styling */
-button {
-    padding: 2px 20px;
-    background-color:#2F3351; /* Dark background color */
-    color: white;/* White text color */
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    // margin-right: 10rem;
-    margin-left: 72rem; 
-    height: 30px;
-    // margin-top: 10px;
-     
-  }
-  
-  // button:disabled {
-  //   background-color:red;
-  //   cursor: not-allowed;
-  // }
-  
-  h1{
-    color: white;
-    
-    background-color: red;
-    margin-left: 80px;
-  }
-  .form-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-
-  .form-group label {
-    flex: 1;
-    margin-right: 10px;
-    text-align: right;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    flex: 2;
-  }
-  
-  
-  
-table {
-    width: 100%;
-    overflow: auto; /* Add horizontal and vertical scrollbars when needed */
-    max-height: 250px; /* Set a max height for the table to show at least 5 users; adjust as needed */
-  }
-  
-  .mat-row {
-    height: 50px; /* Set the height of individual rows, which should be at least 5 users' worth of space; adjust as needed */
-  }
-  
-  .mat-elevation-z8 {
-    margin-top: 100px;
-    margin-left: 8px;
-  }
-  
-  .Agent {
-    color: blue;
-  }
-  
-  .mat-cell,
-  .mat-header-cell {
-    padding: 2px;
-    margin: 2px;
-  }
-  
-  .mat-row {
-    border-bottom: none; /* Remove the border between rows */
-    margin: 2px;
-  }
-  
-  .mat-header-row {
-    border-bottom: none; /* Remove the border under the header row */
-    margin: 2px;
-  }
-  
-  .btn-add{
-    margin-left: 60px;
-  }
-
-  
-
-  .descriptionlb{
-    margin-right: 100;
-  }
-  
-  .label-width {
-    width: 120px;  
-  }
-  .fullnamelb{
-    margin-right: 20rem;
-  }
-
-  .label-width {
-    display: inline-block;
-    width: 150px;  
-    text-align: right;
-    margin-right: 10px;
-  }
-  
-  
-  .totalDetails{
-     
-    display: flex;
-    justify-content: space-between;
-  }
-
- .contact-details{
-   
-  margin-right: 60rem;
-  margin-top: 30px;
-  }
-
-.userdetails{
-    margin-left: -20rem;
-    margin-top: 2rem;
-    width:50%
-  }
-  .userdetails,
-.contact-details {
-  flex: 1;
-  margin-right: 15rem; 
-   
+  margin-bottom: 48px;
 }
 
- 
+form {
+  width: 80rem;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  padding-top: 5px;
+}
 
-.input-width {
-  width: 30%; 
+.checkbox-label {
+  display: inline-block;
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.has-error {
+  input {
+    border: 2px solid red; // Red border for the input fields
+  }
+
+  .text-danger {
+    color: red; // Red text color for error messages
+  }
+}
+
+input.ng-invalid.ng-dirty.ng-touched {
+  border: 1px solid red;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2F3351;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 69rem;
+}
+
+.button:disabled{
+  padding: 10px 20px;
+  background-color: rgba(47, 51, 81, 0.6); 
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor:not-allowed;
+  margin-right: 2rem;
+}
+
+.check{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.check1{
+  width: 43%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+// button:disabled {
+//   background-color: #ccc;
+//   cursor: not-allowed;
+// }
+
+.form-group {
+  display: inline;
+  // margin-right: 10px; /* Adjust this margin as needed to separate the elements */
+}
+
+.totalDetails {
+  display: flex important;
+  justify-content: space-between important;
+}
+
+.form-group {
+  flex: 1 important;
+}
+
+.totalDetails {
+  display: flex;
+}
+
+.totalDetails .userdetails,
+.totalDetails .contact-details {
+  flex: 1;
+  padding: 0 10px;  
 }
 
 .inputtag{
@@ -199,85 +128,122 @@ table {
   border: 1px solid #ccc;
   border-radius: 3px;
 }
+.totalDetails{
+  margin-top: 20px;
+}
 
+.contactdetails{
+  margin-right: 30rem;
+}
+
+// .my-custom-class{
+//   border: 30px solid red !important;
+//   background-color: aquamarine;
+
+// }
+
+:host ::ng-deep .mat-tab-label-active {
+  border-width: 9px;
+  border-style: solid;
+  border-color: orange;
+}
+
+.mat-mdc-tab-header { border: 1px solid red; }
  
-.mat-tab-group {
+
+.dialog-content {
+  padding: 20px;
+  background-color: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin: 20px 0;
-  box-shadow: none;  
-  overflow: hidden;
+  text-align: center;
 }
 
- 
-.mat-tab-label {
-  background-color: #007bff;
-  color: #fff;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 1px;
-  margin-right: 1px;
-}
-
- 
-.mat-tab-label.mat-tab-label-active {
-  background-color: #fff;
-  color: #007bff;
-  font-weight: bold;
-}
- 
-.mat-tab-body-content {
-  padding: 20px;
-}
-
-.tabs {
+.access-groups {
   display: flex;
-  flex-wrap: wrap;
-  max-width: 400px;
-  font-family: sans-serif;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px;
+  height: 100px;
 }
 
-.tabs__label {
-  padding: 10px 16px;
+.access-group {
   cursor: pointer;
-}
-
-.tabs__radio {
-  display: none;
-}
-
-.tabs__content {
-  order: 1;
-  width: 100%;
-  border-bottom: 3px solid #dddddd;
-  line-height: 1.5;
-  font-size: 0.9em;
-  display: none;
-}
-
-.tabs__radio:checked + .tabs__label {
-  font-weight: bold;
-  color: #009578;
-  border-bottom: 2px solid #009578;
-}
-
-.tabs__radio:checked + .tabs__label + .tabs__content {
-  display: initial;
-}
-
-/* Remove shadow and make styling important for the form */
-form[formGroup="userForm"] {
-  box-shadow: none !important;
-  /* Add other styling as needed */
-}
-
-/* Custom styling for the tabs */
-.tabs__radio:checked + .tabs__label {
-  background-color: #2F3351 !important;
-  color: white !important;
-  font-weight: bold !important;
-}
-
-/* Other custom styling for the tabs as needed */
-
   
+  
+}
+
+.access-group-name {
+  font-weight: bold;
+  // height: 30px;
+}
+
+.col {
+  display: inline-block;
+  width: 49%;
+}
+
+.col1 {
+  margin-right: 2%;
+}
+
+.col2 {
+  margin-left: 2%;
+}
+
+.access-codes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100px;
+}
+
+.access-code {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.scrollable {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.access-group-item.clicked {
+  background-color: rgb(115, 115, 238); /* Set your desired background color */
+  color: white; /* Set text color to improve visibility */
+  cursor: pointer; /* Change cursor to indicate clickability */
+}
+
+.code-item {
+  width: 150px; /* Adjust the width as needed */
+  display: inline-block;
+}
+
+.description-item {
+  display: inline-block;
+
+}
+
+ 
+.readonly-field {
+  background-color: #f2f2f2;
+  color: #888;
+  pointer-events: none;
+}
+
+.buttons1 {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Adjust the width as needed */
+}
+
+button.cancel-btn,
+button.save-btn {
+  width: 48%; /* Adjust the width as needed */
+  right: 0;
+}

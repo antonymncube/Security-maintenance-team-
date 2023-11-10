@@ -11,6 +11,8 @@ import { ApiServiceService } from '../services/api-service.service';
 })
 export class AccessGroupComponent {
   dataToUpdate :any
+  selectedGroupId: string ='';
+  accessGroundForm: any;
 
   items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
   accessGroup: Array<{
@@ -26,8 +28,7 @@ export class AccessGroupComponent {
     selected: boolean; 
    
   }>;
-  selectedGroupId: string ='';
-  accessGroundForm: any;
+ 
 
   constructor(
     public dialogRef: MatDialogRef<AccessGroupComponent>,private fb: FormBuilder, private apiService: ApiServiceService,
@@ -83,6 +84,10 @@ export class AccessGroupComponent {
     // Now, this.selectedAccessCodes contains the selected access codes
   }
 
+  
+  refreshPage() {
+    location.reload();
+  }
 
   saveSelectedAccessCodes(): void {
     if (this.selectedGroupId === null) {
@@ -124,11 +129,14 @@ export class AccessGroupComponent {
       
         this.accessCodes.forEach((code) => {
           code.selected = false;
+          this.refreshPage()
         });
   
       });
     });
   }
+
+  
   
   
   
