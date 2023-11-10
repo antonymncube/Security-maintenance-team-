@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiServiceService } from '../services/api-service.service';
+import { AvailableProductsComponent } from '../available-products/available-products.component';
+import { UserupdateComponent } from '../userupdate/userupdate.component';
 
 @Component({
   selector: 'app-edit-user',
@@ -20,19 +22,20 @@ export class EditUserComponent implements OnInit {
   ) {
     this.userForm = this.formBuilder.group({
       id: [''],
-      username: [{ value: '',  }, Validators.required], // Set username as not editable
+      username: [{ value: '',  }, Validators.required],
       fullname: ['', Validators.required],
       description: [''],
       location: [{value: '',}],
       agent :  ['',[Validators.required]],
       password: [{ value: '', }, [Validators.required, Validators.minLength(6)]], // Set password as not editable
+      department: ['',[Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       homephone: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
-      department: [''],
       status: [{value: '', }],
       lastUpdated: [''],
-      Language:[''],
+      language:['',[Validators.required]],
+
     });
   }
 
@@ -42,6 +45,11 @@ export class EditUserComponent implements OnInit {
       console.log(this.id);
 
       this.apiService.getUserDetails(this.id).subscribe((userDetails: any) => {
+        if (userDetails && userDetails.selectedProducts) {
+          this.userForm.get('selectedProducts')!.setValue(userDetails.selectedProducts);
+
+
+        }
         this.userForm.patchValue(userDetails);
       });
     });
@@ -69,5 +77,13 @@ export class EditUserComponent implements OnInit {
       });
     }
   }
+
+  updateSelectedProducts(selectedProducts: any[]) {
+    const selectedProductsControl = this.userForm.get('selectedProducts');
+    if (selectedProductsControl) {
+      selectedProductsControl.setValue(selectedProducts);
+    }
+  }
+
 
 }

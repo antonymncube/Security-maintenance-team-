@@ -1,0 +1,7 @@
+
+
+<div *ngFor="let product of products; let i = index">
+  <label class="checkbox-label">
+    <input type="checkbox" [(ngModel)]="product.selected" (change)="toggleProductSelection(product)"> {{ product.sProductName }}
+  </label>
+</div>

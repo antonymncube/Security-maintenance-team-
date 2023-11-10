@@ -149,26 +149,160 @@
       "sAccessCode": "AGENT_COMM_PAY",
       "SAccessDescription": "Underwriting Supervisor",
       "id": "8208fba3-7603-4ee0-aee8-f79aed235ddc"
+    },
+    {
+      "sAccessCode": " CL_FINALISECLMT",
+      "SAccessDescription": "Finalise Claims",
+      "id": "ff3d2831-7ac6-4572-a259-3df9bdea4ae4"
+    },
+    {
+      "sAccessCode": " CL_STALECHEQUE",
+      "SAccessDescription": "Edit CHEQUE",
+      "id": "f69b62e0-507e-4857-b73c-4321d386d094"
     }
   ],
   "SecAccessGroups": [
     {
-      "sAccessGroup": "SH-Antony",
+      "sAccessGroup": "Underwriting con",
       "sAccessCodes": [
         "ACCEPTBBWARN",
+        "AGENT_MAINT",
+        "API_CLAIM_DU",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_CLAIM_MAINT",
+        "API_DOC_4",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        "CL_EXCHANGERATE",
+        "CL_FINALISECLMT",
+        "CL_INCIDENT",
+        "CL_IND_APR",
+        "CL_IND_DEC",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_PAYSEC_LEV3",
+        "CL_RECOVERY",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_REVERSEPAY",
+        "CL_SALVAGE",
+        "CL_SAVECLAIM",
+        "CL_STALECHEQUE",
         "API_DOC_ANTONV",
-        "AGENT_COMM_PAY"
-         
+        "CL_UNDMAN",
+        "AGENT_COMM_PAY",
+        " CL_FINALISECLMT",
+        " CL_STALECHEQUE"
       ],
       "id": "2"
     },
     {
-      "sAccessGroup": "SH-xolani",
+      "sAccessGroup": "Accountent",
       "sAccessCodes": [
+        "ACCEPTBBWARN",
+        "AGENT_MAINT",
+        "API_CLAIM_DU",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_CLAIM_MAINT",
+        "API_DOC_4",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        "CL_EXCHANGERATE",
+        "CL_FINALISECLMT",
+        "CL_INCIDENT",
+        "CL_IND_APR",
+        "CL_IND_DEC",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_PAYSEC_LEV3",
+        "CL_RECOVERY",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_REVERSEPAY",
+        "CL_SALVAGE",
+        "CL_SAVECLAIM",
+        "CL_STALECHEQUE",
+        "API_DOC_ANTONV",
+        "CL_UNDMAN",
         "AGENT_COMM_PAY",
-        "ACCEPTBBWARN"
+        " CL_FINALISECLMT",
+        " CL_STALECHEQUE"
+      ],
+      "id": "23"
+    },
+    {
+      "sAccessGroup": "Broker Pack",
+      "sAccessCodes": [
+        "ACCEPTBBWARN",
+        "AGENT_MAINT",
+        "API_CLAIM_DU",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_CLAIM_MAINT",
+        "API_DOC_4",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        "CL_EXCHANGERATE",
+        "CL_FINALISECLMT",
+        "CL_INCIDENT",
+        "CL_IND_APR",
+        "CL_IND_DEC",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_PAYSEC_LEV3",
+        "CL_RECOVERY",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_REVERSEPAY",
+        "CL_SALVAGE",
+        "CL_SAVECLAIM",
+        "CL_STALECHEQUE",
+        "API_DOC_ANTONV",
+        "CL_UNDMAN",
+        "AGENT_COMM_PAY",
+        " CL_FINALISECLMT",
+        " CL_STALECHEQUE"
       ],
       "id": "3"
+    },
+    {
+      "sAccessGroup": "Claim-Admin",
+      "sAccessCodes": [
+        "AGENT_MAINT",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_DOC_4",
+        " API_DOC_BLOCK",
+        "CL_EXCHANGERATE",
+        "CL_PAYSEC_LEV2",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_SALVAGE",
+        "CL_UNDMAN"
+      ],
+      "id": "3"
+    },
+    {
+      "sAccessGroup": "Accounts Clerk",
+      "sAccessCodes": [
+        "CL_IND_DEC",
+        "CL_PAYSEC_LEV3",
+        "CL_RECOVERY",
+        "CL_SALVAGE",
+        "CL_SAVECLAIM",
+        "AGENT_COMM_PAY"
+      ]
     }
   ],
   "SecUserAccess": [
@@ -185,7 +319,8 @@
         "API_CUST_DU",
         "AGENT_COMM_PA"
       ]
-    },{
+    },
+    {
       "id": "3",
       "sAccessCodes": [
         "API_CUST_DU",
@@ -215,7 +350,8 @@
       "email": "ntshongwanae@gmail.com",
       "homephone": "0712425668",
       "mobile": "0712425668",
-      "department": "IT"
+      "department": "IT",
+      "status": true
     },
     {
       "id": "17",
@@ -227,7 +363,8 @@
       "email": "ranaaphelele@gmail.com",
       "homephone": "0781638594",
       "mobile": "0781990677",
-      "agent": "Simply Health"
+      "agent": "Simply Health",
+      "status": true
     },
     {
       "id": "18",
@@ -239,7 +376,8 @@
       "email": "DEV@Genasystech.com",
       "homephone": "0781638594",
       "mobile": "0781638594",
-      "agent": "Simply Health"
+      "agent": "Simply Health",
+      "status": true
     },
     {
       "id": "W54mHDU",
@@ -321,15 +459,68 @@
       },
       "agent": "Genasys",
       "password": "wawawawe",
+      "department": "Simply Health",
       "email": "nseptember591@gmail.com",
       "homephone": "0781638594",
       "mobile": "0671802963",
-      "department": "Sales",
       "status": {
         "value": ""
       },
-      "lastUpdated": "2023-11-09T06:12:29.225Z",
-      "Language": ""
+      "lastUpdated": "2023-11-09T12:37:54.039Z",
+      "language": "Afrikaans"
+    },
+    {
+      "id": "6Pt4JWs",
+      "username": "mItch",
+      "fullname": "Mitch",
+      "description": "yes",
+      "location": "",
+      "agent": "Standard Bank",
+      "password": "$2a$10$hK9YkfAyFdzfaNIirQ6N7O64CaOVo4xkzB27D.92kgkijDl7jk9ZW",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "department": "Sales",
+      "status": true,
+      "lastUpdated": "2023-11-09T12:47:23.328Z",
+      "selectedProducts": []
+    }
+  ],
+  "Products": [
+    {
+      "id": "16169",
+      "sProductName": "Dental Cover Plan",
+      "sProductCode": "BDI"
+    },
+    {
+      "id": "16383",
+      "sProductName": "Cash Plan",
+      "sProductCode": "SHCP"
+    },
+    {
+      "id": "16462",
+      "sProductName": "Group Cash Plan",
+      "sProductCode": "SHGCP"
+    },
+    {
+      "id": "16542",
+      "sProductName": "Corporate Dental_old",
+      "sProductCode": "SHCD"
+    },
+    {
+      "id": "16842",
+      "sProductName": "Corporate Dental",
+      "sProductCode": "SHCD"
+    },
+    {
+      "id": "16845",
+      "sProductName": "Consumer Dental",
+      "sProductCode": "SHCSD"
+    },
+    {
+      "id": "16847",
+      "sProductName": "Consumer CashPlan",
+      "sProductCode": "SHCCP"
     }
   ]
 }

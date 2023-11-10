@@ -4,6 +4,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiServiceService } from '../services/api-service.service';
 import { UserFormData } from '../User';
 import { Router } from '@angular/router';
+import { MatTabsModule } from '@angular/material/tabs';
+
+
 
 
 @Component({
@@ -15,7 +18,8 @@ export class UserupdateComponent {
   userForm: FormGroup;
   user: UserFormData = new UserFormData();
   SecLookup : any = '';
-  selectedAccessCodes: any[] = []; 
+  selectedAccessCodes: any[] = [];
+  selectedProducts: string[] = [];
   AvailableCodes : any [] = [];
 
   dataToUpdate :any
@@ -26,14 +30,14 @@ export class UserupdateComponent {
   //   sAccessGroup: string;
   //   sAccessCodes: Array<string>;
   //   selected: boolean;
-  //   id:string   
+  //   id:string
   // }> ;
   accessGroup: Array<{
     clicked: boolean;
     sAccessGroup: string;
     sAccessCodes: Array<string>;
     selected: boolean;
-    id:string   
+    id:string
   }> ;
 
   accessCodes: Array<{
@@ -42,13 +46,13 @@ export class UserupdateComponent {
       status: boolean ;
     };
     SAccessDescription: string;
-    selected: boolean; 
-   
+    selected: boolean;
+
   }>;
   selectedGroupId: string ='';
   accessGroundForm: any;
   selectedGroupIndex: number | null = null;
-  
+
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiServiceService,private router :Router,
     private PasswordHashingService: PasswordHashingService ) {
@@ -63,7 +67,7 @@ apiService.getSecLookup().subscribe((res: any) => {
   this.accessCodes = res; // Assigning all the access codes to this array
   // console.log("here is respond mnaka", res);
 
- 
+
   // if (res && res.length > 0) {
   //   const firstObject = res[0]; // Access the first object
   //   if (firstObject.SecLookupCodes && firstObject.SecLookupCodes.length > 0) {
@@ -95,7 +99,7 @@ apiService.getAccessGroup().subscribe(res=>{
     });
   }
 
-  
+
 
   accesscodes() {
     this.apiService.getSecLookup().subscribe((data) => {
@@ -144,23 +148,33 @@ getAccesslookup() {
   this.apiService.getSecLookup().subscribe((SecLookup: any) => {
     this.SecLookup = SecLookup; // Assign the entire response to SecLookup
     // console.log('API Response:', SecLookup);
-    console.log('Security Access2:', SecLookup[0].sAccessCode, 'Security Description', SecLookup[0].SAccessDescription);
+    // console.log('Security Access:', SecLookup[0].sAccessCode, 'Security Description', SecLookup[0].SAccessDescription);
     // console.log("Lets see now");
   });
 }
+
+
+receiveSelectedProducts(products: string[]) {
+  console.log('Received selected products:', products);
+  // this.selectedProducts = products;
+
+}
+
+updateUserWithSelectedProducts() {
+  // this.user.selectedProducts = this.selectedProducts;
+
+}
+
 
 onSubmit() {
   this.getAccesslookup();
   if (this.userForm.valid) {
     if (this.checkPasswordMatch()) {
-
       this.PasswordHashingService.hashPassword(this.userForm.value.password).then((hashedPassword) => {
-
         this.apiService.checkUsernameExist(this.userForm.value.username).subscribe((exists: boolean) => {
           if (exists) {
             alert('Username already exists. Please choose a different username.');
           } else {
-
             this.user.email = this.userForm.value.email;
             this.user.username = this.userForm.value.username;
             this.user.password = hashedPassword;
@@ -170,15 +184,14 @@ onSubmit() {
             this.user.description = this.userForm.value.description;
             this.user.fullname = this.userForm.value.fullname;
             this.user.agent = this.userForm.value.agent;
-            this.user.id = 50;
-
             this.user.lastUpdated = new Date();
-
             console.log(this.user);
 
 
+            this.updateUserWithSelectedProducts();
+
             this.apiService.postdata(this.user).subscribe((postResponse: any) => {
-              
+
               this.router.navigate(['/home']);
               this.userForm.reset();
             });
@@ -188,19 +201,21 @@ onSubmit() {
     }
   }
 }
+saveSelectedProducts() {
+  this.updateUserWithSelectedProducts();
+}
 
-toggleAccessCodes(index: number) {
-
+resetAccessStatus(){
   this.SecLookup.forEach((item: { status: boolean; }) => {
     item.status = false;
   });
-  
-  this.accessGroup.forEach((group, i) => {
-    if (i !== index) {
-      group.selected = false;
-    }
-  });
+}
 
+toggleAccessCodes(index: number) {
+
+  this.resetAccessStatus()
+  
+ 
   this.accessGroup[index].selected = !this.accessGroup[index].selected;
 
   // Debugging: Log the group.id
@@ -208,8 +223,8 @@ toggleAccessCodes(index: number) {
 
   const accessCodesInGroup = this.accessGroup[index].sAccessCodes;
 
-  console.log('this is the secLookup ' + JSON.stringify(this.SecLookup));
-  console.log('this is the access groups ' + JSON.stringify(this.accessGroup));
+  // console.log('this is the secLookup ' + JSON.stringify(this.SecLookup));
+  // console.log('this is the access groups ' + JSON.stringify(this.accessGroup));
 
   for (let i = 0; i < accessCodesInGroup.length; ++i) {
     for (let j = 0; j < this.SecLookup.length; ++j) {
@@ -221,7 +236,7 @@ toggleAccessCodes(index: number) {
   }
 
   // Log the updated SecLookup array
-  console.log('Updated secLookup ' + JSON.stringify(this.SecLookup));
+  // console.log('Updated secLookup ' + JSON.stringify(this.SecLookup));
 }
 
 
@@ -232,18 +247,20 @@ refreshPage() {
 
 saveSelectedAccessCodes(): void {
 
-  
+  const selectedAccessGroups = this.accessGroup.filter(group => group.selected);
+  console.log( 'SELECTED GROUPS',selectedAccessGroups)
+
   if (this.selectedGroupId === null) {
     console.log("No selected group.");
     return;
   }
-  
+
   // console.log('hERE ARE THE ACCESS CODES ARRAY'+this.accessCodes)
-  console.log('HERE ARE THE ACCESS CODES ARRAY', this.accessCodes.map(code => ({ selected: code.selected, sAccessCode: code.sAccessCode })));
+  // console.log('HERE ARE THE ACCESS CODES ARRAY', this.accessCodes.map(code => ({ selected: code.selected, sAccessCode: code.sAccessCode })));
 
   const selectedAccessCodes = this.accessCodes.map(code => ({ selected: code.selected, sAccessCode: code.sAccessCode }))
 
-   console.log(selectedAccessCodes) 
+   console.log(selectedAccessCodes)
   if (selectedAccessCodes.length === 0) {
     console.log("No access codes selected.");
     return;
@@ -256,8 +273,8 @@ saveSelectedAccessCodes(): void {
       sAccessGroup: res.sAccessGroup,
       sAccessCodes: selectedAccessCodes.map((code) => code.sAccessCode),
 
-    };  
-     
+    };
+
     console.log('respond ' + res.sAccessCodes[0]);
     for (let i = 0; i < res.sAccessCodes.length; i++) {
       const code = res.sAccessCodes[i];
@@ -269,14 +286,14 @@ saveSelectedAccessCodes(): void {
         console.log('No access codes in the response.');
       }
     }
-    
+
     const dataToUpdateString = JSON.stringify(this.dataToUpdate, null, 2);
 
     this.apiService.updateAccessgroup(this.selectedGroupId, this.dataToUpdate).subscribe((updateRes) => {
-    
+
       this.accessCodes.forEach((code) => {
         code.selected = false;
-        this.refreshPage()
+        // this.refreshPage()
       });
 
     });
