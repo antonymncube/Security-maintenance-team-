@@ -98,6 +98,16 @@ export class ApiServiceService {
       map(users => users.length > 0)
     );
   }
+
+  //New one to check with case insensitive (Did not want to remove the above incase it is used elsewhere ~Aphelele)
+  checkUsernameExisttt(username: string): Observable<boolean> {
+    return this.http.get<any[]>('http://localhost:3000/Users').pipe(
+      map(users => {
+        const existingUser = users.find(user => user.username.toLowerCase() === username.toLowerCase());
+        return !!existingUser;
+      })
+    );
+  }
   checkAccessCodeExists(accessCode: string): Observable<boolean> {
     const url = `http://localhost:3000/SecLookupCodes?sAccessCode=${accessCode}`;
     return this.http.get<any[]>(url).pipe(

@@ -88,8 +88,8 @@ apiService.getAccessGroup().subscribe(res=>{
       homephone: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       department: ['',[Validators.required]],
-      agent :  ['',[Validators.required]],
-      language: ['',],
+      agent:  ['',[Validators.required]],
+      language: ['',[Validators.required]],
     });
   }
 
@@ -165,7 +165,7 @@ onSubmit() {
   if (this.userForm.valid) {
     if (this.checkPasswordMatch()) {
       this.PasswordHashingService.hashPassword(this.userForm.value.password).then((hashedPassword) => {
-        this.apiService.checkUsernameExist(this.userForm.value.username).subscribe((exists: boolean) => {
+        this.apiService.checkUsernameExisttt(this.userForm.value.username).subscribe((exists: boolean) => {
           if (exists) {
             alert('Username already exists. Please choose a different username.');
           } else {
