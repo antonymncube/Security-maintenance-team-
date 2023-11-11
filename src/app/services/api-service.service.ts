@@ -79,6 +79,13 @@ export class ApiServiceService {
     );
   }
 
+  addUserGroups(data: any): Observable<any> {
+    const url = `http://localhost:3000/SecUserAccessGroups`;
+    return this.http.post(url, data).pipe(
+      map((res: any) => res)
+    );
+  }
+
 
   updateAccessgroup(id: string, data: any): Observable<any> {
     const url = `http://localhost:3000/SecAccessGroups/${id}`;

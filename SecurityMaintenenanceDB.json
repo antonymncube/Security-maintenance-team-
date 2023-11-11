@@ -166,37 +166,15 @@
       "sAccessGroup": "Underwriting con",
       "sAccessCodes": [
         "ACCEPTBBWARN",
-        "AGENT_MAINT",
-        "API_CLAIM_DU",
         "API_DOC_BLOCK",
         "API_DOC_CONF",
-        "API_DOC_PERS",
-        "ADDR_OVERRIDE",
-        "API_CLAIM_MAINT",
-        "API_DOC_4",
-        " API_DOC_BLOCK",
-        "CL_DEL_CLAIMANT",
-        "CL_EXCEL_PRINT",
-        "CL_EXCHANGERATE",
-        "CL_FINALISECLMT",
         "CL_INCIDENT",
-        "CL_IND_APR",
         "CL_IND_DEC",
         "CL_NEGCLAIMBAL",
         "CL_PAYSEC_LEV2",
-        "CL_PAYSEC_LEV3",
-        "CL_RECOVERY",
-        "CL_REOPEN",
-        "CL_REQUISITION",
-        "CL_REVERSEPAY",
-        "CL_SALVAGE",
         "CL_SAVECLAIM",
-        "CL_STALECHEQUE",
-        "API_DOC_ANTONV",
-        "CL_UNDMAN",
         "AGENT_COMM_PAY",
-        " CL_FINALISECLMT",
-        " CL_STALECHEQUE"
+        " CL_FINALISECLMT"
       ],
       "id": "2"
     },
@@ -204,17 +182,10 @@
       "sAccessGroup": "Accountent",
       "sAccessCodes": [
         "ACCEPTBBWARN",
-        "API_CLAIM_DU",
         "API_DOC_BLOCK",
-        "API_DOC_CONF",
-        "API_DOC_PERS",
-        "ADDR_OVERRIDE",
-        "API_CLAIM_MAINT",
         " API_DOC_BLOCK",
         "CL_DEL_CLAIMANT",
         "CL_EXCEL_PRINT",
-        "CL_SALVAGE",
-        " CL_FINALISECLMT",
         " CL_STALECHEQUE"
       ],
       "id": "23"
@@ -223,36 +194,15 @@
       "sAccessGroup": "Broker Pack",
       "sAccessCodes": [
         "ACCEPTBBWARN",
-        "AGENT_MAINT",
-        "API_CLAIM_DU",
-        "API_DOC_BLOCK",
-        "API_DOC_CONF",
-        "API_DOC_PERS",
-        "ADDR_OVERRIDE",
-        "API_CLAIM_MAINT",
-        "API_DOC_4",
-        " API_DOC_BLOCK",
-        "CL_DEL_CLAIMANT",
         "CL_EXCEL_PRINT",
-        "CL_EXCHANGERATE",
         "CL_FINALISECLMT",
         "CL_INCIDENT",
         "CL_IND_APR",
-        "CL_IND_DEC",
         "CL_NEGCLAIMBAL",
-        "CL_PAYSEC_LEV2",
-        "CL_PAYSEC_LEV3",
         "CL_RECOVERY",
-        "CL_REOPEN",
         "CL_REQUISITION",
         "CL_REVERSEPAY",
-        "CL_SALVAGE",
-        "CL_SAVECLAIM",
-        "CL_STALECHEQUE",
-        "API_DOC_ANTONV",
         "CL_UNDMAN",
-        "AGENT_COMM_PAY",
-        " CL_FINALISECLMT",
         " CL_STALECHEQUE"
       ],
       "id": "3"
@@ -264,9 +214,6 @@
         "API_DOC_PERS",
         "ADDR_OVERRIDE",
         "API_DOC_4",
-        " API_DOC_BLOCK",
-        "CL_EXCHANGERATE",
-        "CL_PAYSEC_LEV2",
         "CL_REOPEN",
         "CL_REQUISITION",
         "CL_SALVAGE",
@@ -284,6 +231,58 @@
         "CL_SAVECLAIM",
         "AGENT_COMM_PAY"
       ]
+    },
+    {
+      "selectedAccessGroups": [
+        {
+          "sAccessGroup": "Underwriting con",
+          "sAccessCodes": [
+            "ACCEPTBBWARN",
+            "API_DOC_BLOCK",
+            "API_DOC_CONF",
+            "CL_INCIDENT",
+            "CL_IND_DEC",
+            "CL_NEGCLAIMBAL",
+            "CL_PAYSEC_LEV2",
+            "CL_SAVECLAIM",
+            "AGENT_COMM_PAY",
+            " CL_FINALISECLMT"
+          ],
+          "id": "2",
+          "selected": true
+        },
+        {
+          "sAccessGroup": "Broker Pack",
+          "sAccessCodes": [
+            "ACCEPTBBWARN",
+            "CL_EXCEL_PRINT",
+            "CL_FINALISECLMT",
+            "CL_INCIDENT",
+            "CL_IND_APR",
+            "CL_NEGCLAIMBAL",
+            "CL_RECOVERY",
+            "CL_REQUISITION",
+            "CL_REVERSEPAY",
+            "CL_UNDMAN",
+            " CL_STALECHEQUE"
+          ],
+          "id": "3",
+          "selected": true
+        },
+        {
+          "sAccessGroup": "Accounts Clerk",
+          "sAccessCodes": [
+            "CL_IND_DEC",
+            "CL_PAYSEC_LEV3",
+            "CL_RECOVERY",
+            "CL_SALVAGE",
+            "CL_SAVECLAIM",
+            "AGENT_COMM_PAY"
+          ],
+          "selected": true
+        }
+      ],
+      "id": 100
     }
   ],
   "SecUserAccess": [
@@ -504,43 +503,136 @@
       "sProductCode": "SHCCP"
     }
   ],
-  
-"Products": [
+  "SecUserAccessGroups": [
     {
-      "id": "16169",
-      "sProductName": "Dental Cover Plan",
-      "sProductCode": "BDI"
-    },
-    {
-      "id": "16383",
-      "sProductName": "Cash Plan",
-      "sProductCode": "SHCP"
-    },
-    {
-      "id": "16462",
-      "sProductName": "Group Cash Plan",
-      "sProductCode": "SHGCP"
-    },
-    {
-      "id": "16542",
-      "sProductName": "Corporate Dental_old",
-      "sProductCode": "SHCD"
-    },
-    {
-      "id": "16842",
-      "sProductName": "Corporate Dental",
-      "sProductCode": "SHCD"
-    },
-    {
-      "id": "16845",
-      "sProductName": "Consumer Dental",
-      "sProductCode": "SHCSD"
-    },
-    {
-      "id": "16847",
-      "sProductName": "Consumer CashPlan",
-      "sProductCode": "SHCCP"
+      "accessgroups": [
+        {
+          "sAccessGroup": "Underwriting con",
+          "sAccessCodes": [
+            "ACCEPTBBWARN",
+            "API_DOC_BLOCK",
+            "API_DOC_CONF",
+            "CL_INCIDENT",
+            "CL_IND_DEC",
+            "CL_NEGCLAIMBAL",
+            "CL_PAYSEC_LEV2",
+            "CL_SAVECLAIM",
+            "AGENT_COMM_PAY",
+            " CL_FINALISECLMT"
+          ],
+          "id": "2",
+          "selected": true
+        },
+        {
+          "sAccessGroup": "Accountent",
+          "sAccessCodes": [
+            "ACCEPTBBWARN",
+            "API_DOC_BLOCK",
+            " API_DOC_BLOCK",
+            "CL_DEL_CLAIMANT",
+            "CL_EXCEL_PRINT",
+            " CL_STALECHEQUE"
+          ],
+          "id": "23"
+        },
+        {
+          "sAccessGroup": "Broker Pack",
+          "sAccessCodes": [
+            "ACCEPTBBWARN",
+            "CL_EXCEL_PRINT",
+            "CL_FINALISECLMT",
+            "CL_INCIDENT",
+            "CL_IND_APR",
+            "CL_NEGCLAIMBAL",
+            "CL_RECOVERY",
+            "CL_REQUISITION",
+            "CL_REVERSEPAY",
+            "CL_UNDMAN",
+            " CL_STALECHEQUE"
+          ],
+          "id": "3",
+          "selected": true
+        },
+        {
+          "sAccessGroup": "Claim-Admin",
+          "sAccessCodes": [
+            "AGENT_MAINT",
+            "API_DOC_PERS",
+            "ADDR_OVERRIDE",
+            "API_DOC_4",
+            "CL_REOPEN",
+            "CL_REQUISITION",
+            "CL_SALVAGE",
+            "CL_UNDMAN"
+          ],
+          "id": "3"
+        },
+        {
+          "sAccessGroup": "Accounts Clerk",
+          "sAccessCodes": [
+            "CL_IND_DEC",
+            "CL_PAYSEC_LEV3",
+            "CL_RECOVERY",
+            "CL_SALVAGE",
+            "CL_SAVECLAIM",
+            "AGENT_COMM_PAY"
+          ],
+          "selected": true
+        },
+        {
+          "selectedAccessGroups": [
+            {
+              "sAccessGroup": "Underwriting con",
+              "sAccessCodes": [
+                "ACCEPTBBWARN",
+                "API_DOC_BLOCK",
+                "API_DOC_CONF",
+                "CL_INCIDENT",
+                "CL_IND_DEC",
+                "CL_NEGCLAIMBAL",
+                "CL_PAYSEC_LEV2",
+                "CL_SAVECLAIM",
+                "AGENT_COMM_PAY",
+                " CL_FINALISECLMT"
+              ],
+              "id": "2",
+              "selected": true
+            },
+            {
+              "sAccessGroup": "Broker Pack",
+              "sAccessCodes": [
+                "ACCEPTBBWARN",
+                "CL_EXCEL_PRINT",
+                "CL_FINALISECLMT",
+                "CL_INCIDENT",
+                "CL_IND_APR",
+                "CL_NEGCLAIMBAL",
+                "CL_RECOVERY",
+                "CL_REQUISITION",
+                "CL_REVERSEPAY",
+                "CL_UNDMAN",
+                " CL_STALECHEQUE"
+              ],
+              "id": "3",
+              "selected": true
+            },
+            {
+              "sAccessGroup": "Accounts Clerk",
+              "sAccessCodes": [
+                "CL_IND_DEC",
+                "CL_PAYSEC_LEV3",
+                "CL_RECOVERY",
+                "CL_SALVAGE",
+                "CL_SAVECLAIM",
+                "AGENT_COMM_PAY"
+              ],
+              "selected": true
+            }
+          ],
+          "id": 100
+        }
+      ],
+      "id": 100
     }
-]
-
+  ]
 }

@@ -1,5 +1,5 @@
 export class UserFormData {
-  id: number = 0;
+  id: string = '';
   username: string = '';
   fullname: string = '';
   description: string = '';

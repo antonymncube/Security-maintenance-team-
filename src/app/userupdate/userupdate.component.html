@@ -162,33 +162,24 @@
           <div class="col">
             <div class="access-groups scrollable">
               <div *ngFor="let group of accessGroup; let i = index" class="access-group">
-                <div class="access-group-item" [ngClass]="{'clicked': group.selected}">
-                  <div class="access-group-name">
-                    <label>
-                      <input type="checkbox" [(ngModel)]="group.selected" (change)="toggleAccessCodes(i)">
-                      <strong>{{ group.sAccessGroup }}</strong>
-                    </label>
-                  </div>
-                </div>
-                
+                 <div class="access-group-item" [ngClass]="{'clicked': group.selected}">
+  <div class="access-group-name">
+    <label>
+      <input type="checkbox" [(ngModel)]="group.selected" (change)="toggleAccessCodes(i)">
+      <strong>{{ group.sAccessGroup }}</strong>
+    </label>
+  </div>
+</div>
+
               </div>
             </div>
           </div>
           <div class="col bg-white p-0">
             <div class="access-codes scrollable">
-              <div *ngFor="let group of accessGroup">
-                 <div *ngIf="group.selected"> 
-                  <div *ngFor="let code of group.sAccessCodes" class="access-code">
-                    <label  class="custom-checkbox">
-                      <input type="checkbox" [value]="code" checked>
-                      {{ code }}
-                    </label>
-                 </div>
-                </div>
-              </div>
-              <div *ngFor="let accesscodes of accessCodes; let i = index">
-                <label class="checkbox-container">
-                  <input type="checkbox" class="code-checkbox" [(ngModel)]="accesscodes.selected">
+              
+              <div *ngFor="let accesscodes of SecLookup; let i = index">
+                <label class="checkbox-container" [ngClass]="{'red-checkbox': accesscodes.status}">
+                  <input type="checkbox" class="code-checkbox">
                   <span class="code-item">{{ accesscodes.sAccessCode }}</span>
                 </label>
               </div>
@@ -200,8 +191,12 @@
 
 
         <button (click)="saveSelectedAccessCodes()">Save</button>
-
     </mat-tab>
-  </mat-tab-group>
+    <mat-tab label="Available Products">
+      <app-available-products (selectedProducts)="receiveSelectedProducts($event)"></app-available-products>
+      <button mat-raised-button color="primary" (click)="saveSelectedProducts()">Save</button>
+    </mat-tab>
 
-</form>
+   </mat-tab-group>
+
+</form> 

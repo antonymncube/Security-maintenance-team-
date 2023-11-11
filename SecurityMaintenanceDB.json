@@ -360,4 +360,13 @@
       "sProductCode": "SHCCP"
     }
   ]
+  ,
+  "SecUserAccessGroups" :[
+     {
+      "accessgroup": []
+      ,
+      "id": ""
+     }
+    
+  ]
 }
