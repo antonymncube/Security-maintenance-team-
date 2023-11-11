@@ -245,22 +245,22 @@ export class UserupdateComponent {
     
 
      
-    // const requestData = {+
-    //   accessgroups: this.selectedAccessGroups,
-    //   id: id
-    // };
+    const requestData = {+
+      accessgroups: this.accessGroup,
+      id: id
+    };
     
     // Make the API call
-    // this.apiService.addUserGroups(requestData).subscribe(
-    //   (res: any) => {
-    //     // Handle the response as needed
-    //     console.log(res);
-    //   },
-    //   (error: any) => {
-    //     // Handle errors
-    //     console.error(error);
-    //   }
-    // );
+    this.apiService.addUserGroups(requestData).subscribe(
+      (res: any) => {
+        // Handle the response as needed
+        console.log(res);
+      },
+      (error: any) => {
+        // Handle errors
+        console.error(error);
+      }
+    );
 
 
 
