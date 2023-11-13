@@ -60,9 +60,9 @@ router-outlet {
 .search {
     border-bottom: 3px solid #2F3351;
     background-color: white;
-    margin-top: 1px;
+    margin-top: -18px;
     margin-left: 70px;
-    padding: 1px;
+    padding: 0px;
 }
 
 .searchfield {
@@ -70,6 +70,7 @@ router-outlet {
     outline: none;
     margin-left: 1rem;
     font-size: 20px;
+    margin-top: 3px;
 }
 
 .col-content {
@@ -89,7 +90,19 @@ router-outlet {
     margin-left: 10px;
     border: none;
 }
+.col2{
+    margin-right:1px;
+}
+// .content{
+//     margin-left: 200px;
+// }
+// .col2{
+//     margin-left: 70px;
+// }
 
+// .col-content{
+//     margin-left: px;
+// }
 .user {
     margin-left: 949px;
     font-size: 3em;

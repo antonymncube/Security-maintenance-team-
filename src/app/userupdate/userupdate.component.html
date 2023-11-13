@@ -1,5 +1,4 @@
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form1">
-
   <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" class="my-custom-class">
     <mat-tab label="User-Details">
       <div class="totalDetails">
@@ -14,7 +13,6 @@
               </div>
             </div>
           </div>
-
           <div class="form-group">
             <label for="fullname" class="label-width">Full Name:</label>
             <div class="inputtag">
@@ -25,7 +23,6 @@
               </div>
             </div>
           </div>
-
           <div class="form-group">
             <label for="password" class="label-width">Password:</label>
             <div class="inputtag">
@@ -36,8 +33,6 @@
               </div>
             </div>
           </div>
-
-
           <div class="form-group">
             <label for="confirmpassword" class="label-width">Confirm Password:</label>
             <div class="inputtag">
@@ -48,12 +43,21 @@
               </div>
             </div>
           </div>
-
-
-
+          <div class="form-group">
+            <label for="email" class="label-width">Email:</label>
+            <div class="inputtag">
+              <input type="email" id="email" formControlName="email"
+                [ngClass]="{ 'is-invalid': isControlInvalid('email') }">
+              <div *ngIf="isControlInvalid('email')" class="invalid-feedback">
+                Email is required and should be in a valid format.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contactdetails form-group">
           <div class="form-group">
             <label for="department" class="label-width">Department:</label>
-            <select id="department" class="check1" formControlName="department">
+            <select id="department" class="check" formControlName="department">
               <option value="HR">HR</option>
               <option value="IT">IT</option>
               <option value="Sales">Sales</option>
@@ -62,19 +66,6 @@
               Department is required.
             </div>
           </div>
-
-
-        </div>
-
-
-
-        <div class="contactdetails form-group">
-          <!-- <div class="form-group">
-            <label for="department" class="label-width">Department:</label>
-            <div class="inputtag">
-              <input type="text" id="department" formControlName="department">
-            </div>
-          </div> -->
           <div class="form-group">
             <label for="agent" class="label-width">Agent:</label>
             <select id="agent" class="check" formControlName="agent">
@@ -87,18 +78,6 @@
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="email" class="label-width">Email:</label>
-            <div class="inputtag">
-              <input type="email" id="email" formControlName="email"
-                [ngClass]="{ 'is-invalid': isControlInvalid('email') }">
-              <div *ngIf="isControlInvalid('email')" class="invalid-feedback">
-                Email is required and should be in a valid format.
-              </div>
-            </div>
-          </div>
-
-
 
           <div class="form-group">
             <label for="homephone" class="label-width">Home-Phone:</label>
@@ -110,7 +89,6 @@
               </div>
             </div>
           </div>
-
           <div class="form-group">
             <label for="description" class="label-width">description:</label>
             <div class="inputtag">
@@ -121,21 +99,17 @@
               </div>
             </div>
           </div>
-
-
           <div class="form-group">
-            <label for="Language" class="label-width">Language:</label>
-            <select id="Language" class="check" formControlName="agent">
+            <label for="language" class="label-width">Language:</label>
+            <select id="language" class="check" formControlName="language">
               <option value="English">English</option>
               <option value="Afrikaans">Afrikaans</option>
               <option value="Native">Native</option>
             </select>
-            <!-- <div *ngIf="isControlInvalid('Language')" class="invalid-feedback">
-              Language is required. -->
+            <div *ngIf="isControlInvalid('language')" class="invalid-feedback">
+              Language is required.
             </div>
-
-
-
+          </div>
           <div class="form-group">
             <label for="mobile" class="label-width">Mobile:</label>
             <div class="inputtag">
@@ -148,50 +122,48 @@
           </div>
         </div>
       </div>
-      <button type="submit" [disabled]="userForm.invalid">Save</button>
+      <!-- <div class="buttons1">
+        <button class="cancel-btn" type="submit" routerLink="/home">Cancel</button>
+        <button class="save-btn" type="submit" [disabled]="userForm.invalid">Save</button>
+      </div> -->
     </mat-tab>
     <mat-tab label="Contact-details">
-    
-
       <div class="dialog-content">
         <h2>Security Access Groups and Codes</h2>
         <div class="row">
           <div class="col">
             <div class="access-groups scrollable">
               <div *ngFor="let group of accessGroup; let i = index" class="access-group">
-                <div class="access-group-item" (click)="toggleAccessCodes(i)" [ngClass]="{'clicked': group.selected}">
+                <div class="access-group-item" [ngClass]="{'clicked': group.selected}">
                   <div class="access-group-name">
-                    <strong>{{ group.sAccessGroup }}</strong>
+                    <label>
+                      <input type="checkbox" [(ngModel)]="group.selected" (change)="toggleAccessCodes(i)">
+                      <strong>{{ group.sAccessGroup }}</strong>
+                    </label>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col bg-white">
+          <div class="col bg-white p-0">
             <div class="access-codes scrollable">
-              <div *ngFor="let group of accessGroup">
-                 <div *ngIf="group.selected"> 
-                  <div *ngFor="let code of group.sAccessCodes" class="access-code">{{ code }}</div>
-                </div>
+              <div *ngFor="let accesscodes of SecLookup; let i = index">
+                <label class="checkbox-container" [ngClass]="{'red-checkbox': accesscodes.status}">
+                  <input type="checkbox" class="code-checkbox" (change)="toggleAccessCode(accesscodes)">
+                  <span class="code-item">{{ accesscodes.sAccessCode }}</span>
+                </label>
               </div>
-            </div> 
+            </div>
           </div>
         </div>
       </div>
-      <div class="row scrollable p-3">
-        <div *ngFor="let accesscodes of accessCodes; let i = index" class="access-code p-2">
-          <label class="checkbox-container">
-            <input type="checkbox" class="code-checkbox" [(ngModel)]="accesscodes.selected">
-            <span class="code-item">{{ accesscodes.sAccessCode }}</span>
-            <span class="description-item">{{ accesscodes.SAccessDescription }}</span>
-          </label>
-        </div>
-      </div>
-    
-
-        <button (click)="saveSelectedAccessCodes()">Save</button>
-
+      <button (click)="saveSelectedAccessCodes()">Save</button>
     </mat-tab>
+    <mat-tab label="Available Products">
+      <app-available-products (selectedProducts)="receiveSelectedProducts($event)"></app-available-products>
+      <!-- <button mat-raised-button color="primary" (click)="saveSelectedProducts()">Save</button> -->
+      <button class="" type="submit" [disabled]="userForm.invalid">Save</button>
+    </mat-tab>
+    
   </mat-tab-group>
-
 </form>

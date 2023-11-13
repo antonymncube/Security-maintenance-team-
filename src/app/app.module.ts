@@ -29,6 +29,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ModifyAccesCodesComponent } from './modify-acces-codes/modify-acces-codes.component';
 import { AccessGroupComponent } from './access-group/access-group.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { AvailableProductsComponent } from './available-products/available-products.component';
  
 
 
@@ -45,7 +46,9 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     ViewUserComponent,
     ModifyAccesCodesComponent,
     AccessGroupComponent,
-    ForgotPasswordComponent, // Include ModifyAccesCodesComponent
+    ForgotPasswordComponent,
+    AvailableProductsComponent,  
+    
   ],
   imports: [
     BrowserModule,
