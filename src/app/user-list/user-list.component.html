@@ -8,10 +8,11 @@
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
       <label for="tab1" class="tabs__label" ><strong style="font-size: 20px; margin-left: -14px;" >Users<i class="fa fa-1x fa-user usericon ">
         <select id="statusFilter" class="check" [formControl]="statusFilterControl">
-          <option value="" disabled selected></option>
+          <option value="" selected>All</option>
           <option value="true">Active</option>
           <option value="false">Non-Active</option>
-        </select>  
+          <option value="" selected>Expired</option>
+        </select> 
       </i></strong></label>
 
     <div class="tabs__content">

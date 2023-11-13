@@ -102,7 +102,7 @@ export class UserListComponent implements OnInit {
       }
 
       applyStatusFilter(status: string | null): void {
-        if (status === null) {
+        if (status === null || status === '') {
           // If status is null, no filter should be applied
           this.dataSource.filter = '';
           
