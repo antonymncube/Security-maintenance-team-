@@ -181,7 +181,8 @@ export class UserupdateComponent {
               this.user.fullname = this.userForm.value.fullname;
               this.user.agent = this.userForm.value.agent;
               this.user.lastUpdated = new Date();
-              this.user.id = this.generatedId
+              this.user.id = this.generatedId;
+              this.user.language = this.userForm.value.language
               // console.log(this.user);
 
               this.saveSelectedAccessCodes()
