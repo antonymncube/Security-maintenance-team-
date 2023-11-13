@@ -62,6 +62,13 @@ export class ApiServiceService {
   //     map((res: any) => res)
   //   );
   // }
+ 
+  
+  addUserAccessCodes(data: any): Observable<any> {
+    return this.http.post<any>('http://localhost:3000/SecUserAccess', data).pipe(
+      map((res: any) => res)
+    );
+  }
 
   updateAccesscode( data: SecLookup): Observable<any> {
     const url = `http://localhost:3000/SecLookupCodes/${data.id}`;

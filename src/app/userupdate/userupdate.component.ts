@@ -24,17 +24,10 @@ export class UserupdateComponent {
   AvailableCodes: any[] = [];
   selectedAccessGroups: any;
   generatedId: string = '';
+  solvingarray: any[] = []
 
   dataToUpdate: any
 
-  // items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
-  // accessGroup: Array<{
-  //   clicked: boolean;
-  //   sAccessGroup: string;
-  //   sAccessCodes: Array<string>;
-  //   selected: boolean;
-  //   id:string
-  // }> ;
   accessGroup: Array<{
     clicked: boolean;
     sAccessGroup: string;
@@ -90,6 +83,7 @@ export class UserupdateComponent {
       department: ['', [Validators.required]],
       agent: ['', [Validators.required]],
       language: ['', [Validators.required]],
+      
     });
   }
 
@@ -161,7 +155,7 @@ export class UserupdateComponent {
   }
 
   updateUserWithSelectedProducts() {
-    // this.user.selectedProducts = this.selectedProducts;
+    this.user.selectedProducts = this.selectedProducts;
 
   }
 
@@ -190,8 +184,9 @@ export class UserupdateComponent {
               this.user.id = this.generatedId
               // console.log(this.user);
 
-
+              this.saveSelectedAccessCodes()
               this.updateUserWithSelectedProducts();
+              
 
               this.apiService.postdata(this.user).subscribe((postResponse: any) => {
 
@@ -236,34 +231,76 @@ export class UserupdateComponent {
     location.reload();
   }
 
+  toggleAccessCode(accesscode: any) {
+    console.log('Selected Codes:', this.selectedAccessCodes);
+    accesscode.selected = !accesscode.selected;
+
+    if (accesscode.selected) {
+      this.selectedAccessCodes.push(accesscode.sAccessCode);
+      this.solvingarray.push(accesscode.sAccessCode)
+      console.log('Selected Codes:', this.selectedAccessCodes);
+    } else {
+      const index = this.selectedAccessCodes.indexOf(accesscode.sAccessCode);
+      if (index !== -1) {
+        this.selectedAccessCodes.splice(index, 1);
+      }
+      console.log('Selected Codes:', this.selectedAccessCodes);
+    }
+  }
+
+
+
+
+
+
+
+
   saveSelectedAccessCodes(): void {
-    const UserAccessGroup  = {}
-    const id = 100
-    this.selectedAccessGroups = this.accessGroup.filter(group => group.selected);
-    const accessGroups = this.selectedAccessGroups.map((group: { sAccessGroup: any; }) => group.sAccessGroup);
-      accessGroups.sAccessGroup.map((res: any)=>console.log('lets see now'+res));
+
+    const selectedCodes = this.accessCodes.filter((code: any) => code.selected);
+    console.log('solving Codes:', this.solvingarray);
+    const selectedGroups = this.accessGroup.filter(group => group.selected);
+    const accessGroupsOnly = selectedGroups.map(group => group.sAccessGroup);
+    const accessCodesArray: string[] = selectedGroups.reduce((acc, group) => acc.concat(group.sAccessCodes), [] as string[]);
+
+    for (const codes of this.selectedAccessCodes) {
+      accessCodesArray.push(codes.sAccessCode);
+    }
+    console.log('Before the array is set  '+accessCodesArray)
+    const accessCodesSet = new Set(accessCodesArray);
+
+   
+    const accessCodesArray1 = Array.from(accessCodesSet);
+    const userAccessGroups = {
+      AccessGroups: accessGroupsOnly,
+      id: this.user.id
+    }
+
+    const userAccesscodes = {
+      id: this.user.id,
+      accesscodes : accessCodesArray1
+    }
+   
+    this.apiService.addUserAccessCodes(userAccesscodes).subscribe(
+      (response: any) => {
+        console.log('Success:', response);
+      },
+      (error: any) => {
+        console.error('Error:', error);
+      }
+    );
     
 
      
-    const requestData = {+
-      accessgroups: this.accessGroup,
-      id: id
-    };
-    
-    // Make the API call
-    this.apiService.addUserGroups(requestData).subscribe(
+    this.apiService.addUserGroups(userAccessGroups).subscribe(
       (res: any) => {
-        // Handle the response as needed
-        console.log(res);
+        
       },
       (error: any) => {
         // Handle errors
         console.error(error);
       }
     );
-
-
-
   }
 
 }

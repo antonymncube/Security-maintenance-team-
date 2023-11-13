@@ -47,7 +47,8 @@ import { AvailableProductsComponent } from './available-products/available-produ
     ModifyAccesCodesComponent,
     AccessGroupComponent,
     ForgotPasswordComponent,
-    AvailableProductsComponent, // Include ModifyAccesCodesComponent
+    AvailableProductsComponent,  
+    
   ],
   imports: [
     BrowserModule,
