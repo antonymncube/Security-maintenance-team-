@@ -33,8 +33,11 @@ export class ViewUserComponent implements OnInit {
       password: [{ value: '', disabled: true }, [Validators.required, Validators.minLength(6)]],
       department: [{ value: '', disabled: true }],
       email: [{ value: '', disabled: true }],
+      discription: [{ value: '', disabled: true }],
       homephone: [{ value: '', disabled: true }],
-      mobile: [{ value: '', disabled: true }]
+      mobile: [{ value: '', disabled: true }],
+      agent: [{ value: '', disabled: true }],
+      language: [{ value: '', disabled: true }]
     });
   }
 
