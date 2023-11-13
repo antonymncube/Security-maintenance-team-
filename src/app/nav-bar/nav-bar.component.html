@@ -3,15 +3,16 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
 
     <mat-nav-list class="navbar">
-      <img class="logo-img" src="assets\images\Genasys - White (CMYK).jpg" alt> 
-      <div class="redline"></div>
+      <!-- <img class="logo-img" src="assets\images\white(8).png" alt>  -->
+      <h1 >GENASYS</h1>
+      <!-- <div class="redline"></div> -->
 
       <div class="router-link">
-        <i class="icon fa fa-home fa-2x" aria-hidden="true"></i>
+        <i class="icon fa fa-home fa-1x" aria-hidden="true"></i>
         <label class="link" routerLink="/home">Home</label>
       </div>
 
-      <i class="icon2 fa fa-cog fa-2x" [matMenuTriggerFor]="menu" aria-hidden="true"></i>
+      <i class="icon2 fa fa-cog fa-1x" [matMenuTriggerFor]="menu" aria-hidden="true"></i>
       <label class="link1" [matMenuTriggerFor]="menu">Tools</label>
       <mat-menu #menu="matMenu" style="color: white; background-color: white; padding: 1px;">
         <button mat-menu-item (click)="openDialog()">
@@ -23,7 +24,7 @@
       </mat-menu>
 
       <div class="router-link">
-        <i class="icon fa fa-refresh fa-2x" (click)="refreshPage()" aria-hidden="true"></i>
+        <i class="icon fa fa-refresh fa-1x" (click)="refreshPage()" aria-hidden="true"></i>
         <!-- <label class="link" routerLink="/route2">Refresh</label> -->
         <label class="link" (click)="refreshPage()">Refresh</label>
       </div>

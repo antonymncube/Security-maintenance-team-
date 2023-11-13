@@ -1,5 +1,4 @@
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form1">
-
   <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" class="my-custom-class">
     <mat-tab label="User-Details">
       <div class="totalDetails">
@@ -14,7 +13,6 @@
               </div>
             </div>
           </div>
-
           <div class="form-group">
             <label for="fullname" class="label-width">Full Name:</label>
             <div class="inputtag">
@@ -25,7 +23,6 @@
               </div>
             </div>
           </div>
-
           <div class="form-group">
             <label for="password" class="label-width">Password:</label>
             <div class="inputtag">
@@ -36,8 +33,6 @@
               </div>
             </div>
           </div>
-
-
           <div class="form-group">
             <label for="confirmpassword" class="label-width">Confirm Password:</label>
             <div class="inputtag">
@@ -48,8 +43,6 @@
               </div>
             </div>
           </div>
-
-
           <div class="form-group">
             <label for="email" class="label-width">Email:</label>
             <div class="inputtag">
@@ -60,19 +53,8 @@
               </div>
             </div>
           </div>
-          
-
         </div>
-
-
-
         <div class="contactdetails form-group">
-          <!-- <div class="form-group">
-            <label for="department" class="label-width">Department:</label>
-            <div class="inputtag">
-              <input type="text" id="department" formControlName="department">
-            </div>
-          </div> -->
           <div class="form-group">
             <label for="department" class="label-width">Department:</label>
             <select id="department" class="check" formControlName="department">
@@ -84,8 +66,6 @@
               Department is required.
             </div>
           </div>
-
-
           <div class="form-group">
             <label for="agent" class="label-width">Agent:</label>
             <select id="agent" class="check" formControlName="agent">
@@ -109,7 +89,6 @@
               </div>
             </div>
           </div>
-
           <div class="form-group">
             <label for="description" class="label-width">description:</label>
             <div class="inputtag">
@@ -120,8 +99,6 @@
               </div>
             </div>
           </div>
-
-
           <div class="form-group">
             <label for="language" class="label-width">Language:</label>
             <select id="language" class="check" formControlName="language">
@@ -133,9 +110,6 @@
               Language is required.
             </div>
           </div>
-
-
-
           <div class="form-group">
             <label for="mobile" class="label-width">Mobile:</label>
             <div class="inputtag">
@@ -148,14 +122,12 @@
           </div>
         </div>
       </div>
-      <div class="buttons1">
+      <!-- <div class="buttons1">
         <button class="cancel-btn" type="submit" routerLink="/home">Cancel</button>
-      <button class="save-btn" type="submit" [disabled]="userForm.invalid">Save</button>
-    </div>
+        <button class="save-btn" type="submit" [disabled]="userForm.invalid">Save</button>
+      </div> -->
     </mat-tab>
     <mat-tab label="Contact-details">
-
-
       <div class="dialog-content">
         <h2>Security Access Groups and Codes</h2>
         <div class="row">
@@ -170,25 +142,14 @@
                     </label>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
           <div class="col bg-white p-0">
             <div class="access-codes scrollable">
-              <div *ngFor="let group of accessGroup">
-                 <div *ngIf="group.selected"> 
-                  <div *ngFor="let code of group.sAccessCodes" class="access-code">
-                    <label  class="custom-checkbox">
-                      <input type="checkbox" [value]="code" checked>
-                      {{ code }}
-                    </label>
-                 </div>
-                </div>
-              </div>
-              <div *ngFor="let accesscodes of accessCodes; let i = index">
-                <label class="checkbox-container">
-                  <input type="checkbox" class="code-checkbox" [(ngModel)]="accesscodes.selected">
+              <div *ngFor="let accesscodes of SecLookup; let i = index">
+                <label class="checkbox-container" [ngClass]="{'red-checkbox': accesscodes.status}">
+                  <input type="checkbox" class="code-checkbox" (change)="toggleAccessCode(accesscodes)">
                   <span class="code-item">{{ accesscodes.sAccessCode }}</span>
                 </label>
               </div>
@@ -196,12 +157,13 @@
           </div>
         </div>
       </div>
-      
-
-
-        <button (click)="saveSelectedAccessCodes()">Save</button>
-
+      <button (click)="saveSelectedAccessCodes()">Save</button>
     </mat-tab>
+    <mat-tab label="Available Products">
+      <app-available-products (selectedProducts)="receiveSelectedProducts($event)"></app-available-products>
+      <!-- <button mat-raised-button color="primary" (click)="saveSelectedProducts()">Save</button> -->
+      <button class="" type="submit" [disabled]="userForm.invalid">Save</button>
+    </mat-tab>
+    
   </mat-tab-group>
-
 </form>

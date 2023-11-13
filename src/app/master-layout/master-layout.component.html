@@ -13,7 +13,7 @@
             <app-nav-bar></app-nav-bar>
         </div>
         <div class="col-lg-11 ">
-            <div class="security-container">
+            <div class="security-container col2">
                 <div class="securityIcon">
 
                 </div>
@@ -23,11 +23,10 @@
                     </button>
                     <!-- <input type="text" class="searchfield" placeholder="Search by username...." /> -->
                     <input type="text" class="searchfield" placeholder="Search by username...." (input)="searchUsers($event)" />
-                    <span class="pt-2"><i class="fa fa-2x fa-search search icone" aria-hidden="true"></i></span>
+                    <span class="pt-0"><i class="fa fa-2x fa-search search icone" aria-hidden="true"></i></span>
                     <i class="fa fa-user-circle User user" aria-hidden="true" mat-button [matMenuTriggerFor]="menu" #menuTriggers >
-                     
-                       
-                    <mat-menu #menu="" style="color: white;background-color: white; padding: 1px;">
+            
+                    <mat-menu #menu="" style="color: white;background-color: white; padding: 0px;margin-top: 40px;">
                         <!-- <button mat-menu-item (click)="openDialog()">Open dialog</button> -->
                         
                     <p (click)="logout()" style="padding-left: 10px;"><i class="fa fa-1x fa-sign-out"></i>Log out</p>
