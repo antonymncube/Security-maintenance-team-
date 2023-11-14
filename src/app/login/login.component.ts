@@ -10,8 +10,13 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginComponent {
   loginForm: FormGroup;
+  errorMessage: string = '';
 
-  constructor(private router: Router, private authService: AuthService, private formBuilder: FormBuilder) {
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+    private formBuilder: FormBuilder
+  ) {
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -24,15 +29,20 @@ export class LoginComponent {
 
       try {
         await this.authService.login(username, password);
-
-
         this.router.navigate(['/home']);
       } catch (error) {
         console.error('Login error:', error);
-        alert('Invalid username or password');
+
+        if (error === 'InvalidUsername ') {
+          this.errorMessage = 'Invalid username';
+        } else if (error === 'InvalidPassword') {
+          this.errorMessage = 'Invalid password';
+        } else {
+          this.errorMessage = 'Invalid username or password';
+        }
       }
     } else {
-      alert('Please fill in both username and password fields.');
+      this.errorMessage = 'Please fill in both username and password fields.';
     }
   }
 }

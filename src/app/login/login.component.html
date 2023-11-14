@@ -1,3 +1,5 @@
+
+
 <div class="container">
   <div class="row row1">
     <div class="col-md-3"></div>
@@ -5,31 +7,32 @@
       <div class="image-and-form-container">
         <img src="assets\images\Genasys - Colour Logo (CMYK).jpg" class="logo" alt="">
         <h1>Ski-Security Maintenance</h1>
+
+        <div *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
         <form [formGroup]="loginForm" (ngSubmit)="login()">
           <div class="allinputs">
             <div class="form-group">
               <div class="input-group">
                 <i class="fa fa-user icon fa-3x"></i>
-                <input type="text" class="border shadow-none form-control m-1" formControlName="username" placeholder="username" aria-label="Username" aria-describedby="addon-wrapping">
+                <input type="text" class="border shadow-none form-control m-1" formControlName="username" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
               </div>
             </div>
             <div class="form-group">
               <div class="input-group">
                 <i class="fa fa-lock fa-3x"></i>
-                <input type="password" class="border shadow-none form-control m-1" formControlName="password" placeholder="password" aria-label="password" aria-describedby="addon-wrapping">
+                <input type="password" class="border shadow-none form-control m-1" formControlName="password" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping">
               </div>
             </div>
           </div>
           <div class="buttons">
-            <button type="submit" class="submit" >Login</button>
+            <button type="submit" class="submit">Login</button>
           </div>
         </form>
-
         <a class="forgot" routerLink="/forgot-password">Forgot Password</a>
-
       </div>
     </div>
     <div class="col-md-3"></div>
   </div>
 </div>
-
