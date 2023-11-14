@@ -1,4 +1,4 @@
-// Import necessary modules and services
+
 import { PasswordHashingService } from './password-hashing.service';
 import { AuthGuard } from './../auth.guard';
 import { Injectable } from '@angular/core';
@@ -22,21 +22,38 @@ export class AuthService {
     this.checkAuthenticationStatus();
   }
 
-  login(username: string, password: string): Promise<boolean> {
-    return new Promise<boolean>((resolve) => {
-      this.apiservice.getData().subscribe(async (data: any) => {
-        this.users = data;
+  async login(username: string, password: string): Promise<boolean> {
+    return new Promise<boolean>((resolve, reject) => {
+      this.apiservice.getData().subscribe({
+        next: async (data: any) => {
+          this.users = data;
+          const user = this.users.find((user) => user.username.toLowerCase() === username.toLowerCase());
 
-        const user = this.users.find((user) => user.username.toLowerCase() === username.toLowerCase());
+          if (user) {
+            const isPasswordValid = await this.passwordHashingService.verifyPassword(password, user.password);
 
-        if (user && await this.passwordHashingService.verifyPassword(password, user.password)) {
-          this.isAuthenticated$.next(true);
-          this.setCurrentUser(user.username);
-          resolve(true);
-        } else {
-          this.isAuthenticated$.next(false);
-          resolve(false);
-        }
+            if (isPasswordValid) {
+              this.isAuthenticated$.next(true);
+              this.setCurrentUser(user.username);
+              resolve(true);
+            } else {
+              this.isAuthenticated$.next(false);
+              reject(new Error('InvalidPassword'));
+            }
+          } else {
+            this.isAuthenticated$.next(false);
+            reject(new Error('InvalidUsername'));
+          }
+        },
+        error: (error: any) => {
+          // Handle errors
+          console.error('An error occurred:', error);
+          reject(error);
+        },
+        complete: () => {
+          // Optional: Handle completion logic if needed
+          console.log('Observable completed.');
+        },
       });
     });
   }
