@@ -64,9 +64,7 @@ export class UserupdateComponent {
       // console.log("here is respond mnaka", res);
     });
 
-    apiService.getAccessGroup().subscribe(res => {
-
-    })
+   
 
     // this.accessCodes = data;
     this.accesscodes();
@@ -259,7 +257,6 @@ export class UserupdateComponent {
   saveSelectedAccessCodes(): void {
 
     const selectedCodes = this.accessCodes.filter((code: any) => code.selected);
-    console.log('solving Codes:', this.solvingarray);
     const selectedGroups = this.accessGroup.filter(group => group.selected);
     const accessGroupsOnly = selectedGroups.map(group => group.sAccessGroup);
     const accessCodesArray: string[] = selectedGroups.reduce((acc, group) => acc.concat(group.sAccessCodes), [] as string[]);
@@ -267,10 +264,7 @@ export class UserupdateComponent {
     for (const codes of this.selectedAccessCodes) {
       accessCodesArray.push(codes.sAccessCode);
     }
-    console.log('Before the array is set  '+accessCodesArray)
     const accessCodesSet = new Set(accessCodesArray);
-
-   
     const accessCodesArray1 = Array.from(accessCodesSet);
     const userAccessGroups = {
       AccessGroups: accessGroupsOnly,
@@ -284,22 +278,19 @@ export class UserupdateComponent {
    
     this.apiService.addUserAccessCodes(userAccesscodes).subscribe(
       (response: any) => {
-        console.log('Success:', response);
+        // console.log('Success:', response);
       },
       (error: any) => {
-        console.error('Error:', error);
+        // console.error('Error:', error);
       }
     );
-    
-
-     
     this.apiService.addUserGroups(userAccessGroups).subscribe(
       (res: any) => {
         
       },
       (error: any) => {
         // Handle errors
-        console.error(error);
+        // console.error(error);
       }
     );
   }
