@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MasterLayoutRoutingModule } from './master-layout.routing';
+import { AboutComponent } from './about/about.component';
  
  
 
@@ -8,6 +9,8 @@ import { MasterLayoutRoutingModule } from './master-layout.routing';
 @NgModule({
   declarations: [
     
+  
+    AboutComponent
   ],
   imports: [
     CommonModule,
