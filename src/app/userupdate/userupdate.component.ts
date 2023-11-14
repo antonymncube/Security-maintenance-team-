@@ -73,16 +73,16 @@ export class UserupdateComponent {
 
     this.userForm = this.formBuilder.group({
       username: ['', [Validators.required]],
-      fullname: ['', [Validators.required]],
+      fullname: ['', ],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmpassword: ['', [Validators.required, Validators.minLength(6)]],
-      description: ['', [Validators.required]],
+      description: ['', ],
       email: ['', [Validators.required, Validators.email]],
-      homephone: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
+      homephone: ['', [Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       mobile: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       department: ['', [Validators.required]],
       agent: ['', [Validators.required]],
-      language: ['', [Validators.required]],
+      language: ['', ],
       
     });
   }

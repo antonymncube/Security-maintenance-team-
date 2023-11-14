@@ -23,12 +23,12 @@ export class EditUserComponent implements OnInit {
     this.userForm = this.formBuilder.group({
       id: [''],
       username: [{ value: '',  }, Validators.required],
-      fullname: ['', Validators.required],
-      description: [''],
+      fullname: ['', ],
+      description: ['',],
       password: [{ value: '', }, [Validators.required, Validators.minLength(6)]],
       department: ['',],
       email: ['', [Validators.required, Validators.email]],
-      homephone: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
+      homephone: ['',[Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       agent: ['',],
       status: [{value: '', }],
