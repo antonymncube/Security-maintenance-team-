@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { catchError, map, tap } from 'rxjs/operators';
 import { SecLookup } from '../SecAccessLookup';
 
 @Injectable({
@@ -12,7 +12,14 @@ export class ApiServiceService {
   constructor(private http: HttpClient) { }
 
   getData(): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/Users');
+    return this.http.get<any>('http://localhost:3000/Users').pipe(
+      tap((data: any) => {
+
+      }),
+      catchError((error: any) => {
+        return throwError(error);
+      })
+    );
   }
 
   getSecLookup():Observable<any>{
@@ -62,8 +69,8 @@ export class ApiServiceService {
   //     map((res: any) => res)
   //   );
   // }
- 
-  
+
+
   addUserAccessCodes(data: any): Observable<any> {
     return this.http.post<any>('http://localhost:3000/SecUserAccess', data).pipe(
       map((res: any) => res)
@@ -143,4 +150,8 @@ export class ApiServiceService {
 
 }
 
+
+function throwError(error: any): any {
+  throw new Error('Function not implemented.');
+}
 
