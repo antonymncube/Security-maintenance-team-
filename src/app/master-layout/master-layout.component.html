@@ -29,16 +29,11 @@
                     <mat-menu #menu="" style="color: white;background-color: white; padding: 0px;margin-top: 40px;">
                         <!-- <button mat-menu-item (click)="openDialog()">Open dialog</button> -->
                         
-                    <p (click)="logout()" style="padding-left: 10px;"><i class="fa fa-1x fa-sign-out"></i>Log out</p>
+                    <p (click)="logout()" style="cursor: pointer; padding-left: 10px;"><i class="fa fa-1x fa-sign-out"></i>Log out</p>
                         
-                    <p (click)="togglePurpose()" style="cursor: pointer; padding-right: 10px;">
-                        <i><mat-icon>info</mat-icon></i>About
-                      </p>
-                      
-                      <div *ngIf="showPurpose">
-                        
-                        <p>{{ Version1 }}</p>
-                      </div>
+                    <p (click)="getAccesslookupp()" style="cursor: pointer; padding-left: 10px;"><i class="fa fa-info-circle"></i>About</p>
+
+            
                       
 
 
