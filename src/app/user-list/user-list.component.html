@@ -12,13 +12,13 @@
           <option value="true">Active</option>
           <option value="false">Non-Active</option>
           <option value="" selected>Expired</option>
-        </select> 
+        </select>
       </i></strong></label>
 
     <div class="tabs__content">
       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
         <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef>username</th>
+          <th mat-header-cell *matHeaderCellDef>Username</th>
           <td mat-cell *matCellDef="let element">{{ element.username }}</td>
         </ng-container>
         <ng-container matColumnDef="weight">
