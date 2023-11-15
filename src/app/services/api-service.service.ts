@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { catchError,  map, tap } from 'rxjs/operators';
 import { SecLookup } from '../SecAccessLookup';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,14 @@ export class ApiServiceService {
   constructor(private http: HttpClient) { }
 
   getData(): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/Users');
+    return this.http.get<any>('http://localhost:3000/Users').pipe(
+      tap((data: any) => {
+
+      }),
+      catchError((error: any) => {
+        return throwError(error);
+      })
+    );
   }
 
   getSecLookup():Observable<any>{
@@ -71,19 +78,13 @@ export class ApiServiceService {
     );
   }
 
-  updateUserAccesscode(id: string, data: any): Observable<any> {
-    const url = `http://localhost:3000/SecUserAccess/${id}`;
-    return this.http.put(url, data).pipe(
-      map((res: any) => res)
-    );
-  }
-
-  updateUserAccessGroups(id: string, data: any): Observable<any> {
-    const url = `http://localhost:3000/SecUserAccessGroups/${id}`;
-    return this.http.put(url, data).pipe(
-      map((res: any) => res)
-    );
-  }
+  // updateAccesscode(id: string, data: any): Observable<any> {
+  //   const url = `http://localhost:3000/Users/${id}`;
+  //   return this.http.put(url, data).pipe(
+  //     map((res: any) => res)
+  //   );
+  // }
+ 
   
   addUserAccessCodes(data: any): Observable<any> {
     return this.http.post<any>('http://localhost:3000/SecUserAccess', data).pipe(
@@ -164,4 +165,8 @@ export class ApiServiceService {
 
 }
 
+
+function throwError(error: any): any {
+  throw new Error('Function not implemented.');
+}
 

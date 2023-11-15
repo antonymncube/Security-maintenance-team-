@@ -677,6 +677,27 @@
         "Dental Cover Plan",
         "Group Cash Plan"
       ]
+    },
+    {
+      "id": "3029",
+      "username": "Test30",
+      "fullname": "Mark Yarn",
+      "description": "Product Owner",
+      "password": "$2a$10$zNU/cQd581gVaPWKk59bLe55wLKe71dYSlu.H4.NZ3EcHxFz3fZ/e",
+      "department": "HR",
+      "email": "mark.yarn@genasystech.com",
+      "homephone": "0671402936",
+      "mobile": "0671802963",
+      "agent": "Standard Bank",
+      "status": true,
+      "lastUpdated": "2023-11-15T06:10:56.469Z",
+      "language": "",
+      "location": "",
+      "selectedProducts": [
+        "Dental Cover Plan",
+        "Group Cash Plan",
+        "Consumer Dental"
+      ]
     }
   ],
   "Products": [
@@ -814,29 +835,35 @@
       ],
       "id": "5403"
     }
+     
   ],
   "SecUserAccess": [
     {
-      "id": "5403",
+      "id": "3029",
       "accesscodes": [
         "ACCEPTBBWARN",
-        "API_DOC_BLOCK", 
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "CL_INCIDENT",
+        "CL_IND_DEC",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_SAVECLAIM",
+        "AGENT_COMM_PAY",
+        " CL_FINALISECLMT",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
         "CL_EXCEL_PRINT",
-        "CL_IND_APR",
-        "CL_REVERSEPAY",
-        "CL_UNDMAN",
+        " CL_STALECHEQUE",
         "AGENT_MAINT",
         "API_DOC_PERS",
-        "CL_SALVAGE"
-      ]
-    },
-    {
-      "id": "3597",
-      "accesscodes": [
-        "ACCEPTBBWARN",
-        "API_DOC_BLOCK", 
-        "API_DOC_PERS",
-        "CL_SALVAGE"
+        "ADDR_OVERRIDE",
+        "API_DOC_4",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_SALVAGE",
+        "CL_UNDMAN",
+        null
       ]
     }
   ]

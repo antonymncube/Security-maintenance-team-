@@ -1,11 +1,31 @@
 import { PasswordHashingService } from './../services/password-hashing.service';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators, AbstractControl, FormGroup } from '@angular/forms';
 import { ApiServiceService } from '../services/api-service.service';
 import { UserFormData } from '../User';
 import { Router } from '@angular/router';
 import { MatTabsModule } from '@angular/material/tabs';
+// Custom validator for the username field
+const usernameValidator = (control: AbstractControl): { [key: string]: boolean } | null => {
+  const username = control.value;
 
+  // Check if the username is between 6 and 30 characters
+  if (username.length < 6 || username.length > 30) {
+    return { 'invalidLength': true };
+  }
+
+  // Check if the username contains only alphanumeric characters and underscores
+  if (!/^[a-zA-Z0-9_]+$/.test(username)) {
+    return { 'invalidCharacters': true };
+  }
+
+  // Check if the first character is an alphabetic character
+  if (!/^[a-zA-Z]/.test(username)) {
+    return { 'invalidFirstCharacter': true };
+  }
+
+  return null;
+};
 
 
 
@@ -16,6 +36,7 @@ import { MatTabsModule } from '@angular/material/tabs';
   styleUrls: ['./userupdate.component.scss'],
 })
 export class UserupdateComponent {
+  
   userForm: FormGroup;
   user: UserFormData = new UserFormData();
   SecLookup: any = '';
@@ -48,6 +69,7 @@ export class UserupdateComponent {
   selectedGroupId: string = '';
   accessGroundForm: any;
   selectedGroupIndex: number | null = null;
+  form: any;
 
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiServiceService, private router: Router,
@@ -71,16 +93,16 @@ export class UserupdateComponent {
 
     this.userForm = this.formBuilder.group({
       username: ['', [Validators.required]],
-      fullname: ['', [Validators.required]],
+      fullname: ['', ],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmpassword: ['', [Validators.required, Validators.minLength(6)]],
-      description: ['', [Validators.required]],
+      description: ['', ],
       email: ['', [Validators.required, Validators.email]],
-      homephone: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
+      homephone: ['', [Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       mobile: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       department: ['', [Validators.required]],
       agent: ['', [Validators.required]],
-      language: ['', [Validators.required]],
+      language: ['', ],
       
     });
   }
@@ -89,6 +111,7 @@ export class UserupdateComponent {
 
   generateFourDigitId(): string {
     const randomNumber = Math.floor(1000 + Math.random() * 9000);
+    this.generatedId = randomNumber.toString();
     return randomNumber.toString();
   }
 
@@ -167,21 +190,18 @@ export class UserupdateComponent {
             if (exists) {
               alert('Username already exists. Please choose a different username.');
             } else {
-
-              this.generatedId = this.generateFourDigitId();
-              this.user.email = this.userForm.value.email;
-              this.user.username = this.userForm.value.username;
-              this.user.password = hashedPassword;
-              this.user.department = this.userForm.value.department;
-              this.user.mobile = this.userForm.value.mobile;
-              this.user.homephone = this.userForm.value.homephone;
-              this.user.description = this.userForm.value.description;
-              this.user.fullname = this.userForm.value.fullname;
-              this.user.agent = this.userForm.value.agent;
-              this.user.lastUpdated = new Date();
-              this.user.id = this.generatedId;
-              this.user.language = this.userForm.value.language
-              // console.log(this.user);
+            this.generateFourDigitId();
+            this.user.email = this.userForm.value.email;
+            this.user.username = this.userForm.value.username;
+            this.user.password = hashedPassword;
+            this.user.department = this.userForm.value.department;
+            this.user.mobile = this.userForm.value.mobile;
+            this.user.homephone = this.userForm.value.homephone;
+            this.user.description = this.userForm.value.description;
+            this.user.fullname = this.userForm.value.fullname;
+            this.user.agent = this.userForm.value.agent;
+            this.user.lastUpdated = new Date();
+            this.user.id = this.generatedId
 
               this.saveSelectedAccessCodes()
               this.updateUserWithSelectedProducts();
@@ -294,5 +314,7 @@ export class UserupdateComponent {
       }
     );
   }
-
+  get usernameControl() {
+    return this.form.get('username');
+  }
 }

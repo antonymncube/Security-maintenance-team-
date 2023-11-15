@@ -7,6 +7,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { AuthService } from '../services/auth.service';
 //import shared data service
 import { SharedDataService } from '../services/shared-data.service';
+import { AboutComponent } from './about/about.component';
+import { Router } from 'express';
 
 @Component({
   selector: 'app-master-layout',
@@ -50,4 +52,16 @@ togglePurpose() {
   this.showPurpose = !this.showPurpose;
 }
 
+openDialogWithSecLookupp(SecLookup: any) {
+  const dialogRef = this.dialog.open(AboutComponent, {
+    width: '800px',
+    height:'500px',
+    data: { SecLookup } // Pass SecLookup data to the dialog
+  });
+}
+
+getAccesslookupp() {
+    this.openDialogWithSecLookupp(this.About);
+  
+}
 }
