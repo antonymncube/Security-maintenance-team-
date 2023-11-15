@@ -251,19 +251,19 @@ export class UserupdateComponent {
   }
 
   toggleAccessCode(accesscode: any) {
-    console.log('Selected Codes:', this.selectedAccessCodes);
+    // console.log('Selected Codes:', this.selectedAccessCodes);
     accesscode.selected = !accesscode.selected;
 
     if (accesscode.selected) {
       this.selectedAccessCodes.push(accesscode.sAccessCode);
       this.solvingarray.push(accesscode.sAccessCode)
-      console.log('Selected Codes:', this.selectedAccessCodes);
+      // console.log('Selected Codes:', this.selectedAccessCodes);
     } else {
       const index = this.selectedAccessCodes.indexOf(accesscode.sAccessCode);
       if (index !== -1) {
         this.selectedAccessCodes.splice(index, 1);
       }
-      console.log('Selected Codes:', this.selectedAccessCodes);
+      // console.log('Selected Codes:', this.selectedAccessCodes);
     }
   }
 
@@ -282,7 +282,9 @@ export class UserupdateComponent {
     const accessCodesArray: string[] = selectedGroups.reduce((acc, group) => acc.concat(group.sAccessCodes), [] as string[]);
 
     for (const codes of this.selectedAccessCodes) {
-      accessCodesArray.push(codes.sAccessCode);
+      console.log('here is the staff brother  '+codes)
+      accessCodesArray.push(codes);
+      console.log(accessCodesArray)
     }
     const accessCodesSet = new Set(accessCodesArray);
     const accessCodesArray1 = Array.from(accessCodesSet);
