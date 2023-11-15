@@ -698,6 +698,45 @@
         "Group Cash Plan",
         "Consumer Dental"
       ]
+    },
+    {
+      "id": "3836",
+      "username": "Mitch45",
+      "fullname": "anotny",
+      "description": " Married",
+      "password": "$2a$10$ct3S0Tvzs0h.SXiTJwOYxuVA33Lw0PM/O4t3vWQST35nAjkzujG1u",
+      "department": "HR",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "agent": "Standard Bank",
+      "status": true,
+      "lastUpdated": "2023-11-15T06:31:07.530Z",
+      "language": "",
+      "location": "",
+      "selectedProducts": [
+        "Group Cash Plan"
+      ]
+    },
+    {
+      "id": "7453",
+      "username": "Mitch233",
+      "fullname": "Mitch",
+      "description": " Married",
+      "password": "$2a$10$2fnngemflkIWEzpTUBavWeZ0xuSFkkbdLI/qypi1tZXw3GlnvF35q",
+      "department": "IT",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "0846843512",
+      "agent": "Simply Health",
+      "status": true,
+      "lastUpdated": "2023-11-15T06:44:02.896Z",
+      "language": "",
+      "location": "",
+      "selectedProducts": [
+        "Cash Plan",
+        "Corporate Dental"
+      ]
     }
   ],
   "Products": [
@@ -834,8 +873,43 @@
         "Broker Pack"
       ],
       "id": "5403"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con"
+      ],
+      "id": "3836"
+    },
+    {
+      "AccessGroups": [],
+      "id": "csv7cBp"
+    },
+    {
+      "AccessGroups": [],
+      "id": "93TThDa"
+    },
+    {
+      "AccessGroups": [],
+      "id": "icfYeXe"
+    },
+    {
+      "AccessGroups": [],
+      "id": "RSfQSEs"
+    },
+    {
+      "AccessGroups": [],
+      "id": "DDoBDRA"
+    },
+    {
+      "AccessGroups": [],
+      "id": "Vt_ejd2"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con"
+      ],
+      "id": "7453"
     }
-     
   ],
   "SecUserAccess": [
     {
@@ -864,6 +938,75 @@
         "CL_SALVAGE",
         "CL_UNDMAN",
         null
+      ]
+    },
+    {
+      "id": "3836",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "CL_INCIDENT",
+        "CL_IND_DEC",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_SAVECLAIM",
+        "AGENT_COMM_PAY",
+        " CL_FINALISECLMT"
+      ]
+    },
+    {
+      "id": "s3R25Yf",
+      "accesscodes": [
+        null
+      ]
+    },
+    {
+      "id": "QkIHHhU",
+      "accesscodes": [
+        null
+      ]
+    },
+    {
+      "id": "c-CLxYW",
+      "accesscodes": [
+        null
+      ]
+    },
+    {
+      "id": "rBAbTe2",
+      "accesscodes": [
+        null
+      ]
+    },
+    {
+      "id": "AvZF3Hn",
+      "accesscodes": [
+        null
+      ]
+    },
+    {
+      "id": "KQb4zv4",
+      "accesscodes": [
+        "AGENT_MAINT",
+        "API_DOC_BLOCK"
+      ]
+    },
+    {
+      "id": "7453",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "CL_INCIDENT",
+        "CL_IND_DEC",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_SAVECLAIM",
+        "AGENT_COMM_PAY",
+        " CL_FINALISECLMT",
+        "AGENT_MAINT",
+        "CL_RECOVERY"
       ]
     }
   ]
