@@ -162,14 +162,5 @@ router-outlet {
     left: 0;
     /* Adjust the left position as needed */
     /* Add other custom styles for the card appearance */
-    .about-link {
-        cursor: pointer;
-        padding-right: 10px;
-        display: flex;
-        align-items: center;
-      }
     
-      .about-link i {
-        margin-right: 5px; /* Adjust the margin as needed */
-      }
 }
