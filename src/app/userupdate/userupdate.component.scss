@@ -252,5 +252,21 @@ button.save-btn {
    background-color: blue;
 }
 
+/* Add the following styles or modify the existing ones */
+.is-invalid {
+  border: 2px solid red;
+  /* Add any other styling you want for the invalid state */
+}
+
+.invalid-feedback {
+  color: red;
+  /* Add any other styling you want for the error message */
+}
+
+.invalid-field {
+  border-color: 1px solid red;
+}
+
+
 
  
