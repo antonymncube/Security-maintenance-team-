@@ -54,7 +54,7 @@ router-outlet {
 
 .outlet {
     margin-top: 0rem;
-    // overflow: auto;  
+    // overflow: auto;
 }
 
 .search {
@@ -162,5 +162,10 @@ router-outlet {
     left: 0;
     /* Adjust the left position as needed */
     /* Add other custom styles for the card appearance */
-    
+
+}
+
+.hover-effect:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
 }
