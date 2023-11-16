@@ -105,7 +105,7 @@ export class UserupdateComponent {
     const control = this.userForm.get(controlName);
     // console.log('back is hot')
 
-    return control?.invalid && control?.touched;
+    return control?.invalid && (control?.touched || control?.dirty);
   }
 
   getSelectedAccessCodes(): void {
@@ -194,8 +194,22 @@ export class UserupdateComponent {
           });
         });
       }
+    }else {
+      // Mark all form controls as touched to trigger validation errors
+      this.markFormGroupTouched(this.userForm);
     }
   }
+
+  markFormGroupTouched(formGroup: FormGroup) {
+    Object.values(formGroup.controls).forEach(control => {
+      control.markAsTouched();
+  
+      if (control instanceof FormGroup) {
+        this.markFormGroupTouched(control);
+      }
+    });
+  }
+
   saveSelectedProducts() {
     this.updateUserWithSelectedProducts();
   }
