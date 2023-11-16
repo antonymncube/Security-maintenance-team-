@@ -25,35 +25,36 @@
                     <input type="text" class="searchfield" placeholder="Search by username...." (input)="searchUsers($event)" />
                     <span class="pt-0"><i class="fa fa-2x fa-search search icone" aria-hidden="true"></i></span>
                     <i class="fa fa-user-circle User user" aria-hidden="true" mat-button [matMenuTriggerFor]="menu" #menuTriggers >
-            
+
                     <mat-menu #menu="" style="color: white;background-color: white; padding: 0px;margin-top: 40px;">
                         <!-- <button mat-menu-item (click)="openDialog()">Open dialog</button> -->
-                        
-                    <p (click)="logout()" style="cursor: pointer; padding-left: 10px;"><i class="fa fa-1x fa-sign-out" style="padding-right: 10px;"></i>Log out</p>
-                        
-                    <p (click)="getAccesslookupp()" style="cursor: pointer; padding-left: 10px;"><i class="fa fa-info-circle" style="padding-right: 10px;"></i>About</p>
 
-            
-                      
+                        <p (click)="logout()" class="hover-effect" style="padding-left: 10px;">
+                          <i class="fa fa-1x fa-sign-out" style="padding-right: 10px;"></i>Log out
+                        </p>
+
+                        <p (click)="getAccesslookupp()" class="hover-effect" style="padding-left: 10px;">
+                          <i class="fa fa-info-circle" style="padding-right: 10px;"></i>About
+                        </p>
 
 
 
                     </mat-menu>
-                
+
                 </i>
                 </div>
             </div>
-            
+
             <div class="col-content  ">
                 <router-outlet></router-outlet>
-                
+
                 <!-- <h4 class="h4 bg-white">back where</h4> -->
                 <!-- <footer style="color: black; min-height: 1500px;position: fixed;margin-top: 80px ">
                     <p style="color: black;">Author: Hege Refsnes<br>
                     <a style="color: black;" href="mailto:hege@example.com">hege@example.com</a></p>
                 </footer> -->
             </div>
-            
+
         </div>
         <div></div>
         <!-- <div class="row " style="padding-right: 10px; padding-top: 0px; padding-bottom: 0px; height: 0px;">
@@ -61,10 +62,10 @@
               <h3 class="version " style="margin-left: 200px;margin-bottom: 2px;">Genasys Technologies (pty) Ltd</h3>
             </div>
             <div class="col-6 text-end mt-1"  ><h3 style="margin-bottom: 2px;">Version Design 1.0</h3></div>
-        
+
           </div> -->
-        
+
     </div>
-    
+
 
 </main>
