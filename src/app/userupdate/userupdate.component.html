@@ -6,8 +6,8 @@
           <div class="form-group">
             <label for="username" class="label-width">Username:</label>
             <div class="inputtag">
-              <input type="text" id="username" formControlName="username"
-                [ngClass]="{ 'is-invalid': isControlInvalid('username') }">
+              <input type="text" id="username" formControlName="username" 
+              [ngClass]="{ 'is-invalid': isControlInvalid('username'), 'invalid-field': isControlInvalid('username') }">
               <div *ngIf="isControlInvalid('username')" class="invalid-feedback">
                 Username is required.
               </div>
@@ -39,7 +39,7 @@
               <input type="password" id="confirmpassword" formControlName="confirmpassword"
                 [ngClass]="{ 'is-invalid': isControlInvalid('confirmpassword') }">
               <div *ngIf="isControlInvalid('confirmpassword')" class="invalid-feedback">
-                Confirm Password is required and should be at least 6 characters.
+                Confirm Password is required and should match Password.
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@
               <input type="text" id="mobile" formControlName="mobile"
                 [ngClass]="{ 'is-invalid': isControlInvalid('mobile') }">
               <div *ngIf="isControlInvalid('mobile')" class="invalid-feedback">
-                Mobile is not valid.
+                Mobile is not in valid format.
               </div>
             </div>
           </div>
