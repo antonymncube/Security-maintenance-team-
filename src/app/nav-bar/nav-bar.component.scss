@@ -44,6 +44,7 @@ h1 {
   margin: 5px 0; 
   padding: 10px;  
   transition: background-color
+
 }
 
 .navbar{
@@ -54,11 +55,20 @@ h1 {
   margin-left: 15px;
   color: #5e7489;
   font-size: larger;
+  cursor: pointer;
 }
 .link1{
   margin-left: 15px;
   color:  #5e7489;;
   font-size: larger;
+  cursor: pointer;
+}
+.link2{
+  margin-left: 15px;
+  color:  #5e7489;;
+  font-size: larger;
+  cursor: pointer;
+
 }
 .link:hover{
   margin-left: 15px;
@@ -78,10 +88,18 @@ h1 {
   color:#5e7489;;
   margin-left: 10px;
 }
+.icon3{
+  color:#5e7489;;
+  margin-left: 10px;
+}
 .icon:hover{
   color: white;;
 }
 .icon2:hover{
+  color: white;;
+  margin-left: 10px;
+}
+.icon3:hover{
   color: white;;
   margin-left: 10px;
 }
@@ -135,6 +153,53 @@ h1 {
   font-size: x-large;
   margin-left: 10px;
   margin: 5px;
+}
+
+
+/* ... your existing styles ... */
+
+.router-link {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  padding: 10px;
+  transition: background-color;
+}
+
+.router-link:hover {
+  background-color: #2F3351; /* Change the background color on hover and click */
+}
+
+.icon,
+.icon2,
+.icon3 {
+  color: #5e7489;
+  margin-right: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.link,
+.link1,
+.link2 {
+  color: #5e7489;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.router-link:hover .icon,
+.router-link:active .icon,
+.router-link:hover .link,
+.router-link:active .link,
+.router-link:hover .icon2,
+.router-link:active .icon2,
+.router-link:hover .icon3, /* added missing comma */
+.router-link:active .icon3 {
+  color: white;
+}
+
+tr:not(.header-row):hover td {
+  cursor: pointer;
 }
 
  
