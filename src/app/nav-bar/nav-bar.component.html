@@ -3,28 +3,23 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
 
     <mat-nav-list class="navbar">
-      <img class="logo-img" src="assets\images\Genasys-White.svg" alt> 
-      <!-- <h1 >GENASYS</h1> -->
-      <!-- <div class="redline"></div> -->
-
-      <div class="router-link">
+      <img class="logo-img" src="assets\images\Genasys-White.svg" alt>
+      <div class="router-link" routerLink="/home" matTooltip="Home" matTooltipPosition="right">
         <i class="icon fa fa-home fa-1x" aria-hidden="true"></i>
-        <label class="link" routerLink="/home">Home</label>
+        <label class="link">Home</label>
       </div>
 
-      <i class="icon2 fa fa-cog fa-1x" [matMenuTriggerFor]="menu" aria-hidden="true"></i>
-      <label class="link1" [matMenuTriggerFor]="menu">Tools</label>
+      <div class="router-link" [matMenuTriggerFor]="menu" matTooltip="Tools" matTooltipPosition="right">
+        <i class="icon fa fa-cog fa-1x" aria-hidden="true"></i>
+        <label class="link" [matMenuTriggerFor]="menu">Tools</label>
+      </div>
       <mat-menu #menu="matMenu" style="color: white; background-color: white; padding: 1px;">
-        <button mat-menu-item (click)="openDialog()">
-          Modify Access code
-        </button>
-        <button mat-menu-item (click)=" getAccessGroup()">
-          Modify Access Groups
-        </button>
+        <button mat-menu-item (click)="openDialog()">Modify Access code</button>
+        <button mat-menu-item (click)="getAccessGroup()">Modify Access Groups</button>
       </mat-menu>
-      <div class="router-link">
-        <i class="icon fa fa-refresh fa-1x" (click)="refreshPage()" aria-hidden="true"></i>
-        <!-- <label class="link" routerLink="/route2">Refresh</label> -->
+
+      <div class="router-link" (click)="refreshPage()" matTooltip="Refresh" matTooltipPosition="right">
+        <i class="icon fa fa-refresh fa-1x" aria-hidden="true"></i>
         <label class="link" (click)="refreshPage()">Refresh</label>
       </div>
     </mat-nav-list>
