@@ -25,8 +25,7 @@ export class EditUserComponent implements OnInit {
   solvingarray: any[] = []
   UserAccescodes: any[] = [];
   UserAccessGroups: any[] | null = null;
-
-
+  resultArray: Set<any> = new Set();
 
   dataToUpdate: any
 
@@ -51,6 +50,7 @@ export class EditUserComponent implements OnInit {
   selectedGroupId: string = '';
   accessGroundForm: any;
   selectedGroupIndex: number | null = null;
+  alreadyselectedcodes: any[] = [];
 
 
   constructor(
@@ -71,8 +71,8 @@ export class EditUserComponent implements OnInit {
       password: [{ value: '', }, [Validators.required, Validators.minLength(6)]],
       department: ['',],
       email: ['', [Validators.required, Validators.email]],
-      homephone: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
-      mobile: ['',[Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
+      homephone: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
+      mobile: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       agent: ['',],
       status: [{ value: '', }],
       lastUpdated: [''],
@@ -86,6 +86,8 @@ export class EditUserComponent implements OnInit {
 
 
   }
+
+
 
   ngOnInit() {
     this.getAccesslookup();
@@ -103,41 +105,34 @@ export class EditUserComponent implements OnInit {
 
 
     this.apiService.getSecLookup().subscribe((res: any) => {
+
       this.accessCodes = res;
-      // console.log('Separated ',this.accessCodes)
-    });
+      this.accessCodes = this.accessCodes.map(accesscode => {
+        accesscode.selected = false;
+        return accesscode
+      })
 
-    this.apiService.getUserAccessCodes(this.id).subscribe((res1: any) => {
-      this.UserAccescodes = res1.accesscodes;
-      console.log('Here are the user Access codes: ', res1.accesscodes);
+      this.apiService.getUserAccessCodes(this.id).subscribe((res1: any) => {
+        this.UserAccescodes = res1.accesscodes;
+        this.selectedAccessCodes = this.UserAccescodes
+        // console.log('is it an object of a user', this.UserAccescodes)
+        this.accessCodes = this.accessCodes.map((res)=>{
+          if(this.UserAccescodes.includes(res.sAccessCode)){
+            res.selected = true;
+            
+          }
+          return res
+        })
 
-      
-
-      this.SecLookup.forEach((accesscodes: any) => {
-        // console.log( 'Lets see console.log',this.accessCodes)
-        // const existsInAccessCodes = this.SecLookup.some((accessCode: any) => this.UserAccescodes === accesscodes);
-        const existsInAccessCodes = this.UserAccescodes.some(
-          (accessCode: any) =>
-            this.SecLookup.some(
-              (secCode: any) => secCode.sAccessCode === accessCode
-            )
-        );
-
-        // console.log('here is what the seclook up displays ',this.SecLookup)
-
-        // console.log('lets now  ',this.SecLookup[0].sAccessCode)
-        if (existsInAccessCodes) {
-          // Do something when the access code exists
-          console.log('Existing Access Code:', existsInAccessCodes);
-        } else {
-          // Do something when the access code doesn't exist
-          console.log('Access Code not found:', existsInAccessCodes);
-        }
       });
 
+    
+  
+      console.log('the selected is here ', this.accessCodes)
     });
 
-    
+  
+
 
 
     this.apiService.getUserAccessGroups(this.id).subscribe(
@@ -147,7 +142,7 @@ export class EditUserComponent implements OnInit {
         this.apiService.getAccessGroup().subscribe(res => {
           this.UserAccessGroups = data.AccessGroups;
           this.accessGroup = res;
-          console.log('After ', this.UserAccessGroups)
+          // console.log('After ', this.UserAccessGroups)
 
           this.accessGroup.forEach(group => {
             // Check if group.sAccessGroup exists in the AccessGroups array
@@ -169,13 +164,13 @@ export class EditUserComponent implements OnInit {
       }
     );
 
-
+    this.initializeAlreadySelectedCodes();
   }
 
   existsInAccessCodesForItem(accesscodes: any): boolean {
     return this.UserAccescodes.includes(accesscodes.sAccessCode);
   }
-  
+
 
   onSubmit() {
     if (this.userForm.valid) {
@@ -209,7 +204,6 @@ export class EditUserComponent implements OnInit {
 
   updateUserWithSelectedProducts() {
     this.user.selectedProducts = this.selectedProducts;
-
   }
 
   saveSelectedProducts() {
@@ -217,8 +211,7 @@ export class EditUserComponent implements OnInit {
   }
 
   receiveSelectedProducts(products: string[]) {
-    console.log('Received selected products:', products);
-    // this.selectedProducts = products;
+
     this.selectedProducts = products;
 
   }
@@ -274,28 +267,38 @@ export class EditUserComponent implements OnInit {
 
   }
 
+  initializeAlreadySelectedCodes() {
+    this.alreadyselectedcodes = Array.from(this.resultArray);
+  }
 
 
   toggleAccessCode(accesscode: any) {
-    accesscode.selected = !accesscode.selected;
 
-    if (accesscode.selected) {
+
+    if (!accesscode.selected) {
+      // If the access code is checked, add it to both arrays
       this.selectedAccessCodes.push(accesscode.sAccessCode);
-      this.solvingarray.push(accesscode.sAccessCode);
+      // this.solvingarray.push(accessCodeValue);
+      console.log('This is the selected  ', this.selectedAccessCodes)
     } else {
-      const index = this.selectedAccessCodes.indexOf(accesscode.sAccessCode);
-      if (index !== -1) {
-        this.selectedAccessCodes.splice(index, 1);
-      }
-    }
-  }
+     
+      // If the access code is unchecked, remove it from both arrays
+      const selectedIndex = this.selectedAccessCodes.indexOf(accesscode.sAccessCode);
+      if (selectedIndex !== -1) {
+        this.selectedAccessCodes.splice(selectedIndex, 1);
 
+      }
+
+      console.log('you unchecked somehting', this.selectedAccessCodes)
+
+    }
+    accesscode.selected = !accesscode.selected;
+  }
 
 
   saveSelectedAccessCodes(): void {
 
     const selectedCodes = this.accessCodes.filter((code: any) => code.selected);
-    console.log('solving Codes:', this.solvingarray);
     const selectedGroups = this.accessGroup.filter(group => group.selected);
     const accessGroupsOnly = selectedGroups.map(group => group.sAccessGroup);
     const accessCodesArray: string[] = selectedGroups.reduce((acc, group) => acc.concat(group.sAccessCodes), [] as string[]);
@@ -303,7 +306,7 @@ export class EditUserComponent implements OnInit {
     for (const codes of this.selectedAccessCodes) {
       accessCodesArray.push(codes.sAccessCode);
     }
-    console.log('Before the array is set  ' + accessCodesArray)
+
     const accessCodesSet = new Set(accessCodesArray);
 
 

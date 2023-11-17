@@ -6,10 +6,10 @@
           <div class="form-group">
             <label for="username" class="label-width">Username:</label>
             <div class="inputtag">
-              <input type="text" id="username" formControlName="username"
-                [ngClass]="{ 'is-invalid': isControlInvalid('username') }">
+              <input type="text" id="username" formControlName="username" 
+              [ngClass]="{ 'is-invalid': isControlInvalid('username'), 'invalid-field': isControlInvalid('username') }">
               <div *ngIf="isControlInvalid('username')" class="invalid-feedback">
-                Username is required.
+                Username required.
               </div>
             </div>
           </div>
@@ -19,7 +19,7 @@
               <input type="text" id="fullname" formControlName="fullname"
                 [ngClass]="{ 'is-invalid': isControlInvalid('fullname') }">
               <div *ngIf="isControlInvalid('fullname')" class="invalid-feedback">
-                Full Name is required.
+                Full Name required.
               </div>
             </div>
           </div>
@@ -29,7 +29,7 @@
               <input type="password" id="password" formControlName="password"
                 [ngClass]="{ 'is-invalid': isControlInvalid('password') }">
               <div *ngIf="isControlInvalid('password')" class="invalid-feedback">
-                Password is required and should be at least 6 characters.
+                Password required & min 6 characters.
               </div>
             </div>
           </div>
@@ -39,7 +39,7 @@
               <input type="password" id="confirmpassword" formControlName="confirmpassword"
                 [ngClass]="{ 'is-invalid': isControlInvalid('confirmpassword') }">
               <div *ngIf="isControlInvalid('confirmpassword')" class="invalid-feedback">
-                Confirm Password is required and should be at least 6 characters.
+                Confirm Password required & match Password.
               </div>
             </div>
           </div>
@@ -49,7 +49,7 @@
               <input type="email" id="email" formControlName="email"
                 [ngClass]="{ 'is-invalid': isControlInvalid('email') }">
               <div *ngIf="isControlInvalid('email')" class="invalid-feedback">
-                Email is required and should be in a valid format.
+                Email required & in a valid format.
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@
               <option value="Sales">Sales</option>
             </select>
             <div *ngIf="isControlInvalid('department')" class="invalid-feedback">
-              Department is required.
+              Department required.
             </div>
           </div>
           <div class="form-group">
@@ -74,7 +74,7 @@
               <option value="Standard Bank">Standard Bank</option>
             </select>
             <div *ngIf="isControlInvalid('agent')" class="invalid-feedback">
-              Agent is required.
+              Agent required.
             </div>
           </div>
 
@@ -85,7 +85,7 @@
               <input type="text" id="homephone" formControlName="homephone"
                 [ngClass]="{ 'is-invalid': isControlInvalid('homephone') }">
               <div *ngIf="isControlInvalid('homephone')" class="invalid-feedback">
-                Home-Phone is not valid.
+                Home-Phone invalid format.
               </div>
             </div>
           </div>
@@ -95,7 +95,7 @@
               <input type="text" id="description" formControlName="description"
                 [ngClass]="{ 'is-invalid': isControlInvalid('description') }">
               <div *ngIf="isControlInvalid('description')" class="invalid-feedback">
-                Home-Phone is not valid.
+                Description required.
               </div>
             </div>
           </div>
@@ -107,7 +107,7 @@
               <option value="Native">Native</option>
             </select>
             <div *ngIf="isControlInvalid('language')" class="invalid-feedback">
-              Language is required.
+              Language required.
             </div>
           </div>
           <div class="form-group">
@@ -116,7 +116,7 @@
               <input type="text" id="mobile" formControlName="mobile"
                 [ngClass]="{ 'is-invalid': isControlInvalid('mobile') }">
               <div *ngIf="isControlInvalid('mobile')" class="invalid-feedback">
-                Mobile is not valid.
+                Mobile invalid format.
               </div>
             </div>
           </div>

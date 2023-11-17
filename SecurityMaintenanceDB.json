@@ -737,6 +737,65 @@
         "Cash Plan",
         "Corporate Dental"
       ]
+    },
+    {
+      "id": "4476",
+      "username": "mamamic",
+      "fullname": "Mitch",
+      "description": "tester",
+      "password": "$2a$10$y2snCb3D7H2YxIZ.zTjVHuTzX8r2IeN5ITT7PIOtQq9MeUcn7uhcC",
+      "department": "IT",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "agent": "Simply Health",
+      "status": true,
+      "lastUpdated": "2023-11-15T07:43:43.771Z",
+      "language": "",
+      "location": "",
+      "selectedProducts": [
+        "Group Cash Plan"
+      ]
+    },
+    {
+      "id": "9205",
+      "username": "Mitch23323",
+      "fullname": "Mitch",
+      "description": " Married",
+      "password": "$2a$10$aU6GnGjKtYyEs1iHtTfVBOXVrVh1897b6RrwSfVyADaA1sVOoO/UW",
+      "department": "HR",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "agent": "Standard Bank",
+      "status": true,
+      "lastUpdated": "2023-11-15T08:03:12.040Z",
+      "language": "",
+      "location": "",
+      "selectedProducts": [
+        "Dental Cover Plan",
+        "Corporate Dental"
+      ]
+    },
+    {
+      "id": "6462",
+      "username": "Mitchiushfof",
+      "fullname": "Mitch",
+      "description": "tester",
+      "password": "$2a$10$ErKodtG7/H2wM/yazTdnsO.Oo7x2chMnELv7jtYJywmieUVdkpSSu",
+      "department": "HR",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "0671802963",
+      "agent": "Standard Bank",
+      "status": true,
+      "lastUpdated": "2023-11-15T08:22:04.360Z",
+      "language": "",
+      "location": "",
+      "selectedProducts": [
+        "Group Cash Plan",
+        "Corporate Dental_old"
+      ]
     }
   ],
   "Products": [
@@ -909,6 +968,21 @@
         "Underwriting con"
       ],
       "id": "7453"
+    },
+    {
+      "AccessGroups": [],
+      "id": "4476"
+    },
+    {
+      "AccessGroups": [],
+      "id": "9205"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con",
+        "Broker Pack"
+      ],
+      "id": "6462"
     }
   ],
   "SecUserAccess": [
@@ -1007,6 +1081,46 @@
         " CL_FINALISECLMT",
         "AGENT_MAINT",
         "CL_RECOVERY"
+      ]
+    },
+    {
+      "id": "4476",
+      "accesscodes": [
+        "AGENT_MAINT",
+        "API_DOC_BLOCK"
+      ]
+    },
+    {
+      "id": "9205",
+      "accesscodes": [
+        "AGENT_MAINT",
+        "API_DOC_BLOCK"
+      ]
+    },
+    {
+      "id": "6462",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "CL_INCIDENT",
+        "CL_IND_DEC",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_SAVECLAIM",
+        "AGENT_COMM_PAY",
+        " CL_FINALISECLMT",
+        "CL_EXCEL_PRINT",
+        "CL_FINALISECLMT",
+        "CL_IND_APR",
+        "CL_RECOVERY",
+        "CL_REQUISITION",
+        "CL_REVERSEPAY",
+        "CL_UNDMAN",
+        " CL_STALECHEQUE",
+        "AGENT_MAINT",
+        "API_CLAIM_DU",
+        " API_DOC_BLOCK"
       ]
     }
   ]
