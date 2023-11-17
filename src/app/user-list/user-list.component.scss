@@ -195,6 +195,8 @@ td {
   margin-left: 10px;
   margin-bottom: 4px;
   border-radius:  3px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
 }
 
 .tabs__radio {
@@ -242,7 +244,21 @@ tr:not(.header-row):hover td {
   cursor: pointer;
 }
 
+.custom-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: left; /* Align the text to the left, adjust if needed */
+}
 
+.custom-menu-item:hover {
+  background-color: #f0f0f0; /* Change the hover background color as needed */
+}
+
+.details{
+  padding-top: 16px;
+}
 
 
 
