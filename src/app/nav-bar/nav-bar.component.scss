@@ -198,7 +198,8 @@ h1 {
   color: white;
 }
 
-/* ... your existing styles ... */
-
+tr:not(.header-row):hover td {
+  cursor: pointer;
+}
 
  
