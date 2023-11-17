@@ -6,7 +6,7 @@
 <div class="container p-0">
   <div class="tabs">
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
-      <label for="tab1" class="tabs__label" ><strong style="font-size: 20px; margin-left: -14px;" >Users<i class="fa fa-1x fa-user usericon ">
+      <label for="tab1" class="tabs__label" ><strong style="font-size: 18px; margin-left: -14px; font-family: Roboto, Helvetica Neue, sans-serif; font-weight: bold;" >Users<i class="fa fa-1x fa-user usericon ">
         <select id="statusFilter" class="check" [formControl]="statusFilterControl">
           <option value="" selected>All</option>
           <option value="true">Active</option>
@@ -19,39 +19,39 @@
       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
         <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef>Username</th>
-          <td mat-cell *matCellDef="let element">{{ element.username }}</td>
+          <td mat-cell *matCellDef="let element" class="details">{{ element.username }}</td>
         </ng-container>
         <ng-container matColumnDef="weight">
           <th mat-header-cell *matHeaderCellDef>FullName</th>
-          <td mat-cell *matCellDef="let element">{{ element.fullname }}</td>
+          <td mat-cell *matCellDef="let element" class="details">{{ element.fullname }}</td>
         </ng-container>
         <ng-container matColumnDef="email">
           <th mat-header-cell *matHeaderCellDef>Email</th>
-          <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+          <td mat-cell *matCellDef="let element" class="details">{{ element.email }}</td>
         </ng-container>
         <ng-container matColumnDef="description">
           <th mat-header-cell *matHeaderCellDef>Description</th>
-          <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+          <td mat-cell *matCellDef="let element" class="details">{{ element.description }}</td>
         </ng-container>
         <ng-container matColumnDef="department">
           <th mat-header-cell *matHeaderCellDef>Department</th>
-          <td mat-cell *matCellDef="let element">{{ element.department }}</td>
+          <td mat-cell *matCellDef="let element" class="details">{{ element.department }}</td>
         </ng-container>
         <ng-container matColumnDef="agent">
           <th mat-header-cell *matHeaderCellDef>Agent</th>
-          <td mat-cell *matCellDef="let element">{{ element.agent }}</td>
+          <td mat-cell *matCellDef="let element" class="details">{{ element.agent }}</td>
         </ng-container>
 
         <ng-container matColumnDef="lastUpdated">
           <th mat-header-cell *matHeaderCellDef>Last Updated</th>
-          <td mat-cell *matCellDef="let element">{{ element.lastUpdated | date: 'yyyy-MM-dd HH:mm:ss' }}</td>
+          <td mat-cell *matCellDef="let element" class="details">{{ element.lastUpdated | date: 'yyyy-MM-dd HH:mm:ss' }}</td>
         </ng-container>
 
         <ng-container matColumnDef="Action" class="action">
           <th mat-header-cell *matHeaderCellDef>Actions</th>
           <td mat-cell *matCellDef="let element">
             <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-              <mat-icon>more_vert</mat-icon>
+              <mat-icon style="font-size: 16px; padding-top: 4px;">more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu">
               <button mat-menu-item (click)="onActionSelected(element, 'edit')">
