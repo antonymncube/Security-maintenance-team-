@@ -26,6 +26,9 @@
 .welcome{
   margin-left: 9px;
   margin-top: 10px;
+  font-weight: 600px;
+  font-size: 18px; 
+  font-family: Roboto, Helvetica Neue, sans-serif; 
 }
 
 
@@ -179,13 +182,16 @@ td {
 
 .tabs__label {
   // padding: 5px 11px;
-  cursor: pointer;
+  //cursor: pointer;
   border:solid black 1px;
   width: 235px;
   height: 40px;
   padding-left: 20px;
   padding-top: 10px;
   border-radius: 3px;
+  font-size: 16px; 
+  font-family: Roboto, Helvetica Neue, sans-serif; 
+  font-weight: 580;
 
 }
 
@@ -197,6 +203,11 @@ td {
   border-radius:  3px;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: 14px;
+  cursor: pointer;
+}
+
+.check:hover{
+  cursor: pointer;
 }
 
 .tabs__radio {
