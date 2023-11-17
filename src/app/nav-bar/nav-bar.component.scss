@@ -1,5 +1,5 @@
 .menu-list {
-  color: white;  
+  color: white;
 }
 .sidenav-container {
   height: 60vh;
@@ -21,28 +21,28 @@
 h1 {
   color: white;
   margin-left: 20px;
-  // width: 600px;  
-  white-space: nowrap;  
-  overflow: hidden;  
-  text-overflow: ellipsis;  
+  // width: 600px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
- 
+
 .mat-sidenav-container .menu-list {
-  color: white;  
-} 
+  color: white;
+}
 
 .menu{
   color: white;
   margin-top: 80px;
 }
 
- 
+
 .router-link {
-  color: #2F3351;  
-  text-decoration: none;  
-  display: block; 
-  margin: 5px 0; 
-  padding: 10px;  
+  color: #2F3351;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+  padding: 10px;
   transition: background-color
 
 }
@@ -105,17 +105,17 @@ h1 {
 }
  .redline{
   border-top: 15px solid red; /* Set the line color, style, and width */
-  width: 90%; 
+  width: 90%;
   margin-left: 8px;
   margin-top: 1px;
-   
+
  }
- 
+
  .search{
   border-bottom: 3px solid #2F3351 ;
   background-color: white;
   margin-top: 30px;
-  
+
  }
 
  .side-information{
@@ -124,27 +124,27 @@ h1 {
  }
 
  .searchfield{
-    border: none; 
-    
+    border: none;
+
     margin-left: 10px;
     font-size: 20px;
- } 
+ }
  .logo-img {
-  width: 180px;  
-  max-height: 70px;  
+  width: 180px;
+  max-height: 70px;
   margin-left: 9px;
   margin-bottom: 4px;
 }
 
 .key-img {
-  width: 50px;  
-  max-height: 30px;  
+  width: 50px;
+  max-height: 30px;
   margin-left: 9px;
   margin-bottom: 4px;
 }
 .securityIcon {
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   background-color: white;
   margin-top: 20px;
 }
@@ -156,50 +156,39 @@ h1 {
 }
 
 
-/* ... your existing styles ... */
-
 .router-link {
   display: flex;
   align-items: center;
   margin: 5px 0;
   padding: 10px;
-  transition: background-color;
+  transition: background-color, color;
+  cursor: pointer;
 }
 
 .router-link:hover {
-  background-color: #2F3351; /* Change the background color on hover and click */
+  background-color: #2F3351;
+  color: white;
 }
 
-.icon,
-.icon2,
-.icon3 {
+.icon {
   color: #5e7489;
   margin-right: 10px;
   font-size: 1rem;
-  cursor: pointer;
 }
 
-.link,
-.link1,
-.link2 {
+.link {
   color: #5e7489;
   font-size: larger;
-  cursor: pointer;
 }
 
 .router-link:hover .icon,
-.router-link:active .icon,
-.router-link:hover .link,
-.router-link:active .link,
-.router-link:hover .icon2,
-.router-link:active .icon2,
-.router-link:hover .icon3, /* added missing comma */
-.router-link:active .icon3 {
+.router-link:hover .link {
   color: white;
 }
+
 
 tr:not(.header-row):hover td {
   cursor: pointer;
 }
 
- 
+
