@@ -6,14 +6,14 @@
 <div class="container p-0">
   <div class="tabs">
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
-      <label for="tab1" class="tabs__label" ><strong style="font-size: 18px; margin-left: -14px; font-family: Roboto, Helvetica Neue, sans-serif; font-weight: bold;" >Users<i class="fa fa-1x fa-user usericon ">
+      <label for="tab1" class="tabs__label" ><div>Users<i class="fa fa-1x fa-user usericon ">
         <select id="statusFilter" class="check" [formControl]="statusFilterControl">
-          <option value="" selected>All</option>
-          <option value="true">Active</option>
-          <option value="false">Non-Active</option>
-          <option value="" selected>Expired</option>
+          <option value="" selected class="check11">All</option>
+          <option value="true" class="check11">Active</option>
+          <option value="false" class="check11">Non-Active</option>
+          <option value="" selected class="check11">Expired</option>
         </select>
-      </i></strong></label>
+      </i></div></label>
 
     <div class="tabs__content">
       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
