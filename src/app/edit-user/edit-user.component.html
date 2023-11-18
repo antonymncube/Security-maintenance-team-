@@ -114,7 +114,7 @@
           <div class="col">
             <div class="access-groups scrollable">
               <div *ngFor="let group of accessGroup; let i = index" class="access-group">
-                <div class="access-group-item" [ngClass]="{'clicked': group.selected}">
+                <div class="access-group-item" >
                   <div class="access-group-name">
                     <label>
                       <input type="checkbox" [checked]="group.selected" (change)="toggleAccessCodes(i)">
@@ -128,9 +128,12 @@
           <div class="col bg-white p-0">
             <div class="access-codes scrollable">
               <div *ngFor="let accesscodes of accessCodes; let i = index">
-                <label class="checkbox-container" [ngClass]="{'red-checkbox': accesscodes.selected}">
-                  <input type="checkbox" class="code-checkbox" [checked]="existsInAccessCodesForItem(accesscodes)" (change)="toggleAccessCode(accesscodes)">
-                  <span class="code-item">{{ accesscodes.sAccessCode }}</span>
+                <label class="checkbox-container">
+                  <input type="checkbox" class="code-checkbox" [ngClass]="{'checked-background': existsInAccessCodesForItem(accesscodes)}" [checked]="existsInAccessCodesForItem(accesscodes)" 
+                    (change)="toggleAccessCode(accesscodes)"
+                    [ngClass]="{'checked-background': existsInAccessCodesForItem(accesscodes)}">
+
+                  <p class="code-item">{{ accesscodes.sAccessCode }}</p>
                 </label>
               </div>
             </div>
