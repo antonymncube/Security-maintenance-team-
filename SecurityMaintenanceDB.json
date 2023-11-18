@@ -839,6 +839,46 @@
       "selectedProducts": [
         "Corporate Dental"
       ]
+    },
+    {
+      "id": "7074",
+      "username": "Mitchjjghj",
+      "fullname": "Mitch",
+      "description": "we are bacl",
+      "password": "$2a$10$fI8mKsAMEGzzVQwSqiAykelY8VKCba/sFen6655GddxCdbsgrGmXS",
+      "department": "IT",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0781638594",
+      "mobile": "0781954154",
+      "agent": "Standard Bank",
+      "status": true,
+      "lastUpdated": "2023-11-18T11:57:54.154Z",
+      "language": "",
+      "location": "",
+      "selectedProducts": [
+        "Dental Cover Plan",
+        "Corporate Dental"
+      ]
+    },
+    {
+      "id": "2890",
+      "username": "Mitchjjghjkkjkjk",
+      "fullname": "Mitch",
+      "description": "we are bacl",
+      "password": "$2a$10$sMmhHQPJ2pmO7JHENz2Bm.LLlr005/Xn4o1YdIFpu19JZh1CRekr6",
+      "department": "IT",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0781638594",
+      "mobile": "0781954154",
+      "agent": "Standard Bank",
+      "status": true,
+      "lastUpdated": "2023-11-18T11:58:13.766Z",
+      "language": "",
+      "location": "",
+      "selectedProducts": [
+        "Dental Cover Plan",
+        "Corporate Dental"
+      ]
     }
   ],
   "Products": [
@@ -1089,6 +1129,18 @@
         "Claim-Admin"
       ],
       "id": "tkwJgRP"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con"
+      ],
+      "id": "7074"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con"
+      ],
+      "id": "2890"
     }
   ],
   "SecUserAccess": [
@@ -1353,6 +1405,22 @@
         "CL_SALVAGE",
         "CL_UNDMAN",
         null
+      ]
+    },
+    {
+      "id": "7074",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        "API_CLAIM_DU"
+      ]
+    },
+    {
+      "id": "2890",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        "API_CLAIM_DU"
       ]
     }
   ]
