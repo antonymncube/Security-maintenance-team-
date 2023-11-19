@@ -107,39 +107,40 @@
         </div>
       </div>
     </mat-tab>
-    <mat-tab label="Security Access">
-      <div class="dialog-content">
-        <h2>Security Access Groups and Codes</h2>
-        <div class="row">
-          <div class="col">
-            <div class="access-groups scrollable">
-              <div *ngFor="let group of accessGroup; let i = index" class="access-group">
-                <div class="access-group-item" >
-                  <div class="access-group-name">
-                    <label>
-                      <input type="checkbox" [checked]="group.selected" (change)="toggleAccessCodes(i)">
-                      <strong>{{ group.sAccessGroup }}</strong>
-                    </label>
-                  </div>
+    <mat-tab label="Security Access ">
+    
+        <!-- <h2 style="margin-left: 250px;">Security Access Groups and Codes</h2> -->
+        <div class="container"> 
+        <div class="row row1 p-1 no-gutters">
+          <div class="col-4 useraccessgroup ">
+            <div *ngFor="let group of accessGroup; let i = index" class="access-group p-1">
+              <div class="access-group-item">
+                <div class="access-group-name">
+                  <label>
+                    <input type="checkbox" [checked]="group.selected" (change)="toggleAccessCodes(i)">
+                    <strong>{{ group.sAccessGroup }}</strong>
+                  </label>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col bg-white p-0">
-            <div class="access-codes scrollable">
-              <div *ngFor="let accesscodes of accessCodes; let i = index">
-                <label class="checkbox-container">
-                  <input type="checkbox" class="code-checkbox" [ngClass]="{'checked-background': existsInAccessCodesForItem(accesscodes)}" [checked]="existsInAccessCodesForItem(accesscodes)" 
-                    (change)="toggleAccessCode(accesscodes)"
+          <div class="col-8 useraccesscodes">
+            <div *ngFor="let accesscodes of accessCodes; let i = index">
+              <label class="checkbox-container">
+                <div class="inline-block-container  accesscodes p-1">
+                  <input type="checkbox" class="code-checkbox"
+                    [ngClass]="{'checked-background': existsInAccessCodesForItem(accesscodes)}"
+                    [checked]="existsInAccessCodesForItem(accesscodes)" (change)="toggleAccessCode(accesscodes)"
                     [ngClass]="{'checked-background': existsInAccessCodesForItem(accesscodes)}">
-
-                  <p class="code-item">{{ accesscodes.sAccessCode }}</p>
-                </label>
-              </div>
+                  <span class="code-item">{{ accesscodes.sAccessCode }}</span>  
+                  <span>{{ accesscodes.SAccessDescription }}</span>
+                </div>
+              </label>
             </div>
           </div>
         </div>
       </div>
+     
       <button (click)="saveSelectedAccessCodes()">Save</button>
     </mat-tab>
     <mat-tab label="Available Products">

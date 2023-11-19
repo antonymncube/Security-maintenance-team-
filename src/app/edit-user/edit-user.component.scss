@@ -1,258 +1,318 @@
  /* Your existing styles here */
 
  .mat-tab-group {
-  margin-bottom: 48px;
-}
+   margin-bottom: 48px;
+ }
 
-form {
-  width: 80rem;
-  margin: 0 auto;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-top: 50px;
-  padding-top: 5px;
-}
+ form {
+   width: 80rem;
+   margin: 0 auto;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   margin-top: 50px;
+   padding-top: 5px;
+ }
 
-// .red-checkbox {
-//   background-color: blue;
-// }
+ // .red-checkbox {
+ //   background-color: blue;
+ // }
 
-.checked-background {
-  background-color: red !important; ;
-}
+ .checked-background {
+   background-color: red !important;
+   ;
+ }
 
 
-.checkbox-label {
-  display: inline-block;
-  margin-right: 10px; /* Adjust the margin as needed */
-}
 
-.has-error {
-  input {
-    border: 2px solid red; // Red border for the input fields
-  }
+ .checkbox-label {
+   display: inline-block;
+   margin-right: 10px;
+   /* Adjust the margin as needed */
+ }
 
-  .text-danger {
-    color: red; // Red text color for error messages
-  }
-}
+ .has-error {
+   input {
+     border: 2px solid red; // Red border for the input fields
+   }
 
-input.ng-invalid.ng-dirty.ng-touched {
-  border: 1px solid red;
-}
+   .checkbox-container {
+     display: block;
+     /* Ensure block display for the label */
+     margin-bottom: 10px;
+     /* Add some margin for spacing */
+   }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
+   .inline-block-container {
+     display: inline-block;
+     width: 100%;
+     white-space: nowrap;
+     /* Prevent text from wrapping to the next line */
+   }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
+   .scrollable {
+     overflow-y: auto;
+     max-height: 100px;
+     border: 1px solid red;
+     /* reduced border thickness for better visibility */
+     padding: 10px;
+     background-color: #f8f8f8;
+     /* added background color for better visibility */
+   }
 
-button {
-  padding: 10px 20px;
-  background-color: #2F3351;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  margin-right: 69rem;
-}
 
-.button:disabled{
-  padding: 10px 20px;
-  background-color: rgba(47, 51, 81, 0.6); 
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor:not-allowed;
-  margin-right: 2rem;
-}
 
-.check{
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
 
-.check1{
-  width: 43%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
+   .inline-block-container {
+     display: inline-block;
+   }
 
-// button:disabled {
-//   background-color: #ccc;
-//   cursor: not-allowed;
-// }
+   .text-danger {
+     color: red; // Red text color for error messages
+   }
+ }
 
-.form-group {
-  display: inline;
-  // margin-right: 10px; /* Adjust this margin as needed to separate the elements */
-}
+ input.ng-invalid.ng-dirty.ng-touched {
+   border: 1px solid red;
+ }
 
-.totalDetails {
-  display: flex important;
-  justify-content: space-between important;
-}
+ label {
+   display: block;
+   margin-bottom: 5px;
+   font-weight: bold;
+ }
 
-.form-group {
-  flex: 1 important;
-}
+ input[type="text"],
+ input[type="password"],
+ input[type="email"],
+ input[type="tel"],
+ textarea {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 10px;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+ }
 
-.totalDetails {
-  display: flex;
-}
+ button {
+   padding: 10px 20px;
+   background-color: #2F3351;
+   color: #fff;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+   margin-right: 69rem;
+ }
 
-.totalDetails .userdetails,
-.totalDetails .contact-details {
-  flex: 1;
-  padding: 0 10px;  
-}
+ .button:disabled {
+   padding: 10px 20px;
+   background-color: rgba(47, 51, 81, 0.6);
+   color: #fff;
+   border: none;
+   border-radius: 3px;
+   cursor: not-allowed;
+   margin-right: 2rem;
+ }
 
-.inputtag{
-  width: 14rem;
-}
+ .check {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 10px;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+ }
 
-.description{
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-.totalDetails{
-  margin-top: 20px;
-}
+ .check1 {
+   width: 43%;
+   padding: 10px;
+   margin-bottom: 10px;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+ }
 
-.contactdetails{
-  margin-right: 30rem;
-}
+ // button:disabled {
+ //   background-color: #ccc;
+ //   cursor: not-allowed;
+ // }
 
-// .my-custom-class{
-//   border: 30px solid red !important;
-//   background-color: aquamarine;
+ .form-group {
+   display: inline;
+   // margin-right: 10px; /* Adjust this margin as needed to separate the elements */
+ }
 
-// }
+ .totalDetails {
+   display: flex important;
+   justify-content: space-between important;
+ }
 
-:host ::ng-deep .mat-tab-label-active {
-  border-width: 9px;
-  border-style: solid;
-  border-color: orange;
-}
+ .form-group {
+   flex: 1 important;
+ }
 
-.mat-mdc-tab-header { border: 1px solid red; }
- 
+ .totalDetails {
+   display: flex;
+ }
 
-.dialog-content {
-  padding: 20px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center;
-}
+ .totalDetails .userdetails,
+ .totalDetails .contact-details {
+   flex: 1;
+   padding: 0 10px;
+ }
 
-.access-groups {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  padding: 10px;
-  height: 100px;
-}
+ .inputtag {
+   width: 14rem;
+ }
 
-.access-group {
-  cursor: pointer;
-  
-  
-}
+ .description {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 10px;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+ }
 
-.access-group-name {
-  font-weight: bold;
-  // height: 30px;
-}
+ .totalDetails {
+   margin-top: 20px;
+ }
 
-.col {
-  display: inline-block;
-  width: 49%;
-}
+ .contactdetails {
+   margin-right: 30rem;
+ }
 
-.col1 {
-  margin-right: 2%;
-}
+ // .my-custom-class{
+ //   border: 30px solid red !important;
+ //   background-color: aquamarine;
 
-.col2 {
-  margin-left: 2%;
-}
+ // }
 
-.access-codes {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  height: 100px;
-}
+ :host ::ng-deep .mat-tab-label-active {
+   border-width: 9px;
+   border-style: solid;
+   border-color: orange;
+ }
 
-.access-code {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
+ .mat-mdc-tab-header {
+   border: 1px solid red;
+ }
 
-.scrollable {
-  max-height: 200px;
+
+ .dialog-content {
+   padding: 20px;
+   background-color: #f0f0f0;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   text-align: center;
+ }
+
+ .access-groups {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   background-color: #fff;
+   padding: 10px;
+   height: 100px;
+ }
+
+ .access-group {
+   cursor: pointer;
+
+
+ }
+
+ .access-group-name {
+   font-weight: bold;
+   // height: 30px;
+ }
+
+ .col {
+   display: inline-block;
+   width: 49%;
+ }
+
+ .col1 {
+   margin-right: 2%;
+ }
+
+ .useraccesscodes {
+   overflow-y: auto;
+   max-height: 200px;
+   padding: 10px;
+   background-color: #f8f8f8;
+ }
+ .useraccessgroup{
   overflow-y: auto;
+   max-height: 200px;
+   padding: 10px;
+   background-color: #f8f8f8;
+ }
+
+ .row1 {
+  overflow-x: hidden;
 }
 
-.access-group-item.clicked {
-  background-color: rgb(115, 115, 238); /* Set your desired background color */
-  color: white; /* Set text color to improve visibility */
-  cursor: pointer; /* Change cursor to indicate clickability */
-}
+ .col2 {
+   margin-left: 2%;
+ }
 
-.code-item {
-  width: 150px; /* Adjust the width as needed */
-  display: inline-block;
-}
+ .access-codes {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   height: 100px;
+ }
 
-.description-item {
-  display: inline-block;
+ .access-code {
+   display: flex;
+   align-items: center;
+   margin-bottom: 10px;
+ }
 
-}
+ .scrollable {
+   max-height: 200px;
+   overflow-y: auto;
+ }
 
- 
-.readonly-field {
-  background-color: #f2f2f2;
-  color: #888;
-  pointer-events: none;
-}
+ .access-group-item.clicked {
+   background-color: rgb(115, 115, 238);
+   /* Set your desired background color */
+   color: white;
+   /* Set text color to improve visibility */
+   cursor: pointer;
+   /* Change cursor to indicate clickability */
+ }
 
-.buttons1 {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  width: 100%; /* Adjust the width as needed */
-}
+ .code-item {
+   width: 150px;
+   /* Adjust the width as needed */
+   display: inline-block;
+ }
 
-button.cancel-btn,
-button.save-btn {
-  width: 48%; /* Adjust the width as needed */
-  right: 0;
-}
+ .description-item {
+   display: inline-block;
+
+ }
+
+
+ .readonly-field {
+   background-color: #f2f2f2;
+   color: #888;
+   pointer-events: none;
+ }
+
+ .buttons1 {
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   /* Adjust the width as needed */
+ }
+
+ button.cancel-btn,
+ button.save-btn {
+   width: 48%;
+   /* Adjust the width as needed */
+   right: 0;
+ }

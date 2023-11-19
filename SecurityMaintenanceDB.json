@@ -834,7 +834,7 @@
       "mobile": "0671402936",
       "agent": "Simply Health",
       "status": true,
-      "lastUpdated": "2023-11-18T11:13:42.048Z",
+      "lastUpdated": "2023-11-19T09:01:32.297Z",
       "language": "",
       "selectedProducts": [
         "Corporate Dental"
@@ -1082,9 +1082,7 @@
     {
       "id": "2017",
       "AccessGroups": [
-        "Underwriting con",
-        "Accountent",
-        "Broker Pack"
+        "Underwriting con"
       ]
     },
     {
@@ -1292,22 +1290,10 @@
     {
       "accesscodes": [
         "ACCEPTBBWARN",
-        "API_DOC_BLOCK",
-        " API_DOC_BLOCK",
-        "CL_DEL_CLAIMANT",
-        "CL_EXCEL_PRINT",
-        " CL_STALECHEQUE",
-        "CL_FINALISECLMT",
-        "CL_INCIDENT",
-        "CL_IND_APR",
-        "CL_NEGCLAIMBAL",
-        "CL_RECOVERY",
-        "CL_REQUISITION",
-        "CL_REVERSEPAY",
-        "CL_UNDMAN",
         "CL_EXCHANGERATE",
-        "AGENT_MAINT",
-        "API_CLAIM_DU"
+        "API_CLAIM_DU",
+        "API_DOC_BLOCK",
+        "API_DOC_4"
       ],
       "id": "2017"
     },
