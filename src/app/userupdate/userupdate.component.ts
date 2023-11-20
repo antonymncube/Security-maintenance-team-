@@ -64,7 +64,7 @@ export class UserupdateComponent {
       // console.log("here is respond mnaka", res);
     });
 
-   
+
 
     // this.accessCodes = data;
     this.accesscodes();
@@ -81,7 +81,7 @@ export class UserupdateComponent {
       department: ['', [Validators.required]],
       agent: ['', [Validators.required]],
       language: ['',],
-      
+
     });
   }
 
@@ -164,7 +164,7 @@ export class UserupdateComponent {
     if (this.userForm.valid) {
       if (this.checkPasswordMatch()) {
         this.PasswordHashingService.hashPassword(this.userForm.value.password).then((hashedPassword) => {
-          this.apiService.checkUsernameExist(this.userForm.value.username).subscribe((exists: boolean) => {
+          this.apiService.checkUsernameExisttt(this.userForm.value.username).subscribe((exists: boolean) => {
             if (exists) {
               alert('Username already exists. Please choose a different username.');
             } else {
@@ -183,7 +183,7 @@ export class UserupdateComponent {
 
               this.saveSelectedAccessCodes()
               this.updateUserWithSelectedProducts();
-              
+
 
               this.apiService.postdata(this.user).subscribe((postResponse: any) => {
 
@@ -203,7 +203,7 @@ export class UserupdateComponent {
   markFormGroupTouched(formGroup: FormGroup) {
     Object.values(formGroup.controls).forEach(control => {
       control.markAsTouched();
-  
+
       if (control instanceof FormGroup) {
         this.markFormGroupTouched(control);
       }
@@ -289,7 +289,7 @@ export class UserupdateComponent {
       id: this.user.id,
       accesscodes : accessCodesArray1
     }
-   
+
     this.apiService.addUserAccessCodes(userAccesscodes).subscribe(
       (response: any) => {
         // console.log('Success:', response);
@@ -300,7 +300,7 @@ export class UserupdateComponent {
     );
     this.apiService.addUserGroups(userAccessGroups).subscribe(
       (res: any) => {
-        
+
       },
       (error: any) => {
         // Handle errors
