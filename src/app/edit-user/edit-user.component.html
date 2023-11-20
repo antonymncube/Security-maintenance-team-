@@ -1,4 +1,4 @@
-<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form1">
+<!-- <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form1">
 
   <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" class="my-custom-class">
     <mat-tab label="User-Details">
@@ -107,14 +107,173 @@
         </div>
       </div>
     </mat-tab>
-    <mat-tab label="Security Access">
-      <div class="dialog-content">
-        <h2>Security Access Groups and Codes</h2>
-        <div class="row">
-          <div class="col">
-            <div class="access-groups scrollable">
-              <div *ngFor="let group of accessGroup; let i = index" class="access-group">
-                <div class="access-group-item" [ngClass]="{'clicked': group.selected}">
+    <mat-tab label="Security Access ">
+    
+        <h2 style="margin-left: 250px;">Security Access Groups and Codes</h2>
+        <div class="container"> 
+        <div class="row row1 p-1 no-gutters">
+          <div class="col-4 useraccessgroup ">
+            <div *ngFor="let group of accessGroup; let i = index" class="access-group p-1">
+              <div class="access-group-item">
+                <div class="access-group-name">
+                  <label>
+                    <input type="checkbox" [checked]="group.selected" (change)="toggleAccessCodes(i)">
+                    <strong>{{ group.sAccessGroup }}</strong>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-8 useraccesscodes">
+            <div *ngFor="let accesscodes of accessCodes; let i = index">
+              <label class="checkbox-container">
+                <div class="inline-block-container  accesscodes p-1">
+                  <input type="checkbox" class="code-checkbox"
+                    [ngClass]="{'checked-background': existsInAccessCodesForItem(accesscodes)}"
+                    [checked]="existsInAccessCodesForItem(accesscodes)" (change)="toggleAccessCode(accesscodes)"
+                    [ngClass]="{'checked-background': existsInAccessCodesForItem(accesscodes)}">
+                  <span class="code-item">{{ accesscodes.sAccessCode }}</span>  
+                  <span>{{ accesscodes.SAccessDescription }}</span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <button (click)="saveSelectedAccessCodes()">Save</button>
+    </mat-tab>
+    <mat-tab label="Available Products">
+      <app-available-products [availableProducts]="userForm.get('selectedProducts')?.value"
+        (selectedProducts)="updateSelectedProducts($event)"></app-available-products>
+    </mat-tab>
+  </mat-tab-group>
+  <div class="buttons1">
+    <button class="cancel-btn" type="submit" routerLink="/home">Cancel</button>
+      <button class="save-btn" type="submit" [disabled]="userForm.invalid">Save</button>
+  </div>
+</form> -->
+ 
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form1">
+    <div class="tabs">
+      <div></div>
+      <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
+      <label for="tab1" class="tabs__label">Details</label>
+      <div class="tabs__content">
+        <div class="totalDetails">
+          <div class="userdetails form-group">
+            <div class="form-group">
+              <label for="username" class="label-width">Username:</label>
+              <div class="inputtag">
+                <input type="text" id="username" formControlName="username" class="readonly-field">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="fullname" class="label-width">Full Name:</label>
+              <div class="inputtag">
+                <input type="text" id="fullname" formControlName="fullname">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="password" class="label-width">Password:</label>
+              <div class="inputtag">
+                <input type="password" id="password" formControlName="password" class="readonly-field">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="label-width">Email:</label>
+              <div class="inputtag">
+                <input type="email" id="email" formControlName="email"
+                  [ngClass]="{ 'is-invalid': isControlInvalid('email') }">
+                <div *ngIf="isControlInvalid('email')" class="invalid-feedback">
+                  Email is required and should be in a valid format.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contactdetails form-group">
+            <div class="form-group">
+              <label for="agent" class="label-width">Agent:</label>
+              <select id="agent" class="check" formControlName="agent">
+                <option value="Simply Health">Simply Health</option>
+                <option value="Genasys">Genasys</option>
+                <option value="Standard Bank">Standard Bank</option>
+              </select>
+              <div *ngIf="isControlInvalid('agent')" class="invalid-feedback">
+                Agent is required.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="department" class="label-width">Department:</label>
+              <select id="department" class="check" formControlName="department">
+                <option value="HR">HR</option>
+                <option value="IT">IT</option>
+                <option value="Sales">Sales</option>
+              </select>
+              <div *ngIf="isControlInvalid('department')" class="invalid-feedback">
+                Department is required.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="homephone" class="label-width">Home-Phone:</label>
+              <div class="inputtag">
+                <input type="text" id="homephone" formControlName="homephone"
+                  [ngClass]="{ 'is-invalid': isControlInvalid('homephone') }">
+                <div *ngIf="isControlInvalid('homephone')" class="invalid-feedback">
+                  Home-Phone is not valid.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="description" class="label-width">description:</label>
+              <div class="inputtag">
+                <input type="text" id="description" formControlName="description"
+                  [ngClass]="{ 'is-invalid': isControlInvalid('description') }">
+                <div *ngIf="isControlInvalid('description')" class="invalid-feedback">
+                  Home-Phone is not valid.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="language" class="label-width">Language:</label>
+              <select id="language" class="check" formControlName="language">
+                <option value="English">English</option>
+                <option value="Afrikaans">Afrikaans</option>
+                <option value="Native">Native</option>
+              </select>
+              <div *ngIf="isControlInvalid('language')" class="invalid-feedback">
+                Language is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mobile" class="label-width">Mobile:</label>
+              <div class="inputtag">
+                <input type="text" id="mobile" formControlName="mobile"
+                  [ngClass]="{ 'is-invalid': isControlInvalid('mobile') }">
+                <div *ngIf="isControlInvalid('mobile')" class="invalid-feedback">
+                  Mobile is not valid.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
+      <label for="tab2" class="tabs__label">Access Codes</label>
+      <div class="tabs__content">
+        <div class="container">
+          <div class="row row1 p-1 no-gutters">
+            <div class="col-4 useraccessgroup ">
+              <div *ngFor="let group of accessGroup; let i = index" class="access-group p-1">
+                <div class="access-group-item">
                   <div class="access-group-name">
                     <label>
                       <input type="checkbox" [checked]="group.selected" (change)="toggleAccessCodes(i)">
@@ -124,28 +283,32 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col bg-white p-0">
-            <div class="access-codes scrollable">
+            <div class="col-8 useraccesscodes">
               <div *ngFor="let accesscodes of accessCodes; let i = index">
-                <label class="checkbox-container" [ngClass]="{'red-checkbox': accesscodes.selected}">
-                  <input type="checkbox" class="code-checkbox" [checked]="existsInAccessCodesForItem(accesscodes)" (change)="toggleAccessCode(accesscodes)">
-                  <span class="code-item">{{ accesscodes.sAccessCode }}</span>
+                <label class="checkbox-container">
+                  <div class="inline-block-container  accesscodes p-1">
+                    <input type="checkbox" class="code-checkbox"
+                      [ngClass]="{'checked-background': existsInAccessCodesForItem(accesscodes)}"
+                      [checked]="existsInAccessCodesForItem(accesscodes)" (change)="toggleAccessCode(accesscodes)"
+                      [ngClass]="{'checked-background': existsInAccessCodesForItem(accesscodes)}">
+                    <span class="code-item">{{ accesscodes.sAccessCode }}</span>
+                    <span>{{ accesscodes.SAccessDescription }}</span>
+                  </div>
                 </label>
               </div>
             </div>
           </div>
         </div>
+
+      
       </div>
-      <button (click)="saveSelectedAccessCodes()">Save</button>
-    </mat-tab>
-    <mat-tab label="Available Products">
-      <app-available-products [availableProducts]="userForm.get('selectedProducts')?.value"
-        (selectedProducts)="updateSelectedProducts($event)"></app-available-products>
-    </mat-tab>
-  </mat-tab-group>
-  <div class="buttons1">
-    <!-- <button class="cancel-btn" type="submit" routerLink="/home">Cancel</button>
-      <button class="save-btn" type="submit" [disabled]="userForm.invalid">Save</button> -->
-  </div>
-</form>
+      <input type="radio" class="tabs__radio" name="tabs-example" id="tab3">
+      <label for="tab3" class="tabs__label">Available products</label>
+      <div class="tabs__content">
+        <app-available-products [availableProducts]="userForm.get('selectedProducts')?.value"
+          (selectedProducts)="updateSelectedProducts($event)"></app-available-products>
+          <button (click)="saveSelectedAccessCodes()">Save</button>
+      </div>
+    </div>
+  </form>
+ 

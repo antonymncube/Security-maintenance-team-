@@ -115,23 +115,20 @@ export class EditUserComponent implements OnInit {
       this.apiService.getUserAccessCodes(this.id).subscribe((res1: any) => {
         this.UserAccescodes = res1.accesscodes;
         this.selectedAccessCodes = this.UserAccescodes
-        // console.log('is it an object of a user', this.UserAccescodes)
-        this.accessCodes = this.accessCodes.map((res)=>{
-          if(this.UserAccescodes.includes(res.sAccessCode)){
+        console.log('is it an object of a user', this.UserAccescodes)
+        this.accessCodes = this.accessCodes.map((res) => {
+          if (this.UserAccescodes.includes(res.sAccessCode)) {
             res.selected = true;
-            
+
           }
           return res
         })
 
       });
 
-    
-  
-      console.log('the selected is here ', this.accessCodes)
     });
 
-  
+
 
 
 
@@ -142,7 +139,6 @@ export class EditUserComponent implements OnInit {
         this.apiService.getAccessGroup().subscribe(res => {
           this.UserAccessGroups = data.AccessGroups;
           this.accessGroup = res;
-          // console.log('After ', this.UserAccessGroups)
 
           this.accessGroup.forEach(group => {
             // Check if group.sAccessGroup exists in the AccessGroups array
@@ -226,18 +222,66 @@ export class EditUserComponent implements OnInit {
   existingCodes() {
 
   }
+  checkedCodes: Set<string> = new Set<string>();
 
+  isChecked(accesscode: any): boolean {
+    return this.checkedCodes.has(accesscode.sAccessCode);
+  }
+
+  checkedAccessCodes: any[] = [];
 
   toggleAccessCodes(index: number) {
     this.resetAccessStatus();
     this.accessGroup[index].selected = !this.accessGroup[index].selected;
     this.selectedGroupId = this.accessGroup[index].id;
-    const accessCodesInGroup = this.accessGroup[index].sAccessCodes;
 
+    console.log('Checked Access Codes:', this.checkedAccessCodes);
+    if (!this.accessGroup[index].selected) {
+      this.accessGroup.map(res => {
+        if (this.accessGroup[index].sAccessGroup == res.sAccessGroup)
+
+          this.UserAccescodes = this.UserAccescodes.filter(code => !res.sAccessCodes.includes(code));
+        this.selectedAccessCodes = this.selectedAccessCodes.filter(code => !res.sAccessCodes.includes(code))
+      })
+    } else {
+      const selectedAccessGroup = this.accessGroup[index];
+      this.UserAccescodes = this.UserAccescodes.concat(selectedAccessGroup.sAccessCodes);
+      this.selectedAccessCodes = this.selectedAccessCodes.concat(selectedAccessGroup.sAccessCodes)
+    }
+
+
+
+    console.log("here are codes all  ", this.selectedAccessCodes)
+
+
+
+
+
+    if (!this.accessGroup[index].selected) {
+
+
+      this.selectedAccessCodes.forEach(selectedCode => {
+        // Check if the selected code is present in the accessCodes array
+        const matchingCode = this.accessCodes.find(code => code.sAccessCode === selectedCode);
+
+        // If a matching code is found, set selected to false
+        if (matchingCode !== undefined) {
+          // Assuming there is a 'selected' property in each access code object
+          matchingCode.selected = false; 
+        }
+      });
+    }
+    else {
+
+    }
+    const accessCodesInGroup = this.accessGroup[index].sAccessCodes;
+  
     for (let i = 0; i < accessCodesInGroup.length; ++i) {
-      for (let j = 0; j < this.SecLookup.length; ++j) {
-        if (accessCodesInGroup[i] === this.SecLookup[j].sAccessCode) {
-          this.SecLookup[j].status = true;
+      for (let j = 0; j < this.accessCodes.length; ++j) {
+        if (accessCodesInGroup[i] === this.accessCodes[j].sAccessCode.code) {
+          // this.SecLookup[j].status = true;
+          this.accessCodes[j].sAccessCode.status = true
+          console.log(this.accessCodes[j].sAccessCode.status)
           break;
         }
       }
@@ -279,68 +323,171 @@ export class EditUserComponent implements OnInit {
       // If the access code is checked, add it to both arrays
       this.selectedAccessCodes.push(accesscode.sAccessCode);
       // this.solvingarray.push(accessCodeValue);
-      console.log('This is the selected  ', this.selectedAccessCodes)
+      // console.log('This is the selected  ', this.selectedAccessCodes)
+      console.log("here is the accescodes from accesscode ", this.selectedAccessCodes)
+
     } else {
-     
+
       // If the access code is unchecked, remove it from both arrays
       const selectedIndex = this.selectedAccessCodes.indexOf(accesscode.sAccessCode);
       if (selectedIndex !== -1) {
         this.selectedAccessCodes.splice(selectedIndex, 1);
 
+        //  console.log ('You unchecked this now baba ',accesscode.selected)
       }
 
-      console.log('you unchecked somehting', this.selectedAccessCodes)
+      // console.log('you unchecked somehting', this.selectedAccessCodes)
 
     }
     accesscode.selected = !accesscode.selected;
+
+    console.log('LETS SEE SOMETHING  ' + this.selectedAccessCodes)
+    // this.saveSelectedAccessCodes();
+
   }
 
 
   saveSelectedAccessCodes(): void {
+    const updatedcodesset = new Set();
+    let accessCodesSet = new Set();
+
+    console.log("The lenght of the access codes ", this.selectedAccessCodes)
+
+
+    this.accessGroup.map((res) => {
+      if (res.selected) {
+        updatedcodesset.add(res.sAccessGroup)
+
+      }
+    })
+
+    const updatedcodesArray = Array.from(updatedcodesset);
+
+
+    this.apiService.getAccessGroup().subscribe((res: any) => {
+      // console.log('how about here ke ', res);
+      const groupaccesscodes = new Set<string>();
+
+      for (let index = 0; index < res.length; index++) {
+        const accessGroup = res[index];
+        const accessgroup1 = JSON.stringify(accessGroup, null, 2);
+        const parsedObject = JSON.parse(accessgroup1);
+
+        // console.log('Outer Loop: ', parsedObject.sAccessGroup);
+
+        // Inner loop
+        for (let innerIndex = 0; innerIndex < updatedcodesArray.length; innerIndex++) {
+          if (parsedObject.sAccessGroup == updatedcodesArray[innerIndex]) {
+            parsedObject.sAccessCodes.forEach((res: string) => {
+              groupaccesscodes.add(res);
+            });
+
+
+            console.log('this is what happens mshana ', groupaccesscodes);
+
+          }
+        }
+      }
+    });
+
+
+
+    this.apiService.updateUserAccessgroup(this.id, { id: this.id, AccessGroups: updatedcodesArray }).subscribe(
+      (res: any) => {
+        // Handle successful response
+        // console.log('Update successful:', res);
+
+        // Check if any of the updated access codes exist in accessGroup
+        (updatedcodesArray as string[]).forEach(updatedCode => {
+          const groupContainingCode = this.accessGroup.find(group => group.sAccessGroup.includes(updatedCode));
+
+          if (groupContainingCode) {
+            // Access group exists, log a message and loop through access codes
+            console.log(` exists in group ${groupContainingCode.sAccessGroup}.`);
+
+            groupContainingCode.sAccessCodes.forEach(accessCode => {
+              console.log('accescodes', accessCode)
+              this.selectedAccessCodes.push(accessCode)
+              accessCodesSet.add(accessCode)
+            });
+          } else {
+            // console.log(`Access code ${updatedCode} does not exist in any group.`);
+          }
+        });
+      },
+      (error: any) => {
+        // Handle error response
+        console.error('Update failed:', error);
+      }
+    );
+
+
+
+
+
+
+
+
+
+    // console.log( 'here are the saved codes ',updatedcodesArray);
+    // this.apiService.updateAccessgroup(this.id,)
 
     const selectedCodes = this.accessCodes.filter((code: any) => code.selected);
     const selectedGroups = this.accessGroup.filter(group => group.selected);
     const accessGroupsOnly = selectedGroups.map(group => group.sAccessGroup);
-    const accessCodesArray: string[] = selectedGroups.reduce((acc, group) => acc.concat(group.sAccessCodes), [] as string[]);
+    let accessCodesArray: string[] = selectedGroups.reduce((acc, group) => acc.concat(group.sAccessCodes), [] as string[]);
+    // console.log('Ahead save  ',this.selectedAccessCodes)
+    // console.log('Ahead save  ', this.selectedAccessCodes);
 
-    for (const codes of this.selectedAccessCodes) {
-      accessCodesArray.push(codes.sAccessCode);
-    }
+    // for (const codes of this.selectedAccessCodes) {
+    //   if (codes.sAccessCode && codes.sAccessCode.length > 0) {
+    //     console.log('Ahead save  ', codes.sAccessCode);
 
-    const accessCodesSet = new Set(accessCodesArray);
+    //     // Using concat method to flatten the array
+    //     accessCodesArray = accessCodesArray.concat(codes.sAccessCode);
+
+    //     // Alternatively, using the spread operator
+    //     // accessCodesArray.push(...codes.sAccessCode);
+    //   }
+    // }
+    this.selectedAccessCodes.map(res => {
+
+      accessCodesArray.push(res)
 
 
-    const accessCodesArray1 = Array.from(accessCodesSet);
+    })
+    console.log('lets see now  buti boi' + accessCodesArray)
+
+    accessCodesSet.add(accessCodesArray)
+
+
+
+    let accessCodesArray1 = Array.from(accessCodesSet);
+
+
     const userAccessGroups = {
       AccessGroups: accessGroupsOnly,
-      id: this.user.id
+      id: this.id
     }
-
+    let uniqueCodes = [...new Set(this.selectedAccessCodes)];
+    this.selectedAccessCodes.push(...accessCodesArray1.filter(code => !uniqueCodes.includes(code)));
     const userAccesscodes = {
-      id: this.user.id,
+      id: this.id,
       accesscodes: accessCodesArray1
     }
-
-    this.apiService.addUserAccessCodes(userAccesscodes).subscribe(
-      (response: any) => {
-        console.log('Success:', response);
-      },
-      (error: any) => {
-        console.error('Error:', error);
-      }
-    );
-
-
-
-    this.apiService.addUserGroups(userAccessGroups).subscribe(
+    accessCodesArray1 = [...new Set(accessCodesArray1.flat())];
+    console.log('check for duplicates ', accessCodesArray1)
+    this.apiService.updateUserAccessCodes(this.id, { accesscodes: accessCodesArray1 }).subscribe(
       (res: any) => {
-
+        // Handle successful response
+        console.log('Update successful:', res);
       },
       (error: any) => {
-        // Handle errors
-        console.error(error);
+        // Handle error
+        console.error('Update failed:', error);
       }
     );
+
   }
 
 }

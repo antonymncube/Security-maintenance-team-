@@ -122,6 +122,20 @@ export class ApiServiceService {
       map((res: any) => res)
     );
   }
+ 
+  updateUserAccessgroup(id: string, data: any): Observable<any> {
+    const url = `http://localhost:3000/SecUserAccessGroups/${id}`;
+    return this.http.put(url, data).pipe(
+      map((res: any) => res)
+    );
+  }
+
+  updateUserAccessCodes(id: string, data: any): Observable<any> {
+    const url = `http://localhost:3000/SecUserAccess/${id}`;
+    return this.http.put(url, data).pipe(
+      map((res: any) => res)
+    );
+  }
 
   // Get user details based on ID
   getUserDetails(id: string): Observable<any> {

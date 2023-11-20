@@ -165,16 +165,7 @@
     {
       "sAccessGroup": "Underwriting con",
       "sAccessCodes": [
-        "ACCEPTBBWARN",
-        "API_DOC_BLOCK",
-        "API_DOC_CONF",
-        "CL_INCIDENT",
-        "CL_IND_DEC",
-        "CL_NEGCLAIMBAL",
-        "CL_PAYSEC_LEV2",
-        "CL_SAVECLAIM",
-        "AGENT_COMM_PAY",
-        " CL_FINALISECLMT"
+        "ACCEPTBBWARN"
       ],
       "id": "2"
     },
@@ -225,10 +216,6 @@
       "sAccessGroup": "Accounts Clerk",
       "sAccessCodes": [
         "CL_IND_DEC",
-        "CL_PAYSEC_LEV3",
-        "CL_RECOVERY",
-        "CL_SALVAGE",
-        "CL_SAVECLAIM",
         "AGENT_COMM_PAY"
       ]
     }
@@ -769,9 +756,8 @@
       "mobile": "0781954154",
       "agent": "Standard Bank",
       "status": true,
-      "lastUpdated": "2023-11-15T08:03:12.040Z",
+      "lastUpdated": "2023-11-16T12:25:10.936Z",
       "language": "",
-      "location": "",
       "selectedProducts": [
         "Dental Cover Plan",
         "Corporate Dental"
@@ -789,12 +775,109 @@
       "mobile": "0671802963",
       "agent": "Standard Bank",
       "status": true,
-      "lastUpdated": "2023-11-15T08:22:04.360Z",
+      "lastUpdated": "2023-11-16T14:05:11.145Z",
       "language": "",
-      "location": "",
       "selectedProducts": [
         "Group Cash Plan",
         "Corporate Dental_old"
+      ]
+    },
+    {
+      "id": "2362",
+      "username": "xolliee",
+      "fullname": "Mitch",
+      "description": " Married",
+      "password": "$2a$10$JV4IgAwFhrNsJt2hMzZlNep89SOfdl/hgSGgVG7LgtnudJvccguPi",
+      "department": "HR",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "agent": "Simply Health",
+      "status": true,
+      "lastUpdated": "2023-11-17T18:49:32.699Z",
+      "language": "",
+      "location": "",
+      "selectedProducts": [
+        "Corporate Dental_old",
+        "Consumer Dental"
+      ]
+    },
+    {
+      "id": "7098",
+      "username": "xollieer",
+      "fullname": "Mitch",
+      "description": " Married",
+      "password": "$2a$10$1tkUX.zzovan8q.X8B1ai.0tiavo4dVi6n3oC.3y5213txcR93/6a",
+      "department": "HR",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "agent": "Simply Health",
+      "status": true,
+      "lastUpdated": "2023-11-17T18:49:52.511Z",
+      "language": "",
+      "location": "",
+      "selectedProducts": [
+        "Corporate Dental_old",
+        "Consumer Dental"
+      ]
+    },
+    {
+      "id": "2017",
+      "username": "Mitchonon",
+      "fullname": "Antony",
+      "description": "tester",
+      "password": "$2a$10$wFWBpC2UuBr/psokLwy7ueiSlIp604xQbQWNVeT8usUinsyuZnaAS",
+      "department": "HR",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "0671402936",
+      "agent": "Simply Health",
+      "status": true,
+      "lastUpdated": "2023-11-19T09:01:32.297Z",
+      "language": "",
+      "selectedProducts": [
+        "Corporate Dental"
+      ]
+    },
+    {
+      "id": "7074",
+      "username": "Mitchjjghj",
+      "fullname": "Mitch",
+      "description": "we are bacl",
+      "password": "$2a$10$fI8mKsAMEGzzVQwSqiAykelY8VKCba/sFen6655GddxCdbsgrGmXS",
+      "department": "IT",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0781638594",
+      "mobile": "0781954154",
+      "agent": "Standard Bank",
+      "status": true,
+      "lastUpdated": "2023-11-18T11:57:54.154Z",
+      "language": "",
+      "location": "",
+      "selectedProducts": [
+        "Dental Cover Plan",
+        "Corporate Dental"
+      ]
+    },
+    {
+      "id": "2890",
+      "username": "Mitchjjghjkkjkjk",
+      "fullname": "Mitch",
+      "description": "we are bacl",
+      "password": "$2a$10$sMmhHQPJ2pmO7JHENz2Bm.LLlr005/Xn4o1YdIFpu19JZh1CRekr6",
+      "department": "IT",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0781638594",
+      "mobile": "0781954154",
+      "agent": "Standard Bank",
+      "status": true,
+      "lastUpdated": "2023-11-18T11:58:13.766Z",
+      "language": "",
+      "location": "",
+      "selectedProducts": [
+        "Dental Cover Plan",
+        "Corporate Dental"
       ]
     }
   ],
@@ -978,11 +1061,84 @@
       "id": "9205"
     },
     {
+      "id": "6462",
+      "AccessGroups": [
+        "Accountent",
+        "Claim-Admin"
+      ]
+    },
+    {
+      "AccessGroups": [
+        "Claim-Admin"
+      ],
+      "id": "2362"
+    },
+    {
+      "AccessGroups": [
+        "Claim-Admin"
+      ],
+      "id": "7098"
+    },
+    {
+      "id": "2017",
+      "AccessGroups": [
+        "Underwriting con"
+      ]
+    },
+    {
       "AccessGroups": [
         "Underwriting con",
-        "Broker Pack"
+        "Accounts Clerk"
       ],
-      "id": "6462"
+      "id": "tBEJ17Y"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con"
+      ],
+      "id": "nJKBLT2"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con",
+        "Accountent"
+      ],
+      "id": "4f_TPCZ"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con",
+        "Accountent"
+      ],
+      "id": "0iTuuh-"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con",
+        "Accountent",
+        "Claim-Admin"
+      ],
+      "id": "jKm26YA"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con",
+        "Accountent",
+        "Claim-Admin"
+      ],
+      "id": "tkwJgRP"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con"
+      ],
+      "id": "7074"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con"
+      ],
+      "id": "2890"
     }
   ],
   "SecUserAccess": [
@@ -1037,24 +1193,6 @@
     },
     {
       "id": "QkIHHhU",
-      "accesscodes": [
-        null
-      ]
-    },
-    {
-      "id": "c-CLxYW",
-      "accesscodes": [
-        null
-      ]
-    },
-    {
-      "id": "rBAbTe2",
-      "accesscodes": [
-        null
-      ]
-    },
-    {
-      "id": "AvZF3Hn",
       "accesscodes": [
         null
       ]
@@ -1121,6 +1259,154 @@
         "AGENT_MAINT",
         "API_CLAIM_DU",
         " API_DOC_BLOCK"
+      ]
+    },
+    {
+      "id": "2362",
+      "accesscodes": [
+        "AGENT_MAINT",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_DOC_4",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_SALVAGE",
+        "CL_UNDMAN"
+      ]
+    },
+    {
+      "id": "7098",
+      "accesscodes": [
+        "AGENT_MAINT",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_DOC_4",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_SALVAGE",
+        "CL_UNDMAN"
+      ]
+    },
+    {
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "CL_EXCHANGERATE",
+        "API_CLAIM_DU",
+        "API_DOC_BLOCK",
+        "API_DOC_4"
+      ],
+      "id": "2017"
+    },
+    {
+      "id": "JXdnSu-",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "CL_INCIDENT",
+        "CL_IND_DEC",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_SAVECLAIM",
+        "AGENT_COMM_PAY",
+        " CL_FINALISECLMT",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE",
+        null
+      ]
+    },
+    {
+      "id": "h5YBBQ7",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "CL_INCIDENT",
+        "CL_IND_DEC",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_SAVECLAIM",
+        "AGENT_COMM_PAY",
+        " CL_FINALISECLMT",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE",
+        null
+      ]
+    },
+    {
+      "id": "Rlz3ByP",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "CL_INCIDENT",
+        "CL_IND_DEC",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_SAVECLAIM",
+        "AGENT_COMM_PAY",
+        " CL_FINALISECLMT",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE",
+        "AGENT_MAINT",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_DOC_4",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_SALVAGE",
+        "CL_UNDMAN",
+        null
+      ]
+    },
+    {
+      "id": "VjmQbz2",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "CL_INCIDENT",
+        "CL_IND_DEC",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_SAVECLAIM",
+        "AGENT_COMM_PAY",
+        " CL_FINALISECLMT",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE",
+        "AGENT_MAINT",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_DOC_4",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_SALVAGE",
+        "CL_UNDMAN",
+        null
+      ]
+    },
+    {
+      "id": "7074",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        "API_CLAIM_DU"
+      ]
+    },
+    {
+      "id": "2890",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        "API_CLAIM_DU"
       ]
     }
   ]
