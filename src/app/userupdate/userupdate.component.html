@@ -1,13 +1,16 @@
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form1">
-  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" class="my-custom-class">
-    <mat-tab label="User-Details">
+  <div class="tabs">
+    <div></div>
+    <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
+    <label for="tab1" class="tabs__label">Details</label>
+    <div class="tabs__content">
       <div class="totalDetails">
         <div class="userdetails form-group">
           <div class="form-group">
             <label for="username" class="label-width">Username:</label>
             <div class="inputtag">
-              <input type="text" id="username" formControlName="username" 
-              [ngClass]="{ 'is-invalid': isControlInvalid('username'), 'invalid-field': isControlInvalid('username') }">
+              <input type="text" id="username" formControlName="username"
+                [ngClass]="{ 'is-invalid': isControlInvalid('username'), 'invalid-field': isControlInvalid('username') }">
               <div *ngIf="isControlInvalid('username')" class="invalid-feedback">
                 Username required.
               </div>
@@ -122,48 +125,53 @@
           </div>
         </div>
       </div>
-      <!-- <div class="buttons1">
-        <button class="cancel-btn" type="submit" routerLink="/home">Cancel</button>
-        <button class="save-btn" type="submit" [disabled]="userForm.invalid">Save</button>
-      </div> -->
-    </mat-tab>
-    <mat-tab label="Security Access">
-      <div class="dialog-content">
-        <h2>Security Access Groups and Codes</h2>
+    </div>
+
+    <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
+    <label for="tab2" class="tabs__label">Access Codes</label>
+    <div class="tabs__content">
         <div class="row">
-          <div class="col">
+          <div class="col-2 p-1">
             <div class="access-groups scrollable">
               <div *ngFor="let group of accessGroup; let i = index" class="access-group">
-                <div class="access-group-item" [ngClass]="{'clicked': group.selected}">
+                <div class="access-group-item" [ngClass]="{'': group.selected}">
                   <div class="access-group-name">
                     <label>
-                      <input type="checkbox" [(ngModel)]="group.selected" (change)="toggleAccessCodes(i)">
+                      <input type="checkbox" class="checkbox4" [(ngModel)]="group.selected" (change)="toggleAccessCodes(i)">
                       <strong>{{ group.sAccessGroup }}</strong>
+                      <!-- <p>{{group.selected}}</p> -->
                     </label>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col bg-white p-0">
-            <div class="access-codes scrollable">
-              <div *ngFor="let accesscodes of SecLookup; let i = index">
-                <label class="checkbox-container" [ngClass]="{'red-checkbox': accesscodes.status}">
-                  <input type="checkbox" class="code-checkbox" (change)="toggleAccessCode(accesscodes)">
+          <div class="col-8 useraccesscodes">
+            <div *ngFor="let accesscodes of SecLookup; let i = index">
+              <label class="checkbox-container">
+                <div class="inline-block-container  accesscodes p-1">
+                  <input type="checkbox" class="code-checkbox"
+                   [checked]="accesscodes.status"
+                    (change)="toggleAccessCode(accesscodes)"
+                   >
                   <span class="code-item">{{ accesscodes.sAccessCode }}</span>
-                </label>
-              </div>
+                  <span>{{ accesscodes.SAccessDescription }}</span>
+                </div>
+              </label>
             </div>
           </div>
         </div>
-      </div>
+     
       <button (click)="saveSelectedAccessCodes()">Save</button>
-    </mat-tab>
-    <mat-tab label="Available Products">
+    </div>
+
+    <input type="radio" class="tabs__radio" name="tabs-example" id="tab3">
+    <label for="tab3" class="tabs__label">Available Products</label>
+    <div class="tabs__content">
       <app-available-products (selectedProducts)="receiveSelectedProducts($event)"></app-available-products>
       <!-- <button mat-raised-button color="primary" (click)="saveSelectedProducts()">Save</button> -->
       <button class="" type="submit" [disabled]="userForm.invalid">Save</button>
-    </mat-tab>
-    
-  </mat-tab-group>
+
+    </div>
+  </div>
 </form>
