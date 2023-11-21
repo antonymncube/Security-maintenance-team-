@@ -167,7 +167,7 @@ export class UserupdateComponent {
         this.PasswordHashingService.hashPassword(this.userForm.value.password).then((hashedPassword) => {
           let usernameExists = false;
   
-          this.apiService.checkUsernameExist(this.userForm.value.username).subscribe((exists: boolean) => {
+          this.apiService.checkUsernameExisttt(this.userForm.value.username).subscribe((exists: boolean) => {
             usernameExists = exists;
   
             if (usernameExists) {
@@ -185,6 +185,7 @@ export class UserupdateComponent {
             this.user.agent = this.userForm.value.agent;
             this.user.lastUpdated = new Date();
             this.user.id = this.generatedId
+            this.user.language = this.userForm.value.language;
 
               this.saveSelectedAccessCodes()
               this.updateUserWithSelectedProducts();
