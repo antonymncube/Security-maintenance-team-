@@ -5,6 +5,7 @@ import { ApiServiceService } from '../services/api-service.service';
 import { UserFormData } from '../User';
 import { Router } from '@angular/router';
 import { MatTabsModule } from '@angular/material/tabs';
+import { Subject, debounceTime } from 'rxjs';
 
 
 
@@ -25,6 +26,7 @@ export class UserupdateComponent {
   selectedAccessGroups: any;
   generatedId: string = '';
   solvingarray: any[] = []
+  filterTextChanged = new Subject<string>();
 
   dataToUpdate: any
 
@@ -48,14 +50,16 @@ export class UserupdateComponent {
   selectedGroupId: string = '';
   accessGroundForm: any;
   selectedGroupIndex: number | null = null;
-  filterText: any;
+  filterText: string = '';
 
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiServiceService, private router: Router,
     private PasswordHashingService: PasswordHashingService) {
     this.accessCodes = [];
     this.accessGroup = [];
-
+    this.filterTextChanged.pipe(debounceTime(300)).subscribe(() => {
+      this.filteredAccessCodes();
+    });
     apiService.getAccessGroup().subscribe(res => {
       this.accessGroup = res;
       // console.log("here are the groups" + this.accessGroup)
@@ -310,10 +314,23 @@ export class UserupdateComponent {
     );
   }
 
-  filteredAccessCodes() {
-    return this.SecLookup.filter((accessCode: { sAccessCode: string; }) =>
-      accessCode.sAccessCode.toLowerCase().includes(this.filterText.toLowerCase())
-    );
+  onFilterTextChanged() {
+    this.filterTextChanged.next(this.filterText);
+    console.log('what is it getting', this.filterText)
   }
+  
+  
+  filteredAccessCodes() {
+    const filteredArray = this.SecLookup.filter((accessCode: { sAccessCode: string }) =>
+      accessCode.sAccessCode.includes(this.filterText)
+    );
+
+ 
+
+    return filteredArray;
+  }
+  
+ 
+  
 
 }

@@ -171,19 +171,29 @@
           <div class="col-8 useraccesscodes">
             <div class="form-group" style="display: flex;">
               <label for="inputField">Search Access :</label>
-              <input type="text" id="inputField" name="searchAccessGroup" [(ngModel)]="filterText" style="width: 150px;height: 20px;">
+              <input type="text" id="inputField" name="searchAccessGroup" [(ngModel)]="filterText" style="width: 150px; height: 20px;" (input)="onFilterTextChanged()" />
+
             </div>
-            <div *ngFor=" let accesscodes of filteredAccessCodes(); let i = index">
+          
+            <!-- Log the filterText -->
+            <div>Filter Text: {{ filterText }}</div>
+          
+            <!-- Log the filtered array -->
+            <!-- <div>Filtered Array: {{ filteredAccessCodes() | json }}</div> -->
+          
+            <div *ngFor="let accesscodes of filteredAccessCodes(); let i = index">
               <label class="checkbox-container">
                 <div class="inline-block-container  accesscodes p-1">
                   <input type="checkbox" class="code-checkbox" [checked]="accesscodes.status" (change)="toggleAccessCode(accesscodes)">
-
+          
+                  <!-- Log the values -->
                   <span class="code-item">{{ accesscodes.sAccessCode }}</span>
-                  <span>{{ accesscodes.SAccessDescription }}</span>
+                  <span>Description: {{ accesscodes.SAccessDescription }}</span>
                 </div>
               </label>
             </div>
           </div>
+          
         </div>
      
       <button (click)="saveSelectedAccessCodes()">Save</button>
