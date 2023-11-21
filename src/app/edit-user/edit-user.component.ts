@@ -66,7 +66,7 @@ export class EditUserComponent implements OnInit {
     this.userForm = this.formBuilder.group({
       id: [''],
       username: [{ value: '', }, Validators.required],
-      fullname: ['', Validators.required],
+      fullname: ['',],
       description: [''],
       password: [{ value: '', }, [Validators.required, Validators.minLength(6)]],
       department: ['',],

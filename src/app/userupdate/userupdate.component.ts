@@ -62,6 +62,7 @@ export class UserupdateComponent {
     apiService.getSecLookup().subscribe((res: any) => {
       this.accessCodes = res; // Assigning all the access codes to this array
       // console.log("here is respond mnaka", res);
+      
     });
 
 
@@ -164,13 +165,17 @@ export class UserupdateComponent {
     if (this.userForm.valid) {
       if (this.checkPasswordMatch()) {
         this.PasswordHashingService.hashPassword(this.userForm.value.password).then((hashedPassword) => {
+          let usernameExists = false;
+  
           this.apiService.checkUsernameExisttt(this.userForm.value.username).subscribe((exists: boolean) => {
-            if (exists) {
+            usernameExists = exists;
+  
+            if (usernameExists) {
               alert('Username already exists. Please choose a different username.');
             } else {
             this.generateFourDigitId();
             this.user.email = this.userForm.value.email;
-            this.user.username = this.userForm.value.username;
+            this.user.username = this.userForm.value.username.toLowerCase();
             this.user.password = hashedPassword;
             this.user.department = this.userForm.value.department;
             this.user.mobile = this.userForm.value.mobile;
@@ -180,6 +185,7 @@ export class UserupdateComponent {
             this.user.agent = this.userForm.value.agent;
             this.user.lastUpdated = new Date();
             this.user.id = this.generatedId
+            this.user.language = this.userForm.value.language;
 
               this.saveSelectedAccessCodes()
               this.updateUserWithSelectedProducts();

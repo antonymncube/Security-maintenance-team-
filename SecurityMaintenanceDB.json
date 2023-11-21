@@ -879,6 +879,44 @@
         "Dental Cover Plan",
         "Corporate Dental"
       ]
+    },
+    {
+      "id": "4509",
+      "username": "mahle",
+      "fullname": "Mahle Gift",
+      "description": "we are bacl",
+      "password": "$2a$10$fprVvB6gFJt.wVbFlz6/zOxoJ5Wygu/3n1S72hPpREK9//zGV3/CS",
+      "department": "IT",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "",
+      "mobile": "0781954154",
+      "agent": "Standard Bank",
+      "status": true,
+      "lastUpdated": "2023-11-21T07:46:46.379Z",
+      "language": "",
+      "location": "",
+      "selectedProducts": [
+        "Consumer Dental"
+      ]
+    },
+    {
+      "id": "6121",
+      "username": " mahle",
+      "fullname": "Mahle Gift",
+      "description": "we are bacl",
+      "password": "$2a$10$KMl59K7GqV04bj4vCiWvAe9XPfzEf2PvdUYdKTYM2s/t2Oj/dF10O",
+      "department": "HR",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "",
+      "mobile": "0781954154",
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-11-21T07:48:38.112Z",
+      "language": "",
+      "location": "",
+      "selectedProducts": [
+        "Cash Plan"
+      ]
     }
   ],
   "Products": [
@@ -1139,6 +1177,56 @@
         "Underwriting con"
       ],
       "id": "2890"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con",
+        "Accountent"
+      ],
+      "id": "9861"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con"
+      ],
+      "id": "6218"
+    },
+    {
+      "AccessGroups": [
+        "Accountent"
+      ],
+      "id": "9912"
+    },
+    {
+      "AccessGroups": [
+        "Accountent"
+      ],
+      "id": "3002"
+    },
+    {
+      "AccessGroups": [
+        "Accountent"
+      ],
+      "id": "8897"
+    },
+    {
+      "AccessGroups": [
+        "Broker Pack"
+      ],
+      "id": "5167"
+    },
+    {
+      "AccessGroups": [
+        "Accountent"
+      ],
+      "id": "4509"
+    },
+    {
+      "AccessGroups": [
+        "Accountent",
+        "Claim-Admin"
+      ],
+      "id": "6121"
     }
   ],
   "SecUserAccess": [
@@ -1407,6 +1495,102 @@
         "ACCEPTBBWARN",
         "API_DOC_BLOCK",
         "API_CLAIM_DU"
+      ]
+    },
+    {
+      "id": "9861",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE"
+      ]
+    },
+    {
+      "id": "6218",
+      "accesscodes": [
+        "ACCEPTBBWARN"
+      ]
+    },
+    {
+      "id": "9912",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE"
+      ]
+    },
+    {
+      "id": "3002",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE"
+      ]
+    },
+    {
+      "id": "8897",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE"
+      ]
+    },
+    {
+      "id": "5167",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "CL_EXCEL_PRINT",
+        "CL_FINALISECLMT",
+        "CL_INCIDENT",
+        "CL_IND_APR",
+        "CL_NEGCLAIMBAL",
+        "CL_RECOVERY",
+        "CL_REQUISITION",
+        "CL_REVERSEPAY",
+        "CL_UNDMAN",
+        " CL_STALECHEQUE"
+      ]
+    },
+    {
+      "id": "4509",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE"
+      ]
+    },
+    {
+      "id": "6121",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE",
+        "AGENT_MAINT",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_DOC_4",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_SALVAGE",
+        "CL_UNDMAN"
       ]
     }
   ]
