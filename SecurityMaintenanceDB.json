@@ -951,6 +951,44 @@
         "Corporate Dental_old",
         "Consumer CashPlan"
       ]
+    },
+    {
+      "id": "4509",
+      "username": "mahle",
+      "fullname": "Mahle Gift",
+      "description": "we are bacl",
+      "password": "$2a$10$fprVvB6gFJt.wVbFlz6/zOxoJ5Wygu/3n1S72hPpREK9//zGV3/CS",
+      "department": "IT",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "",
+      "mobile": "0781954154",
+      "agent": "Standard Bank",
+      "status": true,
+      "lastUpdated": "2023-11-21T07:46:46.379Z",
+      "language": "",
+      "location": "",
+      "selectedProducts": [
+        "Consumer Dental"
+      ]
+    },
+    {
+      "id": "6121",
+      "username": " mahle",
+      "fullname": "Mahle Gift",
+      "description": "we are bacl",
+      "password": "$2a$10$KMl59K7GqV04bj4vCiWvAe9XPfzEf2PvdUYdKTYM2s/t2Oj/dF10O",
+      "department": "HR",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "",
+      "mobile": "0781954154",
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-11-21T07:48:38.112Z",
+      "language": "",
+      "location": "",
+      "selectedProducts": [
+        "Cash Plan"
+      ]
     }
   ],
   "Products": [
@@ -1209,79 +1247,9 @@
     {
       "id": "2890",
       "AccessGroups": [
-        "Underwriting con",
-        "Broker Pack",
-        "Claim-Admin"
-      ]
-    },
-    {
-      "AccessGroups": [
-        "Underwriting con",
-        "Broker Pack",
-        "Claim-Admin"
+        "Underwriting con"
       ],
-      "id": "BZRqpDv"
-    },
-    {
-      "AccessGroups": [],
-      "id": "7184"
-    },
-    {
-      "AccessGroups": [],
-      "id": "9817"
-    },
-    {
-      "id": "4740",
-      "AccessGroups": [
-        "Underwriting con",
-        "Accountent"
-      ]
-    },
-    {
-      "AccessGroups": [],
-      "id": "1054"
-    },
-    {
-      "AccessGroups": [
-        "Accountent",
-        "Broker Pack",
-        "Claim-Admin"
-      ],
-      "id": "Ar-74UX"
-    },
-    {
-      "AccessGroups": [
-        "Accountent",
-        "Broker Pack",
-        "Claim-Admin"
-      ],
-      "id": "4237"
-    },
-    {
-      "AccessGroups": [
-        "Underwriting con",
-        "Broker Pack",
-        "Claim-Admin"
-      ],
-      "id": "4147"
-    },
-    {
-      "AccessGroups": [
-        "Underwriting con",
-        "Claim-Admin"
-      ],
-      "id": "6305"
-    },
-    {
-      "AccessGroups": [
-        "Underwriting con",
-        "Accounts Clerk"
-      ],
-      "id": "5051"
-    },
-    {
-      "AccessGroups": [],
-      "id": "VpCVCbr"
+      "id": "2890"
     }
   ],
   "SecUserAccess": [
@@ -1726,10 +1694,6 @@
         "CL_EXCEL_PRINT",
         "API_CLAIM_DU"
       ]
-    },
-    {
-      "id": "XszxKZR",
-      "accesscodes": []
     }
   ]
 }

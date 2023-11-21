@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { ApiServiceService } from '../services/api-service.service';
 
 @Component({
@@ -6,10 +6,9 @@ import { ApiServiceService } from '../services/api-service.service';
   templateUrl: './available-products.component.html',
   styleUrls: ['./available-products.component.scss']
 })
-export class AvailableProductsComponent {
+export class AvailableProductsComponent implements OnInit {
   @Output() selectedProducts: EventEmitter<string[]> = new EventEmitter<string[]>();
-  @Input()
-  availableProducts: any[] = [];
+  @Input() availableProducts: string[] = [];
 
   products: any[] = [];
 
@@ -17,16 +16,23 @@ export class AvailableProductsComponent {
 
   ngOnInit() {
     this.apiService.getProducts().subscribe((data) => {
-      this.products = data;
+      this.products = data.map((product: any) => ({
+        ...product,
+        selected: this.availableProducts.includes(product.sProductName)
+      }));
+      this.selectedProducts.emit(this.availableProducts);
     });
   }
 
-  toggleProductSelection(product: any) {
-    if (product.selected) {
-      this.selectedProducts.emit(this.products.filter(p => p.selected).map(p => p.sProductName));
-    } else {
 
-      this.selectedProducts.emit(this.products.filter(p => p.selected).map(p => p.sProductName));
-    }
+  toggleProductSelection(product: any) {
+    product.selected = !product.selected;
+
+    const selectedProductNames = this.products
+      .filter((p) => p.selected)
+      .map((p) => p.sProductName);
+
+    this.selectedProducts.emit(selectedProductNames);
   }
+
 }
