@@ -108,9 +108,9 @@
       </div>
     </mat-tab>
     <mat-tab label="Security Access ">
-    
+
         <h2 style="margin-left: 250px;">Security Access Groups and Codes</h2>
-        <div class="container"> 
+        <div class="container">
         <div class="row row1 p-1 no-gutters">
           <div class="col-4 useraccessgroup ">
             <div *ngFor="let group of accessGroup; let i = index" class="access-group p-1">
@@ -132,7 +132,7 @@
                     [ngClass]="{'checked-background': existsInAccessCodesForItem(accesscodes)}"
                     [checked]="existsInAccessCodesForItem(accesscodes)" (change)="toggleAccessCode(accesscodes)"
                     [ngClass]="{'checked-background': existsInAccessCodesForItem(accesscodes)}">
-                  <span class="code-item">{{ accesscodes.sAccessCode }}</span>  
+                  <span class="code-item">{{ accesscodes.sAccessCode }}</span>
                   <span>{{ accesscodes.SAccessDescription }}</span>
                 </div>
               </label>
@@ -140,7 +140,7 @@
           </div>
         </div>
       </div>
-     
+
       <button (click)="saveSelectedAccessCodes()">Save</button>
     </mat-tab>
     <mat-tab label="Available Products">
@@ -153,7 +153,7 @@
       <button class="save-btn" type="submit" [disabled]="userForm.invalid">Save</button>
   </div>
 </form> -->
- 
+
   <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form1">
     <div class="tabs">
       <div></div>
@@ -300,15 +300,17 @@
           </div>
         </div>
 
-      
+
       </div>
       <input type="radio" class="tabs__radio" name="tabs-example" id="tab3">
       <label for="tab3" class="tabs__label">Available products</label>
       <div class="tabs__content">
-        <app-available-products [availableProducts]="userForm.get('selectedProducts')?.value"
-          (selectedProducts)="updateSelectedProducts($event)"></app-available-products>
+        <app-available-products
+          [availableProducts]="userForm.get('selectedProducts')?.value"
+          (selectedProducts)="updateSelectedProducts($event)"
+          ></app-available-products>
+
           <button (click)="saveSelectedAccessCodes()">Save</button>
       </div>
     </div>
   </form>
- 
