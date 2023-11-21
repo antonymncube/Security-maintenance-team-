@@ -131,7 +131,29 @@
     <label for="tab2" class="tabs__label">Access Codes</label>
     <div class="tabs__content">
         <div class="row">
-          <div class="col-2 p-1">
+          <div class="container" style="display: flex;">
+
+             
+            <div class="form-group" style="display: flex; margin-right: 20px;">
+              <label for="searchAccessGroup">Search Access Group:</label>
+              <input type="text" id="searchAccessGroup" name="searchAccessGroup" style="width: 150px; height: 20px;">
+              
+            </div>
+          
+           
+            <div class="form-group" style="display: flex; margin-left: 100px;">
+              <label for="searchAccessCode">Search Access Code:</label>
+              <input type="text" id="searchAccessCode" name="searchAccessCode" style="width: 150px; height: 20px; margin-left: 20px;">
+            </div>
+          
+          </div>
+          
+          
+          <div class="col-4 p-0" style="border: 9px solid red;">
+            <div class="form-group " style="display: flex;">
+              <label for="inputField" style="width: 200px;">Search Access:</label>
+              <input type="text" id="inputField" name="searchAccessGroup" style="width: 150px;height: 20px;margin-left: 30px;">
+            </div>
             <div class="access-groups scrollable">
               <div *ngFor="let group of accessGroup; let i = index" class="access-group">
                 <div class="access-group-item" [ngClass]="{'': group.selected}">
@@ -139,7 +161,7 @@
                     <label>
                       <input type="checkbox" class="checkbox4" [(ngModel)]="group.selected" (change)="toggleAccessCodes(i)">
                       <strong>{{ group.sAccessGroup }}</strong>
-                      <!-- <p>{{group.selected}}</p> -->
+                     
                     </label>
                   </div>
                 </div>
@@ -147,13 +169,15 @@
             </div>
           </div>
           <div class="col-8 useraccesscodes">
-            <div *ngFor="let accesscodes of SecLookup; let i = index">
+            <div class="form-group" style="display: flex;">
+              <label for="inputField">Search Access :</label>
+              <input type="text" id="inputField" name="searchAccessGroup" [(ngModel)]="filterText" style="width: 150px;height: 20px;">
+            </div>
+            <div *ngFor=" let accesscodes of filteredAccessCodes(); let i = index">
               <label class="checkbox-container">
                 <div class="inline-block-container  accesscodes p-1">
-                  <input type="checkbox" class="code-checkbox"
-                   [checked]="accesscodes.status"
-                    (change)="toggleAccessCode(accesscodes)"
-                   >
+                  <input type="checkbox" class="code-checkbox" [checked]="accesscodes.status" (change)="toggleAccessCode(accesscodes)">
+
                   <span class="code-item">{{ accesscodes.sAccessCode }}</span>
                   <span>{{ accesscodes.SAccessDescription }}</span>
                 </div>

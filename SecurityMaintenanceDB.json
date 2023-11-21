@@ -1278,6 +1278,10 @@
         "Accounts Clerk"
       ],
       "id": "5051"
+    },
+    {
+      "AccessGroups": [],
+      "id": "VpCVCbr"
     }
   ],
   "SecUserAccess": [
@@ -1722,6 +1726,10 @@
         "CL_EXCEL_PRINT",
         "API_CLAIM_DU"
       ]
+    },
+    {
+      "id": "XszxKZR",
+      "accesscodes": []
     }
   ]
 }

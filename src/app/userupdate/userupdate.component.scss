@@ -487,6 +487,10 @@ button {
   border: 1px solid #ccc;
   border-radius: 3px;
 }
+.tabs__content{
+  height: 500px;
+  // background-color: red;
+}
 
 .totalDetails {
   margin-top: 20px;
@@ -549,8 +553,9 @@ button {
 .useraccesscodes {
   overflow-y: auto;
   max-height: 400px;
-  padding: 10px;
-  margin-left: 200px;
+  border: 4px solid red;
+  // padding: 1px;
+  // margin-left: 100px;
   // background-color: #f8f8f8;
 }
 
@@ -647,7 +652,7 @@ button.save-btn {
 .tabs__content {
  order: 1;
  width: 100%;
- border-bottom: 3px solid #dddddd;
+ border-bottom: none;
  line-height: 1.5;
  font-size: 0.9em;
  display: none;
@@ -661,7 +666,8 @@ button.save-btn {
 
 .tabs__radio:checked + .tabs__label {
  font-weight: bold;
- color:#343a40;
+ color:rgb(33, 33, 85) 3px;
+ border-bottom: solid rgb(33, 33, 85) 3px;
  // border-bottom: 2px solid #343a40;
 }
 
@@ -673,6 +679,8 @@ button.save-btn {
 .inline-block-container {
   display: inline-block;
 }
+
+
 
 
  
