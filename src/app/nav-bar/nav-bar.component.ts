@@ -9,6 +9,7 @@ import { UserListComponent } from '../user-list/user-list.component';
 import { ModifyAccesCodesComponent } from '../modify-acces-codes/modify-acces-codes.component';
 import { ApiServiceService } from '../services/api-service.service';
 import { AccessGroupComponent } from '../access-group/access-group.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -22,7 +23,7 @@ export class NavBarComponent {
   SecLookup: any = '';
   accessGroup : any = '';
 
-  constructor(public dialog: MatDialog, private apiService: ApiServiceService) { }
+  constructor(public dialog: MatDialog, private apiService: ApiServiceService, public router: Router) { }
 
   openDialog() {
     // Fetch the data before opening the dialog
@@ -39,7 +40,7 @@ export class NavBarComponent {
     });
   }
 
- 
+
   getAccessGroup() {
     this.apiService.getAccessGroup().subscribe((accessGroup: any) => {
       this.accessGroup = accessGroup;
@@ -53,24 +54,24 @@ export class NavBarComponent {
       height:'500px',
       data: { SecLookup } // Pass SecLookup data to the dialog
     });
-    
+
 
     dialogRef.afterClosed().subscribe((result) => {
-       
+
       console.log('The dialog was closed');
     });
   }
 
   openDialogWithAccessGroup(accessGroup: any) {
-   
+
     const dialogRef = this.dialog.open(AccessGroupComponent, {
       width: '850px',
       height:'550px',
       data: {accessGroup},
-      
+
     });
-   
-  
+
+
     dialogRef.afterClosed().subscribe((result) => {
       console.log('The dialog was closed');
     });
@@ -93,4 +94,13 @@ export class NavBarComponent {
     refreshPage() {
       location.reload();
     }
+
+
+navigateToHome() {
+
+  this.router.navigate(['/home']).then(() => {
+
+      window.location.reload();
+  });
+}
 }
