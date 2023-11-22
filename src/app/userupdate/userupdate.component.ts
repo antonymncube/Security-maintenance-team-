@@ -158,7 +158,12 @@ export class UserupdateComponent {
   ngOnInit() {
     this.getAccesslookup();
 
-    // Initialize filtered groups
+    
+      this.filterTextControl2.valueChanges.pipe(
+        debounceTime(300) // Adjust the debounce time as needed
+      ).subscribe(() => {
+        this.filteredAccessGroups();
+      });
     
 
     // Subscribe to changes in filterText2 control
@@ -345,6 +350,7 @@ export class UserupdateComponent {
 
   onFilterTextChanged() {
     // this.filteredAccessGroup(); 
+    console.log( 'Lets see '+this.userForm.value.filterText1)
   }
   
   
@@ -360,50 +366,36 @@ export class UserupdateComponent {
 
   filteredAccessGroups() {
     let filteredArray = this.accessGroup.filter((group: { sAccessGroup: string }) =>
-      group.sAccessGroup.includes("")
+      group.sAccessGroup.includes(this.userForm.value.filterText2 )
     );
     const jsonString =JSON.stringify(filteredArray)
     const parsedData = JSON.parse(jsonString);
     // console.log('what is this ',parsedData)
     filteredArray = [] ;
-    for (const group of parsedData) {
-      
-     filteredArray.push(group.sAccessGroup)
-    }
-    console.log('Access Group:', filteredArray)
+     // Use the map function to extract the sAccessGroup property from each group in parsedData.
+    filteredArray = parsedData.map((group: { sAccessGroup: string }) => group.sAccessGroup);
+
+    // console.log('Access Group:', filteredArray)
     return filteredArray;
   }
   
+  selectAllCheckbox: boolean = false;
 
-
-  filteredGroups: Array<{
-    clicked: boolean;
-    sAccessGroup: string;
-    sAccessCodes: Array<string>;
-    selected: boolean;
-    id: string;
-  }> = [];
+  toggleSelectAll(event: any) {
+    this.selectAllCheckbox = event.target.checked;
+    this.SecLookup.forEach((accessCode: { sAccessCode: string,status: boolean }) => {
+      if(this.selectAllCheckbox){
+        accessCode.status = this.selectAllCheckbox;
+        console.log('This is what you are adding  ',accessCode.status)
+        this.selectedAccessCodes.push(accessCode.sAccessCode)
+      }else{
+        accessCode.status = this.selectAllCheckbox;
+         this.selectedAccessCodes = []
+      }
+    
+    });
+  }
   
-  // onFilterText2Changed() {
-  //   const filterText = this.filterTextControl2.value;
-  //   this.filteredAccessGroup(filterText);
-  // }
-
-  // filteredAccessGroup(searchText: string | null = '') {
-  //   // Apply the filter to accessGroup based on searchText
-  //   console.log('is it called')
-  //   if (!searchText || searchText.includes(' ')) {
-  //     // If search text is empty or contains empty spaces, display all access groups
-  //     this.filteredGroups = this.accessGroup;
-  //   } else {
-  //     // If search text is not empty and doesn't contain empty spaces, filter based on access groups
-  //     this.filteredGroups = this.accessGroup.filter((group) =>
-  //       group.sAccessGroup.toLowerCase().includes(searchText)
-  //     );
-  //   }
-  // }
-
-
-
+  
 
 }

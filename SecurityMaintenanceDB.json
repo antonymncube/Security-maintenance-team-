@@ -224,14 +224,18 @@
       "username": "EmihleN",
       "fullname": "Emihle Ntshongwana",
       "description": "MGA",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$Fp8Nb1ZVij/SRnEWNH5gv.adxaLYOo.sI4Ylbf0MlrslW.w9gLOpi",
+      "department": "IT",
       "email": "ntshongwanae@gmail.com",
       "homephone": "0712425668",
       "mobile": "0712425668",
-      "department": "IT",
-      "status": true
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-11-22T08:59:47.004Z",
+      "language": "English",
+      "selectedProducts": [
+        "Consumer Dental"
+      ]
     },
     {
       "id": "17",
@@ -642,7 +646,7 @@
     },
     {
       "id": "5403",
-      "username": " close",
+      "username": "close",
       "fullname": "Ndivuwo",
       "description": " Married",
       "password": "$2a$10$SbasnYqEtsyUFbqxkOp3XOeHb1Z60cufE4g43EudhR88cF3VnVK.K",
@@ -972,16 +976,105 @@
       ]
     },
     {
+      "id": "6121",
+      "username": "brandy",
+      "fullname": "Rule ",
+      "description": " Married",
+      "password": {
+        "value": ""
+      },
+      "department": "IT",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "0671402936",
+      "agent": "Genasys",
+      "status": {
+        "value": ""
+      },
+      "lastUpdated": "2023-11-22T08:43:57.425Z",
+      "language": "Afrikaans",
       "selectedProducts": [
-        "Cash Plan"
-      ],
-      "id": "6121"
+        "Dental Cover Plan"
+      ]
     },
     {
+      "id": "7750",
+      "username": "Khuli",
+      "fullname": "sfhsfh",
+      "description": "tester",
+      "password": {
+        "value": ""
+      },
+      "department": "IT",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "agent": "Simply Health",
+      "status": {
+        "value": ""
+      },
+      "lastUpdated": "2023-11-22T08:42:42.288Z",
+      "language": "English",
       "selectedProducts": [
         "Group Cash Plan"
-      ],
-      "id": "7750"
+      ]
+    },
+    {
+      "id": "3250",
+      "username": "sizwe",
+      "fullname": "wase west",
+      "description": "tester",
+      "password": "$2a$10$3EC6Q3inIqodEuWB6/rH7ec5DsECEioLI1EMyjQikEg0BGYnsweHW",
+      "department": "IT",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "0671402936",
+      "agent": "Simply Health",
+      "status": true,
+      "lastUpdated": "2023-11-22T13:03:53.953Z",
+      "language": "English",
+      "location": "",
+      "selectedProducts": [
+        "Dental Cover Plan"
+      ]
+    },
+    {
+      "id": "8036",
+      "username": "robert",
+      "fullname": "Ndivuwo",
+      "description": " Married",
+      "password": "$2a$10$GdU5Nv4t7hU8Ko6bpXYZ2.1BSZqqWLzmefxUYx9yl2.TXU.fMfrZy",
+      "department": "HR",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "agent": "Simply Health",
+      "status": true,
+      "lastUpdated": "2023-11-22T13:10:19.713Z",
+      "language": "English",
+      "location": "",
+      "selectedProducts": [
+        "Corporate Dental_old"
+      ]
+    },
+    {
+      "id": "3121",
+      "username": "brandon",
+      "fullname": "Oliver",
+      "description": " Married",
+      "password": "$2a$10$R1ciH78itYhGoElOd.ZxO.UL4bawTUopStvxNZKNeMyxVrkG1epqS",
+      "department": "IT",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "0671402936",
+      "mobile": "0781954154",
+      "agent": "Simply Health",
+      "status": true,
+      "lastUpdated": "2023-11-22T13:23:52.830Z",
+      "language": "Afrikaans",
+      "selectedProducts": [
+        "Group Cash Plan",
+        "Corporate Dental"
+      ]
     }
   ],
   "Products": [
@@ -1324,11 +1417,178 @@
       "id": "60eINIn"
     },
     {
+      "id": "7750",
       "AccessGroups": [
         "Underwriting con",
         "Broker Pack"
+      ]
+    },
+    {
+      "AccessGroups": [],
+      "id": "CRuKkBC"
+    },
+    {
+      "AccessGroups": [],
+      "id": "WTdhKH3"
+    },
+    {
+      "AccessGroups": [],
+      "id": "jpevyH_"
+    },
+    {
+      "AccessGroups": [],
+      "id": "KkK_B0t"
+    },
+    {
+      "AccessGroups": [],
+      "id": "vbFUY8Q"
+    },
+    {
+      "AccessGroups": [],
+      "id": "gkeGZW7"
+    },
+    {
+      "AccessGroups": [],
+      "id": "RYSO55c"
+    },
+    {
+      "AccessGroups": [],
+      "id": "5V8e8CB"
+    },
+    {
+      "AccessGroups": [],
+      "id": "ryB1tjs"
+    },
+    {
+      "AccessGroups": [],
+      "id": "3TbBslH"
+    },
+    {
+      "AccessGroups": [],
+      "id": "EVeLmm_"
+    },
+    {
+      "AccessGroups": [],
+      "id": "Zii4BzJ"
+    },
+    {
+      "AccessGroups": [],
+      "id": "nzUb8x4"
+    },
+    {
+      "AccessGroups": [],
+      "id": "tb-p3jq"
+    },
+    {
+      "AccessGroups": [],
+      "id": "YX-i-2L"
+    },
+    {
+      "AccessGroups": [],
+      "id": "HO018Rk"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con"
       ],
-      "id": "7750"
+      "id": "3250"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con"
+      ],
+      "id": "8036"
+    },
+    {
+      "AccessGroups": [],
+      "id": "QTmnJSy"
+    },
+    {
+      "AccessGroups": [],
+      "id": "Pr3AWt4"
+    },
+    {
+      "AccessGroups": [],
+      "id": "sEtPari"
+    },
+    {
+      "id": "3121",
+      "AccessGroups": [
+        "Underwriting con",
+        "Claim-Admin"
+      ]
+    },
+    {
+      "AccessGroups": [],
+      "id": "o3WQMEK"
+    },
+    {
+      "AccessGroups": [],
+      "id": "yUKR3gr"
+    },
+    {
+      "AccessGroups": [],
+      "id": "wSNa9X4"
+    },
+    {
+      "AccessGroups": [],
+      "id": "hASyebR"
+    },
+    {
+      "AccessGroups": [],
+      "id": "LsNPASg"
+    },
+    {
+      "AccessGroups": [],
+      "id": "ESQdGHB"
+    },
+    {
+      "AccessGroups": [],
+      "id": "vgOrC8c"
+    },
+    {
+      "AccessGroups": [],
+      "id": "8Si9dOR"
+    },
+    {
+      "AccessGroups": [],
+      "id": "R3lPTNk"
+    },
+    {
+      "AccessGroups": [],
+      "id": "ac8gOZe"
+    },
+    {
+      "AccessGroups": [],
+      "id": "zc37x_x"
+    },
+    {
+      "AccessGroups": [],
+      "id": "o4EftDp"
+    },
+    {
+      "AccessGroups": [],
+      "id": "IogOxsA"
+    },
+    {
+      "AccessGroups": [],
+      "id": "NnMv1gH"
+    },
+    {
+      "AccessGroups": [],
+      "id": "xXPepiM"
+    },
+    {
+      "AccessGroups": [],
+      "id": "Z4lPGHO"
+    },
+    {
+      "AccessGroups": [],
+      "id": "pW4bkXr"
+    },
+    {
+      "AccessGroups": [],
+      "id": "Yisxhz8"
     }
   ],
   "SecUserAccess": [
@@ -1855,7 +2115,6 @@
       ]
     },
     {
-      "id": "7750",
       "accesscodes": [
         "ACCEPTBBWARN",
         "CL_EXCEL_PRINT",
@@ -1870,7 +2129,678 @@
         " CL_STALECHEQUE",
         "API_DOC_BLOCK",
         "API_CLAIM_MAINT"
+      ],
+      "id": "7750"
+    },
+    {
+      "id": "mLyIVoR",
+      "accesscodes": []
+    },
+    {
+      "id": "yrvhGFW",
+      "accesscodes": []
+    },
+    {
+      "id": "M4eVcS4",
+      "accesscodes": []
+    },
+    {
+      "id": "SsYe8Pt",
+      "accesscodes": []
+    },
+    {
+      "id": "Q6M2hn8",
+      "accesscodes": []
+    },
+    {
+      "id": "gPfAYyf",
+      "accesscodes": []
+    },
+    {
+      "id": "aDx0cF0",
+      "accesscodes": []
+    },
+    {
+      "id": "R1Vx4gg",
+      "accesscodes": []
+    },
+    {
+      "id": "Eb0NFb4",
+      "accesscodes": []
+    },
+    {
+      "id": "1cisXm5",
+      "accesscodes": []
+    },
+    {
+      "id": "cjqRv4K",
+      "accesscodes": []
+    },
+    {
+      "id": "5NkT0G-",
+      "accesscodes": []
+    },
+    {
+      "id": "onh5gal",
+      "accesscodes": []
+    },
+    {
+      "id": "ZBFxFZ0",
+      "accesscodes": []
+    },
+    {
+      "id": "jBSvbne",
+      "accesscodes": []
+    },
+    {
+      "id": "yQOMf2H",
+      "accesscodes": []
+    },
+    {
+      "id": "3250",
+      "accesscodes": [
+        "ACCEPTBBWARN"
       ]
+    },
+    {
+      "id": "8036",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        {
+          "sAccessCode": "ACCEPTBBWARN",
+          "SAccessDescription": "Accept policy quote results",
+          "id": "1",
+          "status": true
+        },
+        {
+          "id": "4",
+          "sAccessCode": "AGENT_MAINT",
+          "SAccessDescription": "Agent maintenance",
+          "status": true
+        },
+        {
+          "id": "6",
+          "sAccessCode": "API_CLAIM_DU",
+          "SAccessDescription": "Allow user to upload Claim documents using API",
+          "status": true
+        },
+        {
+          "id": "7",
+          "sAccessCode": "API_DOC_BLOCK",
+          "SAccessDescription": "Prevent access to all documents through API",
+          "status": true
+        },
+        {
+          "id": "8",
+          "sAccessCode": "API_DOC_CONF",
+          "SAccessDescription": "Allow access to documents with Confidential confidentiality through API",
+          "status": true
+        },
+        {
+          "id": "9",
+          "sAccessCode": "API_DOC_PERS",
+          "SAccessDescription": "Allow access to documents with Personal confidentiality through API",
+          "status": true
+        },
+        {
+          "id": "18",
+          "sAccessCode": "ADDR_OVERRIDE",
+          "SAccessDescription": "Prevent access to all documents through API",
+          "status": true
+        },
+        {
+          "sAccessCode": "API_CLAIM_MAINT",
+          "SAccessDescription": "All user to claim",
+          "id": "d03dd7c5-6f3a-4e71-8675-f2547c266845",
+          "status": true
+        },
+        {
+          "sAccessCode": "API_DOC_4",
+          "SAccessDescription": "TEST",
+          "id": "200ba171-0ec1-428c-a200-28b144739185",
+          "status": true
+        },
+        {
+          "sAccessCode": " API_DOC_BLOCK",
+          "SAccessDescription": "Prevent access to all documents through API",
+          "id": "2f009fc3-2441-42d8-a1a6-b3852e523a47",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_DEL_CLAIMANT",
+          "SAccessDescription": "Claim - Delete unpaid Claim Parties",
+          "id": "5af926dc-02b6-4008-88b0-dea6a7d4c196",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_EXCEL_PRINT",
+          "SAccessDescription": "Print Excel Documents",
+          "id": "d7310922-48b3-448c-9362-d38867e86973",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_EXCHANGERATE",
+          "SAccessDescription": "Allow user to specify a settlement currency and rate for Claim Payments",
+          "id": "ae011d42-4348-4cef-b3e2-b98e73a44d9e",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_FINALISECLMT",
+          "SAccessDescription": "Finalise Claimant",
+          "id": "f41ef724-3970-4313-bee1-820990da13d5",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_INCIDENT",
+          "SAccessDescription": "Claim - Change Incident Date",
+          "id": "8ff89267-0a7d-4c6c-a9a5-6d207f047d3e",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_IND_APR",
+          "SAccessDescription": "Allow Individual Claim Approval Note",
+          "id": "feb31cd7-0e0b-454d-bb3c-6c18ac95388c",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_IND_DEC",
+          "SAccessDescription": "Allow Individual Claim Decline Note",
+          "id": "32d2e826-cacd-4c36-95a5-ea8ccc93b614",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_NEGCLAIMBAL",
+          "SAccessDescription": "Allow negative Claim Balances",
+          "id": "71505981-4e1a-4468-b63a-f0310b70e968",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_PAYSEC_LEV2",
+          "SAccessDescription": "Claim - Approve Payment Request",
+          "id": "3e633674-07c1-4053-b290-476e65107b33",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_PAYSEC_LEV3",
+          "SAccessDescription": "Claim - Authorise or Decline Payment",
+          "id": "eeaa029d-33d9-43a8-89a1-5d7490ac0046",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_RECOVERY",
+          "SAccessDescription": "Claim - Perform Recovery",
+          "id": "d8f208ef-4c46-4752-aa59-83589b11e50c",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_REOPEN",
+          "SAccessDescription": "Re-open Finalised Claims",
+          "id": "fbb14367-3723-40bf-8f34-7db2d29c4771",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_REQUISITION",
+          "SAccessDescription": "Claim - Print Payment Requisition",
+          "id": "cb508eb6-30cc-4d02-bcf8-a165fe216a9a",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_REVERSEPAY",
+          "SAccessDescription": "Can reverse Claim Payments",
+          "id": "78972d50-752f-498d-84ff-b62f39352cd2",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_SALVAGE",
+          "SAccessDescription": "Claims - can do salvage",
+          "id": "01be0b36-b1e7-4a73-ab3d-0b10595d02d5",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_SAVECLAIM",
+          "SAccessDescription": "Claim - Can Save Claim",
+          "id": "f21fce2c-ddcd-439b-bbad-77780b3f5e6a",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_STALECHEQUE",
+          "SAccessDescription": "Reverse Claim Payments",
+          "id": "c63cc6ae-265f-4544-813f-e2fe4445d0b2",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_UNDMAN",
+          "SAccessDescription": "Underwriting Manager",
+          "id": "ece0c0cb-c7ea-46b3-9ddd-0d6be32322d9",
+          "status": true
+        },
+        {
+          "sAccessCode": "AGENT_COMM_PAY",
+          "SAccessDescription": "Underwriting Supervisor",
+          "id": "8208fba3-7603-4ee0-aee8-f79aed235ddc",
+          "status": true
+        },
+        {
+          "sAccessCode": " CL_FINALISECLMT",
+          "SAccessDescription": "Finalise Claims",
+          "id": "ff3d2831-7ac6-4572-a259-3df9bdea4ae4",
+          "status": true
+        },
+        {
+          "sAccessCode": " CL_STALECHEQUE",
+          "SAccessDescription": "Edit CHEQUE",
+          "id": "f69b62e0-507e-4857-b73c-4321d386d094",
+          "status": true
+        }
+      ]
+    },
+    {
+      "id": "wnGCMMa",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_CLAIM_DU",
+        "API_DOC_BLOCK",
+        {
+          "sAccessCode": "ACCEPTBBWARN",
+          "SAccessDescription": "Accept policy quote results",
+          "id": "1",
+          "selected": true,
+          "status": true
+        },
+        {
+          "id": "4",
+          "sAccessCode": "AGENT_MAINT",
+          "SAccessDescription": "Agent maintenance",
+          "status": true
+        },
+        {
+          "id": "6",
+          "sAccessCode": "API_CLAIM_DU",
+          "SAccessDescription": "Allow user to upload Claim documents using API",
+          "selected": true,
+          "status": true
+        },
+        {
+          "id": "7",
+          "sAccessCode": "API_DOC_BLOCK",
+          "SAccessDescription": "Prevent access to all documents through API",
+          "selected": true,
+          "status": true
+        },
+        {
+          "id": "8",
+          "sAccessCode": "API_DOC_CONF",
+          "SAccessDescription": "Allow access to documents with Confidential confidentiality through API",
+          "status": true
+        },
+        {
+          "id": "9",
+          "sAccessCode": "API_DOC_PERS",
+          "SAccessDescription": "Allow access to documents with Personal confidentiality through API",
+          "status": true
+        },
+        {
+          "id": "18",
+          "sAccessCode": "ADDR_OVERRIDE",
+          "SAccessDescription": "Prevent access to all documents through API",
+          "status": true
+        },
+        {
+          "sAccessCode": "API_CLAIM_MAINT",
+          "SAccessDescription": "All user to claim",
+          "id": "d03dd7c5-6f3a-4e71-8675-f2547c266845",
+          "status": true
+        },
+        {
+          "sAccessCode": "API_DOC_4",
+          "SAccessDescription": "TEST",
+          "id": "200ba171-0ec1-428c-a200-28b144739185",
+          "status": true
+        },
+        {
+          "sAccessCode": " API_DOC_BLOCK",
+          "SAccessDescription": "Prevent access to all documents through API",
+          "id": "2f009fc3-2441-42d8-a1a6-b3852e523a47",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_DEL_CLAIMANT",
+          "SAccessDescription": "Claim - Delete unpaid Claim Parties",
+          "id": "5af926dc-02b6-4008-88b0-dea6a7d4c196",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_EXCEL_PRINT",
+          "SAccessDescription": "Print Excel Documents",
+          "id": "d7310922-48b3-448c-9362-d38867e86973",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_EXCHANGERATE",
+          "SAccessDescription": "Allow user to specify a settlement currency and rate for Claim Payments",
+          "id": "ae011d42-4348-4cef-b3e2-b98e73a44d9e",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_FINALISECLMT",
+          "SAccessDescription": "Finalise Claimant",
+          "id": "f41ef724-3970-4313-bee1-820990da13d5",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_INCIDENT",
+          "SAccessDescription": "Claim - Change Incident Date",
+          "id": "8ff89267-0a7d-4c6c-a9a5-6d207f047d3e",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_IND_APR",
+          "SAccessDescription": "Allow Individual Claim Approval Note",
+          "id": "feb31cd7-0e0b-454d-bb3c-6c18ac95388c",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_IND_DEC",
+          "SAccessDescription": "Allow Individual Claim Decline Note",
+          "id": "32d2e826-cacd-4c36-95a5-ea8ccc93b614",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_NEGCLAIMBAL",
+          "SAccessDescription": "Allow negative Claim Balances",
+          "id": "71505981-4e1a-4468-b63a-f0310b70e968",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_PAYSEC_LEV2",
+          "SAccessDescription": "Claim - Approve Payment Request",
+          "id": "3e633674-07c1-4053-b290-476e65107b33",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_PAYSEC_LEV3",
+          "SAccessDescription": "Claim - Authorise or Decline Payment",
+          "id": "eeaa029d-33d9-43a8-89a1-5d7490ac0046",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_RECOVERY",
+          "SAccessDescription": "Claim - Perform Recovery",
+          "id": "d8f208ef-4c46-4752-aa59-83589b11e50c",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_REOPEN",
+          "SAccessDescription": "Re-open Finalised Claims",
+          "id": "fbb14367-3723-40bf-8f34-7db2d29c4771",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_REQUISITION",
+          "SAccessDescription": "Claim - Print Payment Requisition",
+          "id": "cb508eb6-30cc-4d02-bcf8-a165fe216a9a",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_REVERSEPAY",
+          "SAccessDescription": "Can reverse Claim Payments",
+          "id": "78972d50-752f-498d-84ff-b62f39352cd2",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_SALVAGE",
+          "SAccessDescription": "Claims - can do salvage",
+          "id": "01be0b36-b1e7-4a73-ab3d-0b10595d02d5",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_SAVECLAIM",
+          "SAccessDescription": "Claim - Can Save Claim",
+          "id": "f21fce2c-ddcd-439b-bbad-77780b3f5e6a",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_STALECHEQUE",
+          "SAccessDescription": "Reverse Claim Payments",
+          "id": "c63cc6ae-265f-4544-813f-e2fe4445d0b2",
+          "status": true
+        },
+        {
+          "sAccessCode": "CL_UNDMAN",
+          "SAccessDescription": "Underwriting Manager",
+          "id": "ece0c0cb-c7ea-46b3-9ddd-0d6be32322d9",
+          "status": true
+        },
+        {
+          "sAccessCode": "AGENT_COMM_PAY",
+          "SAccessDescription": "Underwriting Supervisor",
+          "id": "8208fba3-7603-4ee0-aee8-f79aed235ddc",
+          "status": true
+        },
+        {
+          "sAccessCode": " CL_FINALISECLMT",
+          "SAccessDescription": "Finalise Claims",
+          "id": "ff3d2831-7ac6-4572-a259-3df9bdea4ae4",
+          "status": true
+        },
+        {
+          "sAccessCode": " CL_STALECHEQUE",
+          "SAccessDescription": "Edit CHEQUE",
+          "id": "f69b62e0-507e-4857-b73c-4321d386d094",
+          "status": true
+        }
+      ]
+    },
+    {
+      "id": "ZinAU7U",
+      "accesscodes": [
+        "AGENT_MAINT",
+        "API_DOC_BLOCK",
+        "API_DOC_PERS",
+        "API_DOC_4"
+      ]
+    },
+    {
+      "id": "btt1nbM",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "AGENT_MAINT",
+        "API_CLAIM_DU",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_CLAIM_MAINT",
+        "API_DOC_4",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        "CL_EXCHANGERATE",
+        "CL_FINALISECLMT",
+        "CL_INCIDENT",
+        "CL_IND_APR",
+        "CL_IND_DEC",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_PAYSEC_LEV3",
+        "CL_RECOVERY",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_REVERSEPAY",
+        "CL_SALVAGE",
+        "CL_SAVECLAIM",
+        "CL_STALECHEQUE",
+        "CL_UNDMAN",
+        "AGENT_COMM_PAY",
+        " CL_FINALISECLMT",
+        " CL_STALECHEQUE"
+      ]
+    },
+    {
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "AGENT_MAINT",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_DOC_4",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_SALVAGE",
+        "CL_UNDMAN",
+        "API_CLAIM_MAINT",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        "CL_EXCHANGERATE",
+        "CL_FINALISECLMT",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_RECOVERY",
+        "CL_REVERSEPAY",
+        "CL_SAVECLAIM",
+        "CL_STALECHEQUE",
+        "AGENT_COMM_PAY",
+        " CL_FINALISECLMT",
+        " CL_STALECHEQUE",
+        "API_CLAIM_DU"
+      ],
+      "id": "3121"
+    },
+    {
+      "id": "3ZY2Vlg",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_CLAIM_DU",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_CLAIM_MAINT",
+        "API_DOC_4",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        "CL_EXCHANGERATE",
+        "CL_FINALISECLMT",
+        "CL_INCIDENT",
+        "CL_IND_APR",
+        "CL_IND_DEC",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_PAYSEC_LEV3",
+        "CL_RECOVERY",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_REVERSEPAY",
+        "CL_SALVAGE",
+        "CL_SAVECLAIM",
+        "CL_STALECHEQUE",
+        "CL_UNDMAN",
+        "AGENT_COMM_PAY",
+        " CL_FINALISECLMT",
+        " CL_STALECHEQUE",
+        "AGENT_MAINT"
+      ]
+    },
+    {
+      "id": "1SOEchh",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_CLAIM_DU",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_CLAIM_MAINT",
+        "API_DOC_4",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        "CL_EXCHANGERATE",
+        "CL_FINALISECLMT",
+        "CL_INCIDENT",
+        "CL_IND_APR",
+        "CL_IND_DEC",
+        "CL_NEGCLAIMBAL",
+        "CL_PAYSEC_LEV2",
+        "CL_PAYSEC_LEV3",
+        "CL_RECOVERY",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_REVERSEPAY",
+        "CL_SALVAGE",
+        "CL_SAVECLAIM",
+        "CL_STALECHEQUE",
+        "CL_UNDMAN",
+        "AGENT_COMM_PAY",
+        " CL_FINALISECLMT",
+        " CL_STALECHEQUE",
+        "AGENT_MAINT"
+      ]
+    },
+    {
+      "id": "MrfZDBj",
+      "accesscodes": []
+    },
+    {
+      "id": "0nQNIBI",
+      "accesscodes": []
+    },
+    {
+      "id": "vyA8WdN",
+      "accesscodes": []
+    },
+    {
+      "id": "fC4Sj8k",
+      "accesscodes": []
+    },
+    {
+      "id": "ugZdghG",
+      "accesscodes": []
+    },
+    {
+      "id": "MHdZ0wb",
+      "accesscodes": []
+    },
+    {
+      "id": "MdmOF2n",
+      "accesscodes": []
+    },
+    {
+      "id": "E5O1beg",
+      "accesscodes": []
+    },
+    {
+      "id": "eBbTUgz",
+      "accesscodes": []
+    },
+    {
+      "id": "tuCUEed",
+      "accesscodes": []
+    },
+    {
+      "id": "qff4LEX",
+      "accesscodes": []
+    },
+    {
+      "id": "bVGGDnR",
+      "accesscodes": []
+    },
+    {
+      "id": "AQ6BYFe",
+      "accesscodes": []
+    },
+    {
+      "id": "iOS6tev",
+      "accesscodes": []
+    },
+    {
+      "id": "UU_RG10",
+      "accesscodes": []
+    },
+    {
+      "id": "LTZvdaI",
+      "accesscodes": []
     }
   ]
 }

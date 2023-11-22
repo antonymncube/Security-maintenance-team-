@@ -1,5 +1,6 @@
-<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form1">
-  <div class="tabs">
+ 
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form1 bg-white">
+  <div class="tabs ">
     <div></div>
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
     <label for="tab1" class="tabs__label">Details</label>
@@ -129,65 +130,53 @@
 
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
     <label for="tab2" class="tabs__label">Access Codes</label>
-    <div class="tabs__content">
-      <div class="row">
+    <div class="tabs__content bg-white">
+      <div class="row p-2" style="margin-top: 50px;">
         <div class="container" style="display: flex;">
 
 
           <div class="form-group" style="display: flex; margin-right: 20px;">
             <label for="searchAccessGroup">Search Access Group:</label>
             <!-- <input type="text" id="searchAccessGroup" name="searchAccessGroup" style="width: 150px; height: 20px;"> -->
-                <input type="text" [formControl]="filterTextControl2" placeholder="Search Groups"   />
+
+            <input type="text" id="inputField" name="searchAccessGroup" formControlName="filterText2"
+              style="width: 150px; height: 20px;" (input)="onFilterTextChanged()" />
 
           </div>
 
 
           <div class="form-group" style="display: flex; margin-left: 100px;">
             <label for="searchAccessCode">Search Access Code:</label>
-            <input type="text" id="searchAccessCode" name="searchAccessCode"
-              style="width: 150px; height: 20px; margin-left: 20px;">
-
-          </div>
-
-        </div>
-
-
-        <div class="col-4 p-0" style="border: 9px solid red;">
-          <div class="form-group " style="display: flex;">
-            <label for="inputField" style="width: 200px;">Search Access Group:</label>
-            <input type="text" id="inputField" name="searchAccessGroup"
-              style="width: 150px;height: 20px;margin-left: 30px;">
-          </div>
-          <div class="access-groups scrollable">
-            <!-- <input type="text" [formControl]="filterTextControl2" placeholder="Search Groups" /> -->
-  
- 
-
-            <div *ngFor="let group of filteredAccessGroups(); let i = index" class="access-group">
-              <div class="access-group-item" [ngClass]="{'': group.selected}">
-                <div class="access-group-name">
-                  <label>
-                    <input type="checkbox" class="checkbox4" [(ngModel)]="group.selected" (change)="toggleAccessCodes(i)">
-                    <strong>{{ group }}</strong>
-                    <p>{{group.selected}}</p>
-                  </label>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-        <div class="col-8 useraccesscodes">
-          <div class="form-group" style="display: flex;">
-            <label for="inputField">Search Access :</label>
             <input type="text" id="inputField" name="searchAccessGroup" formControlName="filterText1"
               style="width: 150px; height: 20px;" (input)="onFilterTextChanged()" />
 
           </div>
 
 
-          <div>Filter Text: {{ filterText }}</div>
+        </div>
+        <div class="col-4 pl-3 bg-light" style=" border: solid  rgb(182, 177, 177) 1px;border-radius: 5px; ">
 
+          <div class="access-groups scrollable">
+            <div *ngFor="let group of filteredAccessGroups(); let i = index" class="access-group">
+              <div class="access-group-item" [ngClass]="{'': group.selected}">
+                <div class="access-group-name">
+                  <label>
+                    <input type="checkbox" class="checkbox4" [(ngModel)]="group.selected"
+                      (change)="toggleAccessCodes(i)">
+                    <strong>{{ group }}</strong>
+
+                  </label>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-8 useraccesscodes bg-light">
+          <div class="" style="display: flex;margin-left: 6px;">
+            <input type="checkbox" [checked]="selectAllCheckbox" (change)="toggleSelectAll($event)">
+            <label for="selectAllCheckbox" style="margin-left: 8px; margin-top: 5px;">Select all</label>
+          </div>
           <div *ngFor="let accesscodes of filteredAccessCodes(); let i = index">
             <label class="checkbox-container">
               <div class="inline-block-container  accesscodes p-1">
@@ -201,8 +190,8 @@
         </div>
 
       </div>
-
-      <button (click)="saveSelectedAccessCodes()">Save</button>
+  
+    
     </div>
 
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab3">
@@ -210,8 +199,18 @@
     <div class="tabs__content">
       <app-available-products (selectedProducts)="receiveSelectedProducts($event)"></app-available-products>
       <!-- <button mat-raised-button color="primary" (click)="saveSelectedProducts()">Save</button> -->
-      <button class="" type="submit" [disabled]="userForm.invalid">Save</button>
+      
 
     </div>
   </div>
+  <div style="border: solid red 10px; padding: 0px; position: relative; height: 60px;">
+
+    <button class="cancel-button" style="position: absolute; margin-left: 72rem;">Cancel</button>
+
+    <button class="save-button" type="submit" [disabled]="userForm.invalid" style="position: absolute; left: 100px;margin-left: 61rem;">Save</button>
+
+</div>
+
+
 </form>
+ 
