@@ -42,6 +42,8 @@ export class UserListComponent implements OnInit {
   paginator!: MatPaginator;
   currentuser: string = '';
   statusFilterControl = this.formBuilder.control('');
+  UserForm: any;
+  userForm: any;
 
 
   constructor(private apiService: ApiServiceService, private router: Router, private autservice: AuthService,
@@ -74,16 +76,20 @@ export class UserListComponent implements OnInit {
       this.router.navigate(['/home/viewuser', element.id]);
     } else if (action === 'toggleStatus') {
       this.toggleUserStatus(element.id);
+    } else if (action === 'delete') {
+      // this.onDeleteUser(element.id);
     }
   }
 
-  // onDeleteUser(userId: string): void {
+  // onDeleteUser(userId: number): void {
   //   if (confirm('Are you sure you want to delete this user?')) {
-  //     this.apiService.deleteUser(userId).subscribe(() => {
-
-  //         location.reload();
-  //       });
-  //     }}
+  //     this.apiService.deleteUser(userId.toString()).subscribe(() => {
+  //       // You might not need to reload the location, as Angular's change detection will update the UI.
+  //       // However, if needed, you can force a reload using window.location.reload()
+  //       location.reload();
+  //     });
+  //   }
+  // }
 
 
 
@@ -106,10 +112,17 @@ export class UserListComponent implements OnInit {
         if (status === null || status === '') {
           // If status is null, no filter should be applied
           this.dataSource.filter = '';
-          
+
         } else {
           // Otherwise, apply the filter based on the boolean value
           this.dataSource.filter = status === 'true' ? 'true' : 'false';
         }
       }
+    
+    markAllAsTouched() {
+      Object.keys(this.UserForm.controls).forEach(controlName => {
+        this.userForm.get(controlName)?.markAsTouched();
+      });
     }
+  }
+    
