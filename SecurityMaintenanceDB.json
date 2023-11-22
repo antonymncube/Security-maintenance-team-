@@ -888,14 +888,16 @@
       "password": "$2a$10$fprVvB6gFJt.wVbFlz6/zOxoJ5Wygu/3n1S72hPpREK9//zGV3/CS",
       "department": "IT",
       "email": "219148414@edu.vut.ac.za",
-      "homephone": "",
+      "homephone": "0781638594",
       "mobile": "0781954154",
       "agent": "Standard Bank",
       "status": true,
-      "lastUpdated": "2023-11-21T07:46:46.379Z",
-      "language": "",
-      "location": "",
+      "lastUpdated": "2023-11-21T12:24:17.237Z",
+      "language": "Native",
       "selectedProducts": [
+        "Dental Cover Plan",
+        "Cash Plan",
+        "Group Cash Plan",
         "Consumer Dental"
       ]
     },
@@ -911,11 +913,11 @@
       "mobile": "0781954154",
       "agent": "Genasys",
       "status": true,
-      "lastUpdated": "2023-11-21T07:48:38.112Z",
-      "language": "",
-      "location": "",
+      "lastUpdated": "2023-11-22T07:19:31.775Z",
+      "language": "Afrikaans",
       "selectedProducts": [
-        "Cash Plan"
+        "Cash Plan",
+        "Corporate Dental_old"
       ]
     }
   ],
@@ -1216,17 +1218,29 @@
       "id": "5167"
     },
     {
+      "id": "4509",
       "AccessGroups": [
         "Accountent"
-      ],
-      "id": "4509"
+      ]
     },
     {
+      "id": "6121",
       "AccessGroups": [
         "Accountent",
         "Claim-Admin"
-      ],
-      "id": "6121"
+      ]
+    },
+    {
+      "AccessGroups": [],
+      "id": "LcXrXBB"
+    },
+    {
+      "AccessGroups": [],
+      "id": "_URnJWu"
+    },
+    {
+      "AccessGroups": [],
+      "id": "ttsPlXW"
     }
   ],
   "SecUserAccess": [
@@ -1564,7 +1578,6 @@
       ]
     },
     {
-      "id": "4509",
       "accesscodes": [
         "ACCEPTBBWARN",
         "API_DOC_BLOCK",
@@ -1572,10 +1585,10 @@
         "CL_DEL_CLAIMANT",
         "CL_EXCEL_PRINT",
         " CL_STALECHEQUE"
-      ]
+      ],
+      "id": "4509"
     },
     {
-      "id": "6121",
       "accesscodes": [
         "ACCEPTBBWARN",
         "API_DOC_BLOCK",
@@ -1590,8 +1603,51 @@
         "CL_REOPEN",
         "CL_REQUISITION",
         "CL_SALVAGE",
-        "CL_UNDMAN"
-      ]
+        "CL_UNDMAN",
+        [
+          "ACCEPTBBWARN",
+          "API_DOC_BLOCK",
+          " API_DOC_BLOCK",
+          "CL_DEL_CLAIMANT",
+          "CL_EXCEL_PRINT",
+          " CL_STALECHEQUE",
+          "AGENT_MAINT",
+          "API_DOC_PERS",
+          "ADDR_OVERRIDE",
+          "API_DOC_4",
+          "CL_REOPEN",
+          "CL_REQUISITION",
+          "CL_SALVAGE",
+          "CL_UNDMAN",
+          "ACCEPTBBWARN",
+          "API_DOC_BLOCK",
+          " API_DOC_BLOCK",
+          "CL_DEL_CLAIMANT",
+          "CL_EXCEL_PRINT",
+          " CL_STALECHEQUE",
+          "AGENT_MAINT",
+          "API_DOC_PERS",
+          "ADDR_OVERRIDE",
+          "API_DOC_4",
+          "CL_REOPEN",
+          "CL_REQUISITION",
+          "CL_SALVAGE",
+          "CL_UNDMAN"
+        ]
+      ],
+      "id": "6121"
+    },
+    {
+      "id": "6ExRwoK",
+      "accesscodes": []
+    },
+    {
+      "id": "sQqIkm9",
+      "accesscodes": []
+    },
+    {
+      "id": "bjvZF_K",
+      "accesscodes": []
     }
   ]
 }

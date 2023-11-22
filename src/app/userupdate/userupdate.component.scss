@@ -3,6 +3,11 @@
 .mat-tab-group {
   margin-bottom: 48px;
 }
+/* Add this to your styles.css or styles.scss file */
+mat-icon.warning {
+  color: red; /* Set the color as needed */
+  margin-right: 4px; /* Adjust the margin as needed */
+}
 
 form {
   width: 80rem;

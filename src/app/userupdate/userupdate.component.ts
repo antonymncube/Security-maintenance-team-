@@ -314,5 +314,22 @@ export class UserupdateComponent {
       }
     );
   }
+// Add this method to your component class
+hasRequiredFields(): boolean {
+  // Check if any of the fields in the "User-Details" tab are invalid
+  return !! (
+    this.isControlInvalid('username') ||
+    this.isControlInvalid('fullname') ||
+    this.isControlInvalid('password') ||
+    this.isControlInvalid('confirmpassword') ||
+    this.isControlInvalid('email') ||
+    this.isControlInvalid('department') ||
+    this.isControlInvalid('agent') ||
+    this.isControlInvalid('homephone') ||
+    this.isControlInvalid('description') ||
+    this.isControlInvalid('language') ||
+    this.isControlInvalid('mobile')
+  );
+}
 
 }

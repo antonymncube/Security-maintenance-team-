@@ -1,6 +1,7 @@
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form1">
   <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" class="my-custom-class">
     <mat-tab label="User-Details">
+     <i class="fa fa-exclamation-triangle invalid-indicator"></i>
       <div class="totalDetails">
         <div class="userdetails form-group">
           <div class="form-group">
@@ -10,6 +11,7 @@
               [ngClass]="{ 'is-invalid': isControlInvalid('username'), 'invalid-field': isControlInvalid('username') }">
               <div *ngIf="isControlInvalid('username')" class="invalid-feedback">
                 Username required.
+                
               </div>
             </div>
           </div>
