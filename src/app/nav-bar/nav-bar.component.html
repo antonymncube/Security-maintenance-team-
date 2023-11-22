@@ -5,10 +5,15 @@
 
     <mat-nav-list class="navbar">
       <img class="logo-img" src="assets\images\Genasys-White.svg" alt>
-      <div class="router-link" routerLink="/home" matTooltip="Home" matTooltipPosition="right">
+      <!-- <div class="router-link" routerLink="/home" matTooltip="Home" matTooltipPosition="right">
+        <i class="icon fa fa-home fa-1x" aria-hidden="true"></i>
+        <label class="link" >Home</label>
+      </div> -->
+
+      <div class="router-link" (click)="navigateToHome()" matTooltip="Home" matTooltipPosition="right">
         <i class="icon fa fa-home fa-1x" aria-hidden="true"></i>
         <label class="link">Home</label>
-      </div>
+    </div>
 
       <div class="router-link" [matMenuTriggerFor]="menu" matTooltip="Tools" matTooltipPosition="right">
         <i class="icon fa fa-cog fa-1x" aria-hidden="true"></i>
@@ -26,5 +31,5 @@
     </mat-nav-list>
   </mat-sidenav>
 </mat-sidenav-container>
- 
+
 </main>

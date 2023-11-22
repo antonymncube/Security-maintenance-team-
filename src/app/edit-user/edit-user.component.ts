@@ -66,14 +66,14 @@ export class EditUserComponent implements OnInit {
     this.userForm = this.formBuilder.group({
       id: [''],
       username: [{ value: '', }, Validators.required],
-      fullname: ['', Validators.required],
+      fullname: ['',],
       description: [''],
       password: [{ value: '', }, [Validators.required, Validators.minLength(6)]],
-      department: ['',],
+      department: ['',[Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      homephone: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
-      mobile: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
-      agent: ['',],
+      homephone: ['', [Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
+      mobile: ['', [ Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
+      agent: ['', [Validators.required]],
       status: [{ value: '', }],
       lastUpdated: [''],
       language: ['',],
@@ -97,7 +97,9 @@ export class EditUserComponent implements OnInit {
 
       this.apiService.getUserDetails(this.id).subscribe((userDetails: any) => {
         if (userDetails && userDetails.selectedProducts) {
-          this.userForm.get('selectedProducts')!.setValue(userDetails.selectedProducts);
+
+          // this.selectedProducts = userDetails.selectedProducts;
+          this.userForm.get('selectedProducts')!.setValue(this.selectedProducts);
         }
         this.userForm.patchValue(userDetails);
       });
@@ -184,12 +186,23 @@ export class EditUserComponent implements OnInit {
     }
   }
 
-  updateSelectedProducts(selectedProducts: any[]) {
+  updateSelectedProducts(selectedProducts: string[]) {
     const selectedProductsControl = this.userForm.get('selectedProducts');
     if (selectedProductsControl) {
       selectedProductsControl.setValue(selectedProducts);
     }
+
+    // Update the user with the new selected products
+    // this.apiService.updateUser(this.id, { selectedProducts }).subscribe(
+    //   (response: any) => {
+    //     console.log('User data updated:', response);
+    //   },
+    //   (error: any) => {
+    //     console.error('Update failed:', error);
+    //   }
+    // );
   }
+
 
   getAccesslookup() {
     this.apiService.getSecLookup().subscribe((SecLookup: any) => {
@@ -267,7 +280,7 @@ export class EditUserComponent implements OnInit {
         // If a matching code is found, set selected to false
         if (matchingCode !== undefined) {
           // Assuming there is a 'selected' property in each access code object
-          matchingCode.selected = false; 
+          matchingCode.selected = false;
         }
       });
     }
@@ -275,7 +288,7 @@ export class EditUserComponent implements OnInit {
 
     }
     const accessCodesInGroup = this.accessGroup[index].sAccessCodes;
-  
+
     for (let i = 0; i < accessCodesInGroup.length; ++i) {
       for (let j = 0; j < this.accessCodes.length; ++j) {
         if (accessCodesInGroup[i] === this.accessCodes[j].sAccessCode.code) {

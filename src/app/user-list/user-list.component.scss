@@ -18,17 +18,17 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  margin-left: 72rem;
+  margin-left: 74rem;
 }
 
 
 
 .welcome{
-  margin-left: 9px;
-  margin-top: 10px;
+  margin-left: 5px !important;
+  margin-top: 15px !important;
   font-weight: 600px;
   font-size: 18px; 
-  font-family: Roboto, Helvetica Neue, sans-serif; 
+  font-family: italic; 
 }
 
 
@@ -95,18 +95,11 @@
   padding: 2px;
 }
 
-/* Style the table header */
-th {
-  background-color: #f2f2f2;
-  text-align: left;
-  padding: 2px;
-  border-bottom: 1px solid black;
-}
-
+ 
 /* Style the table rows */
 td {
-  padding: 5px;
-  border-bottom: 1px solid black;
+  padding: 5px !important;
+  border-bottom: 1px solid black !important;
 }
 
 /* Style the Actions column */
@@ -114,20 +107,11 @@ td {
   text-align: center;
 }
 
-/* Style the Add User button */
-// .btn-add {
-//   background-color: #007bff;
-//   color: white;
-//   border: none;
-//   border-radius: 5px;
-//   padding: 10px 20px;
-//   cursor: pointer;
-//   margin-top: 20px;
-//   font-size: 16px;
-// }
+ 
 
 .btn-add:hover {
   background-color: #2F3351;
+
 }
 
 
@@ -183,7 +167,8 @@ td {
 .tabs__label {
   // padding: 5px 11px;
   //cursor: pointer;
-  border:solid black 1px;
+  background-color: #f2f2f2;
+  border: black 0.2px;
   width: 235px;
   height: 40px;
   padding-left: 20px;
@@ -192,12 +177,14 @@ td {
   font-size: 16px; 
   font-family: Roboto, Helvetica Neue, sans-serif; 
   font-weight: 580;
+  
 
 }
 
 .check{
   width: 94px;
   height: 20px;
+  background-color: white;
   margin-left: 10px;
   margin-bottom: 4px;
   border-radius:  3px;
@@ -222,6 +209,7 @@ td {
   font-size: 0.9em;
   display: none;
   padding: 0px;
+
 }
 
 .usericon{
@@ -271,6 +259,32 @@ tr:not(.header-row):hover td {
 .details{
   padding-top: 16px;
 }
+
+/* Style the table header */
+th {
+  background-color: #f2f2f2 !important;
+  text-align: left;
+  padding: 2px;
+  border-bottom: 1px solid black !important;
+  // border-left: 1px solid black !important; /* Add left border */
+  // border-right: 1px solid black !important; /* Add right border */
+}
+
+/* Add border to the first and last th in the table */
+th:first-child {
+  border-left: none !important;
+}
+
+th:last-child {
+  border-right: none !important;
+}
+
+/* Style the table rows */
+td {
+  padding: 5px;
+  border-bottom: 1px solid black !important;
+}
+
 
 
 

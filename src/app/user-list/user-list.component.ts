@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ApiServiceService } from '../services/api-service.service';
 import { Router } from '@angular/router';
 import { MatPaginator } from '@angular/material/paginator';
@@ -31,7 +31,8 @@ export interface PeriodicElement {
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.scss']
+  styleUrls: ['./user-list.component.scss'],
+  encapsulation: ViewEncapsulation.None  
 })
 export class UserListComponent implements OnInit {
   displayedColumns: string[] = ['name', 'weight', 'description', 'agent', 'department', 'lastUpdated', 'Action'];
@@ -73,16 +74,20 @@ export class UserListComponent implements OnInit {
       this.router.navigate(['/home/viewuser', element.id]);
     } else if (action === 'toggleStatus') {
       this.toggleUserStatus(element.id);
+    } else if (action === 'delete') {
+      // this.onDeleteUser(element.id);
     }
   }
 
-  // onDeleteUser(userId: string): void {
+  // onDeleteUser(userId: number): void {
   //   if (confirm('Are you sure you want to delete this user?')) {
-  //     this.apiService.deleteUser(userId).subscribe(() => {
-
-  //         location.reload();
-  //       });
-  //     }}
+  //     this.apiService.deleteUser(userId.toString()).subscribe(() => {
+  //       // You might not need to reload the location, as Angular's change detection will update the UI.
+  //       // However, if needed, you can force a reload using window.location.reload()
+  //       location.reload();
+  //     });
+  //   }
+  // }
 
 
 
@@ -105,7 +110,7 @@ export class UserListComponent implements OnInit {
         if (status === null || status === '') {
           // If status is null, no filter should be applied
           this.dataSource.filter = '';
-          
+
         } else {
           // Otherwise, apply the filter based on the boolean value
           this.dataSource.filter = status === 'true' ? 'true' : 'false';

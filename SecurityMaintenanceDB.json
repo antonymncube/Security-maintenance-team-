@@ -229,14 +229,19 @@
       "username": "EmihleN",
       "fullname": "Emihle Ntshongwana",
       "description": "MGA",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$Fp8Nb1ZVij/SRnEWNH5gv.adxaLYOo.sI4Ylbf0MlrslW.w9gLOpi",
-      "email": "ntshongwanae@gmail.com",
-      "homephone": "0712425668",
-      "mobile": "0712425668",
       "department": "IT",
-      "status": true
+      "email": "ntshongwanae@gmail.com",
+      "homephone": "0781638594",
+      "mobile": "0712425668",
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-11-22T12:12:35.934Z",
+      "language": "English",
+      "selectedProducts": [
+        "Cash Plan",
+        "Corporate Dental"
+      ]
     },
     {
       "id": "17",
@@ -279,20 +284,6 @@
       "status": true
     },
     {
-      "id": "P1kTOnC",
-      "username": "Mihle",
-      "fullname": "Mihle Jack",
-      "description": " Married",
-      "location": "",
-      "agent": "Genasys",
-      "password": "$2a$10$G9g8FpFUBnYg6iYha2wsi.nRF8Vx9k4cWdHq5QvFKZb24.RfhV.4e",
-      "email": "m.jack@genasystech.com",
-      "homephone": "0671402936",
-      "mobile": "7819906770",
-      "department": "IT",
-      "status": true
-    },
-    {
       "id": "E1yptON",
       "username": "Grace",
       "fullname": "Grace Ngwangwa",
@@ -311,573 +302,53 @@
       "username": "Anthony",
       "fullname": "Anthony Ncube",
       "description": "Anthony Hemilton",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$QX4J8usm1PVh2yBC3BMiS.EODCbw/nWsRnX379BL2fHlKMKnjSnoi",
+      "department": "IT",
       "email": "a.ncube@genasystech.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "department": "IT",
-      "status": true
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-11-22T12:10:52.084Z",
+      "language": "English",
+      "selectedProducts": [
+        "Consumer Dental"
+      ]
     },
     {
       "id": "RIpKtJb",
       "username": "Mitch",
       "fullname": "Mitch Gordons",
       "description": "Dev Manager",
-      "location": "",
-      "agent": "Standard Bank",
       "password": "$2a$10$ZPiM8IHrPp24ywAM4bQQbu0RRtbNrc5iAMD2.3HAhiePvsZgtBOuq",
+      "department": "IT",
       "email": "nseptember591@gmail.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "department": "IT",
-      "status": true
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-11-22T12:10:37.567Z",
+      "language": "Afrikaans",
+      "selectedProducts": [
+        "Corporate Dental"
+      ]
     },
     {
       "id": "9d802p8",
       "username": "Grant",
       "fullname": "Grant Oliver",
       "description": "tester",
-      "location": {
-        "value": ""
-      },
-      "agent": "Genasys",
       "password": "wawawawe",
-      "department": "Simply Health",
+      "department": "IT",
       "email": "nseptember591@gmail.com",
       "homephone": "0781638594",
       "mobile": "0671802963",
-      "status": {
-        "value": ""
-      },
-      "lastUpdated": "2023-11-09T12:37:54.039Z",
-      "language": "Afrikaans"
-    },
-    {
-      "id": "6Pt4JWs",
-      "username": "mItch",
-      "fullname": "Mitch",
-      "description": "yes",
-      "location": "",
-      "agent": "Standard Bank",
-      "password": "$2a$10$hK9YkfAyFdzfaNIirQ6N7O64CaOVo4xkzB27D.92kgkijDl7jk9ZW",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0671402936",
-      "mobile": "0781954154",
-      "status": true
-    },
-    {
-      "id": "IwrHf2H",
-      "username": "Nami",
-      "fullname": "Nami Swan",
-      "description": " Married",
-      "password": "$2a$10$C/cRjlx2sjHOxMm3BZILt.A8KTaO3TMs844iIbuyUg7ui.m2WDWBy",
-      "department": "Genasys",
-      "email": "curlybrows@onepiece.com",
-      "homephone": "0671402936",
-      "mobile": "0781990671",
       "agent": "Genasys",
-      "status": true,
-      "lastUpdated": "2023-11-10T07:12:27.779Z",
+      "status": false,
+      "lastUpdated": "2023-11-22T12:09:32.616Z",
       "language": "Afrikaans",
-      "selectedProducts": []
-    },
-    {
-      "id": "rwT478F",
-      "username": "Sanji",
-      "fullname": "Vinsmoke Sanji",
-      "description": "Nami swann!!!!",
-      "location": "",
-      "agent": "Simply Health",
-      "password": "$2a$10$kAuUPq/GhGX1gbQ0zWVodOA.coFwHBNn6D1wrzKvxMtdSnJwpRPYa",
-      "email": "curlybrows@onepiece.com",
-      "homephone": "0671402936",
-      "mobile": "0781990671",
-      "department": "HR",
-      "status": true,
-      "lastUpdated": "2023-11-10T07:12:53.490Z",
-      "selectedProducts": []
-    },
-    {
-      "id": "kFIUrk0",
-      "username": "Namiss",
-      "fullname": "Nami Swan",
-      "description": " Married",
-      "password": "$2a$10$7jL9Cnum2z8vX.XmBA56Mesvh4F5cnmGU3ThVK5M30ggtiBiTmjHG",
-      "department": "Genasys",
-      "email": "mosshead@onepiece.com",
-      "homephone": "0671402936",
-      "mobile": "0781954154",
-      "agent": "Genasys",
-      "status": true,
-      "lastUpdated": "2023-11-10T07:20:29.706Z",
-      "language": "Simply Health",
-      "selectedProducts": []
-    },
-    {
-      "id": "OQWl6Pp",
-      "username": "Namisss",
-      "fullname": "Nami Swan",
-      "description": " Married",
-      "location": "",
-      "agent": "Genasys",
-      "password": "$2a$10$VaFR7jpWaj.pdKAdeHqpleMJEL26Cox1EyTfF0eRVmG7f2S8y/C6.",
-      "email": "pinapule@poroporo.com",
-      "homephone": "0671402936",
-      "mobile": "0671802963",
-      "department": "IT",
-      "status": true,
-      "lastUpdated": "2023-11-10T07:21:04.495Z",
-      "selectedProducts": []
-    },
-    {
-      "id": "L6iloi8",
-      "username": "Namiqq",
-      "fullname": "Kholo yes",
-      "description": " Married",
-      "location": "",
-      "agent": "Genasys",
-      "password": "$2a$10$FabIadCz5358bp5Mv6gcdOGgqv/jbeQK.fKb0/r7z93FjOr54tkRS",
-      "email": "pinapule@poroporo.com",
-      "homephone": "0671402936",
-      "mobile": "0781990621",
-      "department": "Sales",
-      "status": true,
-      "lastUpdated": "2023-11-10T07:25:40.776Z",
-      "selectedProducts": []
-    },
-    {
-      "id": "vUxRspY",
-      "username": "Minamina",
-      "fullname": "Shibawa",
-      "description": " Married",
-      "password": "$2a$10$MrOMku4J7TmYbKt9KjFlDuHMMpDaF.i/wc9rHKpWWG/.De5nD6VK6",
-      "department": "Sales",
-      "email": "nami@onepiece.com",
-      "homephone": "0671402936",
-      "mobile": "0671802963",
-      "agent": "Genasys",
-      "status": true,
-      "lastUpdated": "2023-11-11T13:31:27.112Z",
-      "language": "English",
-      "selectedProducts": [
-        "Dental Cover Plan",
-        "Corporate Dental_old",
-        "Consumer CashPlan"
-      ]
-    },
-    {
-      "id": "6899",
-      "username": "TEST",
-      "fullname": "jack",
-      "description": "yes",
-      "password": "$2a$10$FBQvWwUIAjfHN6dIP9VxzO/n4x97kJKuApMoY/5UghiiDqv8GHoFm",
-      "department": "HR",
-      "email": "nseptember591@gmail.com",
-      "homephone": "0781638594",
-      "mobile": "0671802963",
-      "agent": "Simply Health",
-      "status": true,
-      "lastUpdated": "2023-11-11T20:45:14.206Z",
-      "language": "",
-      "location": "",
-      "selectedProducts": []
-    },
-    {
-      "id": "3715",
-      "username": "Mitch23",
-      "fullname": "test2",
-      "description": "yes",
-      "password": "$2a$10$0akK03gfMrTHg9b6K6ua0e0ZPdt.YqBTkxxp7E0RDYnvvB2Yk8emi",
-      "department": "IT",
-      "email": "mitch.gordons@genasystech.com",
-      "homephone": "0781638594",
-      "mobile": "0781954154",
-      "agent": "Simply Health",
-      "status": true,
-      "lastUpdated": "2023-11-12T07:46:07.813Z",
-      "language": "",
-      "location": "",
-      "selectedProducts": []
-    },
-    {
-      "id": "8086",
-      "username": "test 10",
-      "fullname": "Mitch",
-      "description": " Married",
-      "password": "$2a$10$5/klUWE.MWjCTc8.HvB2MehJfu2YWClg3F0xjJuO3zFT1stVhRA2u",
-      "department": "IT",
-      "email": "nseptember591@gmail.com",
-      "homephone": "0781638594",
-      "mobile": "0781954154",
-      "agent": "Standard Bank",
-      "status": true,
-      "lastUpdated": "2023-11-12T08:00:17.082Z",
-      "language": "",
-      "location": "",
-      "selectedProducts": [
-        "Cash Plan",
-        "Corporate Dental",
-        "Consumer CashPlan"
-      ]
-    },
-    {
-      "id": "8730",
-      "username": "Mahlathin",
-      "fullname": "Enyobeni",
-      "description": "Tester",
-      "password": "$2a$10$QkaiFZHksNYO8mFvTlZHgu59NGg8uROXA/F9FTukRyTXIFT4Wr6Iy",
-      "department": "IT",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0671402936",
-      "mobile": "0781954154",
-      "agent": "Standard Bank",
-      "status": true,
-      "lastUpdated": "2023-11-13T06:49:22.375Z",
-      "language": "",
-      "location": "",
-      "selectedProducts": [
-        "Dental Cover Plan",
-        "Corporate Dental",
-        "Consumer CashPlan"
-      ]
-    },
-    {
-      "id": "8757",
-      "username": "Mitchoijoijna",
-      "fullname": "Mitch",
-      "description": "tester",
-      "password": "$2a$10$u7gkO/gvGDZkiNOnQ/lRLOWpmLbMK0ySf2u.TBpRVQRawAw8nA1Um",
-      "department": "IT",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0781638594",
-      "mobile": "0781954154",
-      "agent": "Genasys",
-      "status": true,
-      "lastUpdated": "2023-11-13T06:56:54.003Z",
-      "language": "",
-      "location": "",
       "selectedProducts": [
         "Group Cash Plan"
-      ]
-    },
-    {
-      "id": "6845",
-      "username": "Ndivuwooi",
-      "fullname": "Mkhomi ",
-      "description": "Tester",
-      "password": "$2a$10$W9R5Cr/3Jjc94XLv4h4Kle2svYg01.3XUKfGUj.HtnIFn4M6tEwae",
-      "department": "Sales",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0671402936",
-      "mobile": "0781954154",
-      "agent": "Simply Health",
-      "status": false,
-      "lastUpdated": "2023-11-13T07:21:28.179Z",
-      "language": "",
-      "location": "",
-      "selectedProducts": [
-        "Dental Cover Plan",
-        "Corporate Dental_old",
-        "Consumer CashPlan"
-      ]
-    },
-    {
-      "id": "7629",
-      "username": "BROTHER",
-      "fullname": "Mkhomi ",
-      "description": "Tester",
-      "password": "$2a$10$3Q4zJD9a1aJRSo5RAai.ueS60lT1tQR1BmWWXbish3mR05lABvGU.",
-      "department": "Sales",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0671402936",
-      "mobile": "0781954154",
-      "agent": "Simply Health",
-      "status": true,
-      "lastUpdated": "2023-11-13T07:21:45.070Z",
-      "language": "",
-      "location": "",
-      "selectedProducts": [
-        "Dental Cover Plan",
-        "Corporate Dental_old",
-        "Consumer CashPlan"
-      ]
-    },
-    {
-      "id": "2313",
-      "username": "tEST22",
-      "fullname": "Mitch",
-      "description": "tester",
-      "password": "$2a$10$kr8loekooqvbdSCiDWwqr.ojA/BYjC/oqWleN8KuNtPqbS2ezlLW6",
-      "department": "IT",
-      "email": "antonymncube@gmail.com",
-      "homephone": "0671402936",
-      "mobile": "0671402936",
-      "agent": "Standard Bank",
-      "status": true,
-      "lastUpdated": "2023-11-13T07:25:02.306Z",
-      "language": "",
-      "location": "",
-      "selectedProducts": [
-        "Cash Plan",
-        "Corporate Dental",
-        "Consumer Dental"
-      ]
-    },
-    {
-      "id": "3597",
-      "username": "Boga",
-      "fullname": "Antony",
-      "description": "accout",
-      "password": "$2a$10$/Myh5JSRg0AusyYYaC8i0u1hXdJJGDkN8BjUwAylCd0qBaFUnyb0S",
-      "department": "HR",
-      "email": "antonymncube49@gmail.com",
-      "homephone": "0671402936",
-      "mobile": "0671402936",
-      "agent": "Standard Bank",
-      "status": true,
-      "lastUpdated": "2023-11-13T07:37:03.284Z",
-      "language": "",
-      "location": "",
-      "selectedProducts": [
-        "Dental Cover Plan",
-        "Corporate Dental_old"
-      ]
-    },
-    {
-      "id": "5403",
-      "username": " close",
-      "fullname": "Ndivuwo",
-      "description": " Married",
-      "password": "$2a$10$SbasnYqEtsyUFbqxkOp3XOeHb1Z60cufE4g43EudhR88cF3VnVK.K",
-      "department": "IT",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0781638594",
-      "mobile": "0781954154",
-      "agent": "Standard Bank",
-      "status": false,
-      "lastUpdated": "2023-11-13T07:41:41.376Z",
-      "language": "",
-      "location": "",
-      "selectedProducts": [
-        "Dental Cover Plan",
-        "Group Cash Plan"
-      ]
-    },
-    {
-      "id": "3029",
-      "username": "Test30",
-      "fullname": "Mark Yarn",
-      "description": "Product Owner",
-      "password": "$2a$10$zNU/cQd581gVaPWKk59bLe55wLKe71dYSlu.H4.NZ3EcHxFz3fZ/e",
-      "department": "HR",
-      "email": "mark.yarn@genasystech.com",
-      "homephone": "0671402936",
-      "mobile": "0671802963",
-      "agent": "Standard Bank",
-      "status": true,
-      "lastUpdated": "2023-11-15T06:10:56.469Z",
-      "language": "",
-      "location": "",
-      "selectedProducts": [
-        "Dental Cover Plan",
-        "Group Cash Plan",
-        "Consumer Dental"
-      ]
-    },
-    {
-      "id": "3836",
-      "username": "Mitch45",
-      "fullname": "anotny",
-      "description": " Married",
-      "password": "$2a$10$ct3S0Tvzs0h.SXiTJwOYxuVA33Lw0PM/O4t3vWQST35nAjkzujG1u",
-      "department": "HR",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0671402936",
-      "mobile": "0781954154",
-      "agent": "Standard Bank",
-      "status": true,
-      "lastUpdated": "2023-11-15T06:31:07.530Z",
-      "language": "",
-      "location": "",
-      "selectedProducts": [
-        "Group Cash Plan"
-      ]
-    },
-    {
-      "id": "7453",
-      "username": "Mitch233",
-      "fullname": "Mitch",
-      "description": " Married",
-      "password": "$2a$10$2fnngemflkIWEzpTUBavWeZ0xuSFkkbdLI/qypi1tZXw3GlnvF35q",
-      "department": "IT",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0671402936",
-      "mobile": "0846843512",
-      "agent": "Simply Health",
-      "status": true,
-      "lastUpdated": "2023-11-15T06:44:02.896Z",
-      "language": "",
-      "location": "",
-      "selectedProducts": [
-        "Cash Plan",
-        "Corporate Dental"
-      ]
-    },
-    {
-      "id": "4476",
-      "username": "mamamic",
-      "fullname": "Mitch",
-      "description": "tester",
-      "password": "$2a$10$y2snCb3D7H2YxIZ.zTjVHuTzX8r2IeN5ITT7PIOtQq9MeUcn7uhcC",
-      "department": "IT",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0671402936",
-      "mobile": "0781954154",
-      "agent": "Simply Health",
-      "status": true,
-      "lastUpdated": "2023-11-15T07:43:43.771Z",
-      "language": "",
-      "location": "",
-      "selectedProducts": [
-        "Group Cash Plan"
-      ]
-    },
-    {
-      "id": "9205",
-      "username": "Mitch23323",
-      "fullname": "Mitch",
-      "description": " Married",
-      "password": "$2a$10$aU6GnGjKtYyEs1iHtTfVBOXVrVh1897b6RrwSfVyADaA1sVOoO/UW",
-      "department": "HR",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0671402936",
-      "mobile": "0781954154",
-      "agent": "Standard Bank",
-      "status": true,
-      "lastUpdated": "2023-11-16T12:25:10.936Z",
-      "language": "",
-      "selectedProducts": [
-        "Dental Cover Plan",
-        "Corporate Dental"
-      ]
-    },
-    {
-      "id": "6462",
-      "username": "Mitchiushfof",
-      "fullname": "Mitch",
-      "description": "tester",
-      "password": "$2a$10$ErKodtG7/H2wM/yazTdnsO.Oo7x2chMnELv7jtYJywmieUVdkpSSu",
-      "department": "HR",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0671402936",
-      "mobile": "0671802963",
-      "agent": "Standard Bank",
-      "status": true,
-      "lastUpdated": "2023-11-16T14:05:11.145Z",
-      "language": "",
-      "selectedProducts": [
-        "Group Cash Plan",
-        "Corporate Dental_old"
-      ]
-    },
-    {
-      "id": "2362",
-      "username": "xolliee",
-      "fullname": "Mitch",
-      "description": " Married",
-      "password": "$2a$10$JV4IgAwFhrNsJt2hMzZlNep89SOfdl/hgSGgVG7LgtnudJvccguPi",
-      "department": "HR",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0671402936",
-      "mobile": "0781954154",
-      "agent": "Simply Health",
-      "status": true,
-      "lastUpdated": "2023-11-17T18:49:32.699Z",
-      "language": "",
-      "location": "",
-      "selectedProducts": [
-        "Corporate Dental_old",
-        "Consumer Dental"
-      ]
-    },
-    {
-      "id": "7098",
-      "username": "xollieer",
-      "fullname": "Mitch",
-      "description": " Married",
-      "password": "$2a$10$1tkUX.zzovan8q.X8B1ai.0tiavo4dVi6n3oC.3y5213txcR93/6a",
-      "department": "HR",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0671402936",
-      "mobile": "0781954154",
-      "agent": "Simply Health",
-      "status": true,
-      "lastUpdated": "2023-11-17T18:49:52.511Z",
-      "language": "",
-      "location": "",
-      "selectedProducts": [
-        "Corporate Dental_old",
-        "Consumer Dental"
-      ]
-    },
-    {
-      "id": "2017",
-      "username": "Mitchonon",
-      "fullname": "Antony",
-      "description": "tester",
-      "password": "$2a$10$wFWBpC2UuBr/psokLwy7ueiSlIp604xQbQWNVeT8usUinsyuZnaAS",
-      "department": "HR",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0671402936",
-      "mobile": "0671402936",
-      "agent": "Simply Health",
-      "status": true,
-      "lastUpdated": "2023-11-19T09:01:32.297Z",
-      "language": "",
-      "selectedProducts": [
-        "Corporate Dental"
-      ]
-    },
-    {
-      "id": "7074",
-      "username": "Mitchjjghj",
-      "fullname": "Mitch",
-      "description": "we are bacl",
-      "password": "$2a$10$fI8mKsAMEGzzVQwSqiAykelY8VKCba/sFen6655GddxCdbsgrGmXS",
-      "department": "IT",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0781638594",
-      "mobile": "0781954154",
-      "agent": "Standard Bank",
-      "status": true,
-      "lastUpdated": "2023-11-18T11:57:54.154Z",
-      "language": "",
-      "location": "",
-      "selectedProducts": [
-        "Dental Cover Plan",
-        "Corporate Dental"
-      ]
-    },
-    {
-      "id": "2890",
-      "username": "Mitchjjghjkkjkjk",
-      "fullname": "Mitch",
-      "description": "we are bacl",
-      "password": "$2a$10$sMmhHQPJ2pmO7JHENz2Bm.LLlr005/Xn4o1YdIFpu19JZh1CRekr6",
-      "department": "IT",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "0781638594",
-      "mobile": "0781954154",
-      "agent": "Standard Bank",
-      "status": true,
-      "lastUpdated": "2023-11-18T11:58:13.766Z",
-      "language": "",
-      "location": "",
-      "selectedProducts": [
-        "Dental Cover Plan",
-        "Corporate Dental"
       ]
     }
   ],
@@ -1139,6 +610,56 @@
         "Underwriting con"
       ],
       "id": "2890"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con",
+        "Accountent"
+      ],
+      "id": "9861"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con"
+      ],
+      "id": "6218"
+    },
+    {
+      "AccessGroups": [
+        "Accountent"
+      ],
+      "id": "9912"
+    },
+    {
+      "AccessGroups": [
+        "Accountent"
+      ],
+      "id": "3002"
+    },
+    {
+      "AccessGroups": [
+        "Accountent"
+      ],
+      "id": "8897"
+    },
+    {
+      "AccessGroups": [
+        "Broker Pack"
+      ],
+      "id": "5167"
+    },
+    {
+      "AccessGroups": [
+        "Accountent"
+      ],
+      "id": "4509"
+    },
+    {
+      "AccessGroups": [
+        "Accountent",
+        "Claim-Admin"
+      ],
+      "id": "6121"
     }
   ],
   "SecUserAccess": [
@@ -1407,6 +928,102 @@
         "ACCEPTBBWARN",
         "API_DOC_BLOCK",
         "API_CLAIM_DU"
+      ]
+    },
+    {
+      "id": "9861",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE"
+      ]
+    },
+    {
+      "id": "6218",
+      "accesscodes": [
+        "ACCEPTBBWARN"
+      ]
+    },
+    {
+      "id": "9912",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE"
+      ]
+    },
+    {
+      "id": "3002",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE"
+      ]
+    },
+    {
+      "id": "8897",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE"
+      ]
+    },
+    {
+      "id": "5167",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "CL_EXCEL_PRINT",
+        "CL_FINALISECLMT",
+        "CL_INCIDENT",
+        "CL_IND_APR",
+        "CL_NEGCLAIMBAL",
+        "CL_RECOVERY",
+        "CL_REQUISITION",
+        "CL_REVERSEPAY",
+        "CL_UNDMAN",
+        " CL_STALECHEQUE"
+      ]
+    },
+    {
+      "id": "4509",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE"
+      ]
+    },
+    {
+      "id": "6121",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE",
+        "AGENT_MAINT",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_DOC_4",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_SALVAGE",
+        "CL_UNDMAN"
       ]
     }
   ]

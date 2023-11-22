@@ -84,8 +84,8 @@ export class ApiServiceService {
   //     map((res: any) => res)
   //   );
   // }
- 
-  
+
+
   addUserAccessCodes(data: any): Observable<any> {
     return this.http.post<any>('http://localhost:3000/SecUserAccess', data).pipe(
       map((res: any) => res)
@@ -122,7 +122,7 @@ export class ApiServiceService {
       map((res: any) => res)
     );
   }
- 
+
   updateUserAccessgroup(id: string, data: any): Observable<any> {
     const url = `http://localhost:3000/SecUserAccessGroups/${id}`;
     return this.http.put(url, data).pipe(
@@ -165,12 +165,12 @@ export class ApiServiceService {
     );
   }
 
-  // deleteUser(userId: string): Observable<any> {
-  //   const url = `http://localhost:3000/Users/${userId}`;
-  //   return this.http.delete(url).pipe(
-  //     map((res: any) => res)
-  //   );
-  // }
+  deleteUser(userId: string): Observable<any> {
+    const url = `http://localhost:3000/Users/${userId}`;
+    return this.http.delete(url).pipe(
+      map((res: any) => res)
+    );
+  }
 
   getProducts(): Observable<any> {
     return this.http.get<any>('http://localhost:3000/Products');
