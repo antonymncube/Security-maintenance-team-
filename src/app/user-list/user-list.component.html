@@ -1,5 +1,5 @@
 
-<h2 class="welcome">Welcome {{currentuser}}</h2>
+<h3 class="welcome">Welcome {{currentuser}}</h3>
 
 
 
@@ -10,8 +10,8 @@
         <select id="statusFilter" class="check" [formControl]="statusFilterControl">
           <option value="" selected class="check11">All</option>
           <option value="true" class="check11">Active</option>
-          <option value="false" class="check11">Non-Active</option>
-          <option value="" selected class="check11">Expired</option>
+          <option value="false" class="check11">Inactive</option>
+          <!-- <option value="" selected class="check11">Expired</option> -->
         </select>
       </i></div></label>
 
@@ -81,13 +81,13 @@
       <!-- <tr mat-header-row class="header-row" *matHeaderRowDef="displayedColumns"></tr> -->
 
 
-
+      <mat-paginator class="p-0 m-0" style="margin-left: 500px; background-color: #f2f2f2 ;" [pageSizeOptions]="[7]" showFirstLastButtons="false"></mat-paginator>
     </div>
-    <!-- Place the mat-paginator here, inside the component's template -->
+  
 
-
+   
     </div>
-    <mat-paginator class="p-0 m-0" [pageSizeOptions]="[5, 10, 50]" showFirstLastButtons="false"></mat-paginator>
+  
     <button class="btn-add" routerLink="/home/updateuser">+ Add-User</button>
     <!-- <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
     <label for="tab2" class="tabs__label">Tab #2</label>

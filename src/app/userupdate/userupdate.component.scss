@@ -157,10 +157,10 @@ button {
  
 
 .dialog-content {
-  padding: 20px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 8px;
+  // background-color: #f0f0f0;
+  // border: 1px solid #ccc;
+  border-radius: 1px;
   text-align: center;
 }
 
@@ -168,11 +168,12 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
+  // border: 1px solid #ccc;
+  // border-radius: 5px;
+  // background-color: #fff;
   padding: 10px;
-  height: 100px;
+  max-height: 300px;
+  // height: 100px;
 }
 
 .access-group {
@@ -197,31 +198,38 @@ button {
 
 .col2 {
   margin-left: 2%;
+  max-height: 300px;
+}
+.col1{
+  height: 500px;
 }
 
 .access-codes {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 100px;
+  max-height: 900px;
+  background-color: red;
 }
 
-.access-code {
+.access-code{
   display: flex;
-  align-items: center;
+  // align-items: center;
   margin-bottom: 10px;
+  max-height: 300px
 }
 
 .scrollable {
-  max-height: 200px;
+  max-height: 250px;
   overflow-y: auto;
+  // border: solid red 3px
 }
 
-.access-group-item.clicked {
-  background-color: rgb(115, 115, 238); /* Set your desired background color */
-  color: white; /* Set text color to improve visibility */
-  cursor: pointer; /* Change cursor to indicate clickability */
-}
+// .access-group-item.clicked {
+//   background-color: rgb(115, 115, 238); /* Set your desired background color */
+//   color: white; /* Set text color to improve visibility */
+//   cursor: pointer; /* Change cursor to indicate clickability */
+// }
 
 .code-item {
   width: 150px; /* Adjust the width as needed */
@@ -271,6 +279,412 @@ button.save-btn {
 .invalid-field {
   border-color: 1px solid red;
 }
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 2000px;
+  font-family: sans-serif;
+  // height: 29rem;
+}
+
+.tabs__label {
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.tabs__radio {
+  display: none;
+}
+
+.tabs__content {
+  order: 1;
+  width: 100%;
+  border-bottom: 3px solid #dddddd;
+  line-height: 1.5;
+  font-size: 0.9em;
+  display: none;
+  
+}
+
+.tabs__radio:checked + .tabs__label {
+  font-weight: bold;
+  color:#343a40;
+  // border-bottom: 2px solid #343a40;
+}
+
+.tabs__radio:checked + .tabs__label + .tabs__content {
+  display: initial;
+}
+
+
+ /* Your existing styles here */
+
+ .mat-tab-group {
+  margin-bottom: 48px;
+}
+
+form {
+  width: 80rem;
+  margin: 0 auto;
+  padding: 10px;
+ //  border: 1px solid #ccc;
+  border-radius: 5px;
+  // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  padding-top: 5px;
+ //  height: 35rem;
+}
+
+// .red-checkbox {
+//   background-color: blue;
+// }
+
+.checked-background {
+  background-color: red !important;
+  ;
+}
+
+
+
+.checkbox-label {
+  display: inline-block;
+  margin-right: 10px;
+  /* Adjust the margin as needed */
+}
+
+.has-error {
+  input {
+    border: 2px solid red; // Red border for the input fields
+  }
+
+  .checkbox-container {
+    display: block;
+    /* Ensure block display for the label */
+    margin-bottom: 10px;
+    /* Add some margin for spacing */
+  }
+
+  .inline-block-container {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    /* Prevent text from wrapping to the next line */
+  }
+
+  .scrollable {
+    overflow-y: auto;
+    max-height: 100px;
+    // border: 1px solid red;
+    /* reduced border thickness for better visibility */
+    padding: 10px;
+    background-color: #f8f8f8;
+    /* added background color for better visibility */
+  }
+
+
+
+
+  .inline-block-container {
+    display: inline-block;
+  }
+
+  .text-danger {
+    color: red; // Red text color for error messages
+  }
+}
+
+input.ng-invalid.ng-dirty.ng-touched {
+  border: 1px solid red;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2F3351;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 69rem;
+}
+
+.button:disabled {
+  padding: 10px 20px;
+  background-color: rgba(47, 51, 81, 0.6);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: not-allowed;
+  margin-right: 2rem;
+}
+
+.check {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.check1 {
+  width: 43%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+// button:disabled {
+//   background-color: #ccc;
+//   cursor: not-allowed;
+// }
+
+.form-group {
+  display: inline;
+  // margin-right: 10px; /* Adjust this margin as needed to separate the elements */
+}
+
+.totalDetails {
+  display: flex important;
+  justify-content: space-between important;
+}
+
+.form-group {
+  flex: 1 important;
+}
+
+.totalDetails {
+  display: flex;
+}
+
+.totalDetails .userdetails,
+.totalDetails .contact-details {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.inputtag {
+  width: 14rem;
+}
+
+.description {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.tabs__content{
+  height: 500px;
+  // background-color: red;
+}
+
+.totalDetails {
+  margin-top: 20px;
+}
+
+.contactdetails {
+  margin-right: 30rem;
+}
+
+// .my-custom-class{
+//   border: 30px solid red !important;
+//   background-color: aquamarine;
+
+// }
+
+:host ::ng-deep .mat-tab-label-active {
+  border-width: 9px;
+  border-style: solid;
+  border-color: orange;
+}
+
+.mat-mdc-tab-header {
+  border: 1px solid red;
+}
+
+
+ 
+
+// .access-groups {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   // border: 1px solid #ccc;
+//   border-radius: 5px;
+//   // background-color: #fff;
+//   padding: 10px;
+//   height: 300px;
+// }
+
+.access-group {
+  cursor: pointer;
+
+
+}
+
+.access-group-name {
+  font-weight: bold;
+  // height: 30px;
+}
+
+.col {
+  display: inline-block;
+  width: 49%;
+}
+
+.col1 {
+  margin-right: 2%;
+}
+
+.useraccesscodes {
+  overflow-y: auto;
+  max-height: 400px;
+  border: 4px solid red;
+  // padding: 1px;
+  // margin-left: 100px;
+  // background-color: #f8f8f8;
+}
+
+.checkbox4{
+  cursor: pointer;
+}
+ 
+
+.row1 {
+ overflow-x: hidden;
+}
+
+.col2 {
+  margin-left: 2%;
+}
+
+.access-codes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100px;
+}
+
+.access-code {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.scrollable {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.access-group-item.clicked {
+  background-color: rgb(115, 115, 238);
+  /* Set your desired background color */
+  color: white;
+  /* Set text color to improve visibility */
+  cursor: pointer;
+  /* Change cursor to indicate clickability */
+}
+
+.code-item {
+  width: 150px;
+  /* Adjust the width as needed */
+  display: inline-block;
+}
+
+.description-item {
+  display: inline-block;
+
+}
+
+
+.readonly-field {
+  background-color: #f2f2f2;
+  color: #888;
+  pointer-events: none;
+}
+
+.buttons1 {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* Adjust the width as needed */
+}
+
+button.cancel-btn,
+button.save-btn {
+  width: 48%;
+  /* Adjust the width as needed */
+  right: 0;
+}
+
+.tabs {
+ display: flex;
+ flex-wrap: wrap;
+ max-width: 2000px;
+ font-family: sans-serif;
+ // height: 29rem;
+}
+
+.tabs__label {
+ padding: 10px 16px;
+ cursor: pointer;
+}
+
+.tabs__radio {
+ display: none;
+}
+
+.tabs__content {
+ order: 1;
+ width: 100%;
+ border-bottom: none;
+ line-height: 1.5;
+ font-size: 0.9em;
+ display: none;
+ 
+}
+
+.access-group-item.selected {
+  /* Add your styling for selected state here */
+  background-color: red; /* Change this to your desired color */
+}
+
+.tabs__radio:checked + .tabs__label {
+ font-weight: bold;
+ color:rgb(33, 33, 85) 3px;
+ border-bottom: solid rgb(33, 33, 85) 3px;
+ // border-bottom: 2px solid #343a40;
+}
+
+.tabs__radio:checked + .tabs__label + .tabs__content {
+ display: initial;
+}
+
+
+.inline-block-container {
+  display: inline-block;
+}
+
 
 
 

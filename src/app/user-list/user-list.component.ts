@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ApiServiceService } from '../services/api-service.service';
 import { Router } from '@angular/router';
 import { MatPaginator } from '@angular/material/paginator';
@@ -31,7 +31,8 @@ export interface PeriodicElement {
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.scss']
+  styleUrls: ['./user-list.component.scss'],
+  encapsulation: ViewEncapsulation.None  
 })
 export class UserListComponent implements OnInit {
   displayedColumns: string[] = ['name', 'weight', 'description', 'agent', 'department', 'lastUpdated', 'Action'];

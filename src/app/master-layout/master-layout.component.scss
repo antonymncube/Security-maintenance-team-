@@ -4,6 +4,7 @@ main {
     height: 100vh;
     overflow-y: auto;
     /* Enable vertical scrolling */
+    background-color: #c74141 !important;
     overflow-x: hidden;
     /* Hide horizontal overflow */
 }
@@ -58,7 +59,7 @@ router-outlet {
 }
 
 .search {
-    border-bottom: 3px solid #2F3351;
+    border-bottom: 2px solid #e0e0e0;
     background-color: white;
     margin-top: -18px;
     margin-left: 70px;
@@ -75,7 +76,7 @@ router-outlet {
 
 .col-content {
     margin-left: 70px;
-    background-color: #fbfafa;
+    // background-color: #fbfafa;
   
 
     .key-img {
@@ -84,6 +85,17 @@ router-outlet {
     }
 
 }
+
+main {
+    background-color: #c74141 !important; /* Use the desired shade of grey */
+     /* Optional: Add padding for spacing */
+  }
+  
+  /* Adjust the padding for specific elements if needed */
+  .row1{
+    background-color: #fafafa;
+  }
+  
 
 .security-container col2{
     justify-items: flex;
@@ -96,19 +108,10 @@ router-outlet {
 .col2{
     margin-right:1px;
 }
-// .content{
-//     margin-left: 200px;
-// }
-// .col2{
-//     margin-left: 70px;
-// }
-
-// .col-content{
-//     margin-left: px;
-// }
+ 
 .user {
     margin-left: 949px;
-    font-size: 3em;
+    font-size: 2em;
     // margin-bottom: 5px;
 }
 
@@ -138,33 +141,24 @@ router-outlet {
 .h4 {
     border-top: 4px solid gray;
     border-bottom: 4px solid grey;
-    // position: fixed;
     top: 10px;
-    /* Adjust the top value to your desired position */
     right: 10px;
-    /* Adjust the right value to your desired position */
     background-color: white;
-    /* Adjust the background color as needed */
-    //   padding: 10px;
     border: 1px solid #ccc;
-    /* Optional: Add border for styling */
     z-index: 9999;
     margin-top: 20px;
 }
 
 .popup-container {
     position: relative;
-    /* The container is the reference for the popup positioning */
+   
 }
 
 .custom-popup {
     position: absolute;
-    /* Position the card absolutely */
     top: 40px;
-    /* Adjust the top position as needed */
     left: 0;
-    /* Adjust the left position as needed */
-    /* Add other custom styles for the card appearance */
+    
 
 }
 
