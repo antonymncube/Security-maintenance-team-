@@ -60,16 +60,16 @@
               <button mat-menu-item (click)="onActionSelected(element, 'viewuser')">
                 <span>View User</span>
               </button>
-              <!-- <button mat-menu-item>
-                <mat-icon>notifications_off</mat-icon>
-                <span>Disable alerts</span>
-              </button> -->
-
               <button mat-menu-item (click)="onActionSelected(element, 'toggleStatus')">
                 <span>
                   {{ element.status ? 'Deactivate' : 'Activate' }} user
                 </span>
               </button>
+              <!-- <button mat-menu-item (click)="onDeleteUser(element.id)">
+                <mat-icon>delete</mat-icon>
+                <span>Delete User</span>
+              </button> -->
+
             </mat-menu>
           </td>
         </ng-container>
