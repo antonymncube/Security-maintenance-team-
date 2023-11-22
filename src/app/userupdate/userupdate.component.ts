@@ -1,11 +1,11 @@
 import { PasswordHashingService } from './../services/password-hashing.service';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ApiServiceService } from '../services/api-service.service';
 import { UserFormData } from '../User';
 import { Router } from '@angular/router';
 import { MatTabsModule } from '@angular/material/tabs';
-import { Subject, debounceTime } from 'rxjs';
+import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
 
 
 
@@ -18,6 +18,8 @@ import { Subject, debounceTime } from 'rxjs';
 })
 export class UserupdateComponent {
   userForm: FormGroup;
+  filterTextControl1 = new FormControl('');
+  filterTextControl2 = new FormControl('');
   user: UserFormData = new UserFormData();
   SecLookup: any = '';
   selectedAccessCodes: any[] = [];
@@ -27,6 +29,8 @@ export class UserupdateComponent {
   generatedId: string = '';
   solvingarray: any[] = []
   filterTextChanged = new Subject<string>();
+  searchTerm: string = '';
+  
 
   dataToUpdate: any
 
@@ -51,15 +55,24 @@ export class UserupdateComponent {
   accessGroundForm: any;
   selectedGroupIndex: number | null = null;
   filterText: string = '';
-
+  
+   
+  
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiServiceService, private router: Router,
     private PasswordHashingService: PasswordHashingService) {
     this.accessCodes = [];
     this.accessGroup = [];
-    this.filterTextChanged.pipe(debounceTime(300)).subscribe(() => {
+    this.filterTextControl1.valueChanges.pipe(
+
+    ).subscribe(() => {
       this.filteredAccessCodes();
     });
+    this.filterTextControl2.valueChanges.pipe(
+
+      ).subscribe(() => {
+        this.filteredAccessGroups();
+      });
     apiService.getAccessGroup().subscribe(res => {
       this.accessGroup = res;
       // console.log("here are the groups" + this.accessGroup)
@@ -70,8 +83,9 @@ export class UserupdateComponent {
       
     });
 
-   
+     
 
+  
     // this.accessCodes = data;
     this.accesscodes();
 
@@ -87,12 +101,13 @@ export class UserupdateComponent {
       department: ['', [Validators.required]],
       agent: ['', [Validators.required]],
       language: ['',],
-      
+      filterText1: this.filterTextControl1,
+      filterText2:this.filterTextControl2
     });
   }
 
 
-
+  
   generateFourDigitId(): string {
     const randomNumber = Math.floor(1000 + Math.random() * 9000);
     this.generatedId = randomNumber.toString();
@@ -142,13 +157,25 @@ export class UserupdateComponent {
 
   ngOnInit() {
     this.getAccesslookup();
+
+    // Initialize filtered groups
+    
+
+    // Subscribe to changes in filterText2 control
+    this.filterTextControl2.valueChanges.subscribe((filterText) => {
+      // return this.filteredAccessGroup(filterText);
+    });
   }
+
+ 
 
   getAccesslookup() {
     this.apiService.getSecLookup().subscribe((SecLookup: any) => {
       this.SecLookup = SecLookup; // Assign the entire response to SecLookup
 
     });
+
+    // this.filteredAccessGroup();
   }
 
 
@@ -317,22 +344,66 @@ export class UserupdateComponent {
   }
 
   onFilterTextChanged() {
-    this.filterTextChanged.next(this.filterText);
-    console.log('what is it getting', this.filterText)
+    // this.filteredAccessGroup(); 
   }
   
   
   filteredAccessCodes() {
     const filteredArray = this.SecLookup.filter((accessCode: { sAccessCode: string }) =>
-      accessCode.sAccessCode.includes(this.filterText)
+      accessCode.sAccessCode.includes(this.userForm.value.filterText1.toUpperCase() )
     );
 
- 
+    // console.log(this.accessGroup)
+  //  console.log('this is the access group  ',this.accessGroup)
+    return filteredArray;
+  }
 
+  filteredAccessGroups() {
+    let filteredArray = this.accessGroup.filter((group: { sAccessGroup: string }) =>
+      group.sAccessGroup.includes("")
+    );
+    const jsonString =JSON.stringify(filteredArray)
+    const parsedData = JSON.parse(jsonString);
+    // console.log('what is this ',parsedData)
+    filteredArray = [] ;
+    for (const group of parsedData) {
+      
+     filteredArray.push(group.sAccessGroup)
+    }
+    console.log('Access Group:', filteredArray)
     return filteredArray;
   }
   
- 
+
+
+  filteredGroups: Array<{
+    clicked: boolean;
+    sAccessGroup: string;
+    sAccessCodes: Array<string>;
+    selected: boolean;
+    id: string;
+  }> = [];
   
+  // onFilterText2Changed() {
+  //   const filterText = this.filterTextControl2.value;
+  //   this.filteredAccessGroup(filterText);
+  // }
+
+  // filteredAccessGroup(searchText: string | null = '') {
+  //   // Apply the filter to accessGroup based on searchText
+  //   console.log('is it called')
+  //   if (!searchText || searchText.includes(' ')) {
+  //     // If search text is empty or contains empty spaces, display all access groups
+  //     this.filteredGroups = this.accessGroup;
+  //   } else {
+  //     // If search text is not empty and doesn't contain empty spaces, filter based on access groups
+  //     this.filteredGroups = this.accessGroup.filter((group) =>
+  //       group.sAccessGroup.toLowerCase().includes(searchText)
+  //     );
+  //   }
+  // }
+
+
+
 
 }

@@ -972,23 +972,16 @@
       ]
     },
     {
-      "id": "6121",
-      "username": " mahle",
-      "fullname": "Mahle Gift",
-      "description": "we are bacl",
-      "password": "$2a$10$KMl59K7GqV04bj4vCiWvAe9XPfzEf2PvdUYdKTYM2s/t2Oj/dF10O",
-      "department": "HR",
-      "email": "219148414@edu.vut.ac.za",
-      "homephone": "",
-      "mobile": "0781954154",
-      "agent": "Genasys",
-      "status": true,
-      "lastUpdated": "2023-11-21T07:48:38.112Z",
-      "language": "",
-      "location": "",
       "selectedProducts": [
         "Cash Plan"
-      ]
+      ],
+      "id": "6121"
+    },
+    {
+      "selectedProducts": [
+        "Group Cash Plan"
+      ],
+      "id": "7750"
     }
   ],
   "Products": [
@@ -1248,8 +1241,94 @@
       "id": "2890",
       "AccessGroups": [
         "Underwriting con"
+      ]
+    },
+    {
+      "AccessGroups": [],
+      "id": "dIh-PDB"
+    },
+    {
+      "AccessGroups": [],
+      "id": "_9GrQXs"
+    },
+    {
+      "AccessGroups": [],
+      "id": "TAV1Gis"
+    },
+    {
+      "AccessGroups": [],
+      "id": "TfG6dd7"
+    },
+    {
+      "AccessGroups": [],
+      "id": "MjeBWWO"
+    },
+    {
+      "AccessGroups": [],
+      "id": "AYpf6Pl"
+    },
+    {
+      "AccessGroups": [],
+      "id": "qCiO37d"
+    },
+    {
+      "AccessGroups": [],
+      "id": "PP3WF9q"
+    },
+    {
+      "AccessGroups": [],
+      "id": "YXvJKZF"
+    },
+    {
+      "AccessGroups": [],
+      "id": "E-xJknp"
+    },
+    {
+      "AccessGroups": [],
+      "id": "xZ9JnsB"
+    },
+    {
+      "AccessGroups": [],
+      "id": "bjOHW2w"
+    },
+    {
+      "AccessGroups": [],
+      "id": "jsgB7LE"
+    },
+    {
+      "AccessGroups": [],
+      "id": "qKwSvP5"
+    },
+    {
+      "AccessGroups": [],
+      "id": "f-gbkhM"
+    },
+    {
+      "AccessGroups": [],
+      "id": "2d3f9Yt"
+    },
+    {
+      "AccessGroups": [],
+      "id": "cAgCn8a"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con"
       ],
-      "id": "2890"
+      "id": "jHO7XS7"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con"
+      ],
+      "id": "60eINIn"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con",
+        "Broker Pack"
+      ],
+      "id": "7750"
     }
   ],
   "SecUserAccess": [
@@ -1693,6 +1772,104 @@
         "AGENT_COMM_PAY",
         "CL_EXCEL_PRINT",
         "API_CLAIM_DU"
+      ]
+    },
+    {
+      "id": "eAsXidV",
+      "accesscodes": []
+    },
+    {
+      "id": "s4Koua_",
+      "accesscodes": []
+    },
+    {
+      "id": "qbvCTdw",
+      "accesscodes": []
+    },
+    {
+      "id": "DoDkV9I",
+      "accesscodes": []
+    },
+    {
+      "id": "2IGzdEo",
+      "accesscodes": []
+    },
+    {
+      "id": "42X0A7H",
+      "accesscodes": []
+    },
+    {
+      "id": "Y8P59i5",
+      "accesscodes": []
+    },
+    {
+      "id": "xoYWrz-",
+      "accesscodes": []
+    },
+    {
+      "id": "tp95hmZ",
+      "accesscodes": []
+    },
+    {
+      "id": "rQZT1AU",
+      "accesscodes": []
+    },
+    {
+      "id": "KBFoiVQ",
+      "accesscodes": []
+    },
+    {
+      "id": "roUXvht",
+      "accesscodes": []
+    },
+    {
+      "id": "7QgXHJg",
+      "accesscodes": []
+    },
+    {
+      "id": "4a2WQle",
+      "accesscodes": []
+    },
+    {
+      "id": "XosdbT3",
+      "accesscodes": []
+    },
+    {
+      "id": "CVl3wgS",
+      "accesscodes": []
+    },
+    {
+      "id": "oeN5iBT",
+      "accesscodes": []
+    },
+    {
+      "id": "v0wKWE_",
+      "accesscodes": [
+        "ACCEPTBBWARN"
+      ]
+    },
+    {
+      "id": "_Wz720_",
+      "accesscodes": [
+        "ACCEPTBBWARN"
+      ]
+    },
+    {
+      "id": "7750",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "CL_EXCEL_PRINT",
+        "CL_FINALISECLMT",
+        "CL_INCIDENT",
+        "CL_IND_APR",
+        "CL_NEGCLAIMBAL",
+        "CL_RECOVERY",
+        "CL_REQUISITION",
+        "CL_REVERSEPAY",
+        "CL_UNDMAN",
+        " CL_STALECHEQUE",
+        "API_DOC_BLOCK",
+        "API_CLAIM_MAINT"
       ]
     }
   ]
