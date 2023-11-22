@@ -71,15 +71,9 @@ export class EditUserComponent implements OnInit {
       password: [{ value: '', }, [Validators.required, Validators.minLength(6)]],
       department: ['',[Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-<<<<<<< HEAD
-      homephone: ['', (/^[0-9]{10}$/)],  // Validate with a regular expression & make it 10 digits
-      mobile: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
-      agent: ['',],
-=======
       homephone: ['', [Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       mobile: ['', [ Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       agent: ['', [Validators.required]],
->>>>>>> 4fe31c314665399fcef0868786c47fc01d4f3c57
       status: [{ value: '', }],
       lastUpdated: [''],
       language: ['',],

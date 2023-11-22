@@ -34,6 +34,9 @@ form {
     color: red; // Red text color for error messages
   }
 }
+.form-control.is-invalid, .was-validated .form-control:invalid {
+  border-color: #dc3545;
+}
 
 input.ng-invalid.ng-dirty.ng-touched {
   border: 1px solid red;
