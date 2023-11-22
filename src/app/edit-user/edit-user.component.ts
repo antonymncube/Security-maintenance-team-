@@ -69,11 +69,11 @@ export class EditUserComponent implements OnInit {
       fullname: ['',],
       description: [''],
       password: [{ value: '', }, [Validators.required, Validators.minLength(6)]],
-      department: ['',],
+      department: ['',[Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      homephone: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
-      mobile: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
-      agent: ['',],
+      homephone: ['', [Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
+      mobile: ['', [ Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
+      agent: ['', [Validators.required]],
       status: [{ value: '', }],
       lastUpdated: [''],
       language: ['',],
@@ -96,12 +96,12 @@ export class EditUserComponent implements OnInit {
       console.log('We are good here ', this.id);
 
       this.apiService.getUserDetails(this.id).subscribe((userDetails: any) => {
-        if (userDetails) {
-          this.userForm.patchValue(userDetails);
-          this.selectedProducts = userDetails.selectedProducts;
+        if (userDetails && userDetails.selectedProducts) {
+
+          // this.selectedProducts = userDetails.selectedProducts;
           this.userForm.get('selectedProducts')!.setValue(this.selectedProducts);
         }
-
+        this.userForm.patchValue(userDetails);
       });
     });
 
@@ -193,14 +193,14 @@ export class EditUserComponent implements OnInit {
     }
 
     // Update the user with the new selected products
-    this.apiService.updateUser(this.id, { selectedProducts }).subscribe(
-      (response: any) => {
-        console.log('User data updated:', response);
-      },
-      (error: any) => {
-        console.error('Update failed:', error);
-      }
-    );
+    // this.apiService.updateUser(this.id, { selectedProducts }).subscribe(
+    //   (response: any) => {
+    //     console.log('User data updated:', response);
+    //   },
+    //   (error: any) => {
+    //     console.error('Update failed:', error);
+    //   }
+    // );
   }
 
 
