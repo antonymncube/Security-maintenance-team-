@@ -1,14 +1,12 @@
- 
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form1 bg-white">
   <div class="tabs ">
     <div></div>
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
-    <label for="tab1" class="tabs__label">Details <i class="fa fa-exclamation-triangle invalid-indicator"
-    ></i></label>
+    <label for="tab1" class="tabs__label">Details <i class="fa fa-exclamation-triangle invalid-indicator"></i></label>
     <div class="tabs__content">
       <div class="totalDetails">
         <div class="userdetails form-group">
-          
+
           <div class="form-group">
             <label for="username" class="label-width">Username:</label>
             <div class="inputtag">
@@ -32,8 +30,8 @@
           <div class="form-group">
             <label for="password" class="label-width">Password:</label>
             <div class="inputtag">
-              <input type="password" class="form-control ng-pristine is-invalid " id="password" formControlName="password"
-                [ngClass]="{ 'is-invalid': isControlInvalid('password') }">
+              <input type="password" class="form-control ng-pristine is-invalid " id="password"
+                formControlName="password" [ngClass]="{ 'is-invalid': isControlInvalid('password') }">
               <div *ngIf="isControlInvalid('password')" class="invalid-feedback">
                 Password required & min 6 characters.
               </div>
@@ -42,8 +40,8 @@
           <div class="form-group">
             <label for="confirmpassword" class="label-width">Confirm Password:</label>
             <div class="inputtag">
-              <input type="password" class="form-control ng-pristine is-invalid " id="confirmpassword" formControlName="confirmpassword"
-                [ngClass]="{ 'is-invalid': isControlInvalid('confirmpassword') }">
+              <input type="password" class="form-control ng-pristine is-invalid " id="confirmpassword"
+                formControlName="confirmpassword" [ngClass]="{ 'is-invalid': isControlInvalid('confirmpassword') }">
               <div *ngIf="isControlInvalid('confirmpassword')" class="invalid-feedback">
                 Confirm Password required & match Password.
               </div>
@@ -52,7 +50,7 @@
           <div class="form-group">
             <label for="email" class="label-width">Email:</label>
             <div class="inputtag">
-              <input type="email"  class="form-control ng-pristine is-invalid " id="email" formControlName="email"
+              <input type="email" class="form-control ng-pristine is-invalid " id="email" formControlName="email"
                 [ngClass]="{ 'is-invalid': isControlInvalid('email') }">
               <div *ngIf="isControlInvalid('email')" class="invalid-feedback">
                 Email required & in a valid format.
@@ -62,8 +60,9 @@
         </div>
         <div class="contactdetails form-group">
           <div class="form-group">
-            <label  for="department" class="label-width">Department:</label>
-            <select id="department" class="form-control ng-pristine is-invalid" class="check" formControlName="department">
+            <label for="department" class="label-width">Department:</label>
+            <select id="department" class="form-control ng-pristine is-invalid" class="check"
+              formControlName="department">
               <option value="HR">HR</option>
               <option value="IT">IT</option>
               <option value="Sales">Sales</option>
@@ -74,7 +73,8 @@
           </div>
           <div class="form-group">
             <label for="agent" class="label-width">Agent:</label>
-            <select id="agent" class="form-control ng-pristine is-invalid" class="ng-star-inserted"class="check" formControlName="agent">
+            <select id="agent" class="form-control ng-pristine is-invalid" class="ng-star-inserted" class="check"
+              formControlName="agent">
               <option value="Simply Health">Simply Health</option>
               <option value="Genasys">Genasys</option>
               <option value="Standard Bank">Standard Bank</option>
@@ -142,34 +142,36 @@
             <!-- <input type="text" id="searchAccessGroup" name="searchAccessGroup" style="width: 150px; height: 20px;"> -->
 
             <input type="text" id="inputField" name="searchAccessGroup" formControlName="filterText2"
-              style="width: 150px; height: 20px;" (input)="onFilterTextChanged()" />
-
+              style="width: 150px; height: 20px;" (input)="onFilterTextChanged($event)" />
+            {{ this.userForm.value.filterText2}}
           </div>
 
 
           <div class="form-group" style="display: flex; margin-left: 100px;">
             <label for="searchAccessCode">Search Access Code:</label>
             <input type="text" id="inputField" name="searchAccessGroup" formControlName="filterText1"
-              style="width: 150px; height: 20px;" (input)="onFilterTextChanged()" />
+              style="width: 150px; height: 20px;"  />
 
           </div>
 
 
         </div>
-        <div class="col-4 pl-3 bg-light" style=" border: solid  rgb(182, 177, 177) 1px;border-radius: 5px; ">
+        <div class="col-4 pl-3 bg-light"
+          style=" border: solid  rgb(182, 177, 177) 1px;border-radius: 5px; font-family: 'Roboto'; ">
 
           <div class="access-groups scrollable">
-            <div *ngFor="let group of filteredAccessGroups(); let i = index" class="access-group">
-              <div class="access-group-item" [ngClass]="{'': group.selected}">
+            <div *ngFor="let group of filteredresults; let i = index" class="access-group">
+              <div class="access-group-item" >
                 <div class="access-group-name">
                   <label>
-                    <input type="checkbox" class="checkbox4" [(ngModel)]="group.selected"
+                    <input type="checkbox" class="checkbox4" 
                       (change)="toggleAccessCodes(i)">
                     <strong>{{ group }}</strong>
 
                   </label>
                 </div>
               </div>
+              
             </div>
 
           </div>
@@ -192,8 +194,8 @@
         </div>
 
       </div>
-  
-    
+
+
     </div>
 
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab3">
@@ -201,18 +203,18 @@
     <div class="tabs__content">
       <app-available-products (selectedProducts)="receiveSelectedProducts($event)"></app-available-products>
       <!-- <button mat-raised-button color="primary" (click)="saveSelectedProducts()">Save</button> -->
-      
+
 
     </div>
   </div>
   <div style="border: solid red 10px; padding: 0px; position: relative; height: 60px;">
 
-    <button class="cancel-button" style="position: absolute; margin-left: 72rem;">Cancel</button>
+    <button class="save-button" type="submit" [disabled]="userForm.invalid"
+      style="position: absolute; margin-left: 72rem;">Save</button>
 
-    <button class="save-button" type="submit" [disabled]="userForm.invalid" style="position: absolute; left: 100px;margin-left: 61rem;">Save</button>
+    <button class="cancel-button" style="position: absolute; left: 100px;margin-left: 60rem;">Cancel</button>
 
-</div>
+  </div>
 
 
 </form>
- 
