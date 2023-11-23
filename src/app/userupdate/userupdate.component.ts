@@ -62,7 +62,7 @@ export class UserupdateComponent {
     apiService.getSecLookup().subscribe((res: any) => {
       this.accessCodes = res; // Assigning all the access codes to this array
       // console.log("here is respond mnaka", res);
-      
+
     });
 
 
@@ -83,6 +83,18 @@ export class UserupdateComponent {
       agent: ['', [Validators.required]],
       language: ['',],
 
+    });
+
+    this.markFormGroupAsTouchedAndDirty(this.userForm);
+  }
+  markFormGroupAsTouchedAndDirty(formGroup: FormGroup): void {
+    Object.values(formGroup.controls).forEach(control => {
+      control.markAsTouched();
+      control.markAsDirty();
+
+      if (control instanceof FormGroup) {
+        this.markFormGroupAsTouchedAndDirty(control);
+      }
     });
   }
 
@@ -166,10 +178,10 @@ export class UserupdateComponent {
       if (this.checkPasswordMatch()) {
         this.PasswordHashingService.hashPassword(this.userForm.value.password).then((hashedPassword) => {
           let usernameExists = false;
-  
+
           this.apiService.checkUsernameExisttt(this.userForm.value.username).subscribe((exists: boolean) => {
             usernameExists = exists;
-  
+
             if (usernameExists) {
               alert('Username already exists. Please choose a different username.');
             } else {

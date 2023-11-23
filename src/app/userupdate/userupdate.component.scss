@@ -15,24 +15,6 @@ form {
   padding-top: 5px;
 }
 
-.checkbox-label {
-  display: inline-block;
-  margin-right: 10px; /* Adjust the margin as needed */
-}
-
-.has-error {
-  input {
-    border: 2px solid red; // Red border for the input fields
-  }
-
-  .text-danger {
-    color: red; // Red text color for error messages
-  }
-}
-
-input.ng-invalid.ng-dirty.ng-touched {
-  border: 1px solid red;
-}
 
 label {
   display: block;
@@ -64,7 +46,7 @@ button {
 
 .button:disabled{
   padding: 10px 20px;
-  background-color: rgba(47, 51, 81, 0.6); 
+  background-color: rgba(47, 51, 81, 0.6);
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -114,7 +96,7 @@ button {
 .totalDetails .userdetails,
 .totalDetails .contact-details {
   flex: 1;
-  padding: 0 10px;  
+  padding: 0 10px;
 }
 
 .inputtag{
@@ -149,7 +131,7 @@ button {
 }
 
 .mat-mdc-tab-header { border: 1px solid red; }
- 
+
 
 .dialog-content {
   padding: 20px;
@@ -172,8 +154,8 @@ button {
 
 .access-group {
   cursor: pointer;
-  
-  
+
+
 }
 
 .access-group-name {
@@ -254,19 +236,38 @@ button.save-btn {
 
 /* Add the following styles or modify the existing ones */
 .is-invalid {
-  border: 2px solid red;
+  border: 1px solid red;
   /* Add any other styling you want for the invalid state */
 }
 
-.invalid-feedback {
-  color: red;
-  /* Add any other styling you want for the error message */
-}
+// .invalid-feedback {
+//   color: red;
+//   /* Add any other styling you want for the error message */
+// }
 
 .invalid-field {
-  border-color: 1px solid red;
+  border-color: 2px solid red;
+}
+
+.checkbox-label {
+  display: inline-block;
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.has-error {
+  input {
+    border: 2px solid red; // Red border for the input fields
+  }
+
+  .text-danger {
+    color: red; // Red text color for error messages
+  }
+}
+
+input.ng-invalid.ng-dirty.ng-touched {
+  border: 1px solid red;
 }
 
 
 
- 
+
