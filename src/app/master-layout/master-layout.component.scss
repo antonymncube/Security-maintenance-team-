@@ -1,13 +1,13 @@
-main {
+// main {
 
-    width: 100%;
-    height: 100vh;
-    overflow-y: auto;
-    /* Enable vertical scrolling */
-    background-color: #c74141 !important;
-    overflow-x: hidden;
-    /* Hide horizontal overflow */
-}
+//     width: 100%;
+//     height: 100vh;
+//     overflow-y: auto;
+//     /* Enable vertical scrolling */
+//     background-color: #c74141 !important;
+//     overflow-x: hidden;
+//     /* Hide horizontal overflow */
+// }
 
 .row {
     display: flex;
@@ -62,7 +62,7 @@ router-outlet {
     border-bottom: 2px solid #e0e0e0;
     background-color: white;
     margin-top: -18px;
-    margin-left: 70px;
+   // margin-left: 70px;
     padding: 0px;
 }
 
@@ -75,7 +75,7 @@ router-outlet {
 }
 
 .col-content {
-    margin-left: 70px;
+    //margin-left: 70px;
     // background-color: #fbfafa;
   
 
@@ -86,10 +86,10 @@ router-outlet {
 
 }
 
-main {
-    background-color: #c74141 !important; /* Use the desired shade of grey */
-     /* Optional: Add padding for spacing */
-  }
+// main {
+//     background-color: #c74141 !important; /* Use the desired shade of grey */
+//      /* Optional: Add padding for spacing */
+//   }
   
   /* Adjust the padding for specific elements if needed */
   .row1{

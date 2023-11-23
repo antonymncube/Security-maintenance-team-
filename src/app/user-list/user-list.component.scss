@@ -18,17 +18,21 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  margin-left: 74rem;
+  margin-left: 75.5rem;
 }
 
 
 
 .welcome{
-  margin-left: 5px !important;
-  margin-top: 15px !important;
+  margin-left: 40px;
+  //margin-top: 0px;
   font-weight: 600px;
   font-size: 18px; 
-  font-family: italic; 
+  font-family: Roboto, Helvetica Neue, sans-serif; 
+}
+
+.welcome1{
+  color: #f0f0f0;
 }
 
 
@@ -95,11 +99,18 @@
   padding: 2px;
 }
 
- 
+/* Style the table header */
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 2px;
+  border-bottom: 1px solid black;
+}
+
 /* Style the table rows */
 td {
-  padding: 5px !important;
-  border-bottom: 1px solid black !important;
+  padding: 5px;
+  border-bottom: 1px solid black;
 }
 
 /* Style the Actions column */
@@ -107,11 +118,20 @@ td {
   text-align: center;
 }
 
- 
+/* Style the Add User button */
+// .btn-add {
+//   background-color: #007bff;
+//   color: white;
+//   border: none;
+//   border-radius: 5px;
+//   padding: 10px 20px;
+//   cursor: pointer;
+//   margin-top: 20px;
+//   font-size: 16px;
+// }
 
 .btn-add:hover {
   background-color: #2F3351;
-
 }
 
 
@@ -158,6 +178,8 @@ td {
   flex-wrap: wrap;
   max-width: 100%;
   font-family: sans-serif;
+  height: 100%;
+  width: 100%;
   padding: 1px;
   // border: solid 1px black;
  border-bottom: none;
@@ -167,8 +189,7 @@ td {
 .tabs__label {
   // padding: 5px 11px;
   //cursor: pointer;
-  background-color: #f2f2f2;
-  border: black 0.2px;
+  border:solid black 1px;
   width: 235px;
   height: 40px;
   padding-left: 20px;
@@ -177,14 +198,12 @@ td {
   font-size: 16px; 
   font-family: Roboto, Helvetica Neue, sans-serif; 
   font-weight: 580;
-  
 
 }
 
 .check{
   width: 94px;
   height: 20px;
-  background-color: white;
   margin-left: 10px;
   margin-bottom: 4px;
   border-radius:  3px;
@@ -209,7 +228,6 @@ td {
   font-size: 0.9em;
   display: none;
   padding: 0px;
-
 }
 
 .usericon{
@@ -241,7 +259,8 @@ td {
 tr:not(.header-row):hover td {
   background-color: #f2f2f2;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 400;
+  color: rgb(0, 38, 255);
 }
 
 .custom-menu-item {
@@ -259,32 +278,6 @@ tr:not(.header-row):hover td {
 .details{
   padding-top: 16px;
 }
-
-/* Style the table header */
-th {
-  background-color: #f2f2f2 !important;
-  text-align: left;
-  padding: 2px;
-  border-bottom: 1px solid black !important;
-  // border-left: 1px solid black !important; /* Add left border */
-  // border-right: 1px solid black !important; /* Add right border */
-}
-
-/* Add border to the first and last th in the table */
-th:first-child {
-  border-left: none !important;
-}
-
-th:last-child {
-  border-right: none !important;
-}
-
-/* Style the table rows */
-td {
-  padding: 5px;
-  border-bottom: 1px solid black !important;
-}
-
 
 
 
