@@ -2,7 +2,8 @@
   <div class="tabs ">
     <div></div>
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
-    <label for="tab1" class="tabs__label">Details <i class="fa fa-exclamation-triangle invalid-indicator"></i></label>
+    <label for="tab1" class="tabs__label">Details </label>
+    <!-- <i class="fa fa-exclamation-triangle invalid-indicator"></i> -->
     <div class="tabs__content">
       <div class="totalDetails">
         <div class="userdetails form-group">
@@ -59,30 +60,33 @@
           </div>
         </div>
         <div class="contactdetails form-group">
-          <div class="form-group">
-            <label for="department" class="label-width">Department:</label>
-            <select id="department" class="form-control ng-pristine is-invalid" class="check"
-              formControlName="department">
-              <option value="HR">HR</option>
-              <option value="IT">IT</option>
-              <option value="Sales">Sales</option>
-            </select>
-            <div *ngIf="isControlInvalid('department')" class="invalid-feedback">
-              Department required.
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="agent" class="label-width">Agent:</label>
-            <select id="agent" class="form-control ng-pristine is-invalid" class="ng-star-inserted" class="check"
-              formControlName="agent">
-              <option value="Simply Health">Simply Health</option>
-              <option value="Genasys">Genasys</option>
-              <option value="Standard Bank">Standard Bank</option>
-            </select>
-            <div *ngIf="isControlInvalid('agent')" class="invalid-feedback">
-              Agent required.
-            </div>
-          </div>
+       <div class="form-group">
+    <label for="department" class="label-width">Department:</label>
+    <select id="department" class="check"
+        formControlName="department"
+        [ngClass]="{ 'is-invalid': isControlInvalid('department') }">
+        <option value="HR">HR</option>
+        <option value="IT">IT</option>
+        <option value="Sales">Sales</option>
+    </select>
+    <div *ngIf="isControlInvalid('department')" class="invalid-feedback">
+        Department required.
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="agent" class="label-width">Agent:</label>
+    <select id="agent" class="ng-star-inserted check"
+        formControlName="agent"
+        [ngClass]="{ 'is-invalid': isControlInvalid('agent') }">
+        <option value="Simply Health">Simply Health</option>
+        <option value="Genasys">Genasys</option>
+        <option value="Standard Bank">Standard Bank</option>
+    </select>
+    <div *ngIf="isControlInvalid('agent')" class="invalid-feedback">
+        Agent required.
+    </div>
+</div>
 
 
           <div class="form-group">
@@ -164,14 +168,14 @@
               <div class="access-group-item" >
                 <div class="access-group-name">
                   <label>
-                    <input type="checkbox" class="checkbox4" 
+                    <input type="checkbox" class="checkbox4"
                       (change)="toggleAccessCodes(i)">
                     <strong>{{ group }}</strong>
 
                   </label>
                 </div>
               </div>
-              
+
             </div>
 
           </div>
