@@ -1,5 +1,5 @@
 import { PasswordHashingService } from './../services/password-hashing.service';
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ApiServiceService } from '../services/api-service.service';
 import { UserFormData } from '../User';
@@ -30,7 +30,7 @@ export class UserupdateComponent {
   solvingarray: any[] = []
   filterTextChanged = new Subject<string>();
   searchTerm: string = '';
-  
+
 
   dataToUpdate: any
 
@@ -55,37 +55,33 @@ export class UserupdateComponent {
   accessGroundForm: any;
   selectedGroupIndex: number | null = null;
   filterText: string = '';
-  
-   
-  
+
+
+
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiServiceService, private router: Router,
-    private PasswordHashingService: PasswordHashingService) {
+    private PasswordHashingService: PasswordHashingService, private _detector: ChangeDetectorRef) {
     this.accessCodes = [];
     this.accessGroup = [];
-    this.filterTextControl1.valueChanges.pipe(
 
-    ).subscribe(() => {
-      this.filteredAccessCodes();
-    });
-    this.filterTextControl2.valueChanges.pipe(
 
-      ).subscribe(() => {
-        this.filteredAccessGroups();
-      });
     apiService.getAccessGroup().subscribe(res => {
       this.accessGroup = res;
       // console.log("here are the groups" + this.accessGroup)
+      this.filteredAccessGroups(this.accessGroup,null);
+
+
     })
     apiService.getSecLookup().subscribe((res: any) => {
       this.accessCodes = res; // Assigning all the access codes to this array
       // console.log("here is respond mnaka", res);
-      
+
+
     });
 
-     
 
-  
+
+
     // this.accessCodes = data;
     this.accesscodes();
 
@@ -94,7 +90,7 @@ export class UserupdateComponent {
       fullname: ['',],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmpassword: ['', [Validators.required, Validators.minLength(6)]],
-      description: ['', ],
+      description: ['',],
       email: ['', [Validators.required, Validators.email]],
       homephone: ['', [Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       mobile: ['', [Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
@@ -102,12 +98,12 @@ export class UserupdateComponent {
       agent: ['', [Validators.required]],
       language: ['',],
       filterText1: this.filterTextControl1,
-      filterText2:this.filterTextControl2
+      filterText2: this.filterTextControl2
     });
   }
 
 
-  
+
   generateFourDigitId(): string {
     const randomNumber = Math.floor(1000 + Math.random() * 9000);
     this.generatedId = randomNumber.toString();
@@ -157,17 +153,13 @@ export class UserupdateComponent {
 
   ngOnInit() {
     this.getAccesslookup();
+    console.log('Initial filterText2 value:', this.userForm.value.filterText2);
+    // setImmediate(this.filteredAccessGroups,2000)
 
-    // Initialize filtered groups
-    
 
-    // Subscribe to changes in filterText2 control
-    this.filterTextControl2.valueChanges.subscribe((filterText) => {
-      // return this.filteredAccessGroup(filterText);
-    });
   }
 
- 
+
 
   getAccesslookup() {
     this.apiService.getSecLookup().subscribe((SecLookup: any) => {
@@ -201,23 +193,23 @@ export class UserupdateComponent {
             if (exists) {
               alert('Username already exists. Please choose a different username.');
             } else {
-            this.generateFourDigitId();
-            this.user.email = this.userForm.value.email;
-            this.user.username = this.userForm.value.username.toLowerCase();
-            this.user.password = hashedPassword;
-            this.user.department = this.userForm.value.department;
-            this.user.mobile = this.userForm.value.mobile;
-            this.user.homephone = this.userForm.value.homephone;
-            this.user.description = this.userForm.value.description;
-            this.user.fullname = this.userForm.value.fullname;
-            this.user.agent = this.userForm.value.agent;
-            this.user.lastUpdated = new Date();
-            this.user.id = this.generatedId
-            this.user.language = this.userForm.value.language;
+              this.generateFourDigitId();
+              this.user.email = this.userForm.value.email;
+              this.user.username = this.userForm.value.username.toLowerCase();
+              this.user.password = hashedPassword;
+              this.user.department = this.userForm.value.department;
+              this.user.mobile = this.userForm.value.mobile;
+              this.user.homephone = this.userForm.value.homephone;
+              this.user.description = this.userForm.value.description;
+              this.user.fullname = this.userForm.value.fullname;
+              this.user.agent = this.userForm.value.agent;
+              this.user.lastUpdated = new Date();
+              this.user.id = this.generatedId
+              this.user.language = this.userForm.value.language;
 
               this.saveSelectedAccessCodes()
               this.updateUserWithSelectedProducts();
-              
+
 
               this.apiService.postdata(this.user).subscribe((postResponse: any) => {
 
@@ -228,7 +220,7 @@ export class UserupdateComponent {
           });
         });
       }
-    }else {
+    } else {
       // Mark all form controls as touched to trigger validation errors
       this.markFormGroupTouched(this.userForm);
     }
@@ -237,7 +229,7 @@ export class UserupdateComponent {
   markFormGroupTouched(formGroup: FormGroup) {
     Object.values(formGroup.controls).forEach(control => {
       control.markAsTouched();
-  
+
       if (control instanceof FormGroup) {
         this.markFormGroupTouched(control);
       }
@@ -257,6 +249,7 @@ export class UserupdateComponent {
   toggleAccessCodes(index: number) {
 
     this.resetAccessStatus()
+    console.log('Lets see ' + this.userForm.value.filterText2)
     this.accessGroup[index].selected = !this.accessGroup[index].selected;
     this.selectedGroupId = this.accessGroup[index].id;
     const accessCodesInGroup = this.accessGroup[index].sAccessCodes;
@@ -308,7 +301,7 @@ export class UserupdateComponent {
     const accessCodesArray: string[] = selectedGroups.reduce((acc, group) => acc.concat(group.sAccessCodes), [] as string[]);
 
     for (const codes of this.selectedAccessCodes) {
-      console.log('here is the staff brother  '+codes)
+      console.log('here is the staff brother  ' + codes)
       accessCodesArray.push(codes);
       console.log(accessCodesArray)
     }
@@ -321,9 +314,9 @@ export class UserupdateComponent {
 
     const userAccesscodes = {
       id: this.user.id,
-      accesscodes : accessCodesArray1
+      accesscodes: accessCodesArray1
     }
-   
+
     this.apiService.addUserAccessCodes(userAccesscodes).subscribe(
       (response: any) => {
         // console.log('Success:', response);
@@ -334,7 +327,7 @@ export class UserupdateComponent {
     );
     this.apiService.addUserGroups(userAccessGroups).subscribe(
       (res: any) => {
-        
+
       },
       (error: any) => {
         // Handle errors
@@ -342,68 +335,84 @@ export class UserupdateComponent {
       }
     );
   }
-
-  onFilterTextChanged() {
-    // this.filteredAccessGroup(); 
+  // Add this method to your component class
+  hasRequiredFields(): boolean {
+    // Check if any of the fields in the "User-Details" tab are invalid
+    return !!(
+      this.isControlInvalid('username') ||
+      this.isControlInvalid('fullname') ||
+      this.isControlInvalid('password') ||
+      this.isControlInvalid('confirmpassword') ||
+      this.isControlInvalid('email') ||
+      this.isControlInvalid('department') ||
+      this.isControlInvalid('agent') ||
+      this.isControlInvalid('homephone') ||
+      this.isControlInvalid('description') ||
+      this.isControlInvalid('language') ||
+      this.isControlInvalid('mobile')
+    );
   }
-  
-  
+
+  variable: any;
+  onFilterTextChanged(event: any) {
+    
+     
+    const value = event.target.value;
+
+    this,this.filteredAccessGroups(this.accessGroup,value.length === 0 ? null : value)
+
+    this._detector.markForCheck();
+   
+  }
+
+
   filteredAccessCodes() {
     const filteredArray = this.SecLookup.filter((accessCode: { sAccessCode: string }) =>
-      accessCode.sAccessCode.includes(this.userForm.value.filterText1.toUpperCase() )
+      accessCode.sAccessCode.includes(this.userForm.value.filterText1.toUpperCase())
     );
 
-    // console.log(this.accessGroup)
-  //  console.log('this is the access group  ',this.accessGroup)
+
     return filteredArray;
   }
 
-  filteredAccessGroups() {
-    let filteredArray = this.accessGroup.filter((group: { sAccessGroup: string }) =>
-      group.sAccessGroup.includes("")
-    );
-    const jsonString =JSON.stringify(filteredArray)
-    const parsedData = JSON.parse(jsonString);
-    // console.log('what is this ',parsedData)
-    filteredArray = [] ;
-    for (const group of parsedData) {
-      
-     filteredArray.push(group.sAccessGroup)
+
+  filteredresults: any;
+
+
+  filteredAccessGroups(accessGroup: any, searchKey: string | null) {
+
+    if (!searchKey) {
+      this.filteredresults = accessGroup.map((group: { sAccessGroup: string }) => group.sAccessGroup);
     }
-    console.log('Access Group:', filteredArray)
-    return filteredArray;
+    else {
+      this.filteredresults = accessGroup.map((group: { sAccessGroup: string }) => group.sAccessGroup)
+      .filter((group: string) =>
+        group.includes(searchKey))
+    }
+
+   console.log(this.filteredresults)
   }
-  
 
 
-  filteredGroups: Array<{
-    clicked: boolean;
-    sAccessGroup: string;
-    sAccessCodes: Array<string>;
-    selected: boolean;
-    id: string;
-  }> = [];
-  
-  // onFilterText2Changed() {
-  //   const filterText = this.filterTextControl2.value;
-  //   this.filteredAccessGroup(filterText);
-  // }
 
-  // filteredAccessGroup(searchText: string | null = '') {
-  //   // Apply the filter to accessGroup based on searchText
-  //   console.log('is it called')
-  //   if (!searchText || searchText.includes(' ')) {
-  //     // If search text is empty or contains empty spaces, display all access groups
-  //     this.filteredGroups = this.accessGroup;
-  //   } else {
-  //     // If search text is not empty and doesn't contain empty spaces, filter based on access groups
-  //     this.filteredGroups = this.accessGroup.filter((group) =>
-  //       group.sAccessGroup.toLowerCase().includes(searchText)
-  //     );
-  //   }
-  // }
+  selectAllCheckbox: boolean = false;
 
+  toggleSelectAll(event: any) {
+    this.selectAllCheckbox = event.target.checked;
+    this.SecLookup.forEach((accessCode: { sAccessCode: string, status: boolean }) => {
+      if (this.selectAllCheckbox) {
+        accessCode.status = this.selectAllCheckbox;
+        console.log('This is what you are adding  ', accessCode.status)
+        this.selectedAccessCodes.push(accessCode.sAccessCode)
+      } else {
+        accessCode.status = this.selectAllCheckbox;
+        this.selectedAccessCodes = []
+      }
+
+    });
+  }
 
 
 
 }
+// return this.filteredresults;

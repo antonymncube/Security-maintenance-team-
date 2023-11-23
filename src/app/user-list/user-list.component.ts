@@ -41,6 +41,8 @@ export class UserListComponent implements OnInit {
   paginator!: MatPaginator;
   currentuser: string = '';
   statusFilterControl = this.formBuilder.control('');
+  UserForm: any;
+  userForm: any;
 
 
   constructor(private apiService: ApiServiceService, private router: Router, private autservice: AuthService,
@@ -111,4 +113,11 @@ export class UserListComponent implements OnInit {
           this.dataSource.filter = status === 'true' ? 'true' : 'false';
         }
       }
+    
+    markAllAsTouched() {
+      Object.keys(this.UserForm.controls).forEach(controlName => {
+        this.userForm.get(controlName)?.markAsTouched();
+      });
     }
+  }
+    
