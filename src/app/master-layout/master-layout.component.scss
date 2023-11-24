@@ -4,7 +4,7 @@ main {
     height: 100vh;
     overflow-y: auto;
     /* Enable vertical scrolling */
-    background-color: #c74141 !important;
+    // background-color: #c74141 !important;
     overflow-x: hidden;
     /* Hide horizontal overflow */
 }
@@ -30,6 +30,7 @@ router-outlet {
     width: 100%;
     height: 100%;
     overflow: auto;
+    // margin-top: 500px !important;
     /* Make the content in router-outlet scrollable */
 }
 
@@ -76,8 +77,9 @@ router-outlet {
 
 .col-content {
     margin-left: 70px;
+   
     // background-color: #fbfafa;
-  
+//   margin-bottom: 10px !important;
 
     .key-img {
         width: 70px;
@@ -86,10 +88,7 @@ router-outlet {
 
 }
 
-main {
-    background-color: #c74141 !important; /* Use the desired shade of grey */
-     /* Optional: Add padding for spacing */
-  }
+ 
   
   /* Adjust the padding for specific elements if needed */
   .row1{
@@ -110,7 +109,7 @@ main {
 }
  
 .user {
-    margin-left: 949px;
+    margin-left: 1019px;
     font-size: 2em;
     // margin-bottom: 5px;
 }
