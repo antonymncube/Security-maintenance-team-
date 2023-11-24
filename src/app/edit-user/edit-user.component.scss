@@ -342,7 +342,7 @@
   line-height: 1.5;
   font-size: 0.9em;
   display: none;
-  
+
 }
 
 .tabs__radio:checked + .tabs__label {
@@ -353,4 +353,10 @@
 
 .tabs__radio:checked + .tabs__label + .tabs__content {
   display: initial;
+}
+
+.fa{
+
+  padding: 10px;
+
 }

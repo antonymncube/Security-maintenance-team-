@@ -2,7 +2,10 @@
   <div class="tabs ">
     <div></div>
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
-    <label for="tab1" class="tabs__label">Details </label>
+    <label for="tab1" class="tabs__label">
+      <i class="fa fa-user"></i> Details
+   </label>
+
     <!-- <i class="fa fa-exclamation-triangle invalid-indicator"></i> -->
     <div class="tabs__content">
       <div class="totalDetails">
@@ -135,7 +138,7 @@
     </div>
 
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
-    <label for="tab2" class="tabs__label">Access Codes</label>
+    <label for="tab2" class="tabs__label" > <i class="fa fa-shield"></i> Access Codes</label>
     <div class="tabs__content bg-white">
       <div class="row p-2" style="margin-top: 50px;">
         <div class="container" style="display: flex;">
@@ -147,7 +150,7 @@
 
             <input type="text" id="inputField" name="searchAccessGroup" formControlName="filterText2"
               style="width: 150px; height: 20px;" (input)="onFilterTextChanged($event)" />
-            
+
           </div>
 
 
@@ -161,10 +164,10 @@
 
         </div>
         <div class="col-4 pl-3 useraccessgroups  ">
-          
+
 
           <div class="access-groups ">
-            
+
             <div *ngFor="let group of filteredresults; let i = index" class="access-group">
               <div class="access-group-item" >
                 <div class="access-group-name">
@@ -176,12 +179,8 @@
                   </label>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 2bcdcb922286e2e322cc6cc31d0e84686ffc8b28
             </div>
-          
+
 
           </div>
         </div>
@@ -208,8 +207,8 @@
     </div>
 
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab3">
-    
-    <label for="tab3" class="tabs__label">Available Products</label>
+
+    <label for="tab3" class="tabs__label"><i class = "fa fa-clipboard"></i> Products</label>
     <div class="tabs__content">
       <div class="container products">
       <app-available-products (selectedProducts)="receiveSelectedProducts($event)"></app-available-products>
@@ -221,18 +220,10 @@
 
     <div class="border" style=" position: relative; height: 50px;">
 
-<<<<<<< HEAD
       <button class="save-button" type="submit" [disabled]="userForm.invalid"
         style="position: absolute; margin-left: 72rem;">Save</button>
       <button class="cancel-button" style="position: absolute; left: 100px;margin-left: 60rem;">Cancel</button>
-    
+
     </div>
-  
-=======
-    <button class="cancel-button" style="position: absolute; left: 100px;margin-left: 60rem;">Cancel</button>
 
-  </div>
-
-
->>>>>>> 2bcdcb922286e2e322cc6cc31d0e84686ffc8b28
 </form>
