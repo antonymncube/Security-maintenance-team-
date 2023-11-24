@@ -2,7 +2,10 @@
   <div class="tabs ">
     <div></div>
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
-    <label for="tab1" class="tabs__label">Details </label>
+    <label for="tab1" class="tabs__label">
+      <i class="fa fa-user"></i> Details
+   </label>
+
     <!-- <i class="fa fa-exclamation-triangle invalid-indicator"></i> -->
     <div class="tabs__content">
       <div class="totalDetails">
@@ -135,7 +138,7 @@
     </div>
 
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
-    <label for="tab2" class="tabs__label">Access Codes</label>
+    <label for="tab2" class="tabs__label" > <i class="fa fa-shield"></i> Access Codes</label>
     <div class="tabs__content bg-white">
       <div class="row p-2" style="margin-top: 50px;">
         <div class="container" style="display: flex;">
@@ -205,7 +208,7 @@
 
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab3">
 
-    <label for="tab3" class="tabs__label">Available Products</label>
+    <label for="tab3" class="tabs__label"><i class = "fa fa-clipboard"></i> Products</label>
     <div class="tabs__content">
       <div class="container products">
       <app-available-products (selectedProducts)="receiveSelectedProducts($event)"></app-available-products>
