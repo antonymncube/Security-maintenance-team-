@@ -154,11 +154,15 @@
   </div>
 </form> -->
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@latest/font/bootstrap-icons.css" rel="stylesheet">
+
   <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form1">
     <div class="tabs">
       <div></div>
       <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
-      <label for="tab1" class="tabs__label">Details</label>
+      <label for="tab1" class="tabs__label">
+        <i class = "fa fa-user"></i> Details
+     </label>
       <div class="tabs__content">
         <div class="totalDetails">
           <div class="userdetails form-group">
@@ -267,7 +271,7 @@
       </div>
 
       <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
-      <label for="tab2" class="tabs__label">Access Codes</label>
+      <label for="tab2" class="tabs__label"><i class = "bi-3 bi-shield-l"></i> <i class = "fa fa-shield"></i>Security Access</label>
       <div class="tabs__content">
         <div class="container">
           <div class="row row1 p-1 no-gutters">
@@ -303,7 +307,7 @@
 
       </div>
       <input type="radio" class="tabs__radio" name="tabs-example" id="tab3">
-      <label for="tab3" class="tabs__label">Available products</label>
+      <label for="tab3" class="tabs__label"><i class = "fa fa-clipboard"></i>Available products</label>
       <div class="tabs__content">
         <app-available-products
           [availableProducts]="userForm.get('selectedProducts')?.value"
