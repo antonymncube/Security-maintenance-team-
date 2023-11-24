@@ -51,6 +51,7 @@ router-outlet {
     height: 100%;
     margin: 0px;
     overflow: auto;
+    // margin-top: 500px !important;
     /* Make the content in router-outlet scrollable */
 }
 
@@ -110,10 +111,7 @@ router-outlet {
 
 }
 
-main {
-    background-color: #c74141 !important; /* Use the desired shade of grey */
-     /* Optional: Add padding for spacing */
-  }
+ 
   
   /* Adjust the padding for specific elements if needed */
   .row1{

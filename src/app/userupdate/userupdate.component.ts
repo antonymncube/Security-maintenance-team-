@@ -100,6 +100,19 @@ export class UserupdateComponent {
       filterText1: this.filterTextControl1,
       filterText2: this.filterTextControl2
     });
+
+    this.markFormGroupAsTouchedAndDirty(this.userForm);
+  }
+  markFormGroupAsTouchedAndDirty(formGroup: FormGroup): void {
+    Object.values(formGroup.controls).forEach(control => {
+      control.markAsTouched();
+      control.markAsDirty();
+
+      if (control instanceof FormGroup) {
+        this.markFormGroupAsTouchedAndDirty(control);
+      }
+    });
+  
   }
 
 
@@ -355,14 +368,14 @@ export class UserupdateComponent {
 
   variable: any;
   onFilterTextChanged(event: any) {
-    
-     
+
+
     const value = event.target.value;
 
     this,this.filteredAccessGroups(this.accessGroup,value.length === 0 ? null : value)
 
     this._detector.markForCheck();
-   
+
   }
 
 

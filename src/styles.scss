@@ -5,11 +5,23 @@
 html, body {
     height: 100%;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    // font-size: 5rem;
+    font-family:  "opensans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    color	: #676a6c !important;
+    
+    // color: var(--primary-color, #a7b1c2);
+    // font-size: 15px !important;
+    // color:red !important;
+    
   }
 
 .btn-primary {
-    background-color: aqua;
+    background-color:#676a6c;
 }
 
+.border{
+    border:  1px solid #e7eaec;
+    width: 78rem;
+    margin-left: 10px;
+    background-color: #fafafa;
+    // margin-top: 5px;
+}

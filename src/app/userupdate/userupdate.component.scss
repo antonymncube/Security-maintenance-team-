@@ -13,10 +13,11 @@ form {
   width: 80rem;
   margin: 0 auto;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background-color: white !important;
+  border:  1px solid #e7eaec;
+  border-radius: 2px;
   // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-top: 50px;
+  margin-top: 5px;
   padding-top: 5px;
 }
 
@@ -72,7 +73,7 @@ button {
 
 .button:disabled{
   padding: 10px 20px;
-  background-color: rgba(47, 51, 81, 0.6); 
+  background-color: rgba(47, 51, 81, 0.6);
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -122,7 +123,7 @@ button {
 .totalDetails .userdetails,
 .totalDetails .contact-details {
   flex: 1;
-  padding: 0 10px;  
+  padding: 0 10px;
 }
 
 .inputtag{
@@ -157,7 +158,7 @@ button {
 }
 
 .mat-mdc-tab-header { border: 1px solid red; }
- 
+
 
 .dialog-content {
   padding: 8px;
@@ -181,8 +182,8 @@ button {
 
 .access-group {
   cursor: pointer;
-  
-  
+
+
 }
 
 .access-group-name {
@@ -307,7 +308,7 @@ button.save-btn {
   line-height: 1.5;
   font-size: 0.9em;
   display: none;
-  
+
 }
 
 .tabs__radio:checked + .tabs__label {
@@ -375,15 +376,16 @@ form {
     /* Prevent text from wrapping to the next line */
   }
 
-  .scrollable {
-    overflow-y: auto;
-    max-height: 100px;
-    // border: 1px solid red;
-    /* reduced border thickness for better visibility */
-    padding: 10px;
-    background-color: #f8f8f8;
-    /* added background color for better visibility */
-  }
+  // .scrollable {
+  //   overflow-y: auto;
+  // border: 4px solid red;
+  //   height: 320px;
+  //   // border: 1px solid red;
+  //   /* reduced border thickness for better visibility */
+  //   padding: 10px;
+  //   background-color: #f8f8f8;
+  //   /* added background color for better visibility */
+  // }
 
 
 
@@ -468,6 +470,8 @@ button {
 .totalDetails {
   display: flex important;
   justify-content: space-between important;
+  background-color: #ffffff  !important
+  ;
 }
 
 .form-group {
@@ -496,7 +500,8 @@ button {
   border-radius: 3px;
 }
 .tabs__content{
-  height: 500px;
+  height: 450px;
+//  background-color: #ffffff;;
   // background-color: red;
 }
 
@@ -506,6 +511,10 @@ button {
 
 .contactdetails {
   margin-right: 30rem;
+}
+
+.products{
+   background-color: #ffffff;;
 }
 
 // .my-custom-class{
@@ -525,7 +534,7 @@ button {
 }
 
 
- 
+
 
 // .access-groups {
 //   display: flex;
@@ -541,7 +550,7 @@ button {
 .access-group {
   cursor: pointer;
 
-
+ 
 }
 
 .access-group-name {
@@ -564,17 +573,23 @@ button {
   border: solid  rgb(182, 177, 177) 1px;
   border-radius: 5px; 
   font-family: 'Roboto';
-  // font-size: 5rem;
-  // border: 4px solid red;
-  // padding: 1px;
-  // margin-left: 100px;
-  // background-color: #f8f8f8;
+  padding: 30px 20px 20px 20px;
+  background-color: #ffffff;
+  
 }
-
+.useraccessgroups{
+  overflow-y: auto;
+  height: 320px;
+  height: 320px;
+  border:  1px solid #e7eaec;
+  padding: 30px 20px 20px 20px;
+  font-family: 'Roboto';
+  background-color: #ffffff;
+}
 .checkbox4{
   cursor: pointer;
 }
- 
+
 
 .row1 {
  overflow-x: hidden;
@@ -668,7 +683,7 @@ button.save-btn {
  line-height: 1.5;
  font-size: 0.9em;
  display: none;
- 
+
 }
 
 .access-group-item.selected {
@@ -692,7 +707,20 @@ button.save-btn {
   display: inline-block;
 }
 
+.is-invalid {
+  border: 1px solid red;
+
+}
+
+.red-border select {
+  border: 1px solid red;
+}
+
+.red-border .invalid-feedback {
+  color: red;
+}
 
 
 
- 
+
+
