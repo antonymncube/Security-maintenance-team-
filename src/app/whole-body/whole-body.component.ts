@@ -1,11 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-interface SideNavToggle{
-  screenWidth: number;
-  collapsed: boolean;
-}
-
 @Component({
   selector: 'app-whole-body',
   //standalone: true,
@@ -28,9 +23,5 @@ export class WholeBodyComponent {
       styleClass = 'body-md-screen'
     }
     return styleClass;
-  }
-  onToggleSideNav(data: SideNavToggle): void{
-    this.screenWidth = data.screenWidth;
-    this.isSideNavCollapsed = data.collapsed;
   }
 }

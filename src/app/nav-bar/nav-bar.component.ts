@@ -1,4 +1,4 @@
-import { Component, EventEmitter, HostListener, OnInit, Output, inject } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output, inject } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -9,6 +9,7 @@ import { UserListComponent } from '../user-list/user-list.component';
 import { ModifyAccesCodesComponent } from '../modify-acces-codes/modify-acces-codes.component';
 import { ApiServiceService } from '../services/api-service.service';
 import { AccessGroupComponent } from '../access-group/access-group.component';
+import { Router } from '@angular/router';
 import { navbarData } from './narbardata';
 
 interface SideNavToggle{
@@ -21,7 +22,7 @@ interface SideNavToggle{
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
-export class NavBarComponent implements OnInit{
+export class NavBarComponent {
   private breakpointObserver = inject(BreakpointObserver);
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
   @ViewChild('drawer') drawer!: MatSidenav;
@@ -42,13 +43,12 @@ export class NavBarComponent implements OnInit{
     } 
   }
 
-  constructor(public dialog: MatDialog, private apiService: ApiServiceService) { }
+  constructor(public dialog: MatDialog, private apiService: ApiServiceService, public router: Router) { }
 
   openDialog() {
     // Fetch the data before opening the dialog
     this.getAccesslookup();
   }
-  
 
   getAccesslookup() {
     this.apiService.getSecLookup().subscribe((SecLookup: any) => {
@@ -60,7 +60,7 @@ export class NavBarComponent implements OnInit{
     });
   }
 
- 
+
   getAccessGroup() {
     this.apiService.getAccessGroup().subscribe((accessGroup: any) => {
       this.accessGroup = accessGroup;
@@ -74,24 +74,24 @@ export class NavBarComponent implements OnInit{
       height:'500px',
       data: { SecLookup } // Pass SecLookup data to the dialog
     });
-    
+
 
     dialogRef.afterClosed().subscribe((result) => {
-       
+
       console.log('The dialog was closed');
     });
   }
 
   openDialogWithAccessGroup(accessGroup: any) {
-   
+
     const dialogRef = this.dialog.open(AccessGroupComponent, {
       width: '850px',
       height:'550px',
       data: {accessGroup},
-      
+
     });
-   
-  
+
+
     dialogRef.afterClosed().subscribe((result) => {
       console.log('The dialog was closed');
     });
@@ -115,19 +115,28 @@ export class NavBarComponent implements OnInit{
       location.reload();
     }
 
-    // responsiveness
 
-    ngOnInit(): void{
-      this.screenWidth = window.innerWidth;
-    }
+navigateToHome() {
 
-    toggleCollapse(): void{
-      this.collapsed = !this.collapsed;
-      this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
-  
-    }
-    closeSidenav(): void{
-      this.collapsed = false;
-      this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
-    }
+  this.router.navigate(['/home']).then(() => {
+
+      window.location.reload();
+  });
+}
+
+// responsiveness
+
+ngOnInit(): void{
+  this.screenWidth = window.innerWidth;
+}
+
+toggleCollapse(): void{
+  this.collapsed = !this.collapsed;
+  this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
+
+}
+closeSidenav(): void{
+  this.collapsed = false;
+  this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
+}
 }

@@ -10,13 +10,13 @@ import { CommonModule } from '@angular/common';
 })
 export class BoddyComponent {
   @Input() collapsed = false;
-  @Input() screenwidth = 0;
+  @Input() screenWidth = 0;
 
   getBodyClass(): string{
     let styleClass = '';
-    if(this.collapsed && this.screenwidth > 768){
+    if(this.collapsed && this.screenWidth > 768){
       styleClass = 'body-trimmed'
-    }else if(this.collapsed && this.screenwidth <= 768 && this.screenwidth > 0){
+    }else if(this.collapsed && this.screenWidth <= 768 && this.screenWidth > 0){
       styleClass = 'body-md-screen'
     }
     return styleClass;

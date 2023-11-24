@@ -24,11 +24,11 @@ interface SideNavToggle{
 export class MasterLayoutComponent {
   @ViewChild('menuTrigger') menuTrigger!: MatMenuTrigger;
   @ViewChild(NavBarComponent) navBarComponent: NavBarComponent | undefined;
-  @Input() collapsed = false;
-  @Input() screenwidth = 0;
 
   Version1: string;
   showPurpose: boolean = false;
+  isSideNavCollapsed = false;
+  screenWidth = 0;
 
 
   constructor(private dialog: MatDialog,private autservice:AuthService, private SharedDataService:  SharedDataService) {
@@ -72,20 +72,21 @@ getAccesslookupp() {
   
 }
 
-getBodyClass(): string{
-  let styleClass = '';
-  if(this.collapsed && this.screenwidth > 768){
-    styleClass = 'body-trimmed'
-  }else if(this.collapsed && this.screenwidth <= 768 && this.screenwidth > 0){
-    styleClass = 'body-md-screen'
-  }
-  return styleClass;
+onToggleSideNav(data: SideNavToggle): void{
+  this.screenWidth = data.screenWidth;
+  this.isSideNavCollapsed = data.collapsed;
 }
 
-isSideNavCollapsed = false;
-  screenWidth = 0;
-  onToggleSideNav(data: SideNavToggle): void{
-    this.screenWidth = data.screenWidth;
-    this.isSideNavCollapsed = data.collapsed;
+@Input() collapsed = false;
+ // @Input() screenWidth = 0;
+
+  getBodyClass(): string{
+    let styleClass = '';
+    if(this.collapsed && this.screenWidth > 768){
+      styleClass = 'body-trimmed'
+    }else if(this.collapsed && this.screenWidth <= 768 && this.screenWidth > 0){
+      styleClass = 'body-md-screen'
+    }
+    return styleClass;
   }
 }

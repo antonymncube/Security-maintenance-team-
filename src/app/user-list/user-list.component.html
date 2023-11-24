@@ -1,6 +1,5 @@
-
-<div class="welcome">.</div>
-<h2 class="welcome">Welcome {{currentuser}}</h2>
+<div class="Contain">
+<h3 class="welcome">Welcome {{currentuser}}</h3>
 
 
 
@@ -12,7 +11,7 @@
           <option value="" selected class="check11">All</option>
           <option value="true" class="check11">Active</option>
           <option value="false" class="check11">Inactive</option>
-          <option value="" selected class="check11">Expired</option>
+          <!-- <option value="" selected class="check11">Expired</option> -->
         </select>
       </i></div></label>
 
@@ -61,16 +60,16 @@
               <button mat-menu-item (click)="onActionSelected(element, 'viewuser')">
                 <span>View User</span>
               </button>
-              <!-- <button mat-menu-item>
-                <mat-icon>notifications_off</mat-icon>
-                <span>Disable alerts</span>
-              </button> -->
-
               <button mat-menu-item (click)="onActionSelected(element, 'toggleStatus')">
                 <span>
                   {{ element.status ? 'Deactivate' : 'Activate' }} user
                 </span>
               </button>
+              <!-- <button mat-menu-item (click)="onDeleteUser(element.id)">
+                <mat-icon>delete</mat-icon>
+                <span>Delete User</span>
+              </button> -->
+
             </mat-menu>
           </td>
         </ng-container>
@@ -82,8 +81,13 @@
       <!-- <tr mat-header-row class="header-row" *matHeaderRowDef="displayedColumns"></tr> -->
 
 
-
+      <mat-paginator class="p-0 m-0" style="margin-left: 500px; background-color: #f2f2f2 ;" [pageSizeOptions]="[7]" showFirstLastButtons="false"></mat-paginator>
     </div>
+  
+
+   
+    </div>
+</div>
   
     <button (click)="markAllAsTouched()" class="btn-add" routerLink="/home/updateuser">+ Add-User</button>
     <!-- <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
@@ -92,3 +96,4 @@
       CONTENT for Tab #2
     </div>
   </div> -->
+</div>
