@@ -1,41 +1,77 @@
- 
-<main>
-   
+
+<!-- <img class="key-img" src="assets\images\key-solid.svg">
+<h2 class="Securityheading">Security Maintenance</h2> -->
+<div class="start">
+    <div class="ad">
+        <app-nav-bar (onToggleSideNav)="onToggleSideNav($event)"></app-nav-bar>
+    </div>
+    <div class="ad1">
+        <div class="body">
+    <!-- <div class="row m-0 d-flex gap-2">
+        <img class="key-img" src="C:\Users\antony.mncube\Documents\projects\securityMaintenance\SecurityMaintenence\src\assets\images\key-solid.svg">
+
+        <b>back there</b>
+    </div> -->
+
     <div class="row row1  ">
-        <div class="col-lg-1">
-            <app-nav-bar></app-nav-bar>
-        </div>
         <div class="col-lg-11 ">
             <div class="security-container col2">
                 <div class="securityIcon">
 
                 </div>
                 <div class="search">
+                    <!-- <button mat-icon-button>
+                        <mat-icon>menu</mat-icon>
+                    </button> -->
+                    <!-- <input type="text" class="searchfield" placeholder="Search by username...." /> -->
                     <input type="text" class="searchfield" placeholder="Search for something ....." (input)="searchUsers($event)" />
+                    <!-- <span class="pt-0"><i class="fa fa-2x fa-search search icone" aria-hidden="true"></i></span> -->
                     <i style="padding-bottom: 100px;"style="cursor: pointer;"class="fa fa-user-circle User user" aria-hidden="true" mat-button [matMenuTriggerFor]="menu" #menuTriggers >
+
                     <mat-menu #menu="" style="color: white;background-color: white; padding-right: 0px;margin-top: 40px;">
+                        <!-- <button mat-menu-item (click)="openDialog()">Open dialog</button> -->
+
                         <p (click)="logout()" class="hover-effect" style="padding-left: 10px;">
                           <i class="fa fa-1x fa-sign-out" style="padding-right: 10px;"></i>Log out
                         </p>
+
                         <p (click)="getAccesslookupp()" class="hover-effect" style="padding-left: 10px;">
                           <i class="fa fa-info-circle" style="padding-right: 10px;"></i>About
                         </p>
+
+
+
                     </mat-menu>
+
                 </i>
                 </div>
             </div>
          
-            <div class="col-content" >
+            <div class="col-content  " >
                 <div class="container bg-white">
                     <router-outlet></router-outlet>
-                    <div class="border"></div>
                 </div>
+                
+
+                <!-- <h4 class="h4 bg-white">back where</h4> -->
+                <!-- <footer style="color: black; min-height: 1500px;position: fixed;margin-top: 80px ">
+                    <p style="color: black;">Author: Hege Refsnes<br>
+                    <a style="color: black;" href="mailto:hege@example.com">hege@example.com</a></p>
+                </footer> -->
             </div>
 
         </div>
-        <div></div>
+        <div class="row " style="padding-right: 10px; padding-top: 0px; padding-bottom: 0px; height: 0px;">
+            <div class="col-6">
+              <h3 class="version " style="margin-left: 200px;margin-bottom: 2px;">Genasys Technologies (pty) Ltd</h3>
+            </div>
+            <div class="col-6 text-end mt-1"  ><h3 style="margin-bottom: 2px;">Version Design 1.0</h3></div>
+
+          </div> 
 
     </div>
 
 
-</main>
+        </div>
+    </div>
+</div>

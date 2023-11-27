@@ -1,0 +1,24 @@
+.body{
+    height: 100vh;
+    width: 100%;
+    //margin-left: 5rem;
+    position: relative;
+    z-index: 0;
+    transition: all .5s ease;
+    background: #c41515;
+    //padding: .21rem;
+}
+
+.body-trimmed{
+    width: calc(100% - 16.5625rem);
+    //margin-left: 16.5625rem;
+}
+
+.body-md-screen{
+    width: calc(100% - 5rem);
+    //margin-left: 5rem;
+}
+.ROUT{
+    width: 100%;
+    
+}
