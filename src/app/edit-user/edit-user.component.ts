@@ -396,7 +396,7 @@ export class EditUserComponent implements OnInit {
             });
 
 
-            console.log('this is what happens mshana ', groupaccesscodes);
+            // console.log('this is what happens mshana ', groupaccesscodes);
 
           }
         }

@@ -15,6 +15,10 @@
   margin: 0px;
 }
 
+.border{
+  width: 100%;
+}
+
 
 .btn-add {
   background-color: #2F3351;
@@ -24,7 +28,7 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  margin-left: 90.5%;
+  margin-left: calc(100% - 7rem);
 }
 
 
@@ -85,7 +89,7 @@
 
 /* Style the table container */
 .container-table {
-  width: auto;
+  width: 100%;
   overflow-x: auto;
   margin-top: 20px;
 }
@@ -155,6 +159,7 @@ td {
   text-overflow: ellipsis;
   max-width: 160px; /* Adjust this value to control the maximum tab width */
 }
+
 .container, .container-md, .container-sm {
   max-width: 100%;
 }

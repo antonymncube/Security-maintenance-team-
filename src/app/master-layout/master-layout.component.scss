@@ -41,6 +41,7 @@
 .col-lg-11 {
     //flex: 0 0 91.667%;
     width: 100%;
+    padding: 0;
     /* Adjust as needed */
     //overflow: auto;
     /* Make the entire .col-lg-11 content scrollable */
@@ -81,6 +82,7 @@ router-outlet {
 }
 
 .search {
+    width: 100%;
     border-bottom: 2px solid #e0e0e0;
     background-color: white;
     margin-top: -18px;
@@ -138,7 +140,7 @@ router-outlet {
 }
  
 .user {
-    margin-left: 110vh;//////////////////////////////////////////////////////////////////////////////////////
+    margin-left: calc(100% - 20rem);//////////////////////////////////////////////////////////////////////////////////////
     font-size: 2em;
     // margin-bottom: 5px;
 }

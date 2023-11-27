@@ -266,7 +266,7 @@ box-shadow: none !important;
 
 
 .submit {
-  margin-left: 75rem;
+  margin-left: calc(100% - 5rem);
   background-color: #2F3351; /* Greyish background color */
   color: white; /* White text color */
   // border: 1px solid #808080; /* Matching greyish border */

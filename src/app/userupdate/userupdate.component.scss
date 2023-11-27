@@ -8,7 +8,9 @@ mat-icon.warning {
   color: red; /* Set the color as needed */
   margin-right: 4px; /* Adjust the margin as needed */
 }
-
+.form1 bg-white{
+ width: 100%;
+}
 form {
   width: 100%;
   margin: 0 auto;
@@ -329,7 +331,7 @@ button.save-btn {
 }
 
 form {
-  width: 100%S;
+  width: 100%;
   margin: 0 auto;
   padding: 10px;
  //  border: 1px solid #ccc;
@@ -722,6 +724,10 @@ button.save-btn {
 
 .fa{
   padding: 10px;
+}
+
+.border{
+  width: 100%;
 }
 
 
