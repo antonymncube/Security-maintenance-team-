@@ -254,10 +254,7 @@
       "homephone": "0781638594",
       "mobile": "0781990677",
       "agent": "Simply Health",
-      "status": true,
-      "lastUpdated": "2023-11-24T07:49:25.574Z",
-      "language": "",
-      "selectedProducts": []
+      "status": true
     },
     {
       "id": "18",
@@ -270,42 +267,35 @@
       "homephone": "0781638594",
       "mobile": "0781638594",
       "agent": "Simply Health",
-      "status": true,
-      "lastUpdated": "2023-11-24T07:48:56.976Z",
-      "language": "",
-      "selectedProducts": []
+      "status": true
     },
     {
       "id": "W54mHDU",
       "username": "Emihle",
       "fullname": "Emihle Ntshongwana",
       "description": " Married",
+      "location": "",
+      "agent": "Genasys",
       "password": "$2a$10$Z7vwnbPeltFmDCXLwbtxk.EqEhE8AkRgYzEbiveqrANunXET73q9W",
-      "department": "IT",
       "email": "e.ntshongwana@genasystech.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "agent": "Genasys",
-      "status": true,
-      "lastUpdated": "2023-11-24T07:48:49.888Z",
-      "language": "",
-      "selectedProducts": []
+      "department": "IT",
+      "status": true
     },
     {
       "id": "E1yptON",
       "username": "Grace",
       "fullname": "Grace Ngwangwa",
       "description": "Hello Grace",
+      "location": "",
+      "agent": "Genasys",
       "password": "$2a$10$fH8zSNFGNRn.FVRpVCUTwu1EObbnRTfUGV.kqWLdxWxjuvt4yxwF6",
-      "department": "IT",
       "email": "g.ngwangwa@genasystech.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "agent": "Genasys",
-      "status": true,
-      "lastUpdated": "2023-11-24T07:48:39.773Z",
-      "language": "",
-      "selectedProducts": []
+      "department": "IT",
+      "status": true
     },
     {
       "id": "A0LIYn3",
@@ -359,44 +349,6 @@
       "language": "Afrikaans",
       "selectedProducts": [
         "Group Cash Plan"
-      ]
-    },
-    {
-      "id": "5236",
-      "username": "mitchyyye",
-      "fullname": "Jack/ntshongwana",
-      "description": "tester",
-      "password": "$2a$10$RNOVhvpwtdCIqxDUp2vxDOyvbhYVTLcwp0c6ALgLbTr6oojHN8FAm",
-      "department": "HR",
-      "email": "antonymncube49@gmail.com",
-      "homephone": "",
-      "mobile": "0781954154",
-      "agent": "Simply Health",
-      "status": true,
-      "lastUpdated": "2023-11-25T21:23:10.028Z",
-      "language": "English",
-      "location": "",
-      "selectedProducts": [
-        "Cash Plan"
-      ]
-    },
-    {
-      "id": "9708",
-      "username": "mitchyyyekm;",
-      "fullname": "Jack/ntshongwana",
-      "description": "tester",
-      "password": "$2a$10$wTpNIP6vZ67H8JbXopgEoea5KeJ1ifJPvLSj8KILLTgz5gjvQyrem",
-      "department": "HR",
-      "email": "antonymncube49@gmail.com",
-      "homephone": "",
-      "mobile": "0781954154",
-      "agent": "Simply Health",
-      "status": true,
-      "lastUpdated": "2023-11-25T21:23:33.333Z",
-      "language": "English",
-      "location": "",
-      "selectedProducts": [
-        "Cash Plan"
       ]
     }
   ],
@@ -708,20 +660,6 @@
         "Claim-Admin"
       ],
       "id": "6121"
-    },
-    {
-      "AccessGroups": [
-        "Underwriting con",
-        "Claim-Admin"
-      ],
-      "id": "5236"
-    },
-    {
-      "AccessGroups": [
-        "Underwriting con",
-        "Claim-Admin"
-      ],
-      "id": "9708"
     }
   ],
   "SecUserAccess": [
@@ -1078,34 +1016,6 @@
         "CL_DEL_CLAIMANT",
         "CL_EXCEL_PRINT",
         " CL_STALECHEQUE",
-        "AGENT_MAINT",
-        "API_DOC_PERS",
-        "ADDR_OVERRIDE",
-        "API_DOC_4",
-        "CL_REOPEN",
-        "CL_REQUISITION",
-        "CL_SALVAGE",
-        "CL_UNDMAN"
-      ]
-    },
-    {
-      "id": "5236",
-      "accesscodes": [
-        "ACCEPTBBWARN",
-        "AGENT_MAINT",
-        "API_DOC_PERS",
-        "ADDR_OVERRIDE",
-        "API_DOC_4",
-        "CL_REOPEN",
-        "CL_REQUISITION",
-        "CL_SALVAGE",
-        "CL_UNDMAN"
-      ]
-    },
-    {
-      "id": "9708",
-      "accesscodes": [
-        "ACCEPTBBWARN",
         "AGENT_MAINT",
         "API_DOC_PERS",
         "ADDR_OVERRIDE",
