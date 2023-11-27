@@ -259,23 +259,65 @@ export class UserupdateComponent {
     });
   }
 
-  toggleAccessCodes(index: number) {
+  existsInAccessCodesForItem(accesscodes: any): boolean {
+    console.log('lets see the boolean')
+    return this.selectedAccessCodes.includes(accesscodes.sAccessCode);
+  }
+  
 
-    this.resetAccessStatus()
-    console.log('Lets see ' + this.userForm.value.filterText2)
+  toggleAccessCodes(index: number) {
+    this.resetAccessStatus();
     this.accessGroup[index].selected = !this.accessGroup[index].selected;
     this.selectedGroupId = this.accessGroup[index].id;
+
+    console.log('Checked Access Codes:', this.selectedAccessCodes);
+    if (!this.accessGroup[index].selected) {
+      this.accessGroup.map(res => {
+        if (this.accessGroup[index].sAccessGroup == res.sAccessGroup)
+        this.selectedAccessCodes = this.selectedAccessCodes.filter(code => !res.sAccessCodes.includes(code))
+      })
+    } else {
+      const selectedAccessGroup = this.accessGroup[index];
+      this.selectedAccessCodes = this.selectedAccessCodes.concat(selectedAccessGroup.sAccessCodes)
+    }
+
+
+
+    console.log("here are codes all  ", this.selectedAccessCodes)
+
+
+
+
+
+    if (!this.accessGroup[index].selected) {
+
+
+      this.selectedAccessCodes.forEach(selectedCode => {
+        // Check if the selected code is present in the accessCodes array
+        const matchingCode = this.accessCodes.find(code => code.sAccessCode === selectedCode);
+
+        // If a matching code is found, set selected to false
+        if (matchingCode !== undefined) {
+          // Assuming there is a 'selected' property in each access code object
+          matchingCode.selected = false;
+        }
+      });
+    }
+    else {
+
+    }
     const accessCodesInGroup = this.accessGroup[index].sAccessCodes;
 
     for (let i = 0; i < accessCodesInGroup.length; ++i) {
-      for (let j = 0; j < this.SecLookup.length; ++j) {
-        if (accessCodesInGroup[i] === this.SecLookup[j].sAccessCode) {
-          this.SecLookup[j].status = true;
+      for (let j = 0; j < this.accessCodes.length; ++j) {
+        if (accessCodesInGroup[i] === this.accessCodes[j].sAccessCode.code) {
+          // this.SecLookup[j].status = true;
+          this.accessCodes[j].sAccessCode.status = true
+          console.log(this.accessCodes[j].sAccessCode.status)
           break;
         }
       }
     }
-
   }
 
   refreshPage() {

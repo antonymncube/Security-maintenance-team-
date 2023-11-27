@@ -98,9 +98,12 @@
  
 /* Style the table rows */
 td {
-  padding: 5px !important;
+  padding-top: 3px !important;
   border-bottom: 1px solid black !important;
+  padding-bottom: 0px !important;
+  text-align: center; /* Add this line to center the content */
 }
+
 
 /* Style the Actions column */
 .action {
@@ -217,21 +220,11 @@ td {
   transform: scale(1.2);
 }
 
-// .tabs__radio:checked + .tabs__label {
-//   // font-weight: bold;
-//   // color: #009578;
-//   // border-bottom: 2px solid #009578;
-// }
-
+ 
 .tabs__radio:checked + .tabs__label + .tabs__content {
   display: initial;
 }
 
-
-
-// .container{
-//   border: solid 3px black;
-// }
 
 .tab2{
   display:none;
@@ -261,12 +254,10 @@ tr:not(.header-row):hover td {
 
 /* Style the table header */
 th {
+  
   background-color: #f2f2f2 !important;
   text-align: left;
-  padding: 2px;
   border-bottom: 1px solid black !important;
-  // border-left: 1px solid black !important; /* Add left border */
-  // border-right: 1px solid black !important; /* Add right border */
 }
 
 /* Add border to the first and last th in the table */
@@ -280,7 +271,7 @@ th:last-child {
 
 /* Style the table rows */
 td {
-  padding: 5px;
+  // padding: 5px;
   border-bottom: 1px solid black !important;
 }
 
