@@ -5,7 +5,7 @@
  }
 
  form {
-   width: 80rem;
+   width: 100%;
    margin: 0 auto;
    padding: 10px;
   //  border: 1px solid #ccc;
@@ -163,6 +163,10 @@
 
  .inputtag {
    width: 14rem;
+ }
+
+ .border{
+  width: 100%;
  }
 
  .description {

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output, inject } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -10,6 +10,12 @@ import { ModifyAccesCodesComponent } from '../modify-acces-codes/modify-acces-co
 import { ApiServiceService } from '../services/api-service.service';
 import { AccessGroupComponent } from '../access-group/access-group.component';
 import { Router } from '@angular/router';
+import { navbarData } from './narbardata';
+
+interface SideNavToggle{
+  screenWidth: number;
+  collapsed: boolean;
+}
 
 @Component({
   selector: 'app-nav-bar',
@@ -22,6 +28,20 @@ export class NavBarComponent {
   @ViewChild('drawer') drawer!: MatSidenav;
   SecLookup: any = '';
   accessGroup : any = '';
+  @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
+  collapsed = false;
+  screenWidth = 0;
+  navData =navbarData;
+  @HostListener('window:resize', ['$event'])
+
+  onResize(event: any){
+    this.screenWidth = window.innerWidth;
+    if(this.screenWidth <= 768){
+      this.collapsed = false;
+      this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
+
+    } 
+  }
 
   constructor(public dialog: MatDialog, private apiService: ApiServiceService, public router: Router) { }
 
@@ -102,5 +122,21 @@ navigateToHome() {
 
       window.location.reload();
   });
+}
+
+// responsiveness
+
+ngOnInit(): void{
+  this.screenWidth = window.innerWidth;
+}
+
+toggleCollapse(): void{
+  this.collapsed = !this.collapsed;
+  this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
+
+}
+closeSidenav(): void{
+  this.collapsed = false;
+  this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
 }
 }

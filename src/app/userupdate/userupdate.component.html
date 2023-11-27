@@ -174,7 +174,7 @@
                   <label>
                     <input type="checkbox" class="checkbox4"
                       (change)="toggleAccessCodes(i)">
-                    <strong>{{ group }}</strong>
+                    <strong class="accesscodesfont">{{ group }}</strong>
 
                   </label>
                 </div>
@@ -187,15 +187,15 @@
         <div class="col-8 useraccesscodes ">
           <div class="" style="display: flex;margin-left: 6px;">
             <input type="checkbox" [checked]="selectAllCheckbox" (change)="toggleSelectAll($event)">
-            <label for="selectAllCheckbox" style="margin-left: 8px; margin-top: 5px;">Select all</label>
+            <label for="selectAllCheckbox" style="margin-left: 8px; margin-top: 5px;font-weight: 1000;">Select all</label>
           </div>
           <div *ngFor="let accesscodes of filteredAccessCodes(); let i = index">
             <label class="checkbox-container">
               <div class="inline-block-container  accesscodes p-1">
-                <input type="checkbox" class="code-checkbox" [checked]="accesscodes.status"
+                <input  type="checkbox" class="code-checkbox" [checked]="existsInAccessCodesForItem(accesscodes)"
                   (change)="toggleAccessCode(accesscodes)">
-                <span class="code-item">{{ accesscodes.sAccessCode }}</span>
-                <span>{{ accesscodes.SAccessDescription }}</span>
+                <span   class="code-item accesscodesfont">{{ accesscodes.sAccessCode }}</span>
+                <span class="accesscodesdescriptionfont" >{{ accesscodes.SAccessDescription }}</span>
               </div>
             </label>
           </div>
@@ -221,9 +221,9 @@
     <div class="border" style=" position: relative; height: 50px;">
 
       <button class="save-button" type="submit" [disabled]="userForm.invalid"
-        style="position: absolute; margin-left: 72rem;">Save</button>
-      <button class="cancel-button" style="position: absolute; left: 100px;margin-left: 60rem;">Cancel</button>
+        style="position: absolute; margin-left: calc(100% - 5rem);">Save</button>
+      <button class="cancel-button" routerLink="/home" style="position: absolute; left: 100px;margin-left: calc(100% - 17rem);">Cancel</button>
 
     </div>
-
+  
 </form>
