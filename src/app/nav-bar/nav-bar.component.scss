@@ -40,7 +40,7 @@ h1 {
 
 
 .router-link {
-  color: #2F3351;
+  color: #2F4050;
   text-decoration: none;
   display: block;
   margin: 5px 0;
@@ -173,13 +173,13 @@ h1 {
 }
 
 .icon {
-  color: #5e7489;
+  color: #fff;
   margin-right: 10px;
   font-size: 1rem;
 }
 
 .link {
-  color: #5e7489;
+  color: #fff;
   font-size: larger;
 }
 
@@ -194,7 +194,7 @@ tr:not(.header-row):hover td {
 }
 
 .sidenav{
-  background: #2F3351;
+  background: #2F4050;
   transition: all .5s ease;
   position:static;
   z-index: 1;
@@ -271,7 +271,7 @@ tr:not(.header-row):hover td {
           display: flex;
           align-items: center;
           height: 3rem;
-          color: #fff;
+          color: #5e7489;
           text-decoration: none;
           border-radius: 0.625rem;
           transition: all .3s ease;
@@ -292,18 +292,18 @@ tr:not(.header-row):hover td {
 
   .sidenav-nav-item:hover{
       .router-link:hover{
-          background-color: #E70E0E;
+          background-color: #dadada;
           color: #2F3351;
       }
   }
 }
 
 .active{
-  background-color: #fff;
+  background-color: #5e7489;
 
   .icon fa,
   .sidenav-link-text{
-      color: #2F3351;
+      color: #fff;
   }
 }
 
