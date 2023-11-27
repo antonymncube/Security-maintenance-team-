@@ -314,7 +314,14 @@
           (selectedProducts)="updateSelectedProducts($event)"
           ></app-available-products>
 
-          <button (click)="saveSelectedAccessCodes()">Save</button>
+          <!-- <button (click)="saveSelectedAccessCodes()">Save</button> -->
       </div>
+    </div>
+    <div class="border" style=" position: relative; height: 50px;">
+
+      <button class="save-button" type="submit" [disabled]="userForm.invalid"
+        style="position: absolute; margin-left: 72rem;">Save</button>
+      <button class="cancel-button" routerLink="/home" style="position: absolute; left: 100px;margin-left: 60rem;">Cancel</button>
+
     </div>
   </form>

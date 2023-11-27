@@ -1,6 +1,5 @@
-
-<h3 class="welcome ">Welcome {{currentuser}}</h3>
-
+<!-- <h3 class="welcome">Welcome {{currentuser}}</h3> -->
+<h3 class="welcome">Welcome {{ currentUserFullName }}</h3>
 
 
 <div class="container p-0">
@@ -78,11 +77,11 @@
 
       <mat-paginator class="p-0 m-0" style="margin-left: 500px; background-color: #f2f2f2 ;" [pageSizeOptions]="[8,10,50]" showFirstLastButtons="false"></mat-paginator>
     </div>
-  
 
-   
+
+
     </div>
-  
+
     <button (click)="markAllAsTouched()" class="btn-add" routerLink="/home/updateuser">+ Add-User</button>
     <div class="border" style="height: 35px;background-color: white;width: 81rem !important; margin-left: -1px !important;border-top: none; margin-top : 10px ;">
          <h4>Genasys Technologies (Pty) Ltd</h4>

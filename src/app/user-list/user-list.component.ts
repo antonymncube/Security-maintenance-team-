@@ -25,6 +25,9 @@ export interface PeriodicElement {
   id: number; // Add the 'id' property with the appropriate data type (e.g., number)
   // Add more properties as needed
   lastUpdated: Date;
+  fullname: String;
+  username : String;
+
 
 }
 
@@ -32,7 +35,7 @@ export interface PeriodicElement {
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.scss'],
-  encapsulation: ViewEncapsulation.None  
+  encapsulation: ViewEncapsulation.None
 })
 export class UserListComponent implements OnInit {
   displayedColumns: string[] = ['name', 'weight', 'description', 'agent', 'department', 'lastUpdated', 'Action'];
@@ -44,6 +47,9 @@ export class UserListComponent implements OnInit {
   statusFilterControl = this.formBuilder.control('');
   UserForm: any;
   userForm: any;
+
+  currentUserFullName: string = '';
+
 
 
   constructor(private apiService: ApiServiceService, private router: Router, private autservice: AuthService,
@@ -57,6 +63,12 @@ export class UserListComponent implements OnInit {
 
         const storedUser = sessionStorage.getItem('currentuser');
         this.currentuser = storedUser !== null ? storedUser : '';
+
+
+           const currentUser = data.find(user => user.username === this.currentuser);
+           console.log(currentUser);
+           this.currentUserFullName = currentUser ? currentUser.fullname.toString() : '';
+
 
         this.SharedDataService.filterText$.subscribe((filterText) => {
           this.dataSource.filter = filterText;
@@ -118,11 +130,10 @@ export class UserListComponent implements OnInit {
           this.dataSource.filter = status === 'true' ? 'true' : 'false';
         }
       }
-    
+
     markAllAsTouched() {
       Object.keys(this.UserForm.controls).forEach(controlName => {
         this.userForm.get(controlName)?.markAsTouched();
       });
     }
   }
-    
