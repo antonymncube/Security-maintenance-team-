@@ -1,3 +1,15 @@
+<div>
+  <!-- Select All checkbox -->
+  <label class="checkbox-label">
+    <input
+      type="checkbox"
+      [ngModel]="selectAll"
+      (change)="toggleSelectAll()"
+    />
+    Select All
+  </label>
+
+
 <div *ngFor="let product of products; let i = index">
   <label class="checkbox-label">
     <input

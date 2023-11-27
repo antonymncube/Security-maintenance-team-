@@ -9,8 +9,9 @@ import { ApiServiceService } from '../services/api-service.service';
 export class AvailableProductsComponent implements OnInit {
   @Output() selectedProducts: EventEmitter<string[]> = new EventEmitter<string[]>();
   @Input() availableProducts: string[] = [];
+  products: any[] = []; // Assuming you have an array of products
+  selectAll: boolean = false;
 
-  products: any[] = [];
 
   constructor(private apiService: ApiServiceService) {}
 
@@ -33,6 +34,13 @@ export class AvailableProductsComponent implements OnInit {
       .map((p) => p.sProductName);
 
     this.selectedProducts.emit(selectedProductNames);
+  
   }
+  toggleSelectAll(): void {
+    this.selectAll = !this.selectAll;
+    this.products.forEach((product) => {
+      product.selected = this.selectAll;
+    });
 
+}
 }
