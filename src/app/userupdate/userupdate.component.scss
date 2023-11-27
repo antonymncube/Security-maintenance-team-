@@ -11,9 +11,11 @@
    margin-right: 4px;
    /* Adjust the margin as needed */
  }
-
+.form1 bg-white{
+ width: 100%;
+}
  form {
-   width: 80rem;
+   width: 100%;
    margin: 0 auto;
    padding: 10px;
    background-color: white !important;
@@ -298,13 +300,13 @@
    border-color: 1px solid red;
  }
 
- .tabs {
-   display: flex;
-   flex-wrap: wrap;
-   max-width: 2000px;
-   font-family: sans-serif;
-   // height: 29rem;
- }
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 2000px;
+  font-family: sans-serif;
+  // height: 29rem;
+}
 
  .tabs__label {
    padding: 10px 16px;
@@ -342,17 +344,17 @@
    margin-bottom: 48px;
  }
 
- form {
-   width: 80rem;
-   margin: 0 auto;
-   padding: 10px;
-   //  border: 1px solid #ccc;
-   border-radius: 5px;
-   // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-   margin-top: 50px;
-   padding-top: 5px;
-   //  height: 35rem;
- }
+form {
+  width: 80rem;
+  margin: 0 auto;
+  padding: 10px;
+ //  border: 1px solid #ccc;
+  border-radius: 5px;
+  // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  padding-top: 5px;
+ //  height: 35rem;
+}
 
  // .red-checkbox {
  //   background-color: blue;
@@ -744,6 +746,10 @@
    color: red;
  }
 
- .fa {
-   padding: 10px;
- }
+.fa{
+  padding: 10px;
+}
+
+
+
+

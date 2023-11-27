@@ -1,1 +1,11 @@
- 
+.start{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: flex-end;
+    padding-inline: 0;
+}
+
+.ad,.ad1{
+    padding: 0;
+}

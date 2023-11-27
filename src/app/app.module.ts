@@ -30,7 +30,8 @@ import { ModifyAccesCodesComponent } from './modify-acces-codes/modify-acces-cod
 import { AccessGroupComponent } from './access-group/access-group.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { AvailableProductsComponent } from './available-products/available-products.component';
- 
+import { BoddyComponent } from './boddy/boddy.component';
+import { WholeBodyComponent } from './whole-body/whole-body.component'; 
 
 
 @NgModule({
@@ -47,7 +48,9 @@ import { AvailableProductsComponent } from './available-products/available-produ
     ModifyAccesCodesComponent,
     AccessGroupComponent,
     ForgotPasswordComponent,
-    AvailableProductsComponent,  
+    AvailableProductsComponent,
+    BoddyComponent,
+    WholeBodyComponent,  
     
   ],
   imports: [

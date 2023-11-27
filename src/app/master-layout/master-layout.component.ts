@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
 import { MatDialog } from '@angular/material/dialog';
 import { MatMenuTrigger, MatMenuModule } from '@angular/material/menu';
@@ -9,6 +9,11 @@ import { AuthService } from '../services/auth.service';
 import { SharedDataService } from '../services/shared-data.service';
 import { AboutComponent } from './about/about.component';
 import { Router } from 'express';
+
+interface SideNavToggle{
+  screenWidth: number;
+  collapsed: boolean;
+}
 
 @Component({
   selector: 'app-master-layout',
@@ -22,6 +27,8 @@ export class MasterLayoutComponent {
 
   Version1: string;
   showPurpose: boolean = false;
+  isSideNavCollapsed = false;
+  screenWidth = 0;
 
 
   constructor(private dialog: MatDialog,private autservice:AuthService, private SharedDataService:  SharedDataService) {
@@ -64,4 +71,22 @@ getAccesslookupp() {
     this.openDialogWithSecLookupp(this.About);
   
 }
+
+onToggleSideNav(data: SideNavToggle): void{
+  this.screenWidth = data.screenWidth;
+  this.isSideNavCollapsed = data.collapsed;
+}
+
+@Input() collapsed = false;
+ // @Input() screenWidth = 0;
+
+  getBodyClass(): string{
+    let styleClass = '';
+    if(this.collapsed && this.screenWidth > 768){
+      styleClass = 'body-trimmed'
+    }else if(this.collapsed && this.screenWidth <= 768 && this.screenWidth > 0){
+      styleClass = 'body-md-screen'
+    }
+    return styleClass;
+  }
 }
