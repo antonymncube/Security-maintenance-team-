@@ -155,6 +155,9 @@ td {
   text-overflow: ellipsis;
   max-width: 160px; /* Adjust this value to control the maximum tab width */
 }
+.container, .container-md, .container-sm {
+  max-width: 100%;
+}
 
 .mat-tab-group {
   box-shadow: none !important;

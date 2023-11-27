@@ -111,6 +111,10 @@ router-outlet {
 
 }
 
+.container, .container-md, .container-sm {
+    max-width: 100%;
+}
+
  
   
   /* Adjust the padding for specific elements if needed */

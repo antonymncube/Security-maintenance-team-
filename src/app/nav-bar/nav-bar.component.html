@@ -31,8 +31,9 @@
 
 <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
   <div class="logo-container">
-      <button class="logo" (click)="toggleCollapse()">G</button>
-      <div class="logo-text" *ngIf="collapsed">Genasys</div>
+      <button class="logo" (click)="toggleCollapse()" *ngIf="!collapsed">G</button>
+      <div class="logo-text" (click)="toggleCollapse()" *ngIf="collapsed">
+        <img class="logo-img" src="assets\images\Genasys-White.svg" alt></div>
       <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav()">
           <i class="fal fa-times close-icon"></i>
       </button>
