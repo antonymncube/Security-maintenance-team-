@@ -137,6 +137,21 @@ export class ApiServiceService {
     );
   }
 
+  changeSuperUser(event: any ,selectedAccessCodes : string []) {
+    if (event.target.checked) {
+      
+        selectedAccessCodes.push('SU01');
+        console.log('Add it', selectedAccessCodes);
+    } else {
+      // If not checked, remove 'SU01' from selectedAccessCodes
+      const index = selectedAccessCodes.indexOf('SU01');
+      if (index !== -1) {
+        selectedAccessCodes.splice(index, 1);
+        console.log('After remove ', selectedAccessCodes);
+      }
+    }
+  }
+
   // Get user details based on ID
   getUserDetails(id: string): Observable<any> {
     const url = `http://localhost:3000/Users/${id}`;
