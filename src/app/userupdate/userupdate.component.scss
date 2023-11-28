@@ -1,351 +1,337 @@
- /* Your existing styles here */
+  /* Your existing styles here */
 
- .mat-tab-group {
-   margin-bottom: 48px;
- }
-
- /* Add this to your styles.css or styles.scss file */
- mat-icon.warning {
-   color: red;
-   /* Set the color as needed */
-   margin-right: 4px;
-   /* Adjust the margin as needed */
- }
+.mat-tab-group {
+  margin-bottom: 48px;
+}
+/* Add this to your styles.css or styles.scss file */
+mat-icon.warning {
+  color: red; /* Set the color as needed */
+  margin-right: 4px; /* Adjust the margin as needed */
+}
 .form1 bg-white{
  width: 100%;
 }
- form {
-   width: 100%;
-   margin: 0 auto;
-   padding: 10px;
-   background-color: white !important;
-   border: 1px solid #e7eaec;
-   border-radius: 2px;
-   // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-   margin-top: 5px;
-   padding-top: 5px;
- }
+form {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: white !important;
+  border:  1px solid #e7eaec;
+  border-radius: 2px;
+  // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+  padding-top: 5px;
+}
 
- .checkbox-label {
-   display: inline-block;
-   margin-right: 10px;
-   /* Adjust the margin as needed */
- }
+.checkbox-label {
+  display: inline-block;
+  margin-right: 10px; /* Adjust the margin as needed */
+}
 
- .has-error {
-   input {
-     border: 2px solid red; // Red border for the input fields
-   }
+.has-error {
+  input {
+    border: 2px solid red; // Red border for the input fields
+  }
 
-   .text-danger {
-     color: red; // Red text color for error messages
-   }
- }
+  .text-danger {
+    color: red; // Red text color for error messages
+  }
+}
+.form-control.is-invalid, .was-validated .form-control:invalid {
+  border-color: #dc3545;
+}
 
- .form-control.is-invalid,
- .was-validated .form-control:invalid {
-   border-color: #dc3545;
- }
+input.ng-invalid.ng-dirty.ng-touched {
+  border: 1px solid red;
+}
 
- input.ng-invalid.ng-dirty.ng-touched {
-   border: 1px solid red;
- }
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
 
- label {
-   display: block;
-   margin-bottom: 5px;
-   font-weight: bold;
- }
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
 
- input[type="text"],
- input[type="password"],
- input[type="email"],
- input[type="tel"],
- textarea {
-   width: 100%;
-   padding: 10px;
-   margin-bottom: 10px;
-   border: 1px solid #ccc;
-   border-radius: 3px;
- }
+button {
+  padding: 10px 20px;
+  background-color: #2F3351;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 69rem;
+}
 
- button {
-   padding: 10px 20px;
-   background-color: #2F3351;
-   color: #fff;
-   border: none;
-   border-radius: 3px;
-   cursor: pointer;
-   margin-right: 69rem;
- }
+.button:disabled{
+  padding: 10px 20px;
+  background-color: rgba(47, 51, 81, 0.6);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor:not-allowed;
+  margin-right: 2rem;
+}
 
- .button:disabled {
-   padding: 10px 20px;
-   background-color: rgba(47, 51, 81, 0.6);
-   color: #fff;
-   border: none;
-   border-radius: 3px;
-   cursor: not-allowed;
-   margin-right: 2rem;
- }
+.check{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
 
- .check {
-   width: 100%;
-   padding: 10px;
-   margin-bottom: 10px;
-   border: 1px solid #ccc;
-   border-radius: 3px;
- }
+.check1{
+  width: 43%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
 
- .check1 {
-   width: 43%;
-   padding: 10px;
-   margin-bottom: 10px;
-   border: 1px solid #ccc;
-   border-radius: 3px;
- }
+// button:disabled {
+//   background-color: #ccc;
+//   cursor: not-allowed;
+// }
 
- // button:disabled {
- //   background-color: #ccc;
- //   cursor: not-allowed;
- // }
+.form-group {
+  display: inline;
+  // margin-right: 10px; /* Adjust this margin as needed to separate the elements */
+}
 
- .form-group {
-   display: inline;
-   // margin-right: 10px; /* Adjust this margin as needed to separate the elements */
- }
+.totalDetails {
+  display: flex important;
+  justify-content: space-between important;
+}
 
- .totalDetails {
-   display: flex important;
-   justify-content: space-between important;
- }
+.form-group {
+  flex: 1 important;
+}
 
- .form-group {
-   flex: 1 important;
- }
+.totalDetails {
+  display: flex;
+}
 
- .totalDetails {
-   display: flex;
- }
+.totalDetails .userdetails,
+.totalDetails .contact-details {
+  flex: 1;
+  padding: 0 10px;
+}
 
- .totalDetails .userdetails,
- .totalDetails .contact-details {
-   flex: 1;
-   padding: 0 10px;
- }
+.inputtag{
+  width: 14rem;
+}
 
- .inputtag {
-   width: 14rem;
- }
+.description{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.totalDetails{
+  margin-top: 20px;
+}
 
- .description {
-   width: 100%;
-   padding: 10px;
-   margin-bottom: 10px;
-   border: 1px solid #ccc;
-   border-radius: 3px;
- }
+.contactdetails{
+  margin-right: 30rem;
+}
 
- .totalDetails {
-   margin-top: 20px;
- }
+// .my-custom-class{
+//   border: 30px solid red !important;
+//   background-color: aquamarine;
 
- .contactdetails {
-   margin-right: 30rem;
- }
+// }
 
- // .my-custom-class{
- //   border: 30px solid red !important;
- //   background-color: aquamarine;
+:host ::ng-deep .mat-tab-label-active {
+  border-width: 9px;
+  border-style: solid;
+  border-color: orange;
+}
 
- // }
-
- :host ::ng-deep .mat-tab-label-active {
-   border-width: 9px;
-   border-style: solid;
-   border-color: orange;
- }
-
- .mat-mdc-tab-header {
-   border: 1px solid red;
- }
+.mat-mdc-tab-header { border: 1px solid red; }
 
 
- .dialog-content {
-   padding: 8px;
-   // background-color: #f0f0f0;
-   // border: 1px solid #ccc;
-   border-radius: 1px;
-   text-align: center;
- }
+.dialog-content {
+  padding: 8px;
+  // background-color: #f0f0f0;
+  // border: 1px solid #ccc;
+  border-radius: 1px;
+  text-align: center;
+}
 
- .access-groups {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   // border: 1px solid #ccc;
-   // border-radius: 5px;
-   // background-color: #fff;
-   padding: 10px;
-   max-height: 300px;
-   // height: 100px;
- }
+.access-groups {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  // border: 1px solid #ccc;
+  // border-radius: 5px;
+  // background-color: #fff;
+  padding: 10px;
+  max-height: 300px;
+  // height: 100px;
+}
 
- .access-group {
-   cursor: pointer;
-
-
- }
-
- .access-group-name {
-   font-weight: bold;
-   // height: 30px;
- }
-
- .col {
-   display: inline-block;
-   width: 49%;
- }
-
- .col1 {
-   margin-right: 2%;
- }
-
- .col2 {
-   margin-left: 2%;
-   max-height: 300px;
- }
-
- .col1 {
-   height: 500px;
- }
-
- .access-codes {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   max-height: 900px;
-   background-color: red;
- }
-
- .access-code {
-   display: flex;
-   // align-items: center;
-   margin-bottom: 10px;
-   max-height: 300px
- }
-
- .scrollable {
-   max-height: 250px;
-   overflow-y: auto;
-   // border: solid red 3px
- }
-
- // .access-group-item.clicked {
- //   background-color: rgb(115, 115, 238); /* Set your desired background color */
- //   color: white; /* Set text color to improve visibility */
- //   cursor: pointer; /* Change cursor to indicate clickability */
- // }
-
- .code-item {
-   width: 150px;
-   /* Adjust the width as needed */
-   display: inline-block;
- }
-
- .description-item {
-   display: inline-block;
-
- }
+.access-group {
+  cursor: pointer;
 
 
- .buttons1 {
-   margin: 0 auto;
-   display: flex;
-   justify-content: space-between;
-   width: 100%;
-   /* Adjust the width as needed */
- }
+}
 
- button.cancel-btn,
- button.save-btn {
-   width: 48%;
-   /* Adjust the width as needed */
-   right: 0;
- }
+.access-group-name {
+  font-weight: bold;
+  // height: 30px;
+}
 
- .custom-checkbox {
-   background-color: blue !important;
-   // width:100px;
-   // height: 30px;
+.col {
+  display: inline-block;
+  width: 49%;
+}
 
- }
+.col1 {
+  margin-right: 2%;
+}
 
- .red-checkbox {
+.col2 {
+  margin-left: 2%;
+  max-height: 300px;
+}
+.col1{
+  height: 500px;
+}
+
+.access-codes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-height: 900px;
+  background-color: red;
+}
+
+.access-code{
+  display: flex;
+  // align-items: center;
+  margin-bottom: 10px;
+  max-height: 300px
+}
+
+.scrollable {
+  max-height: 250px;
+  overflow-y: auto;
+  // border: solid red 3px
+}
+
+// .access-group-item.clicked {
+//   background-color: rgb(115, 115, 238); /* Set your desired background color */
+//   color: white; /* Set text color to improve visibility */
+//   cursor: pointer; /* Change cursor to indicate clickability */
+// }
+
+.code-item {
+  width: 150px; /* Adjust the width as needed */
+  display: inline-block;
+}
+
+.description-item {
+  display: inline-block;
+
+}
+
+
+.buttons1 {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Adjust the width as needed */
+}
+
+button.cancel-btn,
+button.save-btn {
+  width: 48%; /* Adjust the width as needed */
+  right: 0;
+}
+.custom-checkbox{
+  background-color: blue !important;
+  // width:100px;
+  // height: 30px;
+
+}
+
+.red-checkbox {
    background-color: blue;
- }
+}
 
- /* Add the following styles or modify the existing ones */
- .is-invalid {
-   border: 2px solid red;
-   /* Add any other styling you want for the invalid state */
- }
+/* Add the following styles or modify the existing ones */
+.is-invalid {
+  border: 2px solid red;
+  /* Add any other styling you want for the invalid state */
+}
 
- .invalid-feedback {
-   color: red;
-   /* Add any other styling you want for the error message */
- }
+.invalid-feedback {
+  color: red;
+  /* Add any other styling you want for the error message */
+}
 
- .invalid-field {
-   border-color: 1px solid red;
- }
+.invalid-field {
+  border-color: 1px solid red;
+}
 
 .tabs {
   display: flex;
   flex-wrap: wrap;
-  max-width: 2000px;
+  width: 100%;
   font-family: sans-serif;
   // height: 29rem;
 }
 
- .tabs__label {
-   padding: 10px 16px;
-   cursor: pointer;
- }
+.tabs__label {
+  padding: 10px 16px;
+  cursor: pointer;
+}
 
- .tabs__radio {
-   display: none;
- }
+.tabs__radio {
+  display: none;
+}
 
- .tabs__content {
-   order: 1;
-   width: 100%;
-   border-bottom: 3px solid #dddddd;
-   line-height: 1.5;
-   font-size: 0.9em;
-   display: none;
+.tabs__content {
+  order: 1;
+  width: 100%;
+  border-bottom: 3px solid #dddddd;
+  line-height: 1.5;
+  font-size: 0.9em;
+  display: none;
 
- }
+}
 
- .tabs__radio:checked+.tabs__label {
-   font-weight: bold;
-   color: #343a40;
-   // border-bottom: 2px solid #343a40;
- }
+.tabs__radio:checked + .tabs__label {
+  font-weight: bold;
+  color:#343a40;
+  // border-bottom: 2px solid #343a40;
+}
 
- .tabs__radio:checked+.tabs__label+.tabs__content {
-   display: initial;
- }
+.tabs__radio:checked + .tabs__label + .tabs__content {
+  display: initial;
+}
 
 
  /* Your existing styles here */
 
  .mat-tab-group {
-   margin-bottom: 48px;
- }
+  margin-bottom: 48px;
+}
 
 form {
-  width: 80rem;
+  width: 100%;
   margin: 0 auto;
   padding: 10px;
  //  border: 1px solid #ccc;
@@ -356,400 +342,390 @@ form {
  //  height: 35rem;
 }
 
- // .red-checkbox {
- //   background-color: blue;
- // }
-
- .checked-background {
-   background-color: red !important;
-   ;
- }
-
-
-
- .checkbox-label {
-   display: inline-block;
-   margin-right: 10px;
-   /* Adjust the margin as needed */
- }
-
- .has-error {
-   input {
-     border: 2px solid red; // Red border for the input fields
-   }
-
-   .checkbox-container {
-     display: block;
-     /* Ensure block display for the label */
-     margin-bottom: 10px;
-     /* Add some margin for spacing */
-   }
-
-   .inline-block-container {
-     display: inline-block;
-     width: 100%;
-     white-space: nowrap;
-     /* Prevent text from wrapping to the next line */
-   }
-
-   // .scrollable {
-   //   overflow-y: auto;
-   // border: 4px solid red;
-   //   height: 320px;
-   //   // border: 1px solid red;
-   //   /* reduced border thickness for better visibility */
-   //   padding: 10px;
-   //   background-color: #f8f8f8;
-   //   /* added background color for better visibility */
-   // }
-
-
-
-
-   .inline-block-container {
-     display: inline-block;
-   }
-
-   .text-danger {
-     color: red; // Red text color for error messages
-   }
- }
-
- input.ng-invalid.ng-dirty.ng-touched {
-   border: 1px solid red;
- }
-
- label {
-   display: block;
-   margin-bottom: 5px;
-   font-weight: bold;
- }
-
- input[type="text"],
- input[type="password"],
- input[type="email"],
- input[type="tel"],
- textarea {
-   width: 100%;
-   padding: 10px;
-   margin-bottom: 10px;
-   border: 1px solid #ccc;
-   border-radius: 3px;
- }
-
- button {
-   padding: 10px 20px;
-   background-color: #2F3351;
-   color: #fff;
-   border: none;
-   border-radius: 3px;
-   cursor: pointer;
-   margin-right: 69rem;
- }
-
- .button:disabled {
-   padding: 10px 20px;
-   background-color: rgba(47, 51, 81, 0.6);
-   color: #fff;
-   border: none;
-   border-radius: 3px;
-   cursor: not-allowed;
-   margin-right: 2rem;
- }
-
- .check {
-   width: 100%;
-   padding: 10px;
-   margin-bottom: 10px;
-   border: 1px solid #ccc;
-   border-radius: 3px;
- }
-
- .check1 {
-   width: 43%;
-   padding: 10px;
-   margin-bottom: 10px;
-   border: 1px solid #ccc;
-   border-radius: 3px;
- }
-
- // button:disabled {
- //   background-color: #ccc;
- //   cursor: not-allowed;
- // }
-
- .form-group {
-   display: inline;
-   // margin-right: 10px; /* Adjust this margin as needed to separate the elements */
- }
-
- .form-group1 {
-   display: inline;
-   margin-left:-200px ;
-
- }
-
- .totalDetails {
-   display: flex important;
-   justify-content: space-between important;
-   background-color: #ffffff !important;
- }
-
- .form-group {
-   flex: 1 important;
- }
-
- .totalDetails {
-   display: flex;
- }
-
- .totalDetails .userdetails,
- .totalDetails .contact-details {
-   flex: 1;
-   padding: 0 10px;
- }
-
- .inputtag {
-   width: 14rem;
- }
-
- .description {
-   width: 100%;
-   padding: 10px;
-   margin-bottom: 10px;
-   border: 1px solid #ccc;
-   border-radius: 3px;
- }
-
- .tabs__content {
-   height: 450px;
-   //  background-color: #ffffff;;
-   // background-color: red;
- }
-
- .totalDetails {
-   margin-top: 20px;
- }
-
- .contactdetails {
-   margin-right: 30rem;
- }
-
- .products {
-   background-color: #ffffff;
-   ;
- }
-
- // .my-custom-class{
- //   border: 30px solid red !important;
- //   background-color: aquamarine;
-
- // }
-
- :host ::ng-deep .mat-tab-label-active {
-   border-width: 9px;
-   border-style: solid;
-   border-color: orange;
- }
-
- .mat-mdc-tab-header {
-   border: 1px solid red;
- }
-
-
-
-
- // .access-groups {
- //   display: flex;
- //   flex-direction: column;
- //   align-items: flex-start;
- //   // border: 1px solid #ccc;
- //   border-radius: 5px;
- //   // background-color: #fff;
- //   padding: 10px;
- //   height: 300px;
- // }
-
- .access-group {
-   cursor: pointer;
-
-
- }
-
- .access-group-name {
-   font-weight: bold;
-   // height: 30px;
- }
-
- .col {
-   display: inline-block;
-   width: 49%;
- }
-
- .col1 {
-   margin-right: 2%;
- }
-
- .useraccesscodes {
-   overflow-y: auto;
-   height: 320px;
-   border: solid rgb(182, 177, 177) 1px;
-   border-radius: 5px;
-   font-family: 'Roboto';
-   padding: 30px 20px 20px 20px;
-   background-color: #ffffff;
-
- }
-
- .useraccessgroups {
-   overflow-y: auto;
-   height: 320px;
-   height: 320px;
-   border: 1px solid #e7eaec;
-   padding: 30px 20px 20px 20px;
-   font-family: 'Roboto';
-   background-color: #ffffff;
- }
-
- .checkbox4 {
-   cursor: pointer;
- }
-
-
- .row1 {
-   overflow-x: hidden;
- }
-
- .col2 {
-   margin-left: 2%;
- }
-
- .access-codes {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   height: 100px;
- }
-
- .access-code {
-   display: flex;
-   align-items: center;
-   margin-bottom: 10px;
- }
-
- .scrollable {
-   max-height: 150px;
-   overflow-y: auto;
- }
-
- .access-group-item.clicked {
-   background-color: rgb(115, 115, 238);
-   /* Set your desired background color */
-   color: white;
-   /* Set text color to improve visibility */
-   cursor: pointer;
-   /* Change cursor to indicate clickability */
- }
-
- .code-item {
-   width: 150px;
-   /* Adjust the width as needed */
-   display: inline-block;
- }
-
- .description-item {
-   display: inline-block;
-
- }
-
-
- .readonly-field {
-   background-color: #f2f2f2;
-   color: #888;
-   pointer-events: none;
- }
-
- .buttons1 {
-   margin: 0 auto;
-   display: flex;
-   justify-content: space-between;
-   width: 100%;
-   /* Adjust the width as needed */
- }
-
- button.cancel-btn,
- button.save-btn {
-   width: 48%;
-   /* Adjust the width as needed */
-   right: 0;
- }
-
- .tabs {
-   display: flex;
-   flex-wrap: wrap;
-   max-width: 2000px;
-   font-family: sans-serif;
-   // height: 29rem;
- }
-
- .tabs__label {
-   padding: 10px 16px;
-   cursor: pointer;
- }
-
- .tabs__radio {
-   display: none;
- }
-
- .tabs__content {
-   order: 1;
-   width: 100%;
-   border-bottom: none;
-   line-height: 1.5;
-   font-size: 0.9em;
-   display: none;
-
- }
-
- .access-group-item.selected {
-   /* Add your styling for selected state here */
-   background-color: red;
-   /* Change this to your desired color */
- }
-
- .tabs__radio:checked+.tabs__label {
-   font-weight: bold;
-   color: rgb(33, 33, 85) 3px;
-   border-bottom: solid rgb(33, 33, 85) 3px;
-   // border-bottom: 2px solid #343a40;
- }
-
- .tabs__radio:checked+.tabs__label+.tabs__content {
-   display: initial;
- }
-
-
- .inline-block-container {
-   display: inline-block;
- }
-
- .is-invalid {
-   border: 1px solid red;
-
- }
-
- .red-border select {
-   border: 1px solid red;
- }
-
- .red-border .invalid-feedback {
-   color: red;
- }
-
-.fa{
+// .red-checkbox {
+//   background-color: blue;
+// }
+
+.checked-background {
+  background-color: red !important;
+  ;
+}
+
+
+
+.checkbox-label {
+  display: inline-block;
+  margin-right: 10px;
+  /* Adjust the margin as needed */
+}
+
+.has-error {
+  input {
+    border: 2px solid red; // Red border for the input fields
+  }
+
+  .checkbox-container {
+    display: block;
+    /* Ensure block display for the label */
+    margin-bottom: 10px;
+    /* Add some margin for spacing */
+  }
+
+  .inline-block-container {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    /* Prevent text from wrapping to the next line */
+  }
+
+  // .scrollable {
+  //   overflow-y: auto;
+  // border: 4px solid red;
+  //   height: 320px;
+  //   // border: 1px solid red;
+  //   /* reduced border thickness for better visibility */
+  //   padding: 10px;
+  //   background-color: #f8f8f8;
+  //   /* added background color for better visibility */
+  // }
+
+
+
+
+  .inline-block-container {
+    display: inline-block;
+  }
+
+  .text-danger {
+    color: red; // Red text color for error messages
+  }
+}
+
+input.ng-invalid.ng-dirty.ng-touched {
+  border: 1px solid red;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
   padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2F3351;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 69rem;
+}
+
+.button:disabled {
+  padding: 10px 20px;
+  background-color: rgba(47, 51, 81, 0.6);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: not-allowed;
+  margin-right: 2rem;
+}
+
+.check {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.check1 {
+  width: 43%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+// button:disabled {
+//   background-color: #ccc;
+//   cursor: not-allowed;
+// }
+
+.form-group {
+  display: inline;
+  // margin-right: 10px; /* Adjust this margin as needed to separate the elements */
+}
+
+.totalDetails {
+  display: flex important;
+  justify-content: space-between important;
+  background-color: #ffffff  !important
+  ;
+}
+
+.form-group {
+  flex: 1 important;
+}
+
+.totalDetails {
+  display: flex;
+}
+
+.totalDetails .userdetails,
+.totalDetails .contact-details {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.inputtag {
+  width: 14rem;
+}
+
+.description {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.tabs__content{
+  height: 450px;
+//  background-color: #ffffff;;
+  // background-color: red;
+}
+
+.totalDetails {
+  margin-top: 20px;
+}
+
+.contactdetails {
+  margin-right: 30rem;
+}
+
+.products{
+   background-color: #ffffff;;
+}
+
+// .my-custom-class{
+//   border: 30px solid red !important;
+//   background-color: aquamarine;
+
+// }
+
+:host ::ng-deep .mat-tab-label-active {
+  border-width: 9px;
+  border-style: solid;
+  border-color: orange;
+}
+
+.mat-mdc-tab-header {
+  border: 1px solid red;
 }
 
 
 
 
+// .access-groups {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   // border: 1px solid #ccc;
+//   border-radius: 5px;
+//   // background-color: #fff;
+//   padding: 10px;
+//   height: 300px;
+// }
+
+.access-group {
+  cursor: pointer;
+
+
+}
+
+.access-group-name {
+  font-weight: bold;
+  // height: 30px;
+}
+
+.col {
+  display: inline-block;
+  width: 49%;
+}
+
+.col1 {
+  margin-right: 2%;
+}
+
+.useraccesscodes {
+  overflow-y: auto;
+  height: 320px;
+  border: solid  rgb(182, 177, 177) 1px;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  padding: 30px 20px 20px 20px;
+  background-color: #ffffff;
+
+}
+.useraccessgroups{
+  overflow-y: auto;
+  height: 320px;
+  height: 320px;
+  border:  1px solid #e7eaec;
+  padding: 30px 20px 20px 20px;
+  font-family: 'Roboto';
+  background-color: #ffffff;
+}
+.checkbox4{
+  cursor: pointer;
+}
+
+
+.row1 {
+ overflow-x: hidden;
+}
+
+.col2 {
+  margin-left: 2%;
+}
+
+.access-codes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100px;
+}
+
+.access-code {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.scrollable {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.access-group-item.clicked {
+  background-color: rgb(115, 115, 238);
+  /* Set your desired background color */
+  color: white;
+  /* Set text color to improve visibility */
+  cursor: pointer;
+  /* Change cursor to indicate clickability */
+}
+
+.code-item {
+  width: 150px;
+  /* Adjust the width as needed */
+  display: inline-block;
+}
+
+.description-item {
+  display: inline-block;
+
+}
+
+
+.readonly-field {
+  background-color: #f2f2f2;
+  color: #888;
+  pointer-events: none;
+}
+
+.buttons1 {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* Adjust the width as needed */
+}
+
+button.cancel-btn,
+button.save-btn {
+  width: 48%;
+  /* Adjust the width as needed */
+  right: 0;
+}
+
+.tabs {
+ display: flex;
+ flex-wrap: wrap;
+ max-width: 2000px;
+ font-family: sans-serif;
+ // height: 29rem;
+}
+
+.tabs__label {
+ padding: 10px 16px;
+ cursor: pointer;
+}
+
+.tabs__radio {
+ display: none;
+}
+
+.tabs__content {
+ order: 1;
+ width: 100%;
+ border-bottom: none;
+ line-height: 1.5;
+ font-size: 0.9em;
+ display: none;
+
+}
+
+.access-group-item.selected {
+  /* Add your styling for selected state here */
+  background-color: red; /* Change this to your desired color */
+}
+
+.tabs__radio:checked + .tabs__label {
+ font-weight: bold;
+ color:rgb(33, 33, 85) 3px;
+ border-bottom: solid rgb(33, 33, 85) 3px;
+ // border-bottom: 2px solid #343a40;
+}
+
+.tabs__radio:checked + .tabs__label + .tabs__content {
+ display: initial;
+}
+
+
+.inline-block-container {
+  display: inline-block;
+}
+
+.is-invalid {
+  border: 1px solid red;
+
+}
+
+.red-border select {
+  border: 1px solid red;
+}
+
+.red-border .invalid-feedback {
+  color: red;
+}
+
+.fa{
+  padding: 10px;
+}
+
+.border{
+  width: 100%;
+}
