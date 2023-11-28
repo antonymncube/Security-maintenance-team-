@@ -211,23 +211,25 @@ tr:not(.header-row):hover td {
      
 
       .logo{
-       
-          background: white;
+        font-family: Arial, Helvetica, sans-serif;
+          background: #2F4050;
           text-align: center;
           width: 3rem;
+          color: white;
           min-width: 0.313rem;
-          padding: 0.313em;
-          font-size: 24px;
-          font-weight: 900;
+          padding: 0.37em;
+          font-size: 35px;
+          font-weight: 600;
           cursor: pointer;
           border: none;
 
       }
       .logo-text{
-          margin-left: 1.5rem;
-          font-size: 24px;
+        padding: 0.313em;
+        font-size: 24px;
           font-weight: 700;
           color: white;
+          cursor: pointer;
 
 
       }

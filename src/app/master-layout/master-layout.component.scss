@@ -203,6 +203,8 @@ router-outlet {
 .start {
     display: flex;
     height: 100%;
+    min-height: 100vh;  // Set minimum height to fill the viewport
+
 }
 
 .container bg-white {
@@ -212,6 +214,27 @@ router-outlet {
 }
 
 .ad, .ad1 {
+   // flex: 1;  // Allow the content to grow and take up remaining space
     padding: 0; // Remove default Bootstrap padding if needed
     //padding-left: -14;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between; // Adjust as needed
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 44.6rem);
+    background-color: white;
+    margin-top: auto;  // Push the footer to the bottom
+    padding: 0px;
+    
+    .Company{
+    margin-left: 0;
+    margin-top: 10px;
+    font-size: 20px;
+    }
+    .version{
+        margin-top: 10px;
+    }
 }

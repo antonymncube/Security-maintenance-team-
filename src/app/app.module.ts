@@ -72,7 +72,7 @@ import { WholeBodyComponent } from './whole-body/whole-body.component';
     MatFormFieldModule, // Add MatFormFieldModule to imports for MatPrefix
     MatDialogModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent],

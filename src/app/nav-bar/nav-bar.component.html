@@ -31,11 +31,11 @@
 
 <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
   <div class="logo-container">
-      <button class="logo" (click)="toggleCollapse()" *ngIf="!collapsed">G</button>
-      <div class="logo-text" (click)="toggleCollapse()" *ngIf="collapsed">
+      <button class="logo" @fadeInOut (click)="toggleCollapse()" *ngIf="!collapsed">G</button>
+      <div class="logo-text" @fadeInOut (click)="toggleCollapse()" *ngIf="collapsed">
         <img class="logo-img" src="assets\images\Genasys-White.svg" alt></div>
-      <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav()">
-          <i class="fal fa-times close-icon"></i>
+      <button class="btn-close" @rotate @fadeInOut *ngIf="collapsed" (click)="closeSidenav()">
+          <i class="icon fa fa-info-times fa-1x"></i>
       </button>
   </div>
   <ul class="sidenav-nav">
@@ -54,12 +54,12 @@
         routerLinkActive="active"
         [routerLinkActiveOptions]="{exact: true}">
             <i class="icon fa fa-home fa-1x" aria-hidden="true"></i>
-            <span class="sidenav-link-text" *ngIf="collapsed">Home</span>
+            <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">Home</span>
         </a>
         <a class="router-link" [matMenuTriggerFor]="menu" matTooltip="Tools" matTooltipPosition="right"
         >
             <i class="icon fa fa-cog fa-1x" aria-hidden="true"></i>
-            <span class="sidenav-link-text" [matMenuTriggerFor]="menu" *ngIf="collapsed">Tools</span>
+            <span class="sidenav-link-text" @fadeInOut [matMenuTriggerFor]="menu" *ngIf="collapsed">Tools</span>
         </a>
         <mat-menu #menu="matMenu" style="color: white; background-color: white; padding: 1px;">
           <button mat-menu-item (click)="openDialog()">Modify Access code</button>
@@ -69,7 +69,7 @@
       <a class="router-link" (click)="refreshPage()" matTooltip="Refresh" matTooltipPosition="right"
       >
           <i class="icon fa fa-refresh fa-1x" aria-hidden="true"></i>
-          <span class="sidenav-link-text" (click)="refreshPage()" *ngIf="collapsed">Refresh</span>
+          <span class="sidenav-link-text" @fadeInOut (click)="refreshPage()" *ngIf="collapsed">Refresh</span>
       </a>
   </li>
   
