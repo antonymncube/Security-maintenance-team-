@@ -4,7 +4,7 @@
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
     <label for="tab1" class="tabs__label">
       <i class="fa fa-user"></i> Details
-   </label>
+    </label>
 
     <!-- <i class="fa fa-exclamation-triangle invalid-indicator"></i> -->
     <div class="tabs__content">
@@ -51,55 +51,31 @@
               </div>
             </div>
           </div>
-          <div class="form-group">
-            <label for="email" class="label-width">Email:</label>
-            <div class="inputtag">
-              <input type="email" class="form-control ng-pristine is-invalid " id="email" formControlName="email"
-                [ngClass]="{ 'is-invalid': isControlInvalid('email') }">
-              <div *ngIf="isControlInvalid('email')" class="invalid-feedback">
-                Email required & in a valid format.
-              </div>
-            </div>
-          </div>
         </div>
         <div class="contactdetails form-group">
-       <div class="form-group">
-    <label for="department" class="label-width">Department:</label>
-    <select id="department" class="check"
-        formControlName="department"
-        [ngClass]="{ 'is-invalid': isControlInvalid('department') }">
-        <option value="HR">HR</option>
-        <option value="IT">IT</option>
-        <option value="Sales">Sales</option>
-    </select>
-    <div *ngIf="isControlInvalid('department')" class="invalid-feedback">
-        Department required.
-    </div>
-</div>
-
-<div class="form-group">
-    <label for="agent" class="label-width">Agent:</label>
-    <select id="agent" class="ng-star-inserted check"
-        formControlName="agent"
-        [ngClass]="{ 'is-invalid': isControlInvalid('agent') }">
-        <option value="Simply Health">Simply Health</option>
-        <option value="Genasys">Genasys</option>
-        <option value="Standard Bank">Standard Bank</option>
-    </select>
-    <div *ngIf="isControlInvalid('agent')" class="invalid-feedback">
-        Agent required.
-    </div>
-</div>
-
+          <div class="form-group">
+            <label for="department" class="label-width">Department:</label>
+            <select id="department" class="check" formControlName="department"
+              [ngClass]="{ 'is-invalid': isControlInvalid('department') }">
+              <option value="HR">HR</option>
+              <option value="IT">IT</option>
+              <option value="Sales">Sales</option>
+            </select>
+            <div *ngIf="isControlInvalid('department')" class="invalid-feedback">
+              Department required.
+            </div>
+          </div>
 
           <div class="form-group">
-            <label for="homephone" class="label-width">Home-Phone:</label>
-            <div class="inputtag">
-              <input type="text" id="homephone" formControlName="homephone"
-                [ngClass]="{ 'is-invalid': isControlInvalid('homephone') }">
-              <div *ngIf="isControlInvalid('homephone')" class="invalid-feedback">
-                Home-Phone invalid format.
-              </div>
+            <label for="agent" class="label-width">Agent:</label>
+            <select id="agent" class="ng-star-inserted check" formControlName="agent"
+              [ngClass]="{ 'is-invalid': isControlInvalid('agent') }">
+              <option value="Simply Health">Simply Health</option>
+              <option value="Genasys">Genasys</option>
+              <option value="Standard Bank">Standard Bank</option>
+            </select>
+            <div *ngIf="isControlInvalid('agent')" class="invalid-feedback">
+              Agent required.
             </div>
           </div>
           <div class="form-group">
@@ -123,29 +99,51 @@
               Language required.
             </div>
           </div>
+          
+        </div>
+        <div class="mobile-input" style="margin-left: -138px;" >
+          
           <div class="form-group">
-            <label for="mobile" class="label-width">Mobile:</label>
+            <label for="email" class="label-width">Email:</label>
             <div class="inputtag">
-              <input type="text" id="mobile" formControlName="mobile"
-                [ngClass]="{ 'is-invalid': isControlInvalid('mobile') }">
-              <div *ngIf="isControlInvalid('mobile')" class="invalid-feedback">
-                Mobile invalid format.
+              <input type="email" class="form-control ng-pristine is-invalid " id="email" formControlName="email"
+                [ngClass]="{ 'is-invalid': isControlInvalid('email') }">
+              <div *ngIf="isControlInvalid('email')" class="invalid-feedback">
+                Email required & in a valid format.
+              </div>
+            </div>
+          </div>
+          <label for="mobile" class="label-width">Mobile:</label>
+          <div class="inputtag">
+            <input type="text" id="mobile" formControlName="mobile" [ngClass]="{ 'is-invalid': isControlInvalid('mobile') }">
+            <div *ngIf="isControlInvalid('mobile')" class="invalid-feedback">
+              Mobile invalid format.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="homephone" class="label-width">Home-Phone:</label>
+            <div class="inputtag">
+              <input type="text" id="homephone" formControlName="homephone"
+                [ngClass]="{ 'is-invalid': isControlInvalid('homephone') }">
+              <div *ngIf="isControlInvalid('homephone')" class="invalid-feedback">
+                Home-Phone invalid format.
               </div>
             </div>
           </div>
         </div>
+        
       </div>
     </div>
 
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
-    <label for="tab2" class="tabs__label" > <i class="fa fa-shield"></i> Access Codes</label>
+    <label for="tab2" class="tabs__label"> <i class="fa fa-shield"></i> Access Codes</label>
     <div class="tabs__content bg-white">
       <div class="row p-2" style="margin-top: 50px;">
         <div class="container" style="display: flex;">
 
 
-          <div class="form-group" style="display: flex; margin-right: 20px;">
-            <label for="searchAccessGroup">Search Access Group:</label>
+          <div class="form-group" style="display: flex; margin-right: 16px;">
+            <label for="searchAccessGroup" style="margin-left: -12px;">Search Access Group:</label>
             <!-- <input type="text" id="searchAccessGroup" name="searchAccessGroup" style="width: 150px; height: 20px;"> -->
 
             <input type="text" id="inputField" name="searchAccessGroup" formControlName="filterText2"
@@ -154,11 +152,15 @@
           </div>
 
 
-          <div class="form-group" style="display: flex; margin-left: 100px;">
+          <div class="form-group" style="display: flex; margin-left: 114px;">
             <label for="searchAccessCode">Search Access Code:</label>
             <input type="text" id="inputField" name="searchAccessGroup" formControlName="filterText1"
-              style="width: 150px; height: 20px;"  />
-
+              style="width: 150px; height: 20px;" />
+            <div class="form-group" style="display: flex;margin-top: 30px;margin-left: -280px;font-size: 20px;">
+              <label>Super User:</label>
+              <input (change)="changeSuperUser($event)" type="checkbox" id="SuperUser" name="SuperUser"
+                formControlName="SuperUser" style="width: 18px;margin-left: 10px;" />
+            </div>
           </div>
 
 
@@ -169,11 +171,10 @@
           <div class="access-groups ">
 
             <div *ngFor="let group of filteredresults; let i = index" class="access-group">
-              <div class="access-group-item" >
+              <div class="access-group-item">
                 <div class="access-group-name">
                   <label>
-                    <input type="checkbox" class="checkbox4"
-                      (change)="toggleAccessCodes(i)">
+                    <input type="checkbox" class="checkbox4" (change)="toggleAccessCodes(i)">
                     <strong class="accesscodesfont">{{ group }}</strong>
 
                   </label>
@@ -187,15 +188,16 @@
         <div class="col-8 useraccesscodes ">
           <div class="" style="display: flex;margin-left: 6px;">
             <input type="checkbox" [checked]="selectAllCheckbox" (change)="toggleSelectAll($event)">
-            <label for="selectAllCheckbox" style="margin-left: 8px; margin-top: 5px;font-weight: 1000;">Select all</label>
+            <label for="selectAllCheckbox" style="margin-left: 8px; margin-top: 5px;font-weight: 1000;">Select
+              all</label>
           </div>
           <div *ngFor="let accesscodes of filteredAccessCodes(); let i = index">
             <label class="checkbox-container">
               <div class="inline-block-container  accesscodes p-1">
-                <input  type="checkbox" class="code-checkbox" [checked]="existsInAccessCodesForItem(accesscodes)"
+                <input type="checkbox" class="code-checkbox" [checked]="existsInAccessCodesForItem(accesscodes)"
                   (change)="toggleAccessCode(accesscodes)">
-                <span   class="code-item accesscodesfont">{{ accesscodes.sAccessCode }}</span>
-                <span class="accesscodesdescriptionfont" >{{ accesscodes.SAccessDescription }}</span>
+                <span class="code-item accesscodesfont">{{ accesscodes.sAccessCode }}</span>
+                <span class="accesscodesdescriptionfont">{{ accesscodes.SAccessDescription }}</span>
               </div>
             </label>
           </div>
@@ -208,22 +210,23 @@
 
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab3">
 
-    <label for="tab3" class="tabs__label"><i class = "fa fa-clipboard"></i> Products</label>
+    <label for="tab3" class="tabs__label"><i class="fa fa-clipboard"></i> Products</label>
     <div class="tabs__content">
       <div class="container products">
-      <app-available-products (selectedProducts)="receiveSelectedProducts($event)"></app-available-products>
-      <!-- <button mat-raised-button color="primary" (click)="saveSelectedProducts()">Save</button> -->
-    </div>
-    </div>
-
+        <app-available-products (selectedProducts)="receiveSelectedProducts($event)"></app-available-products>
+        <!-- <button mat-raised-button color="primary" (click)="saveSelectedProducts()">Save</button> -->
+      </div>
     </div>
 
-    <div class="border" style=" position: relative; height: 50px;">
+  </div>
 
-      <button class="save-button" type="submit" [disabled]="userForm.invalid"
-        style="position: absolute; margin-left: 72rem;">Save</button>
-      <button class="cancel-button" routerLink="/home" style="position: absolute; left: 100px;margin-left: 60rem;">Cancel</button>
+  <div class="border" style=" position: relative; height: 50px;padding-top: 7px;">
 
-    </div>
-  
+    <button class="save-button" type="submit" [disabled]="userForm.invalid"
+      style="position: absolute; margin-left: 73.23rem;">Save</button>
+    <button class="cancel-button" routerLink="/home"
+      style="position: absolute; left: 100px;margin-left: 61rem;">Cancel</button>
+
+  </div>
+
 </form>

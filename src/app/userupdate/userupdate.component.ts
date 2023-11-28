@@ -260,7 +260,6 @@ export class UserupdateComponent {
   }
 
   existsInAccessCodesForItem(accesscodes: any): boolean {
-    console.log('lets see the boolean')
     return this.selectedAccessCodes.includes(accesscodes.sAccessCode);
   }
   
@@ -270,7 +269,7 @@ export class UserupdateComponent {
     this.accessGroup[index].selected = !this.accessGroup[index].selected;
     this.selectedGroupId = this.accessGroup[index].id;
 
-    console.log('Checked Access Codes:', this.selectedAccessCodes);
+    
     if (!this.accessGroup[index].selected) {
       this.accessGroup.map(res => {
         if (this.accessGroup[index].sAccessGroup == res.sAccessGroup)
@@ -283,7 +282,7 @@ export class UserupdateComponent {
 
 
 
-    console.log("here are codes all  ", this.selectedAccessCodes)
+    
 
 
 
@@ -356,7 +355,6 @@ export class UserupdateComponent {
     const accessCodesArray: string[] = selectedGroups.reduce((acc, group) => acc.concat(group.sAccessCodes), [] as string[]);
 
     for (const codes of this.selectedAccessCodes) {
-      console.log('here is the staff brother  ' + codes)
       accessCodesArray.push(codes);
       console.log(accessCodesArray)
     }
@@ -457,7 +455,6 @@ export class UserupdateComponent {
     this.SecLookup.forEach((accessCode: { sAccessCode: string, status: boolean }) => {
       if (this.selectAllCheckbox) {
         accessCode.status = this.selectAllCheckbox;
-        console.log('This is what you are adding  ', accessCode.status)
         this.selectedAccessCodes.push(accessCode.sAccessCode)
       } else {
         accessCode.status = this.selectAllCheckbox;
@@ -467,7 +464,9 @@ export class UserupdateComponent {
     });
   }
 
-
+  changeSuperUser(event: any) {
+    this.apiService.changeSuperUser(event,this.selectedAccessCodes)
+  }
 
 }
-// return this.filteredresults;
+ 
