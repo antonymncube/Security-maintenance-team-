@@ -468,5 +468,9 @@ export class UserupdateComponent {
     this.apiService.changeSuperUser(event,this.selectedAccessCodes)
   }
 
+ productsfilter(): boolean {
+  console.log("here is the super what what",this.selectedAccessCodes)
+  return this.selectedAccessCodes.includes('SU01');
+}
 }
  

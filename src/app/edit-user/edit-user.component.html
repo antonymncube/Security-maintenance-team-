@@ -303,7 +303,7 @@
               <div class="form-group" style="display: flex;margin-top: 30px;margin-left: -327px;font-size: 20px;">
                 <label>Super User:</label>
                 <input (change)="changeSuperUser($event)" type="checkbox" id="SuperUser" name="SuperUser"
-                  formControlName="SuperUser" style="width: 18px;margin-left: 10px;" />
+                  formControlName="SuperUser" style="width: 18px;margin-left: 10px;"  [checked]="checksuperuser()" />
               </div>
             </div>
 
@@ -343,10 +343,13 @@
     <label for="tab3" class="tabs__label"><i class="fa fa-clipboard"></i>Available products</label>
     <div class="tabs__content">
       <div class="container products">
-        <div class="availableProducts">
+        <div class="availableProducts" *ngIf="!checksuperuser()">
         <app-available-products [availableProducts]="userForm.get('selectedProducts')?.value"
         (selectedProducts)="updateSelectedProducts($event)"></app-available-products>
         </div>
+        <div class="availableProducts" *ngIf="checksuperuser()">
+          <h2>Filter Products</h2>
+          </div>
       </div>
 
       

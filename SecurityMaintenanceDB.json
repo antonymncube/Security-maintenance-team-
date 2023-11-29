@@ -386,6 +386,75 @@
         "Corporate Dental",
         "Consumer CashPlan"
       ]
+    },
+    {
+      "id": "4861",
+      "username": "timothy",
+      "fullname": "Tomothy Sporty",
+      "description": "Back End Developer",
+      "password": "$2a$10$WDEcFUa0kvISLH40PR.S9.Ri6kp930j3W/KFmqdKciMFh1e8BYhw.",
+      "department": "IT",
+      "email": "antonymncube49@gmail.com",
+      "homephone": "0671402936",
+      "mobile": "0671802963",
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-11-29T11:55:42.737Z",
+      "language": "English",
+      "location": "",
+      "selectedProducts": []
+    },
+    {
+      "id": "8580",
+      "username": "username",
+      "fullname": "",
+      "description": "",
+      "password": "$2a$10$w8KD59E.Bc.DWLOGjbcC/eebfLYE3eYmXil4/dovN7XXJXuXlMThy",
+      "department": "IT",
+      "email": "nseptember591@gmail.com",
+      "homephone": "",
+      "mobile": "",
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-11-29T12:13:12.437Z",
+      "language": "",
+      "selectedProducts": [],
+      "filterText1": "",
+      "filterText2": ""
+    },
+    {
+      "id": "9153",
+      "username": "mdsjfhsdnl",
+      "fullname": "dsfddsf",
+      "description": " Married",
+      "password": "$2a$10$OG29ShDYTsVS8f/OQ2BAIOCNZW/U0tgeXsZZmTRftNNvV2nEGb2QK",
+      "department": "Sales",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "",
+      "mobile": "0781954154",
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-11-29T12:21:43.569Z",
+      "language": "English",
+      "location": "",
+      "selectedProducts": []
+    },
+    {
+      "id": "9632",
+      "username": "brother",
+      "fullname": "ajsbdsja",
+      "description": "",
+      "password": "$2a$10$UoO.rfHWLtJ0vzs3yMfcl.KGNSLA6nBYd2EZNx7W.OgYhnEr7BJbC",
+      "department": "HR",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "",
+      "mobile": "",
+      "agent": "Simply Health",
+      "status": true,
+      "lastUpdated": "2023-11-29T12:26:39.351Z",
+      "language": "",
+      "location": "",
+      "selectedProducts": []
     }
   ],
   "Products": [
@@ -704,6 +773,33 @@
         "Accounts Clerk"
       ],
       "id": "1773"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con",
+        "Claim-Admin"
+      ],
+      "id": "4861"
+    },
+    {
+      "AccessGroups": [
+        "Broker Pack",
+        "Accounts Clerk"
+      ],
+      "id": "8580"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con",
+        "Claim-Admin"
+      ],
+      "id": "9153"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con"
+      ],
+      "id": "9632"
     }
   ],
   "SecUserAccess": [
@@ -1088,6 +1184,66 @@
         "AGENT_COMM_PAY",
         "AGENT_MAINT",
         "API_CLAIM_DU"
+      ]
+    },
+    {
+      "id": "4861",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "AGENT_MAINT",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_DOC_4",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_SALVAGE",
+        "CL_UNDMAN",
+        "API_DOC_BLOCK",
+        "API_DOC_CONF",
+        "SU01"
+      ]
+    },
+    {
+      "id": "8580",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "CL_EXCEL_PRINT",
+        "CL_FINALISECLMT",
+        "CL_INCIDENT",
+        "CL_IND_APR",
+        "CL_NEGCLAIMBAL",
+        "CL_RECOVERY",
+        "CL_REQUISITION",
+        "CL_REVERSEPAY",
+        "CL_UNDMAN",
+        " CL_STALECHEQUE",
+        "CL_IND_DEC",
+        "AGENT_COMM_PAY",
+        "SU01"
+      ]
+    },
+    {
+      "id": "9153",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "AGENT_MAINT",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_DOC_4",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_SALVAGE",
+        "CL_UNDMAN",
+        "API_CLAIM_DU",
+        "SU01"
+      ]
+    },
+    {
+      "id": "9632",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "SU01",
+        "API_DOC_CONF"
       ]
     }
   ]

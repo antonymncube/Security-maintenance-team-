@@ -38,7 +38,7 @@ export interface PeriodicElement {
   encapsulation: ViewEncapsulation.None
 })
 export class UserListComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'weight', 'description', 'agent', 'department', 'lastUpdated', 'Action'];
+  displayedColumns: string[] = ['name', 'weight', 'description', 'agent', 'department', 'lastUpdated','type', 'Action'];
 
   dataSource: MatTableDataSource<PeriodicElement> = new MatTableDataSource<PeriodicElement>();
   @ViewChild(MatPaginator)
@@ -60,7 +60,8 @@ export class UserListComponent implements OnInit {
         data = data.slice().reverse(); // Reverse the array
         this.dataSource.data = data; // Set the data source for MatTableDataSource
         this.dataSource.paginator = this.paginator; // Set the paginator
-
+        
+        // this.apiService.addUserAccessCodes(this.)
         const storedUser = sessionStorage.getItem('currentuser');
         this.currentuser = storedUser !== null ? storedUser : '';
 
@@ -93,15 +94,13 @@ export class UserListComponent implements OnInit {
     }
   }
 
-  // onDeleteUser(userId: number): void {
-  //   if (confirm('Are you sure you want to delete this user?')) {
-  //     this.apiService.deleteUser(userId.toString()).subscribe(() => {
-  //       // You might not need to reload the location, as Angular's change detection will update the UI.
-  //       // However, if needed, you can force a reload using window.location.reload()
-  //       location.reload();
-  //     });
-  //   }
-  // }
+  userType(userId: string): any{
+     this.apiService.getUserAccessCodes(userId).subscribe((res)=>{
+
+     return res.includes('SU01')
+
+     })
+  }
 
 
 
@@ -131,9 +130,13 @@ export class UserListComponent implements OnInit {
         }
       }
 
+      
+
     markAllAsTouched() {
       Object.keys(this.UserForm.controls).forEach(controlName => {
         this.userForm.get(controlName)?.markAsTouched();
       });
     }
+
+    
   }

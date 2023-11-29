@@ -12,9 +12,7 @@ import { UserFormData } from '../User';
   styleUrls: ['./edit-user.component.scss'],
 })
 export class EditUserComponent implements OnInit {
-changeSuperUser($event: Event) {
-throw new Error('Method not implemented.');
-}
+
   id: string = '';
   userForm: FormGroup;
   // userForm: FormGroup;
@@ -191,11 +189,12 @@ throw new Error('Method not implemented.');
 
       if (lastUpdatedControl) {
         lastUpdatedControl.setValue(new Date());
+
       }
 
       this.apiService.updateUser(this.id, this.userForm.value).subscribe((response: any) => {
         this.userForm.reset();
-        this.router.navigate(['/home']);
+        this.router.navigate(['/home/']);
         console.log('User data updated:', response);
       });
     }
@@ -378,10 +377,7 @@ throw new Error('Method not implemented.');
         const accessGroup = res[index];
         const accessgroup1 = JSON.stringify(accessGroup, null, 2);
         const parsedObject = JSON.parse(accessgroup1);
-
-        // console.log('Outer Loop: ', parsedObject.sAccessGroup);
-
-        // Inner loop
+ 
         for (let innerIndex = 0; innerIndex < updatedcodesArray.length; innerIndex++) {
           if (parsedObject.sAccessGroup == updatedcodesArray[innerIndex]) {
             parsedObject.sAccessCodes.forEach((res: string) => {
@@ -400,15 +396,12 @@ throw new Error('Method not implemented.');
 
     this.apiService.updateUserAccessgroup(this.id, { id: this.id, AccessGroups: updatedcodesArray }).subscribe(
       (res: any) => {
-        // Handle successful response
-        // console.log('Update successful:', res);
-
-        // Check if any of the updated access codes exist in accessGroup
+  
         (updatedcodesArray as string[]).forEach(updatedCode => {
           const groupContainingCode = this.accessGroup.find(group => group.sAccessGroup.includes(updatedCode));
 
           if (groupContainingCode) {
-            // Access group exists, log a message and loop through access codes
+             
             console.log(` exists in group ${groupContainingCode.sAccessGroup}.`);
 
             groupContainingCode.sAccessCodes.forEach(accessCode => {
@@ -420,6 +413,7 @@ throw new Error('Method not implemented.');
             // console.log(`Access code ${updatedCode} does not exist in any group.`);
           }
         });
+       
       },
       (error: any) => {
         // Handle error response
@@ -498,8 +492,12 @@ throw new Error('Method not implemented.');
    
     return filteredArray;
   }
-
-
+  changeSuperUser(event: any) {
+    this.apiService.changeSuperUser(event,this.UserAccescodes)
+  }
+checksuperuser() : boolean{
+   return  this.UserAccescodes.includes('SU01')
+}
   filteredresults: any;
 
 

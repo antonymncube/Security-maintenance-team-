@@ -212,20 +212,21 @@
 
     <label for="tab3" class="tabs__label"><i class="fa fa-clipboard"></i> Products</label>
     <div class="tabs__content">
-      <div class="container products">
-        <div class="availableProducts">
+
+        <div class="availableProducts" *ngIf="!productsfilter()">
         <app-available-products (selectedProducts)="receiveSelectedProducts($event)"></app-available-products>
         </div>
+        <div class="availableProducts" *ngIf="productsfilter()">
+          <h2>Filter Products</h2>
+          </div>
       </div>
-    </div>
-
   </div>
 
   <div class="border" style=" position: relative; height: 50px;padding-top: 5px;">
 
     <button class="save-button" type="submit" [disabled]="userForm.invalid"
       style="position: absolute; margin-left: 73.23rem;">Save</button>
-    <button class="cancel-button" routerLink="/home"
+    <button class="cancel-button" routerLink="/home/"
       style="position: absolute; left: 100px;margin-left: 61rem;">Cancel</button>
 
   </div>
