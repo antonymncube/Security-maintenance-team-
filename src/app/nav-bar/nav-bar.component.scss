@@ -7,7 +7,7 @@
 }
 .sidenav {
   width: 230px;
-  background-color: #2F4050;
+  background-color: rgb(36,53,69);
 }
 .sidenav .mat-toolbar {
   background: inherit;
@@ -49,7 +49,7 @@ main {
   text-decoration: none;
   display: block;
   margin: 5px 0;
-  padding: 10px;
+  padding: 7px;
   transition: background-color
 
 }
@@ -173,9 +173,19 @@ main {
 }
 
 .router-link:hover {
-  background-color: #2F3351;
+  background-color:#5e7489;  ;
   color: white;
+  border-radius: 5px;
+  padding: 10px;
 }
+
+.router-link.active {
+  background-color:#2F4050;    
+  color:white !important;  
+  border-radius: 5px;  
+  
+}
+
 
 .icon {
   color: #5e7489;

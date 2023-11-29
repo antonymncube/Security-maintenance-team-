@@ -24,7 +24,9 @@ export class NavBarComponent {
   accessGroup : any = '';
 
   constructor(public dialog: MatDialog, private apiService: ApiServiceService, public router: Router) { }
-
+  isHomeRoute(): boolean {
+    return this.router.url === '/home';
+}
   openDialog() {
     // Fetch the data before opening the dialog
     this.getAccesslookup();

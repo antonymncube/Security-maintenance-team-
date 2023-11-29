@@ -159,6 +159,11 @@
       "sAccessCode": " CL_STALECHEQUE",
       "SAccessDescription": "Edit CHEQUE",
       "id": "f69b62e0-507e-4857-b73c-4321d386d094"
+    },
+    {
+      "sAccessCode": "",
+      "SAccessDescription": "",
+      "id": "f6ccb2a8-28df-4d84-a21f-05132b0c8a41"
     }
   ],
   "SecAccessGroups": [
