@@ -63,14 +63,24 @@ textarea {
   border-radius: 3px;
 }
 
-button {
+// button {
+//   padding: 10px 20px;
+//   background-color: #2F3351;
+//   color: #fff;
+//   border: none;
+//   border-radius: 3px;
+//   cursor: pointer;
+//   //margin-right: 69rem;
+// }
+
+button[_ngcontent-ng-c3418834454] {
   padding: 10px 20px;
   background-color: #2F3351;
   color: #fff;
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  margin-right: 69rem;
+  //margin-right: 69rem;
 }
 
 .button:disabled{
@@ -430,7 +440,7 @@ button {
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  margin-right: 69rem;
+  //margin-right: 69rem;
 }
 
 .button:disabled {
@@ -516,6 +526,7 @@ button {
 }
 
 .products{
+  width: 100%;
    background-color: #ffffff;;
 }
 
@@ -730,6 +741,11 @@ button.save-btn {
   width: 100%;
 }
 
+.container products{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
 .availableProducts{
   margin-top: 45px;
   margin-left: -0px;
@@ -740,3 +756,8 @@ button.save-btn {
   background-color:#ffffff;
   width: 100%;
 }
+.btnnn{
+  width: 100%;
+}
+
+
