@@ -98,7 +98,7 @@ export class UserupdateComponent {
       agent: ['', [Validators.required]],
       language: ['',],
       filterText1: this.filterTextControl1,
-      filterText2: this.filterTextControl2
+      filterText2: this.filterTextControl2,
     });
 
     this.markFormGroupAsTouchedAndDirty(this.userForm);

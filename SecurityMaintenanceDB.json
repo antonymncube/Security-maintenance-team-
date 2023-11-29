@@ -253,8 +253,11 @@
       "email": "ranaaphelele@gmail.com",
       "homephone": "0781638594",
       "mobile": "0781990677",
-      "agent": "Simply Health",
-      "status": true
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-11-28T15:02:49.924Z",
+      "language": "",
+      "selectedProducts": []
     },
     {
       "id": "18",
@@ -267,35 +270,42 @@
       "homephone": "0781638594",
       "mobile": "0781638594",
       "agent": "Simply Health",
-      "status": true
+      "status": true,
+      "lastUpdated": "2023-11-28T15:00:17.338Z",
+      "language": "",
+      "selectedProducts": []
     },
     {
       "id": "W54mHDU",
       "username": "Emihle",
       "fullname": "Emihle Ntshongwana",
       "description": " Married",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$Z7vwnbPeltFmDCXLwbtxk.EqEhE8AkRgYzEbiveqrANunXET73q9W",
+      "department": "IT",
       "email": "e.ntshongwana@genasystech.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "department": "IT",
-      "status": true
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-11-28T15:00:13.377Z",
+      "language": "",
+      "selectedProducts": []
     },
     {
       "id": "E1yptON",
       "username": "Grace",
       "fullname": "Grace Ngwangwa",
       "description": "Hello Grace",
-      "location": "",
-      "agent": "Genasys",
       "password": "$2a$10$fH8zSNFGNRn.FVRpVCUTwu1EObbnRTfUGV.kqWLdxWxjuvt4yxwF6",
+      "department": "IT",
       "email": "g.ngwangwa@genasystech.com",
       "homephone": "0671402936",
       "mobile": "0781954154",
-      "department": "IT",
-      "status": true
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-11-28T15:00:01.527Z",
+      "language": "",
+      "selectedProducts": []
     },
     {
       "id": "A0LIYn3",
@@ -349,6 +359,27 @@
       "language": "Afrikaans",
       "selectedProducts": [
         "Group Cash Plan"
+      ]
+    },
+    {
+      "id": "1773",
+      "username": "mehluli",
+      "fullname": "Mehluli Dlamin",
+      "description": "Tester",
+      "password": "$2a$10$ZQhYE4jYf5Ps4HEsCp.bO.77uX4QK0Q50OrMszN.w7koC9KcbmxoG",
+      "department": "IT",
+      "email": "antonymncube49@gmail.com",
+      "homephone": "",
+      "mobile": "0781954154",
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-11-28T13:42:11.487Z",
+      "language": "English",
+      "location": "",
+      "selectedProducts": [
+        "Dental Cover Plan",
+        "Corporate Dental",
+        "Consumer CashPlan"
       ]
     }
   ],
@@ -660,6 +691,14 @@
         "Claim-Admin"
       ],
       "id": "6121"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con",
+        "Broker Pack",
+        "Accounts Clerk"
+      ],
+      "id": "1773"
     }
   ],
   "SecUserAccess": [
@@ -1024,6 +1063,26 @@
         "CL_REQUISITION",
         "CL_SALVAGE",
         "CL_UNDMAN"
+      ]
+    },
+    {
+      "id": "1773",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "CL_EXCEL_PRINT",
+        "CL_FINALISECLMT",
+        "CL_INCIDENT",
+        "CL_IND_APR",
+        "CL_NEGCLAIMBAL",
+        "CL_RECOVERY",
+        "CL_REQUISITION",
+        "CL_REVERSEPAY",
+        "CL_UNDMAN",
+        " CL_STALECHEQUE",
+        "CL_IND_DEC",
+        "AGENT_COMM_PAY",
+        "AGENT_MAINT",
+        "API_CLAIM_DU"
       ]
     }
   ]

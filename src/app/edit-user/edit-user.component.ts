@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiServiceService } from '../services/api-service.service';
 import { AvailableProductsComponent } from '../available-products/available-products.component';
@@ -12,6 +12,9 @@ import { UserFormData } from '../User';
   styleUrls: ['./edit-user.component.scss'],
 })
 export class EditUserComponent implements OnInit {
+changeSuperUser($event: Event) {
+throw new Error('Method not implemented.');
+}
   id: string = '';
   userForm: FormGroup;
   // userForm: FormGroup;
@@ -51,6 +54,8 @@ export class EditUserComponent implements OnInit {
   accessGroundForm: any;
   selectedGroupIndex: number | null = null;
   alreadyselectedcodes: any[] = [];
+  filterTextControl1 = new FormControl('');
+  filterTextControl2 = new FormControl('');
 
 
   constructor(
@@ -78,6 +83,8 @@ export class EditUserComponent implements OnInit {
       lastUpdated: [''],
       language: ['',],
       selectedProducts: [[]],
+      filterText1: this.filterTextControl1,
+      filterText2: this.filterTextControl2,
     });
 
 
@@ -114,10 +121,11 @@ export class EditUserComponent implements OnInit {
         return accesscode
       })
 
+     
+
       this.apiService.getUserAccessCodes(this.id).subscribe((res1: any) => {
         this.UserAccescodes = res1.accesscodes;
         this.selectedAccessCodes = this.UserAccescodes
-        console.log('is it an object of a user', this.UserAccescodes)
         this.accessCodes = this.accessCodes.map((res) => {
           if (this.UserAccescodes.includes(res.sAccessCode)) {
             res.selected = true;
@@ -131,7 +139,7 @@ export class EditUserComponent implements OnInit {
     });
 
 
-
+    
 
 
     this.apiService.getUserAccessGroups(this.id).subscribe(
@@ -169,6 +177,13 @@ export class EditUserComponent implements OnInit {
     return this.UserAccescodes.includes(accesscodes.sAccessCode);
   }
 
+  getAccesslookup() {
+    this.apiService.getSecLookup().subscribe((SecLookup: any) => {
+      this.SecLookup = SecLookup; // Assign the entire response to SecLookup
+       console.log('The lookup', this.SecLookup)
+    });}
+
+ 
 
   onSubmit() {
     if (this.userForm.valid) {
@@ -191,24 +206,10 @@ export class EditUserComponent implements OnInit {
     if (selectedProductsControl) {
       selectedProductsControl.setValue(selectedProducts);
     }
-
-    // Update the user with the new selected products
-    // this.apiService.updateUser(this.id, { selectedProducts }).subscribe(
-    //   (response: any) => {
-    //     console.log('User data updated:', response);
-    //   },
-    //   (error: any) => {
-    //     console.error('Update failed:', error);
-    //   }
-    // );
   }
 
 
-  getAccesslookup() {
-    this.apiService.getSecLookup().subscribe((SecLookup: any) => {
-      this.SecLookup = SecLookup; // Assign the entire response to SecLookup
-    });
-  }
+ 
 
 
   updateUserWithSelectedProducts() {
@@ -261,14 +262,6 @@ export class EditUserComponent implements OnInit {
       this.UserAccescodes = this.UserAccescodes.concat(selectedAccessGroup.sAccessCodes);
       this.selectedAccessCodes = this.selectedAccessCodes.concat(selectedAccessGroup.sAccessCodes)
     }
-
-
-
-    console.log("here are codes all  ", this.selectedAccessCodes)
-
-
-
-
 
     if (!this.accessGroup[index].selected) {
 
@@ -337,7 +330,7 @@ export class EditUserComponent implements OnInit {
       this.selectedAccessCodes.push(accesscode.sAccessCode);
       // this.solvingarray.push(accessCodeValue);
       // console.log('This is the selected  ', this.selectedAccessCodes)
-      console.log("here is the accescodes from accesscode ", this.selectedAccessCodes)
+       
 
     } else {
 
@@ -354,7 +347,7 @@ export class EditUserComponent implements OnInit {
     }
     accesscode.selected = !accesscode.selected;
 
-    console.log('LETS SEE SOMETHING  ' + this.selectedAccessCodes)
+    
     // this.saveSelectedAccessCodes();
 
   }
@@ -364,7 +357,7 @@ export class EditUserComponent implements OnInit {
     const updatedcodesset = new Set();
     let accessCodesSet = new Set();
 
-    console.log("The lenght of the access codes ", this.selectedAccessCodes)
+    
 
 
     this.accessGroup.map((res) => {
@@ -440,36 +433,18 @@ export class EditUserComponent implements OnInit {
 
 
 
-
-
-    // console.log( 'here are the saved codes ',updatedcodesArray);
-    // this.apiService.updateAccessgroup(this.id,)
-
     const selectedCodes = this.accessCodes.filter((code: any) => code.selected);
     const selectedGroups = this.accessGroup.filter(group => group.selected);
     const accessGroupsOnly = selectedGroups.map(group => group.sAccessGroup);
     let accessCodesArray: string[] = selectedGroups.reduce((acc, group) => acc.concat(group.sAccessCodes), [] as string[]);
-    // console.log('Ahead save  ',this.selectedAccessCodes)
-    // console.log('Ahead save  ', this.selectedAccessCodes);
-
-    // for (const codes of this.selectedAccessCodes) {
-    //   if (codes.sAccessCode && codes.sAccessCode.length > 0) {
-    //     console.log('Ahead save  ', codes.sAccessCode);
-
-    //     // Using concat method to flatten the array
-    //     accessCodesArray = accessCodesArray.concat(codes.sAccessCode);
-
-    //     // Alternatively, using the spread operator
-    //     // accessCodesArray.push(...codes.sAccessCode);
-    //   }
-    // }
+    
     this.selectedAccessCodes.map(res => {
 
       accessCodesArray.push(res)
 
 
     })
-    console.log('lets see now  buti boi' + accessCodesArray)
+  
 
     accessCodesSet.add(accessCodesArray)
 
@@ -501,6 +476,44 @@ export class EditUserComponent implements OnInit {
       }
     );
 
+  }
+  variable: any;
+  onFilterTextChanged(event: any) {
+
+
+    const value = event.target.value;
+
+    this,this.filteredAccessGroups(this.accessGroup,value.length === 0 ? null : value)
+
+    
+
+  }
+
+ 
+  filteredAccessCodes() {
+    const filteredArray = this.SecLookup.filter((accessCode: { sAccessCode: string }) =>
+      accessCode.sAccessCode.includes(this.userForm.value.filterText1.toUpperCase())
+    );
+
+   
+    return filteredArray;
+  }
+
+
+  filteredresults: any;
+
+
+  filteredAccessGroups(accessGroup: any, searchKey: string | null) {
+
+    if (!searchKey) {
+      this.filteredresults = accessGroup.map((group: { sAccessGroup: string }) => group.sAccessGroup);
+    }
+    else {
+      this.filteredresults = accessGroup.map((group: { sAccessGroup: string }) => group.sAccessGroup)
+      .filter((group: string) =>
+        group.includes(searchKey))
+    }
+ 
   }
 
 }

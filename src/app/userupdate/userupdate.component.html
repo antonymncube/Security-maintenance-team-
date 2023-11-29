@@ -1,15 +1,15 @@
-<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form1 bg-white">
-  <div class="tabs ">
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form1 bg-white ">
+  <div class="tabs  ">
     <div></div>
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
-    <label for="tab1" class="tabs__label">
+    <label for="tab1" class="tabs__label"  >
       <i class="fa fa-user"></i> Details
     </label>
 
     <!-- <i class="fa fa-exclamation-triangle invalid-indicator"></i> -->
-    <div class="tabs__content">
-      <div class="totalDetails">
-        <div class="userdetails form-group">
+    <div class="tabs__content" >
+      <div class="totalDetails " >
+        <div class="userdetails form-group " style="background-color: #ffffff;">
 
           <div class="form-group">
             <label for="username" class="label-width">Username:</label>
@@ -138,12 +138,12 @@
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
     <label for="tab2" class="tabs__label"> <i class="fa fa-shield"></i> Access Codes</label>
     <div class="tabs__content bg-white">
-      <div class="row p-2" style="margin-top: 50px;">
+      <div class="row p-2" style="margin-top: 5px;">
         <div class="container" style="display: flex;">
 
 
           <div class="form-group" style="display: flex; margin-right: 16px;">
-            <label for="searchAccessGroup" style="margin-left: -12px;">Search Access Group:</label>
+            <label for="searchAccessGroup" style="margin-left: -12px;font-size:17px;">Search Access Group:</label>
             <!-- <input type="text" id="searchAccessGroup" name="searchAccessGroup" style="width: 150px; height: 20px;"> -->
 
             <input type="text" id="inputField" name="searchAccessGroup" formControlName="filterText2"
@@ -152,11 +152,11 @@
           </div>
 
 
-          <div class="form-group" style="display: flex; margin-left: 114px;">
-            <label for="searchAccessCode">Search Access Code:</label>
+          <div class="form-group" style="display: flex; margin-left: 70px;">
+            <label for="searchAccessCode" style="font-size:17px;">Search Access Code:</label>
             <input type="text" id="inputField" name="searchAccessGroup" formControlName="filterText1"
               style="width: 150px; height: 20px;" />
-            <div class="form-group" style="display: flex;margin-top: 30px;margin-left: -280px;font-size: 20px;">
+            <div class="form-group" style="display: flex;margin-top: 30px;margin-left: -327px;font-size: 20px;">
               <label>Super User:</label>
               <input (change)="changeSuperUser($event)" type="checkbox" id="SuperUser" name="SuperUser"
                 formControlName="SuperUser" style="width: 18px;margin-left: 10px;" />
@@ -213,14 +213,15 @@
     <label for="tab3" class="tabs__label"><i class="fa fa-clipboard"></i> Products</label>
     <div class="tabs__content">
       <div class="container products">
+        <div class="availableProducts">
         <app-available-products (selectedProducts)="receiveSelectedProducts($event)"></app-available-products>
-        <!-- <button mat-raised-button color="primary" (click)="saveSelectedProducts()">Save</button> -->
+        </div>
       </div>
     </div>
 
   </div>
 
-  <div class="border" style=" position: relative; height: 50px;padding-top: 7px;">
+  <div class="border" style=" position: relative; height: 50px;padding-top: 5px;">
 
     <button class="save-button" type="submit" [disabled]="userForm.invalid"
       style="position: absolute; margin-left: 73.23rem;">Save</button>

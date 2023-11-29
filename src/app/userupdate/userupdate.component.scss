@@ -16,7 +16,6 @@ form {
   background-color: white !important;
   border:  1px solid #e7eaec;
   border-radius: 2px;
-  // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-top: 5px;
   padding-top: 5px;
 }
@@ -57,7 +56,7 @@ textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  // border: 1px solid #ccc;
   border-radius: 3px;
 }
 
@@ -110,6 +109,7 @@ button {
 .totalDetails {
   display: flex important;
   justify-content: space-between important;
+   background-color:#ffffff;
 }
 
 .form-group {
@@ -172,12 +172,9 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  // border: 1px solid #ccc;
-  // border-radius: 5px;
-  // background-color: #fff;
   padding: 10px;
   max-height: 300px;
-  // height: 100px;
+ 
 }
 
 .access-group {
@@ -188,7 +185,6 @@ button {
 
 .access-group-name {
   font-weight: bold;
-  // height: 30px;
 }
 
 .col {
@@ -304,7 +300,7 @@ button.save-btn {
 .tabs__content {
   order: 1;
   width: 100%;
-  border-bottom: 3px solid #dddddd;
+  // border-bottom: 3px solid red;
   line-height: 1.5;
   font-size: 0.9em;
   display: none;
@@ -417,7 +413,7 @@ textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  // border: 1px solid #ccc;
   border-radius: 3px;
 }
 
@@ -500,7 +496,7 @@ button {
   border-radius: 3px;
 }
 .tabs__content{
-  height: 450px;
+  height: 400px;
 }
 
 .totalDetails {
@@ -532,30 +528,14 @@ button {
 .mat-mdc-tab-header {
   border: 1px solid red;
 }
-
-
-
-
-// .access-groups {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: flex-start;
-//   // border: 1px solid #ccc;
-//   border-radius: 5px;
-//   // background-color: #fff;
-//   padding: 10px;
-//   height: 300px;
-// }
+ 
 
 .access-group {
   cursor: pointer;
-
-
 }
 
 .access-group-name {
   font-weight: bold;
-  // height: 30px;
 }
 
 .col {
@@ -569,9 +549,8 @@ button {
 
 .useraccesscodes {
   overflow-y: auto;
-  height: 320px;
+  height: 288px;;
   border: solid  rgb(182, 177, 177) 1px;
-  border-radius: 5px;
   font-family: 'Roboto';
   padding: 30px 20px 20px 20px;
   background-color: #ffffff;
@@ -579,8 +558,7 @@ button {
 }
 .useraccessgroups{
   overflow-y: auto;
-  height: 320px;
-  height: 320px;
+  height: 288px;
   border:  1px solid #e7eaec;
   padding: 30px 20px 20px 20px;
   font-family: 'Roboto';
@@ -725,5 +703,14 @@ button.save-btn {
 }
 
 
-
+.availableProducts{
+  margin-top: 45px;
+  margin-left: -0px;
+  border: 1px solid #e7eaec;
+  padding: 5px;
+  padding-top: 15px;
+  padding-left: 20px;
+  background-color:#ffffff;
+  width: 100%;
+}
 
