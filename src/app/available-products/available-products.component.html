@@ -1,4 +1,4 @@
-<div *ngFor="let product of products; let i = index" style="padding: 8px;">
+<div class="products" *ngFor="let product of products; let i = index">
   <label class="checkbox-label">
     <input type="checkbox" [ngModel]="product.selected" (change)="toggleProductSelection(product)" />
     <span style="font-weight: 550 ; color: #707d85; font-family: 'opensans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;">
