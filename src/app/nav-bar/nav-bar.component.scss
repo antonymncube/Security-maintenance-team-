@@ -6,7 +6,7 @@
   padding: 0%;
 
 .sidenav {
-  width: 230px;
+  width: 150px;
   background-color: #2F4050;
 }
 .sidenav .mat-toolbar {
@@ -134,7 +134,7 @@ h1 {
  .logo-img {
   width: 180px;
   max-height: 70px;
-  margin-left: 9px;
+  margin-left: -25px;
   margin-bottom: 4px;
 }
 
@@ -199,7 +199,7 @@ tr:not(.header-row):hover td {
   position:static;
   z-index: 1;
   top: 25;
-  width: 5rem;
+  width: 4rem;
   height: 100vh;
   box-shadow: 0.063rem o 1.25rem 0 #E70E0E;
 
@@ -208,24 +208,28 @@ tr:not(.header-row):hover td {
       align-items: center;
       padding: 0.938rem 0.938rem 0 0.938rem;
       width: 100%;
+     
 
       .logo{
-          background: white;
+        font-family: Arial, Helvetica, sans-serif;
+          background: #2F4050;
           text-align: center;
           width: 3rem;
+          color: white;
           min-width: 0.313rem;
-          padding: 0.313em;
-          font-size: 24px;
-          font-weight: 900;
+          padding: 0.37em;
+          font-size: 35px;
+          font-weight: 600;
           cursor: pointer;
           border: none;
 
       }
       .logo-text{
-          margin-left: 1.5rem;
-          font-size: 24px;
+        padding: 0.313em;
+        font-size: 24px;
           font-weight: 700;
           color: white;
+          cursor: pointer;
 
 
       }
@@ -249,7 +253,7 @@ tr:not(.header-row):hover td {
 }
 
 .sidenav-collapsed{
-  width: 16.5625rem;
+  width: 14.5625rem;
 
 }
 
@@ -306,5 +310,29 @@ tr:not(.header-row):hover td {
       color: #fff;
   }
 }
+
+
+
+
+ /* For Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #2F3351 #fff;
+}
+
+/* For WebKit (Chrome, Safari, etc.) */
+body::-webkit-scrollbar {
+  width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #2F3351;
+  border-radius: 2px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff;
+}
+
 
 
