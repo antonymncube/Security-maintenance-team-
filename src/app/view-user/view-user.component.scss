@@ -1,5 +1,5 @@
 
- .mat-tab-group {
+.mat-tab-group {
   margin-bottom: 48px;
 }
 
@@ -46,7 +46,7 @@ h1{
 .form-group {
   display: flex;
   align-items:baseline;
-  margin-bottom: 10px;
+  //margin-bottom: 10px;
 }
 
 .form-group label {
@@ -64,7 +64,7 @@ h1{
 
 table {
   width: 100%;
-  overflow: auto; /* Add horizontal and vertical scrollbars when needed */
+  //overflow: auto; /* Add horizontal and vertical scrollbars when needed */
   max-height: 250px; /* Set a max height for the table to show at least 5 users; adjust as needed */
 }
 
@@ -110,6 +110,7 @@ table {
 }
 
 .label-width {
+  color: #2F4050;
   width: 120px;
 }
 .fullnamelb{
@@ -125,7 +126,7 @@ table {
 
 
 .totalDetails{
-
+  margin-left: 112px;
   display: flex;
   justify-content: space-between;
 }
@@ -173,6 +174,7 @@ width: 30%;
 width: 14rem;
 margin-top: 5px;
 // background-color: gr;
+color: gray;
 }
 
 .description{
@@ -189,7 +191,7 @@ border: 1px solid #ccc;
 border-radius: 5px;
 margin: 20px 0;
 box-shadow: none; /* Remove the shadow */
-overflow: hidden;
+//overflow: hidden;
 }
 
 /* Style the tabs */
@@ -266,7 +268,7 @@ box-shadow: none !important;
 
 
 .submit {
-  margin-left: 75rem;
+  margin-left: calc(100% - 5rem);
   background-color: #2F3351; /* Greyish background color */
   color: white; /* White text color */
   // border: 1px solid #808080; /* Matching greyish border */

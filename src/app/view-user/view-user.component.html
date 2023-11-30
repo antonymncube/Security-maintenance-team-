@@ -58,7 +58,7 @@
 <div class="view-container container ">
   <div class="white container  ">
 <form [formGroup]="userForm" class="bg-white p-0">
-  <h4 class="bg-white username ">{{fullname}}</h4>
+  <!-- <h4 class="bg-white username ">{{fullname}}</h4> -->
   <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" class="mat-elevation-z0">
     <mat-tab label="User-Details"   class="mat-elevation-z0">
       <div class="totalDetails">
@@ -131,11 +131,16 @@
                 <input type="text" id="mobile" formControlName="mobile">
               </div>
             </div>
+            <div class="form-group" style="color: transparent;">..</div>
+          <div class="form-group" style="color: transparent;">..</div>
+          <div class="form-group" style="color: transparent;">..</div>
+          <div class="form-group" style="color: transparent;">..</div>
+          <div class="form-group" style="color: transparent;">..</div>
             <div class="form-group">
-              <label for="products">Selected Products:</label>
+              <label class="label-width" for="products">Selected Products:</label>
               <div class="inputtag">
               <ul>
-                <li *ngFor="let product of selectedProducts">{{ product }}</li>
+                <li *ngFor="let product of selectedProducts">{{product}}</li>
               </ul>
               </div>
             </div>
