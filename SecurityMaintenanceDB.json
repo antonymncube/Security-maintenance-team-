@@ -451,10 +451,14 @@
       "mobile": "",
       "agent": "Simply Health",
       "status": true,
-      "lastUpdated": "2023-11-29T12:26:39.351Z",
+      "lastUpdated": "2023-11-30T07:03:54.720Z",
       "language": "",
-      "location": "",
-      "selectedProducts": []
+      "selectedProducts": [
+        "Cash Plan",
+        "Group Cash Plan"
+      ],
+      "filterText1": "",
+      "filterText2": ""
     }
   ],
   "Products": [
@@ -796,10 +800,10 @@
       "id": "9153"
     },
     {
+      "id": "9632",
       "AccessGroups": [
-        "Underwriting con"
-      ],
-      "id": "9632"
+        "Accounts Clerk"
+      ]
     }
   ],
   "SecUserAccess": [
@@ -1239,12 +1243,13 @@
       ]
     },
     {
-      "id": "9632",
       "accesscodes": [
-        "ACCEPTBBWARN",
-        "SU01",
-        "API_DOC_CONF"
-      ]
+        "CL_IND_DEC",
+        "AGENT_COMM_PAY",
+        "API_DOC_CONF",
+        "SU01"
+      ],
+      "id": "9632"
     }
   ]
 }

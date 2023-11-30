@@ -196,6 +196,7 @@ export class EditUserComponent implements OnInit {
         this.userForm.reset();
         this.router.navigate(['/home/']);
         console.log('User data updated:', response);
+        this.saveSelectedAccessCodes()
       });
     }
   }
