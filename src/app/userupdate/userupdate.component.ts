@@ -93,7 +93,7 @@ export class UserupdateComponent {
       description: ['',],
       email: ['', [Validators.required, Validators.email]],
       homephone: ['', [Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
-      mobile: ['', [Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
+      mobile: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       department: ['', [Validators.required]],
       agent: ['', [Validators.required]],
       language: ['',],
