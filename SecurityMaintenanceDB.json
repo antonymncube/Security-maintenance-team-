@@ -437,10 +437,17 @@
       "mobile": "0781954154",
       "agent": "Genasys",
       "status": true,
-      "lastUpdated": "2023-11-29T12:21:43.569Z",
+      "lastUpdated": "2023-12-04T08:23:52.751Z",
       "language": "English",
-      "location": "",
-      "selectedProducts": []
+      "selectedProducts": [
+        "Dental Cover Plan",
+        "Cash Plan",
+        "Group Cash Plan",
+        "Corporate Dental",
+        "Consumer CashPlan"
+      ],
+      "filterText1": "",
+      "filterText2": ""
     },
     {
       "id": "9632",
@@ -454,10 +461,13 @@
       "mobile": "",
       "agent": "Simply Health",
       "status": false,
-      "lastUpdated": "2023-12-03T18:13:05.439Z",
+      "lastUpdated": "2023-12-04T12:13:05.095Z",
       "language": "",
       "selectedProducts": [
         "Group Cash Plan",
+        "Corporate Dental_old",
+        "Corporate Dental",
+        "Consumer Dental",
         "Consumer CashPlan"
       ],
       "filterText1": "",
@@ -796,11 +806,11 @@
       "id": "8580"
     },
     {
+      "id": "9153",
       "AccessGroups": [
         "Underwriting con",
         "Claim-Admin"
-      ],
-      "id": "9153"
+      ]
     },
     {
       "id": "9632",
@@ -1233,7 +1243,6 @@
       ]
     },
     {
-      "id": "9153",
       "accesscodes": [
         "ACCEPTBBWARN",
         "AGENT_MAINT",
@@ -1244,9 +1253,9 @@
         "CL_REQUISITION",
         "CL_SALVAGE",
         "CL_UNDMAN",
-        "API_CLAIM_DU",
-        "SU01"
-      ]
+        "API_CLAIM_DU"
+      ],
+      "id": "9153"
     },
     {
       "accesscodes": [
@@ -1267,7 +1276,8 @@
         "CL_STALECHEQUE",
         "API_DOC_ANTONV",
         "API_CLAIM_MAINT",
-        "CL_REOPEN"
+        "CL_REOPEN",
+        "SU01"
       ],
       "id": "9632"
     }

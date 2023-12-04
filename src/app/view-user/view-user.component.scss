@@ -198,13 +198,14 @@ border-radius: 3px;
 
 .tabs__radio {
   display: none;
+   background-color: whitesmoke;
+
 }
 
 .tabs__content {
   order: 1;
   width: 100%;
-  // border-bottom: 3px solid red;
-  height: 510px;
+  height: 470px;
   font-size: 0.9em;
   display: none;
 }
@@ -212,7 +213,7 @@ border-radius: 3px;
 .tabs__radio:checked + .tabs__label {
   font-weight: bold;
   color: black;
-  background-color: whitesmoke;
+ 
   border-bottom: 2px solid black ;
  
 }
@@ -242,8 +243,8 @@ border-radius: 3px;
   padding: 30px 20px 20px 20px;
   font-family: 'Roboto';
   background-color: #ffffff;
-  width: 350px !important;
-  // margin-left: 5rem;
+  width: 60% !important;
+  margin-left: -1.9rem;
 }
 
 .useraccesscodes {
@@ -253,12 +254,31 @@ border-radius: 3px;
   font-family: 'Roboto';
   padding: 30px 20px 20px 20px;
   background-color: #ffffff;
-  margin-left: -0rem;
-  width: 65%;
+  margin-left: -15rem;
+  width: 62%;
   margin-bottom: 100rem !important;
 
 }
 
+.availableProducts{
+  margin-top: 65px;
+  margin-left: 30px;
+  border:  1px solid #e7eaec;
+  padding: 5px;
+  padding-top: 15px;
+  padding-left: -50px !important;
+  background-color:#ffffff;
+  width: 76.17rem !important;
+}
+button {
+  padding: 10px 20px;
+  background-color: #2F3351;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 69rem;
+}
  
 
 

@@ -87,7 +87,9 @@ export class ViewUserComponent implements OnInit {
   }
   
   checksuperuser(): boolean {
-    console.log("Lets see ", this.UserAccescodes);
+    // console.log( this.UserAccescodes);
     return this.UserAccescodes.includes('SU01');
   }
 }  
+
+
