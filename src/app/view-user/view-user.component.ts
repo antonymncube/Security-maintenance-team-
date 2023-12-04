@@ -18,6 +18,11 @@ export class ViewUserComponent implements OnInit {
   currentuser : string = ''
   fullname : string ='';
   selectedProducts: string[] = [];
+  UserAccescodes : any ;
+  allAccessCodes : any;
+  matchingAccessCodes : any ;
+  userAccessGroups : any ;
+  superUserExist : any ;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -48,16 +53,41 @@ export class ViewUserComponent implements OnInit {
   ngOnInit() {
     const storedUser = sessionStorage.getItem('currentuser');
     this.currentuser = storedUser !== null ? storedUser : '';
+  
     this.route.params.subscribe((params: { [x: string]: string }) => {
       this.id = params['id'];
-
+  
       this.apiService.getUserDetails(this.id).subscribe((userDetails: any) => {
         console.log('User Details:', userDetails);
         this.fullname = userDetails.fullname;
         this.userForm.patchValue(userDetails);
         this.selectedProducts = userDetails.selectedProducts;
       });
-
+  
+      this.apiService.getUserAccessGroups(this.id).subscribe((data) => {
+        this.userAccessGroups = data.AccessGroups;
+        console.log("User access groups ", this.userAccessGroups);
+      });
+  
+      this.apiService.getSecLookup().subscribe((res: any) => {
+        this.allAccessCodes = res;
+  
+        this.apiService.getUserAccessCodes(this.id).subscribe((res1: any) => {
+          const userAccessCodes = res1.accesscodes;
+          this.UserAccescodes = userAccessCodes;
+  
+          this.matchingAccessCodes = this.allAccessCodes
+            .filter((codeObj: { sAccessCode: any; }) => userAccessCodes.includes(codeObj.sAccessCode));
+  
+          
+          this.superUserExist = this.checksuperuser();
+        });
+      });
     });
   }
-}
+  
+  checksuperuser(): boolean {
+    console.log("Lets see ", this.UserAccescodes);
+    return this.UserAccescodes.includes('SU01');
+  }
+}  

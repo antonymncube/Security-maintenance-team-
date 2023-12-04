@@ -38,7 +38,7 @@ export interface PeriodicElement {
   encapsulation: ViewEncapsulation.None
 })
 export class UserListComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'weight', 'description', 'agent', 'department', 'lastUpdated','type', 'Action'];
+  displayedColumns: string[] = ['name', 'weight', 'description', 'agent', 'department', 'lastUpdated','Action'];
 
   dataSource: MatTableDataSource<PeriodicElement> = new MatTableDataSource<PeriodicElement>();
   @ViewChild(MatPaginator)
