@@ -8,10 +8,10 @@
           <img class="logo-img" src="assets\images\Genasys-White.svg" alt>
         </div>
         <div style="padding-left: 15px;margin-top: 16px;">
-          <div class="router-link" [class.active]="isHomeRoute()" routerLink="/home" matTooltip="Home" matTooltipPosition="right">
+          <div class="router-link" [class.active]="isHomeRoute()" (click)="navigateToHome()" matTooltip="Home" matTooltipPosition="right">
             <i class="icon fa fa-home fa-1x"  aria-hidden="true"></i>
-            <label class="link" >Home</label>
-        </div>
+            <label class="link">Home</label>
+          </div>
         
         
         <div class="router-link" routerLink="/tools" routerLinkActive="active" [matMenuTriggerFor]="menu" matTooltip="Tools" matTooltipPosition="right">
