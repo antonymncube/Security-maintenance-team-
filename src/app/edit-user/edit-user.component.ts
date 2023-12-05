@@ -191,6 +191,8 @@ export class EditUserComponent implements OnInit {
         lastUpdatedControl.setValue(new Date());
  
       }
+      this.userForm.get('status')!.setValue(true); //Status always true after updating a user
+
  
       this.apiService.updateUser(this.id, this.userForm.value).subscribe((response: any) => {
         this.userForm.reset();
