@@ -175,7 +175,7 @@
       "id": "2"
     },
     {
-      "sAccessGroup": "Accountent",
+      "sAccessGroup": "Accountant",
       "sAccessCodes": [
         "ACCEPTBBWARN",
         "API_DOC_BLOCK",
@@ -456,12 +456,12 @@
       "description": "",
       "password": "$2a$10$UoO.rfHWLtJ0vzs3yMfcl.KGNSLA6nBYd2EZNx7W.OgYhnEr7BJbC",
       "department": "HR",
-      "email": "219148414@edu.vut.ac.za",
+      "email": "ntshongwanae@gmail.com",
       "homephone": "",
       "mobile": "",
       "agent": "Simply Health",
       "status": false,
-      "lastUpdated": "2023-12-04T12:13:05.095Z",
+      "lastUpdated": "2023-12-05T08:18:29.931Z",
       "language": "",
       "selectedProducts": [
         "Group Cash Plan",

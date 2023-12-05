@@ -115,9 +115,10 @@
           </div>
           <label for="mobile" class="label-width">Mobile:</label>
           <div class="inputtag">
-            <input type="text" id="mobile" formControlName="mobile" [ngClass]="{ 'is-invalid': isControlInvalid('mobile') }">
+            <input type="text" class="form-control ng-pristine is-invalid " id="mobile" formControlName="mobile" [ngClass]="{ 'is-invalid': isControlInvalid('mobile') }">
             <div *ngIf="isControlInvalid('mobile')" class="invalid-feedback">
-              Mobile invalid format.
+              <!-- Mobile invalid format. -->
+              Mobile is required
             </div>
           </div>
           <div class="form-group">
