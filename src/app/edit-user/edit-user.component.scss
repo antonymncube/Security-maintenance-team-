@@ -342,7 +342,6 @@ form {
    flex-wrap: wrap;
    max-width: 2000px;
    font-family: sans-serif;
-   // height: 29rem;
  }
 
  .tabs__label {
@@ -366,7 +365,6 @@ form {
  .tabs__radio:checked+.tabs__label {
    font-weight: bold;
    color: #343a40;
-   // border-bottom: 2px solid #343a40;
  }
 
  .tabs__radio:checked+.tabs__label+.tabs__content {
