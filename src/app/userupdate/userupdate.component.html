@@ -3,7 +3,7 @@
     <div></div>
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
     <label for="tab1" class="tabs__label"  >
-      <i class="fa fa-user"></i> User Details
+      <i class="fa fa-user"></i> Details
     </label>
 
     <!-- <i class="fa fa-exclamation-triangle invalid-indicator"></i> -->
@@ -24,7 +24,7 @@
           <div class="form-group">
             <label for="fullname" class="label-width">Full Name:</label>
             <div class="inputtag">
-              <input type="text" id="fullname" formControlName="fullname"
+              <input type="text" class="form-control ng-pristine is-invalid " id="fullname" formControlName="fullname"
                 [ngClass]="{ 'is-invalid': isControlInvalid('fullname') }">
               <div *ngIf="isControlInvalid('fullname')" class="invalid-feedback">
                 Full Name required.
@@ -81,7 +81,7 @@
           <div class="form-group">
             <label for="description" class="label-width">description:</label>
             <div class="inputtag">
-              <input type="text" id="description" formControlName="description"
+              <input type="text" class="form-control ng-pristine is-invalid " id="description" formControlName="description"
                 [ngClass]="{ 'is-invalid': isControlInvalid('description') }">
               <div *ngIf="isControlInvalid('description')" class="invalid-feedback">
                 Description required.
@@ -124,7 +124,7 @@
           <div class="form-group">
             <label for="homephone" class="label-width">Home-Phone:</label>
             <div class="inputtag">
-              <input type="text" id="homephone" formControlName="homephone"
+              <input type="text" class="form-control ng-pristine is-invalid " id="homephone" formControlName="homephone"
                 [ngClass]="{ 'is-invalid': isControlInvalid('homephone') }">
               <div *ngIf="isControlInvalid('homephone')" class="invalid-feedback">
                 Home-Phone invalid format.
@@ -137,7 +137,7 @@
     </div>
 
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
-    <label for="tab2" class="tabs__label"> <i class="fa fa-shield"></i> Security Access</label>
+    <label for="tab2" class="tabs__label"> <i class="fa fa-shield"></i> Access Codes</label>
     <div class="tabs__content bg-white">
       <div class="row p-2" style="margin-top: 5px;">
         <div class="container" style="display: flex;">
@@ -211,7 +211,7 @@
 
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab3">
 
-    <label for="tab3" class="tabs__label"><i class="fa fa-clipboard"></i> Available Products</label>
+    <label for="tab3" class="tabs__label"><i class="fa fa-clipboard"></i> Products</label>
     <div class="tabs__content">
 
         <div class="availableProducts" *ngIf="!productsfilter()">
@@ -225,7 +225,7 @@
 
   <div class="border" style=" position: relative; height: 50px;padding-top: 5px;">
 
-    <button class="save-button" type="submit" [disabled]="userForm.invalid"
+    <button class="save-button" type="submit" (click)="onSubmit()" [ngStyle]="{'background-color': isFormValid() ? '#2F3351' : 'grey'}"
       style="position: absolute; margin-left: 73.23rem;">Save</button>
     <button class="cancel-button" routerLink="/home/"
       style="position: absolute; left: 100px;margin-left: 61rem;">Cancel</button>
