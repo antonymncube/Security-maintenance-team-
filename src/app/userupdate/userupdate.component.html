@@ -1,5 +1,5 @@
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form1 bg-white ">
-  <div class="tabs  ">
+  <div class="tabs  " >
     <div></div>
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
     <label for="tab1" class="tabs__label"  >
@@ -7,12 +7,12 @@
     </label>
 
     <!-- <i class="fa fa-exclamation-triangle invalid-indicator"></i> -->
-    <div class="tabs__content" >
+    <div class="tabs__content" style="display: grid;place-items: center; background-color:white;" >
      
-        <div class="userdetails form-group " style="background-color: #ffffff;">
-          <div class="row">
-            <div class="col-4" style="border: red 1px solid;width: 25%;" >
-              <div class="form-group">
+        <div class="userdetails form-group " style="background-color: white; display: grid; place-items: center;width: fit-content;">
+          <div class="row" >
+            <div class="col-4"  >
+              <div class="form-group col">
                 <label for="username" class="label-width">Username:</label>
                 <div class="inputtag">
                   <input type="text" class="form-control ng-pristine is-invalid " id="username" formControlName="username"
@@ -105,8 +105,8 @@
               </div>
              
             </div>
-            <div class="col-4">
-              <div class="mobile-input" style="margin-left: -138px;" >
+            <div class="col-4" >
+              <div class="mobile-input" style="margin-left: -40px;" >
         
                 <div class="form-group">
                   <label for="email" class="label-width">Email:</label>
