@@ -8,132 +8,138 @@
 
     <!-- <i class="fa fa-exclamation-triangle invalid-indicator"></i> -->
     <div class="tabs__content" >
-      <div class="totalDetails " >
+     
         <div class="userdetails form-group " style="background-color: #ffffff;">
-
-          <div class="form-group">
-            <label for="username" class="label-width">Username:</label>
-            <div class="inputtag">
-              <input type="text" class="form-control ng-pristine is-invalid " id="username" formControlName="username"
-                [ngClass]="{ 'is-invalid': isControlInvalid('username'), 'invalid-field': isControlInvalid('username') }">
-              <div *ngIf="isControlInvalid('username')" class="invalid-feedback">
-                Username required.
+          <div class="row">
+            <div class="col-4" style="border: red 1px solid;width: 25%;" >
+              <div class="form-group">
+                <label for="username" class="label-width">Username:</label>
+                <div class="inputtag">
+                  <input type="text" class="form-control ng-pristine is-invalid " id="username" formControlName="username"
+                    [ngClass]="{ 'is-invalid': isControlInvalid('username'), 'invalid-field': isControlInvalid('username') }">
+                  <div *ngIf="isControlInvalid('username')" class="invalid-feedback">
+                    Username required.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="fullname" class="label-width">Full Name:</label>
+                <div class="inputtag">
+                  <input type="text" id="fullname" formControlName="fullname"
+                    [ngClass]="{ 'is-invalid': isControlInvalid('fullname') }">
+                  <div *ngIf="isControlInvalid('fullname')" class="invalid-feedback">
+                    Full Name required.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="password" class="label-width">Password:</label>
+                <div class="inputtag">
+                  <input type="password" class="form-control ng-pristine is-invalid " id="password"
+                    formControlName="password" [ngClass]="{ 'is-invalid': isControlInvalid('password') }">
+                  <div *ngIf="isControlInvalid('password')" class="invalid-feedback">
+                    Password required & min 6 characters.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="confirmpassword" class="label-width">Confirm Password:</label>
+                <div class="inputtag">
+                  <input type="password" class="form-control ng-pristine is-invalid " id="confirmpassword"
+                    formControlName="confirmpassword" [ngClass]="{ 'is-invalid': isControlInvalid('confirmpassword') }">
+                  <div *ngIf="isControlInvalid('confirmpassword')" class="invalid-feedback">
+                    Confirm Password required & match Password.
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="form-group">
-            <label for="fullname" class="label-width">Full Name:</label>
-            <div class="inputtag">
-              <input type="text" id="fullname" formControlName="fullname"
-                [ngClass]="{ 'is-invalid': isControlInvalid('fullname') }">
-              <div *ngIf="isControlInvalid('fullname')" class="invalid-feedback">
-                Full Name required.
+            <div class="col-4">
+              <div class="contactdetails form-group" style="margin-left: 0rem; ;">
+                <div class="form-group">
+                  <label for="department" class="label-width">Department:</label>
+                  <select id="department" class="check" formControlName="department"
+                    [ngClass]="{ 'is-invalid': isControlInvalid('department') }">
+                    <option value="HR">HR</option>
+                    <option value="IT">IT</option>
+                    <option value="Sales">Sales</option>
+                  </select>
+                  <div *ngIf="isControlInvalid('department')" class="invalid-feedback">
+                    Department required.
+                  </div>
+                </div>
+      
+                <div class="form-group">
+                  <label for="agent" class="label-width">Agent:</label>
+                  <select id="agent" class="ng-star-inserted check" formControlName="agent"
+                    [ngClass]="{ 'is-invalid': isControlInvalid('agent') }">
+                    <option value="Simply Health">Simply Health</option>
+                    <option value="Genasys">Genasys</option>
+                    <option value="Standard Bank">Standard Bank</option>
+                  </select>
+                  <div *ngIf="isControlInvalid('agent')" class="invalid-feedback">
+                    Agent required.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="description" class="label-width">description:</label>
+                  <div class="inputtag">
+                    <input type="text" id="description" formControlName="description"
+                      [ngClass]="{ 'is-invalid': isControlInvalid('description') }">
+                    <div *ngIf="isControlInvalid('description')" class="invalid-feedback">
+                      Description required.
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="language" class="label-width">Language:</label>
+                  <select id="language" class="check" formControlName="language">
+                    <option value="English">English</option>
+                    <option value="Afrikaans">Afrikaans</option>
+                    <option value="Native">Native</option>
+                  </select>
+                  <div *ngIf="isControlInvalid('language')" class="invalid-feedback">
+                    Language required.
+                  </div>
+                </div>
+                
               </div>
+             
             </div>
-          </div>
-          <div class="form-group">
-            <label for="password" class="label-width">Password:</label>
-            <div class="inputtag">
-              <input type="password" class="form-control ng-pristine is-invalid " id="password"
-                formControlName="password" [ngClass]="{ 'is-invalid': isControlInvalid('password') }">
-              <div *ngIf="isControlInvalid('password')" class="invalid-feedback">
-                Password required & min 6 characters.
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="confirmpassword" class="label-width">Confirm Password:</label>
-            <div class="inputtag">
-              <input type="password" class="form-control ng-pristine is-invalid " id="confirmpassword"
-                formControlName="confirmpassword" [ngClass]="{ 'is-invalid': isControlInvalid('confirmpassword') }">
-              <div *ngIf="isControlInvalid('confirmpassword')" class="invalid-feedback">
-                Confirm Password required & match Password.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="contactdetails form-group">
-          <div class="form-group">
-            <label for="department" class="label-width">Department:</label>
-            <select id="department" class="check" formControlName="department"
-              [ngClass]="{ 'is-invalid': isControlInvalid('department') }">
-              <option value="HR">HR</option>
-              <option value="IT">IT</option>
-              <option value="Sales">Sales</option>
-            </select>
-            <div *ngIf="isControlInvalid('department')" class="invalid-feedback">
-              Department required.
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="agent" class="label-width">Agent:</label>
-            <select id="agent" class="ng-star-inserted check" formControlName="agent"
-              [ngClass]="{ 'is-invalid': isControlInvalid('agent') }">
-              <option value="Simply Health">Simply Health</option>
-              <option value="Genasys">Genasys</option>
-              <option value="Standard Bank">Standard Bank</option>
-            </select>
-            <div *ngIf="isControlInvalid('agent')" class="invalid-feedback">
-              Agent required.
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="description" class="label-width">description:</label>
-            <div class="inputtag">
-              <input type="text" id="description" formControlName="description"
-                [ngClass]="{ 'is-invalid': isControlInvalid('description') }">
-              <div *ngIf="isControlInvalid('description')" class="invalid-feedback">
-                Description required.
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="language" class="label-width">Language:</label>
-            <select id="language" class="check" formControlName="language">
-              <option value="English">English</option>
-              <option value="Afrikaans">Afrikaans</option>
-              <option value="Native">Native</option>
-            </select>
-            <div *ngIf="isControlInvalid('language')" class="invalid-feedback">
-              Language required.
-            </div>
-          </div>
-          
-        </div>
-        <div class="mobile-input" style="margin-left: -138px;" >
-          
-          <div class="form-group">
-            <label for="email" class="label-width">Email:</label>
-            <div class="inputtag">
-              <input type="email" class="form-control ng-pristine is-invalid " id="email" formControlName="email"
-                [ngClass]="{ 'is-invalid': isControlInvalid('email') }">
-              <div *ngIf="isControlInvalid('email')" class="invalid-feedback">
-                Email required & in a valid format.
-              </div>
-            </div>
-          </div>
-          <label for="mobile" class="label-width">Mobile:</label>
-          <div class="inputtag">
-            <input type="text" class="form-control ng-pristine is-invalid " id="mobile" formControlName="mobile" [ngClass]="{ 'is-invalid': isControlInvalid('mobile') }">
-            <div *ngIf="isControlInvalid('mobile')" class="invalid-feedback">
-              <!-- Mobile invalid format. -->
-              Mobile is required
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="homephone" class="label-width">Home-Phone:</label>
-            <div class="inputtag">
-              <input type="text" id="homephone" formControlName="homephone"
-                [ngClass]="{ 'is-invalid': isControlInvalid('homephone') }">
-              <div *ngIf="isControlInvalid('homephone')" class="invalid-feedback">
-                Home-Phone invalid format.
-              </div>
-            </div>
-          </div>
-        </div>
+            <div class="col-4">
+              <div class="mobile-input" style="margin-left: -138px;" >
         
-      </div>
+                <div class="form-group">
+                  <label for="email" class="label-width">Email:</label>
+                  <div class="inputtag">
+                    <input type="email" class="form-control ng-pristine is-invalid " id="email" formControlName="email"
+                      [ngClass]="{ 'is-invalid': isControlInvalid('email') }">
+                    <div *ngIf="isControlInvalid('email')" class="invalid-feedback">
+                      Email required & in a valid format.
+                    </div>
+                  </div>
+                </div>
+                <label for="mobile" class="label-width">Mobile:</label>
+                <div class="inputtag">
+                  <input type="text" class="form-control ng-pristine is-invalid " id="mobile" formControlName="mobile" [ngClass]="{ 'is-invalid': isControlInvalid('mobile') }">
+                  <div *ngIf="isControlInvalid('mobile')" class="invalid-feedback">
+                    <!-- Mobile invalid format. -->
+                    Mobile is required
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="homephone" class="label-width">Home-Phone:</label>
+                  <div class="inputtag">
+                    <input type="text" id="homephone" formControlName="homephone"
+                      [ngClass]="{ 'is-invalid': isControlInvalid('homephone') }">
+                    <div *ngIf="isControlInvalid('homephone')" class="invalid-feedback">
+                      Home-Phone invalid format.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
     </div>
 
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
