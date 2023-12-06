@@ -130,7 +130,7 @@
            <div class="col-12 p-0">
              <div class="availableProducts" *ngIf="!superUserExist" >
                <div *ngFor="let product of selectedProducts" style="padding: 8px;" >
-                 <input type="checkbox" [value]="product" disabled>
+                 <input type="checkbox" [value]="product" disabled [checked]="true">
                  <span
                    style="font-weight: 550 ; color: #707d85; font-family: 'opensans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;">
                    {{ product }}
