@@ -75,7 +75,7 @@ export class EditUserComponent implements OnInit {
       department: ['',[Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       homephone: ['', [Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
-      mobile: ['', [ Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
+      mobile: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],  // Validate with a regular expression & make it 10 digits
       agent: ['', [Validators.required]],
       status: [{ value: '', }],
       lastUpdated: [''],
@@ -200,7 +200,20 @@ export class EditUserComponent implements OnInit {
         console.log('User data updated:', response);
         this.saveSelectedAccessCodes()
       });
+    }else {
+      // Mark all form controls as touched to trigger validation errors
+      this.markFormGroupTouched(this.userForm);
     }
+  }
+
+  markFormGroupTouched(formGroup: FormGroup) {
+    Object.values(formGroup.controls).forEach(control => {
+      control.markAsTouched();
+
+      if (control instanceof FormGroup) {
+        this.markFormGroupTouched(control);
+      }
+    });
   }
  
   updateSelectedProducts(selectedProducts: string[]) {
@@ -517,4 +530,23 @@ checksuperuser() : boolean{
  
   }
  
+  hasRequiredFields(): boolean {
+    // Check if any of the fields in the "User-Details" tab are invalid
+    return !!(
+      this.isControlInvalid('username') ||
+      this.isControlInvalid('fullname') ||
+      this.isControlInvalid('password') ||
+      this.isControlInvalid('confirmpassword') ||
+      this.isControlInvalid('email') ||
+      this.isControlInvalid('department') ||
+      this.isControlInvalid('agent') ||
+      this.isControlInvalid('homephone') ||
+      this.isControlInvalid('description') ||
+      this.isControlInvalid('language') ||
+      this.isControlInvalid('mobile')
+    );
+  }
+  isFormValid(): boolean {
+    return this.userForm.valid && !this.hasRequiredFields();
+  }
 }
