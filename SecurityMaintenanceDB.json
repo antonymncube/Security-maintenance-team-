@@ -470,6 +470,176 @@
         "Corporate Dental_old",
         "Consumer Dental"
       ]
+    },
+    {
+      "id": "1827",
+      "username": "edgar",
+      "fullname": "Edgar Morudu",
+      "description": "Frontend Dev",
+      "password": "$2a$10$SNFD01DFDzA0RHiaF2vnxuRXPgx8O1AyCFNuLyPGupvrOdPGR9qRC",
+      "department": "IT",
+      "email": "edgar.m@genasys",
+      "homephone": "",
+      "mobile": "0714374894",
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-12-07T08:23:22.508Z",
+      "language": "English",
+      "location": "",
+      "selectedProducts": [
+        "Group Cash Plan",
+        "Corporate Dental_old",
+        "Corporate Dental"
+      ]
+    },
+    {
+      "id": "3362",
+      "username": "bianca",
+      "fullname": "Bianca Grace",
+      "description": "Manager",
+      "password": "$2a$10$aFgkiym9EgDivSiLbArHLuj0mwmfU8zjJHPTNClqg6aukjNxoIQaW",
+      "department": "Sales",
+      "email": "bianca@simplyh",
+      "homephone": "",
+      "mobile": "0715679678",
+      "agent": "Simply Health",
+      "status": true,
+      "lastUpdated": "2023-12-07T08:29:47.146Z",
+      "language": "English",
+      "location": "",
+      "selectedProducts": [
+        "Group Cash Plan",
+        "Corporate Dental_old"
+      ]
+    },
+    {
+      "id": "2328",
+      "username": "live",
+      "fullname": "Live Jack",
+      "description": "Clerk",
+      "password": "$2a$10$M7UhrYtsczLVPf3k81/aTuzPnD1nsZ6KuQDJRs88cOBqNu10rXNHa",
+      "department": "HR",
+      "email": "livek@gmail.com",
+      "homephone": "",
+      "mobile": "0714374894",
+      "agent": "Standard Bank",
+      "status": true,
+      "lastUpdated": "2023-12-07T08:36:52.394Z",
+      "language": "Afrikaans",
+      "location": "",
+      "selectedProducts": []
+    },
+    {
+      "id": "8044",
+      "username": "sive",
+      "fullname": "Sive Cwala",
+      "description": "Learner tester",
+      "password": "$2a$10$kdjn0kI4B4J8E9hPkqcoD.MNUkvdRM9498zKZjHeT0.c9eo553zxe",
+      "department": "IT",
+      "email": "sivec@genasys",
+      "homephone": "",
+      "mobile": "0715679678",
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-12-07T08:38:41.579Z",
+      "language": "English",
+      "location": "",
+      "selectedProducts": [
+        "Group Cash Plan"
+      ]
+    },
+    {
+      "id": "9019",
+      "username": "mihle",
+      "fullname": "Mihle Jack",
+      "description": "Learner Dev",
+      "password": "$2a$10$QrBMpzjH0BJO98Uima2vmOvak2.MaIL.a4HY8O4icV748VaT2ddSe",
+      "department": "IT",
+      "email": "mihlejack2@gmail.com",
+      "homephone": "",
+      "mobile": "0713748945",
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-12-07T08:42:15.944Z",
+      "language": "English",
+      "location": "",
+      "selectedProducts": []
+    },
+    {
+      "id": "6497",
+      "username": "elvin",
+      "fullname": "Elvin James",
+      "description": "CEO",
+      "password": "$2a$10$5VIkBe2W4kVnjGazePPhN.w.VhGdy2mqmV/g/3oY9QlLGioUiqp96",
+      "department": "HR",
+      "email": "elvin@standardbank",
+      "homephone": "",
+      "mobile": "0713748945",
+      "agent": "Standard Bank",
+      "status": true,
+      "lastUpdated": "2023-12-07T08:44:47.643Z",
+      "language": "Afrikaans",
+      "location": "",
+      "selectedProducts": []
+    },
+    {
+      "id": "6202",
+      "username": "christelle",
+      "fullname": "Christelle Frost",
+      "description": "COP",
+      "password": "$2a$10$0xLTzhpT0vQxloMFlJkFrOX2IVFPc1iQM4fyIwgU9dwqoCiPwIzj2",
+      "department": "HR",
+      "email": "christelle@genasys",
+      "homephone": "",
+      "mobile": "0714374894",
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-12-07T08:48:57.097Z",
+      "language": "Afrikaans",
+      "location": "",
+      "selectedProducts": [
+        "Group Cash Plan",
+        "Corporate Dental_old",
+        "Corporate Dental"
+      ]
+    },
+    {
+      "id": "4713",
+      "username": "aviwe",
+      "fullname": "Aviwe Sofoyiya",
+      "description": "Data Analyst",
+      "password": "$2a$10$YhviSjJj1Q0f8whquWSW0u.MpI0vfyPnLHEJFEMX.tP/HuYXSsSbG",
+      "department": "IT",
+      "email": "aviwes@simplyh",
+      "homephone": "",
+      "mobile": "0715679678",
+      "agent": "Simply Health",
+      "status": true,
+      "lastUpdated": "2023-12-07T08:52:34.903Z",
+      "language": "English",
+      "location": "",
+      "selectedProducts": []
+    },
+    {
+      "id": "6950",
+      "username": "mia",
+      "fullname": "Mia Fortein",
+      "description": "PA",
+      "password": "$2a$10$nYSqzgXH43urBuXlvPA/q.MV1UslG2h9eNhv4CKOVtUE6Ji5cWLpC",
+      "department": "Sales",
+      "email": "mia@standardbank",
+      "homephone": "",
+      "mobile": "0713748945",
+      "agent": "Standard Bank",
+      "status": true,
+      "lastUpdated": "2023-12-07T09:12:48.390Z",
+      "language": "Afrikaans",
+      "location": "",
+      "selectedProducts": [
+        "Group Cash Plan",
+        "Corporate Dental_old",
+        "Corporate Dental"
+      ]
     }
   ],
   "Products": [
@@ -832,6 +1002,59 @@
         "Claim-Admin"
       ],
       "id": "5532"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con",
+        "Accountant"
+      ],
+      "id": "1827"
+    },
+    {
+      "AccessGroups": [
+        "Accountant",
+        "Broker Pack"
+      ],
+      "id": "3362"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con",
+        "Accountant"
+      ],
+      "id": "2328"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con"
+      ],
+      "id": "8044"
+    },
+    {
+      "AccessGroups": [],
+      "id": "9019"
+    },
+    {
+      "AccessGroups": [],
+      "id": "6497"
+    },
+    {
+      "AccessGroups": [
+        "Claim-Admin",
+        "Accounts Clerk"
+      ],
+      "id": "6202"
+    },
+    {
+      "AccessGroups": [],
+      "id": "4713"
+    },
+    {
+      "AccessGroups": [
+        "Accountant",
+        "Claim-Admin"
+      ],
+      "id": "6950"
     }
   ],
   "SecUserAccess": [
@@ -1328,6 +1551,106 @@
         "CL_SALVAGE",
         "CL_UNDMAN",
         "API_DOC_BLOCK"
+      ]
+    },
+    {
+      "id": "1827",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE"
+      ]
+    },
+    {
+      "id": "3362",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE",
+        "CL_FINALISECLMT",
+        "CL_INCIDENT",
+        "CL_IND_APR",
+        "CL_NEGCLAIMBAL",
+        "CL_RECOVERY",
+        "CL_REQUISITION",
+        "CL_REVERSEPAY",
+        "CL_UNDMAN"
+      ]
+    },
+    {
+      "id": "2328",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE",
+        "AGENT_MAINT"
+      ]
+    },
+    {
+      "id": "8044",
+      "accesscodes": [
+        "ACCEPTBBWARN"
+      ]
+    },
+    {
+      "id": "9019",
+      "accesscodes": [
+        "SU01"
+      ]
+    },
+    {
+      "id": "6497",
+      "accesscodes": [
+        "SU01"
+      ]
+    },
+    {
+      "id": "6202",
+      "accesscodes": [
+        "AGENT_MAINT",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_DOC_4",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_SALVAGE",
+        "CL_UNDMAN",
+        "CL_IND_DEC",
+        "AGENT_COMM_PAY"
+      ]
+    },
+    {
+      "id": "4713",
+      "accesscodes": [
+        "SU01"
+      ]
+    },
+    {
+      "id": "6950",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE",
+        "AGENT_MAINT",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_DOC_4",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_SALVAGE",
+        "CL_UNDMAN"
       ]
     }
   ]
