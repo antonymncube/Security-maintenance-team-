@@ -408,6 +408,68 @@
       "language": "English",
       "location": "",
       "selectedProducts": []
+    },
+    {
+      "id": "7544",
+      "username": "sphokazi",
+      "fullname": "sphokazi",
+      "description": "Tester",
+      "password": "$2a$10$oFlvp0sxvrTnSA5UVHSLyeWvSsmmq0X5Y49qk8QCiJZFV4reug6Xi",
+      "department": "IT",
+      "email": "antonymncube49@gmail.com",
+      "homephone": "",
+      "mobile": "0682509620",
+      "agent": "Simply Health",
+      "status": true,
+      "lastUpdated": "2023-12-07T08:03:42.592Z",
+      "language": "English",
+      "location": "",
+      "selectedProducts": [
+        "Cash Plan",
+        "Corporate Dental_old",
+        "Consumer Dental"
+      ]
+    },
+    {
+      "id": "4887",
+      "username": "sphokazi",
+      "fullname": "sphokazi",
+      "description": "Tester",
+      "password": "$2a$10$6mdabqThlqoQuNVBpaIG5uxH3CPao2ay3g8d7M0NJ8R/4bszVWO2e",
+      "department": "IT",
+      "email": "antonymncube49@gmail.com",
+      "homephone": "",
+      "mobile": "0682509620",
+      "agent": "Simply Health",
+      "status": true,
+      "lastUpdated": "2023-12-07T08:03:42.652Z",
+      "language": "English",
+      "location": "",
+      "selectedProducts": [
+        "Cash Plan",
+        "Corporate Dental_old",
+        "Consumer Dental"
+      ]
+    },
+    {
+      "id": "3544",
+      "username": "sphiwe",
+      "fullname": "Sohiwe mcwala",
+      "description": "Front-end developer",
+      "password": "$2a$10$Zd2eZspSogIlHe5hdQbku.C8NDUiE7Kj6.g64psbXldYwjkzwDHCe",
+      "department": "IT",
+      "email": "219148414@edu.vut.ac.za",
+      "homephone": "",
+      "mobile": "0671402936",
+      "agent": "Simply Health",
+      "status": true,
+      "lastUpdated": "2023-12-07T08:12:10.062Z",
+      "language": "Afrikaans",
+      "location": "",
+      "selectedProducts": [
+        "Corporate Dental_old",
+        "Consumer Dental"
+      ]
     }
   ],
   "Products": [
@@ -770,6 +832,29 @@
         "Claim-Admin"
       ],
       "id": "5532"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con",
+        "Broker Pack",
+        "Accounts Clerk"
+      ],
+      "id": "7544"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con",
+        "Broker Pack",
+        "Accounts Clerk"
+      ],
+      "id": "4887"
+    },
+    {
+      "AccessGroups": [
+        "Accountant",
+        "Claim-Admin"
+      ],
+      "id": "3544"
     }
   ],
   "SecUserAccess": [
@@ -1266,6 +1351,67 @@
         "CL_SALVAGE",
         "CL_UNDMAN",
         "API_DOC_BLOCK"
+      ]
+    },
+    {
+      "id": "7544",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "CL_EXCEL_PRINT",
+        "CL_FINALISECLMT",
+        "CL_INCIDENT",
+        "CL_IND_APR",
+        "CL_NEGCLAIMBAL",
+        "CL_RECOVERY",
+        "CL_REQUISITION",
+        "CL_REVERSEPAY",
+        "CL_UNDMAN",
+        " CL_STALECHEQUE",
+        "CL_IND_DEC",
+        "AGENT_COMM_PAY",
+        "API_CLAIM_DU",
+        "API_DOC_CONF",
+        "ADDR_OVERRIDE"
+      ]
+    },
+    {
+      "id": "4887",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "CL_EXCEL_PRINT",
+        "CL_FINALISECLMT",
+        "CL_INCIDENT",
+        "CL_IND_APR",
+        "CL_NEGCLAIMBAL",
+        "CL_RECOVERY",
+        "CL_REQUISITION",
+        "CL_REVERSEPAY",
+        "CL_UNDMAN",
+        " CL_STALECHEQUE",
+        "CL_IND_DEC",
+        "AGENT_COMM_PAY",
+        "API_CLAIM_DU",
+        "API_DOC_CONF",
+        "ADDR_OVERRIDE"
+      ]
+    },
+    {
+      "id": "3544",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE",
+        "AGENT_MAINT",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_DOC_4",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_SALVAGE",
+        "CL_UNDMAN"
       ]
     }
   ]
