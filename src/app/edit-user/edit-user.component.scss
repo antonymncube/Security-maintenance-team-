@@ -128,13 +128,14 @@ form {
    margin-right: 2rem;
  }
 
- .check {
-   width: 100%;
-   padding: 10px;
-   margin-bottom: 10px;
-   border: 1px solid #ccc;
-   border-radius: 3px;
- }
+ .check{
+  width: 14rem !important;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 42px;
+}
 
  .check1 {
    width: 43%;
@@ -342,12 +343,12 @@ form {
    flex-wrap: wrap;
    max-width: 2000px;
    font-family: sans-serif;
-   // height: 29rem;
  }
 
  .tabs__label {
    padding: 10px 16px;
    cursor: pointer;
+  
  }
 
  .tabs__radio {
@@ -366,11 +367,12 @@ form {
  .tabs__radio:checked+.tabs__label {
    font-weight: bold;
    color: #343a40;
-   // border-bottom: 2px solid #343a40;
+   border-bottom:black 3px solid ;
  }
 
  .tabs__radio:checked+.tabs__label+.tabs__content {
    display: initial;
+ 
  }
 
  .fa {

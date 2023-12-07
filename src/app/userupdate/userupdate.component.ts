@@ -101,7 +101,7 @@ export class UserupdateComponent {
       filterText2: this.filterTextControl2,
     });
 
-    this.markFormGroupAsTouchedAndDirty(this.userForm);
+    //this.markFormGroupAsTouchedAndDirty(this.userForm);
   }
   markFormGroupAsTouchedAndDirty(formGroup: FormGroup): void {
     Object.values(formGroup.controls).forEach(control => {
@@ -205,7 +205,7 @@ export class UserupdateComponent {
           this.apiService.checkUsernameExisttt(this.userForm.value.username).subscribe((exists: boolean) => {
             if (exists) {
               alert('Username already exists. Please choose a different username.');
-            } else {
+            } else if (!exists) {
               this.generateFourDigitId();
               this.user.email = this.userForm.value.email;
               this.user.username = this.userForm.value.username.toLowerCase();
@@ -229,6 +229,8 @@ export class UserupdateComponent {
                 this.router.navigate(['/home']);
                 this.userForm.reset();
               });
+            } else {
+              alert('Web Error.');
             }
           });
         });
@@ -471,6 +473,10 @@ export class UserupdateComponent {
  productsfilter(): boolean {
   console.log("here is the super what what",this.selectedAccessCodes)
   return this.selectedAccessCodes.includes('SU01');
+}
+
+isFormValid(): boolean {
+  return this.userForm.valid && this.checkPasswordMatch() && !this.hasRequiredFields();
 }
 }
  
