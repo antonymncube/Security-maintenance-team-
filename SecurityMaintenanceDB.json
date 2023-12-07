@@ -640,6 +640,26 @@
         "Corporate Dental_old",
         "Corporate Dental"
       ]
+    },
+    {
+      "id": "7323",
+      "username": "allian",
+      "fullname": "Allian Nxube",
+      "description": "Developer",
+      "password": "$2a$10$qzueU6Fuy7.Ei1zRfq4Lre7lzsqP9JsvX2dn3mIjuRiGh1bBhR/by",
+      "department": "IT",
+      "email": "allian@simplyh",
+      "homephone": "",
+      "mobile": "0715679678",
+      "agent": "Simply Health",
+      "status": true,
+      "lastUpdated": "2023-12-07T09:18:56.885Z",
+      "language": "Afrikaans",
+      "location": "",
+      "selectedProducts": [
+        "Cash Plan",
+        "Group Cash Plan"
+      ]
     }
   ],
   "Products": [
@@ -1055,6 +1075,12 @@
         "Claim-Admin"
       ],
       "id": "6950"
+    },
+    {
+      "AccessGroups": [
+        "Accountant"
+      ],
+      "id": "7323"
     }
   ],
   "SecUserAccess": [
@@ -1651,6 +1677,17 @@
         "CL_REQUISITION",
         "CL_SALVAGE",
         "CL_UNDMAN"
+      ]
+    },
+    {
+      "id": "7323",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE"
       ]
     }
   ]
