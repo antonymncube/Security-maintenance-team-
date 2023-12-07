@@ -1,14 +1,13 @@
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form1 bg-white ">
-  <div class="tabs  " >
-    <div></div>
+  <div class="tabs  "  >
+    
     <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
     <label for="tab1" class="tabs__label"  >
       <i class="fa fa-user"></i> Details
     </label>
 
-    <!-- <i class="fa fa-exclamation-triangle invalid-indicator"></i> -->
-    <div class="tabs__content" style="display: grid;place-items: center; background-color:white;" >
-     
+    <div class="tabs__content"  >
+        <div>
         <div class="userdetails form-group " style="background-color: white; display: grid; place-items: center;width: fit-content;">
           <div class="row" >
             <div class="col-4"  >
@@ -139,6 +138,7 @@
               </div>
             </div>
           </div>
+        </div> 
         </div> 
     </div>
 

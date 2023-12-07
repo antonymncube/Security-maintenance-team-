@@ -134,7 +134,7 @@ form {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
-  height: 46px;
+  height: 42px;
 }
 
  .check1 {
@@ -348,6 +348,7 @@ form {
  .tabs__label {
    padding: 10px 16px;
    cursor: pointer;
+  
  }
 
  .tabs__radio {
@@ -366,10 +367,12 @@ form {
  .tabs__radio:checked+.tabs__label {
    font-weight: bold;
    color: #343a40;
+   border-bottom:black 3px solid ;
  }
 
  .tabs__radio:checked+.tabs__label+.tabs__content {
    display: initial;
+ 
  }
 
  .fa {

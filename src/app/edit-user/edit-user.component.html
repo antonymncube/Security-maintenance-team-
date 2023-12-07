@@ -7,9 +7,11 @@
      <label for="tab1" class="tabs__label">
        <i class="fa fa-user"></i> User Details
      </label>
-     <div class="tabs__content">
+     <div class="tabs__content" style="display: grid;place-items: center; background-color:white;">
+      <div class="userdetails form-group " style="background-color: white; display: grid; place-items: center;width: fit-content;">
+       
        <div class="row">
-         <div class="col-4" style="width: 25%;">
+         <div class="col-4" style="border: red solid 1px;width: 25%;">
            <div class="userdetails form-group">
              <div class="form-group">
                <label for="username" class="label-width">Username:</label>
@@ -45,7 +47,7 @@
            </div>
          </div>
          <div class="col-4">
-           <div class="contactdetails form-group" style="margin-left: 0rem; ;">
+           <div class="contactdetails form-group" style="margin-left: 0px;width: 25%;border: 	red solid 1px;">
              <div class="form-group">
                <label for="agent" class="label-width">Agent:</label>
                <select id="agent" class="check" formControlName="agent">
@@ -92,9 +94,7 @@
            </div>
          </div>
          <div class="col-4">
-
-           <div class="mobile-input" style="margin-left: -100px;">
-
+           <div class="mobile-input" style="margin-left: -0px;border: 	solid red 1px;">
              <div class="form-group">
                <label for="mobile" class="label-width">Mobile:</label>
                <div class="inputtag">
@@ -120,6 +120,7 @@
 
 
        </div>
+      </div>
      </div>
 
      <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
