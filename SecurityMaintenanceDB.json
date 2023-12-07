@@ -408,6 +408,66 @@
       "language": "English",
       "location": "",
       "selectedProducts": []
+    },
+    {
+      "id": "9644",
+      "username": "edgar",
+      "fullname": "Edgar Morudu",
+      "description": "Frontend Dev",
+      "password": "$2a$10$htHbp7O/VXL0CHuEmYao8ePA5.IXa/b4BDf3s4oGFiPF5oQ06q4aW",
+      "department": "IT",
+      "email": "edgar.m@genasys",
+      "homephone": "",
+      "mobile": "0714374894",
+      "agent": "Genasys",
+      "status": true,
+      "lastUpdated": "2023-12-07T07:47:18.949Z",
+      "language": "English",
+      "location": "",
+      "selectedProducts": [
+        "Cash Plan",
+        "Group Cash Plan"
+      ]
+    },
+    {
+      "id": "4438",
+      "username": "zintle",
+      "fullname": "Zintle Jack",
+      "description": "Clerk",
+      "password": "$2a$10$AEmhZv5/00zooKo2n4iXSejkbiRzfARImvsKYXAHAZ8eWY3mMgWVe",
+      "department": "Sales",
+      "email": "zintlej@gmail.com",
+      "homephone": "",
+      "mobile": "0714374894",
+      "agent": "Standard Bank",
+      "status": true,
+      "lastUpdated": "2023-12-07T07:52:15.579Z",
+      "language": "English",
+      "location": "",
+      "selectedProducts": []
+    },
+   
+
+    {
+      "id": "7286",
+      "username": "bianca",
+      "fullname": "Bianca Grace",
+      "description": "Manager",
+      "password": "$2a$10$NaTGZi.VmkWrnDWJyesPzuROpESklpfO9twcBjPR2/SBoZMynLfC.",
+      "department": "HR",
+      "email": "bianca@simplyh",
+      "homephone": "",
+      "mobile": "0715679678",
+      "agent": "Simply Health",
+      "status": true,
+      "lastUpdated": "2023-12-07T07:57:36.822Z",
+      "language": "Afrikaans",
+      "location": "",
+      "selectedProducts": [
+        "Corporate Dental_old",
+        "Corporate Dental",
+        "Consumer Dental"
+      ]
     }
   ],
   "Products": [
@@ -770,6 +830,40 @@
         "Claim-Admin"
       ],
       "id": "5532"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con",
+        "Accountant"
+      ],
+      "id": "3148"
+    },
+    {
+      "AccessGroups": [
+        "Underwriting con",
+        "Accountant"
+      ],
+      "id": "9644"
+    },
+    {
+      "AccessGroups": [],
+      "id": "8964"
+    },
+    {
+      "AccessGroups": [],
+      "id": "4438"
+    },
+    {
+      "AccessGroups": [
+        "Claim-Admin"
+      ],
+      "id": "4908"
+    },
+    {
+      "AccessGroups": [
+        "Claim-Admin"
+      ],
+      "id": "7286"
     }
   ],
   "SecUserAccess": [
@@ -1266,6 +1360,66 @@
         "CL_SALVAGE",
         "CL_UNDMAN",
         "API_DOC_BLOCK"
+      ]
+    },
+    {
+      "id": "3148",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE"
+      ]
+    },
+    {
+      "id": "9644",
+      "accesscodes": [
+        "ACCEPTBBWARN",
+        "API_DOC_BLOCK",
+        " API_DOC_BLOCK",
+        "CL_DEL_CLAIMANT",
+        "CL_EXCEL_PRINT",
+        " CL_STALECHEQUE"
+      ]
+    },
+    {
+      "id": "8964",
+      "accesscodes": [
+        "SU01"
+      ]
+    },
+    {
+      "id": "4438",
+      "accesscodes": [
+        "SU01"
+      ]
+    },
+    {
+      "id": "4908",
+      "accesscodes": [
+        "AGENT_MAINT",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_DOC_4",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_SALVAGE",
+        "CL_UNDMAN"
+      ]
+    },
+    {
+      "id": "7286",
+      "accesscodes": [
+        "AGENT_MAINT",
+        "API_DOC_PERS",
+        "ADDR_OVERRIDE",
+        "API_DOC_4",
+        "CL_REOPEN",
+        "CL_REQUISITION",
+        "CL_SALVAGE",
+        "CL_UNDMAN"
       ]
     }
   ]
