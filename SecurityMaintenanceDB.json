@@ -159,20 +159,29 @@
       "sAccessCode": " CL_STALECHEQUE",
       "SAccessDescription": "Edit CHEQUE",
       "id": "f69b62e0-507e-4857-b73c-4321d386d094"
-    },
-    {
-      "sAccessCode": "",
-      "SAccessDescription": "",
-      "id": "f6ccb2a8-28df-4d84-a21f-05132b0c8a41"
     }
+     
   ],
   "SecAccessGroups": [
     {
       "sAccessGroup": "Underwriting con",
       "sAccessCodes": [
-        "ACCEPTBBWARN"
+        "ACCEPTBBWARN",
+        "CL_INCIDENT",
+        "CL_IND_APR",
+        "CL_NEGCLAIMBAL"
       ],
       "id": "2"
+    }, {
+      "sAccessGroup": "Claim Manager",
+      "sAccessCodes": [
+        "API_DOC_4",
+        "CL_REOPEN",
+        "API_DOC_BLOCK",
+        "CL_NEGCLAIMBAL",
+        "CL_RECOVERY"
+      ],
+      "id": "50"
     },
     {
       "sAccessGroup": "Accountant",
@@ -189,7 +198,6 @@
     {
       "sAccessGroup": "Broker Pack",
       "sAccessCodes": [
-        "ACCEPTBBWARN",
         "CL_EXCEL_PRINT",
         "CL_FINALISECLMT",
         "CL_INCIDENT",
@@ -259,7 +267,7 @@
       "homephone": "0781638594",
       "mobile": "0781990677",
       "agent": "Genasys",
-      "status": true,
+      "status": false,
       "lastUpdated": "2023-11-28T15:02:49.924Z",
       "language": "",
       "selectedProducts": []
@@ -275,7 +283,7 @@
       "homephone": "0781638594",
       "mobile": "0781638594",
       "agent": "Genasys",
-      "status": true,
+      "status": false,
       "lastUpdated": "2023-12-07T07:29:45.309Z",
       "language": "",
       "selectedProducts": [],
@@ -318,7 +326,7 @@
       "id": "A0LIYn3",
       "username": "Anthony",
       "fullname": "Anthony Ncube",
-      "description": "Anthony Hemilton",
+      "description": " software developer",
       "password": "$2a$10$QX4J8usm1PVh2yBC3BMiS.EODCbw/nWsRnX379BL2fHlKMKnjSnoi",
       "department": "IT",
       "email": "a.ncube@genasystech.com",
@@ -326,11 +334,13 @@
       "mobile": "0781954154",
       "agent": "Genasys",
       "status": true,
-      "lastUpdated": "2023-11-22T12:10:52.084Z",
+      "lastUpdated": "2023-12-07T16:50:41.619Z",
       "language": "English",
       "selectedProducts": [
         "Consumer Dental"
-      ]
+      ],
+      "filterText1": "",
+      "filterText2": ""
     },
     {
       "id": "RIpKtJb",
@@ -403,7 +413,7 @@
       "homephone": "0671402936",
       "mobile": "0671802963",
       "agent": "Genasys",
-      "status": true,
+      "status": false,
       "lastUpdated": "2023-11-29T11:55:42.737Z",
       "language": "English",
       "location": "",
@@ -462,7 +472,7 @@
       "homephone": "",
       "mobile": "0671402936",
       "agent": "Simply Health",
-      "status": true,
+      "status": false,
       "lastUpdated": "2023-12-07T08:12:10.062Z",
       "language": "Afrikaans",
       "location": "",
@@ -523,7 +533,7 @@
       "homephone": "",
       "mobile": "0714374894",
       "agent": "Standard Bank",
-      "status": true,
+      "status": false,
       "lastUpdated": "2023-12-07T08:36:52.394Z",
       "language": "Afrikaans",
       "location": "",
@@ -540,7 +550,7 @@
       "homephone": "",
       "mobile": "0715679678",
       "agent": "Genasys",
-      "status": true,
+      "status": false,
       "lastUpdated": "2023-12-07T08:38:41.579Z",
       "language": "English",
       "location": "",
@@ -631,7 +641,7 @@
       "homephone": "",
       "mobile": "0713748945",
       "agent": "Standard Bank",
-      "status": true,
+      "status": false,
       "lastUpdated": "2023-12-07T09:12:48.390Z",
       "language": "Afrikaans",
       "location": "",
@@ -910,10 +920,8 @@
       "id": "tkwJgRP"
     },
     {
-      "AccessGroups": [
-        "Underwriting con"
-      ],
-      "id": "7074"
+      "AccessGroups":["Claim Manager"],
+      "id": "9905"
     },
     {
       "AccessGroups": [
@@ -1108,8 +1116,7 @@
         "CL_REOPEN",
         "CL_REQUISITION",
         "CL_SALVAGE",
-        "CL_UNDMAN",
-        null
+        "CL_UNDMAN"
       ]
     },
     {
@@ -1136,7 +1143,7 @@
     {
       "id": "QkIHHhU",
       "accesscodes": [
-        null
+        
       ]
     },
     {
